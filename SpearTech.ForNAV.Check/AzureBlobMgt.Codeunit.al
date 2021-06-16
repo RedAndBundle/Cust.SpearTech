@@ -6,8 +6,8 @@ codeunit 50100 "PTE Azure Blob Mgt."
         Client: HttpClient;
         ResponseMessage: HttpResponseMessage;
     begin
-        if not Client.Get('https://vgblobstoragepublic.blob.core.windows.net/fornavsetup/A4_column_1.pdf', ResponseMessage) then // ToDo, Dynamically build URL based on Check No.
-                                                                                                                                 //        if not Client.Get('https://spearclaimsdevdocuments.blob.core.windows.net/spear-claimant/EOR from IMS.pdf', ResponseMessage) then // ToDo, Dynamically build URL based on Check No.
+        if not Client.Get('https://vgblobstoragepublic.blob.core.windows.net/fornavsetup/EOR from IMS.pdf', ResponseMessage) then // ToDo, Dynamically build URL based on Check No.
+                                                                                                                                  //        if not Client.Get('https://spearclaimsdevdocuments.blob.core.windows.net/spear-claimant/EOR from IMS.pdf', ResponseMessage) then // ToDo, Dynamically build URL based on Check No.
             Error('The call to the web service failed.');
 
         ResponseMessage.Content().ReadAs(ResponseText);
