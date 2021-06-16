@@ -1,6 +1,6 @@
 Report 50100 "PTE US Check"
 {
-    Caption = 'Check';
+    Caption = 'SpearTech Check';
     WordLayout = './Layouts/SpearTech US Check.docx';
     DefaultLayout = Word;
 
@@ -72,6 +72,13 @@ Report 50100 "PTE US Check"
             trigger OnPreDataItem();
             begin
                 ReportForNav.OnPreDataItem('Args', Args);
+            end;
+
+            trigger OnAfterGetRecord();
+            var
+                AzureBlobMgt: Codeunit "PTE Azure Blob Mgt.";
+            begin
+                ReportForNav.SetAppendPdf('Args', AzureBlobMgt.GetBlobFromAzure(GenJnlLnBuffer."Document No."));
             end;
         }
     }
