@@ -22,8 +22,12 @@ Page 50100 "PTE Payment Entity"
                 field(VendorNo; Rec."Vendor No.") { ApplicationArea = Basic; }
                 field(id; Rec.SystemId) { ApplicationArea = Basic; }
                 field(documentNo; Rec."Document No.") { ApplicationArea = Basic; }
+                field(paymentMethod; Rec."Payment Method") { ApplicationArea = Basic; }
+                field(bankAccount; Rec."Bank Account No.") { ApplicationArea = Basic; }
+                field(invoiceNo; Rec."External Document No.") { ApplicationArea = Basic; }
                 field(amountUSD; Rec."Amount (USD)") { ApplicationArea = Basic; }
                 field(PaymentSpecification; PaymentSpecification) { ApplicationArea = Basic; }
+                field(description; Rec.Description) { ApplicationArea = Basic; }
             }
         }
     }
