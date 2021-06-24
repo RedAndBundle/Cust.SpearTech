@@ -2,55 +2,26 @@ Report 50101 "PTE Check Processing"
 {
     Caption = 'SpearTech Check';
     ProcessingOnly = true;
-
     dataset
     {
         dataitem(Args; "ForNAV Check Arguments")
         {
             DataItemTableView = sorting("Primary Key");
             UseTemporary = true;
-            dataitem(VoidGenJnlLine; "Gen. Journal Line")
-            {
-                DataItemTableView = sorting("Journal Template Name", "Journal Batch Name", "Posting Date", "Document No.");
-                RequestFilterFields = "Journal Template Name", "Journal Batch Name", "Posting Date";
-                trigger OnPreDataItem();
-                var
-                    TestVoidCheck: Codeunit "ForNAV Test Void Check";
-                begin
-                    VoidGenJnlLine.SetRange("Bal. Account No.", Args."Bank Account No.");
-                    if not TestVoidCheck.TestVoidCheck(VoidGenJnlLine, Args, CurrReport.Preview) then
-                        CurrReport.Break;
-                end;
-
-                trigger OnAfterGetRecord();
-                var
-                    CheckManagement: Codeunit CheckManagement;
-                begin
-                    CheckManagement.VoidCheck(VoidGenJnlLine);
-                end;
-
-            }
             dataitem(GenJnlLnBuffer; "Gen. Journal Line")
             {
                 DataItemTableView = sorting("Journal Template Name", "Journal Batch Name", "Line No.");
                 UseTemporary = true;
-                dataitem(Model; "ForNAV Check Model")
-                {
-                    DataItemTableView = sorting("Page No.", "Part No.", "Line No.");
-                    UseTemporary = true;
-                }
                 trigger OnPreDataItem();
                 begin
                     CreateGenJnlLnBuffer;
                 end;
 
                 trigger OnAfterGetRecord();
+                var
+                    RunCheck: Codeunit "PTE Run Check Report";
                 begin
-                    if not Args.CreateModelFromGenJnlLn(GenJnlLnBuffer, Model) then
-                        CurrReport.Skip;
-                    if Model.FindFirst() then
-                        if Model."Amount Paid" < 0 then
-                            Error(AmountCannotBeNegativeErr, GenJnlLnBuffer."Account Type", GenJnlLnBuffer."Account No.");
+                    RunCheck.RunCheckReportPerLine(Args, GenJnlLnBuffer);
                 end;
 
             }
@@ -133,7 +104,6 @@ Report 50101 "PTE Check Processing"
 
     trigger OnPreReport()
     begin
-
         Codeunit.Run(Codeunit::"ForNAV First Time Setup");
         Commit;
         CheckSetupIsValid;
@@ -170,7 +140,6 @@ Report 50101 "PTE Check Processing"
         CheckSetup.Get;
         if CheckSetup.Layout = CheckSetup.Layout::" " then
             CheckSetup.FieldError(CheckSetup.Layout);
-
     end;
 
     local procedure CreateGenJnlLnBuffer()
@@ -181,7 +150,7 @@ Report 50101 "PTE Check Processing"
             GenJnlLnBuffer.Init;
             GenJnlLnBuffer.Insert;
         end else begin
-            GenJnlLn.Copy(VoidGenJnlLine);
+            // GenJnlLn.Copy(VoidGenJnlLine);
             if not Args."Test Print" then begin
                 GenJnlLn.SetRange(GenJnlLn."Bank Payment Type", GenJnlLn."bank payment type"::"Computer Check");
                 GenJnlLn.SetRange(GenJnlLn."Check Printed", false);

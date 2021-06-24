@@ -76,9 +76,13 @@ Report 50100 "PTE US Check"
 
             trigger OnAfterGetRecord();
             var
-                AzureBlobMgt: Codeunit "PTE Azure Blob Mgt.";
+                PDFFile: Record "ForNAV File Storage";
+                is: InStream;
             begin
-                ReportForNav.SetAppendPdf('Args', AzureBlobMgt.GetBlobFromAzure(GenJnlLnBuffer."Document No."));
+                PDFFile.Get(Args."PTE Document No.");
+                PDFFile.CalcFields(Data);
+                PDFFile.Data.CreateInStream(is);
+                ReportForNav.SetAppendPdf('Args', is);
             end;
         }
     }

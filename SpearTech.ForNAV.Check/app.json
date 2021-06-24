@@ -33,6 +33,6 @@
   ],
   "contextSensitiveHelpUrl": "https://SpearTech.ForNAV.Check.com/help/",
   "showMyCode": true,
-  "runtime": "7.0",
+  "runtime": "7.1",
   "features": ["TranslationFile"]
 }
