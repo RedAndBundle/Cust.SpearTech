@@ -123,6 +123,11 @@
           <note from="Developer" annotates="general" priority="2">DO NOT TRANSLATE</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report PTE US Check - Control TestPrinting - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 1972246617 - Field 3684356171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1648332528">
+          <source>PTE Document No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Check Arguments - Field PTE Document No. - Property Caption</note>
+        </trans-unit>
       </group>
     </body>
   </file>

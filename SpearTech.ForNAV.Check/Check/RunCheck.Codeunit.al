@@ -13,7 +13,16 @@ codeunit 50102 "PTE Run Check Report"
             GenJnlLnFilter.Get(GenJnlLn.RecordId);
             GenJnlLnFilter.SetRecFilter();
             Check.Run();
+            DeletePDF(GenJnlLn."Document No.");
         until GenJnlLn.Next() = 0;
+    end;
+
+    local procedure DeletePDF(Value: Code[20])
+    var
+        PDFFile: Record "ForNAV File Storage";
+    begin
+        PDFFile.Get(Value);
+        PDFFile.Delete();
     end;
 
 }
