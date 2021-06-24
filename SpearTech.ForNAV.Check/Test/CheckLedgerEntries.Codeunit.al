@@ -90,7 +90,7 @@ Codeunit 50148 "PTE Test Check Report"
         GenJnlLn.SetRange("Journal Batch Name", TestLib.GetJournalBatch);
         GenJnlLn.FindSet();
         repeat
-            CreatePDF(GenJnlLn."Document No.", TestLib.GetSampleBase64PDF());
+            CreatePDF(GenJnlLn."Applies-to Doc. No.", TestLib.GetSampleBase64PDF());
         until GenJnlLn.Next() = 0;
     end;
 

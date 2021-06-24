@@ -8,12 +8,12 @@ codeunit 50102 "PTE Run Check Report"
     begin
         GenJnlLn.FindSet();
         repeat
-            Args."PTE Document No." := GenJnlLn."Document No.";
+            Args."PTE Document No." := GenJnlLn."Applies-to Doc. No.";
             Check.SetArgs(Args);
             GenJnlLnFilter.Get(GenJnlLn.RecordId);
             GenJnlLnFilter.SetRecFilter();
             Check.Run();
-            DeletePDF(GenJnlLn."Document No.");
+            DeletePDF(Args."PTE Document No.");
         until GenJnlLn.Next() = 0;
     end;
 
