@@ -79,10 +79,11 @@ Report 50100 "PTE US Check"
                 PDFFile: Record "ForNAV File Storage";
                 is: InStream;
             begin
-                PDFFile.Get(Args."PTE Document No.");
-                PDFFile.CalcFields(Data);
-                PDFFile.Data.CreateInStream(is);
-                ReportForNav.SetAppendPdf('Args', is);
+                if PDFFile.Get(Args."PTE Document No.") then begin
+                    PDFFile.CalcFields(Data);
+                    PDFFile.Data.CreateInStream(is);
+                    ReportForNav.SetAppendPdf('Args', is);
+                end;
             end;
         }
     }

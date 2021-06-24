@@ -2,7 +2,7 @@ Codeunit 50148 "PTE Test Check Report"
 {
     Subtype = Test;
     [Test]
-    [HandlerFunctions('SuggestVendorPaymentsRequestPageHandler,MessageHandler')]
+    [HandlerFunctions('SuggestVendorPaymentsRequestPageHandler')]
     procedure TestSuggestVendorPayments()
     begin
         // [Given]
@@ -16,7 +16,7 @@ Codeunit 50148 "PTE Test Check Report"
     end;
 
     [Test]
-    //    [HandlerFunctions('StrMenuHandler')]
+    [HandlerFunctions('CheckRequestPageHandler')]
     procedure TestCheck()
     var
         TempBlob: Record "ForNAV Core Setup";
@@ -126,9 +126,14 @@ Codeunit 50148 "PTE Test Check Report"
         SuggestVendorPayments.OK.INVOKE;
     end;
 
-    [MessageHandler]
-    procedure MessageHandler(Value: Text[1024])
+    [RequestPageHandler]
+    procedure CheckRequestPageHandler(var Check: TestRequestPage "PTE Check Processing")
+    var
+        BalAccType: Option "G/L Account",Customer,Vendor,"Bank Account";
+        BankPmtType: Option " ","Computer Check","Manual Check","Electronic Payment","Electronic Payment-IAT";
+        Test: Variant;
     begin
+        Check.OK.INVOKE;
     end;
 
     procedure TestCheckEntries()
