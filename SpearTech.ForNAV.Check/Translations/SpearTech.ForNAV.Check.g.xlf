@@ -43,6 +43,36 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Vendor No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 219769631 - Field 3852983238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Account No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field G/L Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 219769631 - Field 1549154094 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Method (Check)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field Payment Method (Check) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 219769631 - Field 1469386901 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Method (EFT)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field Payment Method (EFT) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 219769631 - Field 3309745468 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Method (Void)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field Payment Method (Void) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 219769631 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3001911709 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Spear Technologies Setup - Control General - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 1058662544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>SpearTech Check</source>
           <note from="Developer" annotates="general" priority="2"></note>

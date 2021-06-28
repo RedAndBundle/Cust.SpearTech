@@ -23,7 +23,7 @@ table 50100 "PTE Payment Interface"
         CreateVendorLedgerEntry();
         CreatePDF(Base64String);
         CreatePaymentJournalLine();
-        exit('Vendor Ledger Entries created and Payment Journal prepared');
+        exit('Vendor Ledger Entries created and Payment Journal prepared in ' + GetPaymentJournalBatch().Name);
     end;
 
     local procedure CreatePaymentJournalLine()
@@ -42,6 +42,8 @@ table 50100 "PTE Payment Interface"
         GenJnlLine.Init;
         GenJnlLine."Document Type" := GenJnlLine."Document Type"::Payment;
         GenJnlLine."Posting No. Series" := GetPaymentJournalBatch."Posting No. Series";
+        GenJnlLine."Journal Template Name" := GetPaymentJournalBatch()."Journal Template Name";
+        GenJnlLine."Journal Batch Name" := GetPaymentJournalBatch().Name;
         GenJnlLine."Document No." := "Document No.";
         //         "Document No." := NextDocNo;
         //         IncrementDocumentNo(GenJnlBatch, NextDocNo);
