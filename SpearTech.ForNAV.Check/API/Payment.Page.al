@@ -4,8 +4,6 @@ Page 50100 "PTE Payment Entity"
     DeleteAllowed = false;
     EntityName = 'payment';
     EntitySetName = 'payments';
-    InsertAllowed = false;
-    ModifyAllowed = false;
     ODataKeyFields = SystemId;
     PageType = API;
     APIPublisher = 'speartech';
@@ -26,12 +24,37 @@ Page 50100 "PTE Payment Entity"
                 field(bankAccount; Rec."Bank Account No.") { ApplicationArea = Basic; }
                 field(invoiceNo; Rec."External Document No.") { ApplicationArea = Basic; }
                 field(amountUSD; Rec."Amount (USD)") { ApplicationArea = Basic; }
-                field(PaymentSpecification; PaymentSpecification) { ApplicationArea = Basic; }
+                field(paymentSpecificationPDF; paymentSpecificationPDF) { ApplicationArea = Basic; }
                 field(description; Rec.Description) { ApplicationArea = Basic; }
+                field(postingDate; Rec."Posting Date") { ApplicationArea = Basic; }
+                field(result; Result) { ApplicationArea = Basic; }
             }
         }
     }
 
     var
-        PaymentSpecification: Text;
+        paymentSpecificationPDF, Result : Text;
+
+    trigger OnInsertRecord(BelowxRec: Boolean): Boolean
+    var
+        Setup: Record "PTE Spear Technology Setup";
+    begin
+        Rec.TestField("Vendor No.");
+        Rec.TestField("Document No.");
+        Rec.TestField("Posting Date");
+        Rec.TestField("Amount (USD)");
+        Setup.Get();
+        Setup.TestField("Payment Method (Check)");
+        Setup.TestField("Payment Method (EFT)");
+        Setup.TestField("Payment Method (Void)");
+        Setup.TestField("G/L Account No.");
+        Result := Rec.ProcessPaymentInterface(paymentSpecificationPDF)
+    end;
+
+    // trigger OnOpenPage()
+    // begin
+    //     "Posting Date" := WorkDate();
+    //     Insert();
+    // end;
+
 }

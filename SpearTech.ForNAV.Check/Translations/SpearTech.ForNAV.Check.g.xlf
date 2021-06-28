@@ -33,6 +33,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Payment Method - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Posting Date - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1159935010 - Field 1527594213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Vendor No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
