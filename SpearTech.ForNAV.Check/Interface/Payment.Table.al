@@ -36,14 +36,7 @@ table 50100 "PTE Payment Interface"
         // LastLineNo := LastLineNo + 10000;
         // "Line No." := LastLineNo;
         GenJnlLine."Document Type" := GenJnlLine."Document Type"::Payment;
-        // "Posting No. Series" := GenJnlBatch."Posting No. Series"; TODO Find batch based on Bank Account
-        // if SummarizePerVend then
-        //     "Document No." := TempPaymentBuffer."Document No."
-        // else
-        //     if DocNoPerLine then begin
-        //         if TempPaymentBuffer.Amount < 0 then
-        //             "Document Type" := "Document Type"::Refund;
-
+        GenJnlLine."Posting No. Series" := GetPaymentJournalBatch."Posting No. Series";
         //         "Document No." := NextDocNo;
         //         IncrementDocumentNo(GenJnlBatch, NextDocNo);
         //     end else
@@ -53,46 +46,31 @@ table 50100 "PTE Payment Interface"
         //             "Document No." := OldTempPaymentBuffer."Document No."
         //         else begin
         //             "Document No." := NextDocNo;
+
         //             IncrementDocumentNo(GenJnlBatch, NextDocNo);
-        //             OldTempPaymentBuffer := TempPaymentBuffer;
-        //             OldTempPaymentBuffer."Document No." := "Document No.";
-        //         end;
-        // "Account Type" := "Account Type"::Vendor;
-        // SetHideValidation(true);
-        // ShowPostingDateWarning := ShowPostingDateWarning or
-        //   SetPostingDate(GenJnlLine, GetApplDueDate(TempPaymentBuffer."Vendor Ledg. Entry No."), PostingDate);
-        // Validate("Account No.", TempPaymentBuffer."Vendor No.");
-        // Vendor.Get(TempPaymentBuffer."Vendor No.");
-        // if (Vendor."Pay-to Vendor No." <> '') and (Vendor."Pay-to Vendor No." <> "Account No.") then
-        //     Message(Text025, Vendor.TableCaption, Vendor."No.", Vendor.FieldCaption("Pay-to Vendor No."),
-        //       Vendor."Pay-to Vendor No.");
-        // "Bal. Account Type" := BalAccType;
-        // Validate("Bal. Account No.", BalAccNo);
-        // Validate("Currency Code", TempPaymentBuffer."Currency Code");
-        // "Message to Recipient" := GetMessageToRecipient(SummarizePerVend);
-        // "Bank Payment Type" := BankPmtType;
-        // if SummarizePerVend then
-        //     "Applies-to ID" := "Document No.";
-        // Description := Vendor.Name;
-        // "Source Line No." := TempPaymentBuffer."Vendor Ledg. Entry No.";
-        // "Shortcut Dimension 1 Code" := TempPaymentBuffer."Global Dimension 1 Code";
-        // "Shortcut Dimension 2 Code" := TempPaymentBuffer."Global Dimension 2 Code";
-        // "Dimension Set ID" := TempPaymentBuffer."Dimension Set ID";
-        // "Source Code" := GenJnlTemplate."Source Code";
-        // "Reason Code" := GenJnlBatch."Reason Code";
-        // Validate(Amount, TempPaymentBuffer.Amount);
-        // "Applies-to Doc. Type" := TempPaymentBuffer."Vendor Ledg. Entry Doc. Type";
-        // "Applies-to Doc. No." := TempPaymentBuffer."Vendor Ledg. Entry Doc. No.";
-        // "Payment Method Code" := TempPaymentBuffer."Payment Method Code";
 
-        // TempPaymentBuffer.CopyFieldsToGenJournalLine(GenJnlLine);
-
-        // OnBeforeUpdateGnlJnlLineDimensionsFromTempBuffer(GenJnlLine, TempPaymentBuffer, SummarizePerVend);
-        // UpdateDimensions(GenJnlLine);
-        // Insert;
-        // GenJnlLineInserted := true;
-        //  end;
-        // end;
+        GenJnlLine."Account Type" := GenJnlLine."Account Type"::Vendor;
+        GenJnlLine.SetHideValidation(true);
+        GenJnlLine."Posting Date" := "Posting Date";
+        GenJnlLine.Validate("Account No.", "Vendor No.");
+        GenJnlLine."Bal. Account Type" := GenJnlLine."Bal. Account Type"::"Bank Account";
+        GenJnlLine.Validate("Bal. Account No.", GetBankAccount."No.");
+        // "Message to Recipient" := GetMessageToRecipient(SummarizePerVend); TODO Can we use this?
+        case "Payment Method" of
+            "Payment Method"::Check:
+                GenJnlLine."Bank Payment Type" := GenJnlLine."Bank Payment Type"::"Computer Check";
+            "Payment Method"::EFT:
+                GenJnlLine."Bank Payment Type" := GenJnlLine."Bank Payment Type"::"Electronic Payment";
+            "Payment Method"::Void:
+                GenJnlLine."Bank Payment Type" := GenJnlLine."Bank Payment Type"::"Manual Check";
+        end;
+        GenJnlLine.Description := Description;
+        GenJnlLine."Source Line No." := GetLastVendorLedgerEntryNo()."Entry No.";
+        GenJnlLine.Validate(Amount, "Amount (USD)");
+        GenJnlLine."Applies-to Doc. Type" := GenJnlLine."Applies-to Doc. Type"::Invoice;
+        GenJnlLine."Applies-to Doc. No." := "Document No.";
+        GenJnlLine."Payment Method Code" := GetPaymentMethod();
+        GenJnlLine.Insert();
     end;
 
     local procedure CreateVendorLedgerEntry()
@@ -102,6 +80,7 @@ table 50100 "PTE Payment Interface"
     begin
         GenJnlLn.Init();
         GenJnlLn."Document No." := "Document No.";
+        GenJnlLn."Document Type" := GenJnlLn."Document Type"::Invoice;
         GenJnlLn."External Document No." := "External Document No.";
         GenJnlLn."Posting Date" := "Posting Date";
         GenJnlLn.Description := Description;
@@ -148,5 +127,27 @@ table 50100 "PTE Payment Interface"
             "Payment Method"::Void:
                 exit(Setup."Payment Method (Void)");
         end
+    end;
+
+    local procedure GetBankAccount() BankAccount: Record "Bank Account"
+    begin
+        BankAccount.SetRange("Bank Account No.", "Bank Account No.");
+        BankAccount.FindFirst();
+    end;
+
+    local procedure GetPaymentJournalBatch() Batch: Record "Gen. Journal Batch"
+    begin
+        Batch.SetRange("Bal. Account Type", Batch."Bal. Account Type"::"Bank Account");
+        Batch.SetRange("Bal. Account No.", GetBankAccount."No.");
+        Batch.FindFirst();
+    end;
+
+    local procedure GetLastVendorLedgerEntryNo() VendLedEnt: Record "Vendor Ledger Entry";
+    begin
+        VendLedEnt.SetCurrentKey("Document No.", "Document Type", "Vendor No.");
+        VendLedEnt.SetRange("Vendor No.", "Vendor No.");
+        VendLedEnt.SetRange("Document No.", "Document No.");
+        VendLedEnt.SetRange("Document Type", VendLedEnt."Document Type"::Invoice);
+        VendLedEnt.FindFirst();
     end;
 }
