@@ -17,7 +17,7 @@ Page 50100 "PTE Payment Entity"
         {
             repeater(Group)
             {
-                field(VendorNo; Rec."Vendor No.") { ApplicationArea = Basic; }
+                field(vendorNo; Rec."Vendor No.") { ApplicationArea = Basic; }
                 field(id; Rec.SystemId) { ApplicationArea = Basic; }
                 field(documentNo; Rec."Document No.") { ApplicationArea = Basic; }
                 field(paymentMethod; Rec."Payment Method") { ApplicationArea = Basic; }
@@ -50,11 +50,4 @@ Page 50100 "PTE Payment Entity"
         Setup.TestField("G/L Account No.");
         Result := Rec.ProcessPaymentInterface(paymentSpecificationPDF)
     end;
-
-    // trigger OnOpenPage()
-    // begin
-    //     "Posting Date" := WorkDate();
-    //     Insert();
-    // end;
-
 }

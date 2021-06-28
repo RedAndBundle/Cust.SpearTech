@@ -32,11 +32,17 @@ table 50100 "PTE Payment Interface"
         Vendor: Record Vendor;
         GenJnlLine: Record "Gen. Journal Line";
     begin
+        GenJnlLine.SetRange("Journal Template Name", GetPaymentJournalBatch()."Journal Template Name");
+        GenJnlLine.SetRange("Journal Batch Name", GetPaymentJournalBatch().Name);
+        if GenJnlLine.FindLast() then
+            GenJnlLine."Line No." += 10000
+        else
+            GenJnlLine."Line No." := 10000;
+
         GenJnlLine.Init;
-        // LastLineNo := LastLineNo + 10000;
-        // "Line No." := LastLineNo;
         GenJnlLine."Document Type" := GenJnlLine."Document Type"::Payment;
         GenJnlLine."Posting No. Series" := GetPaymentJournalBatch."Posting No. Series";
+        GenJnlLine."Document No." := "Document No.";
         //         "Document No." := NextDocNo;
         //         IncrementDocumentNo(GenJnlBatch, NextDocNo);
         //     end else
