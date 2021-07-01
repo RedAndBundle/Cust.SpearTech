@@ -92,12 +92,12 @@ table 50100 "PTE Payment Interface"
         GenJnlLn."External Document No." := "External Document No.";
         GenJnlLn."Posting Date" := "Posting Date";
         GenJnlLn.Description := Description;
-        GenJnlLn.Amount := "Amount (USD)";
+        GenJnlLn.Amount := -"Amount (USD)";
         GenJnlLn."Account Type" := GenJnlLn."Account Type"::Vendor;
         GenJnlLn."Account No." := "Vendor No.";
         GenJnlLn."Bal. Account Type" := GenJnlLn."Bal. Account Type"::"G/L Account";
         GenJnlLn."Bal. Account No." := GetBalAccountFromVendor();
-        GenJnlLn."Recipient Bank Account" := "Bank Account No.";
+        // GenJnlLn."Recipient Bank Account" := "Bank Account No.";
         GenJnlLn."Payment Method Code" := GetPaymentMethod();
         GenJnlPostLine.RunWithCheck(GenJnlLn);
     end;
@@ -110,7 +110,9 @@ table 50100 "PTE Payment Interface"
     begin
         PDFFile.Code := "Document No.";
         PDFFile.Data.CreateOutStream(OutStr);
-        OutStr.WriteText(Base64Convert.FromBase64(Base64String));
+        // OutStr.WriteText(Base64Convert.FromBase64(Base64String));
+        Base64Convert.FromBase64(Base64String, OutStr);
+        PDFFile.Filename := "Document No." + '.pdf';
         PDFFile.Insert();
     end;
 

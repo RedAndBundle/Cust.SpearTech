@@ -1,6 +1,6 @@
 Report 50101 "PTE Check Processing"
 {
-    Caption = 'SpearTech Check';
+    Caption = 'SpearTech Check Batch';
     ProcessingOnly = true;
     dataset
     {

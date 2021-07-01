@@ -75,15 +75,7 @@ Report 50100 "PTE US Check"
             end;
 
             trigger OnAfterGetRecord();
-            var
-                PDFFile: Record "ForNAV File Storage";
-                is: InStream;
             begin
-                if PDFFile.Get(Args."PTE Document No.") then begin
-                    PDFFile.CalcFields(Data);
-                    PDFFile.Data.CreateInStream(is);
-                    ReportForNav.SetAppendPdf('Args', is);
-                end;
             end;
         }
     }
@@ -186,6 +178,9 @@ Report 50100 "PTE US Check"
     end;
 
     trigger OnPreReport()
+    var
+        PDFFile: Record "ForNAV File Storage";
+        is: InStream;
     begin
 
         Codeunit.Run(Codeunit::"ForNAV First Time Setup");
@@ -195,7 +190,11 @@ Report 50100 "PTE US Check"
         Args.TestMandatoryFields;
         if CurrReport.Preview then
             Args."Test Print" := true;
-        ;
+        if PDFFile.Get(Args."PTE Document No.") then begin
+            PDFFile.CalcFields(Data);
+            PDFFile.Data.CreateInStream(is);
+            ReportForNav.SetAppendPdf('Args', is);
+        end;
         ReportsForNavPre;
 
     end;

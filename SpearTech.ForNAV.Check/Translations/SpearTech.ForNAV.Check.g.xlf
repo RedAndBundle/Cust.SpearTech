@@ -74,7 +74,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Spear Technologies Setup - Control General - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1058662544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SpearTech Check</source>
+          <source>SpearTech Check Batch</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report PTE Check Processing - Property Caption</note>
         </trans-unit>
