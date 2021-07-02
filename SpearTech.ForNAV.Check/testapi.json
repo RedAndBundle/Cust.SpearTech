@@ -1,0 +1,27 @@
+{
+    "vendorNo": "10000",
+    "documentNo": "checktest06",
+    "paymentMethod": "Check",
+    "bankAccount": "99-99-888",
+    "invoiceNo": "invoice06",
+    "amountUSD": 101,
+    "paymentSpecificationPDF": "BASE64String",
+    "description": "You break it you buy it",
+    "postingDate":"2021-06-28"
+}
+
+// {
+//     "@odata.context": "https://api.businesscentral.dynamics.com/v2.0/697cd372-139a-4f44-b0ee-e5ab832d9265/us/api/speartech/check/v2.0/$metadata#companies(6ff64c7a-b1fd-ea11-bc7d-00155df3a615)/payments/$entity",
+//     "@odata.etag": "W/\"JzQ0O2JNL1VTWTlaTGo5SFdlcVEyMlRHZmhZRHFvYllGSHF1RGpZS09NTlVBOWc9MTswMDsn\"",
+//     "id": "00000000-0000-0000-0000-000000000000",
+//     "vendorNo": "10000",
+//     "documentNo": "CHECKTEST09",
+//     "paymentMethod": "Check",
+//     "bankAccount": "99-99-888",
+//     "invoiceNo": "INVOICE09",
+//     "amountUSD": 101,
+//     "paymentSpecificationPDF": "BASE64String",
+//     "description": "You break it you buy it",
+//     "postingDate": "2021-06-28",
+//     "result": "Vendor Ledger Entries created and Payment Journal prepared in CHI"
+// }

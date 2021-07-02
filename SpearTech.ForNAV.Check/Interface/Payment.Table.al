@@ -98,6 +98,7 @@ table 50100 "PTE Payment Interface"
         GenJnlLn."Bal. Account Type" := GenJnlLn."Bal. Account Type"::"G/L Account";
         GenJnlLn."Bal. Account No." := GetBalAccountFromVendor();
         // GenJnlLn."Recipient Bank Account" := "Bank Account No.";
+        // TODO add external document no
         GenJnlLn."Payment Method Code" := GetPaymentMethod();
         GenJnlPostLine.RunWithCheck(GenJnlLn);
     end;
