@@ -12,7 +12,6 @@ codeunit 50102 "PTE Run Check Report"
     begin
         GenJnlLn.FindSet();
         repeat
-            Args."Test Print" := true;
             Args."PTE Document No." := GenJnlLn."Applies-to Doc. No.";
             Check.SetArgs(Args);
             GenJnlLnFilter.Get(GenJnlLn.RecordId);
@@ -25,7 +24,8 @@ codeunit 50102 "PTE Run Check Report"
             Check.SaveAs(Parameters, Reportformat::Pdf, OutStr);
             Filename := Args."PTE Document No." + '.pdf';
             DownloadFromStream(InStr, '', '', '', Filename);
-            DeletePDF(Args."PTE Document No.");
+            if not Args."Test Print" then
+                DeletePDF(Args."PTE Document No.");
         until GenJnlLn.Next() = 0;
     end;
 
