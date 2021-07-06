@@ -188,6 +188,8 @@ Report 50100 "PTE US Check"
         CheckSetupIsValid;
         LoadWatermark;
         Args.TestMandatoryFields;
+        if VoidGenJnlLine.Get(Args."PTE GL Entry") then
+            VoidGenJnlLine.SetRecFilter();
         if CurrReport.Preview then
             Args."Test Print" := true;
         if PDFFile.Get(Args."PTE Document No.") then begin

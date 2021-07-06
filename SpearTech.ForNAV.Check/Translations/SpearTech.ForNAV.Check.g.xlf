@@ -163,6 +163,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Check Arguments - Field PTE Document No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 1972246617 - Field 1252989434 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1648332528">
+          <source>PTE GL Entry</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Check Arguments - Field PTE GL Entry - Property Caption</note>
+        </trans-unit>
       </group>
     </body>
   </file>

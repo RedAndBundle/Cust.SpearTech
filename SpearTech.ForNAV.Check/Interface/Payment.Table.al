@@ -32,6 +32,7 @@ table 50100 "PTE Payment Interface"
         Vendor: Record Vendor;
         GenJnlLine: Record "Gen. Journal Line";
     begin
+        // TODO external document no not copied to check ledger entry. Use Bank Ledger Entries for ext doc no?
         GenJnlLine.SetRange("Journal Template Name", GetPaymentJournalBatch()."Journal Template Name");
         GenJnlLine.SetRange("Journal Batch Name", GetPaymentJournalBatch().Name);
         if GenJnlLine.FindLast() then
@@ -78,29 +79,29 @@ table 50100 "PTE Payment Interface"
         GenJnlLine."Applies-to Doc. Type" := GenJnlLine."Applies-to Doc. Type"::Invoice;
         GenJnlLine."Applies-to Doc. No." := "Document No.";
         GenJnlLine."Payment Method Code" := GetPaymentMethod();
+        GenJnlLine."External Document No." := "External Document No.";
         GenJnlLine.Insert();
     end;
 
     local procedure CreateVendorLedgerEntry()
     var
-        GenJnlLn: Record "Gen. Journal Line";
+        GenJnlLine: Record "Gen. Journal Line";
         GenJnlPostLine: Codeunit "Gen. Jnl.-Post Line";
     begin
-        GenJnlLn.Init();
-        GenJnlLn."Document No." := "Document No.";
-        GenJnlLn."Document Type" := GenJnlLn."Document Type"::Invoice;
-        GenJnlLn."External Document No." := "External Document No.";
-        GenJnlLn."Posting Date" := "Posting Date";
-        GenJnlLn.Description := Description;
-        GenJnlLn.Amount := -"Amount (USD)";
-        GenJnlLn."Account Type" := GenJnlLn."Account Type"::Vendor;
-        GenJnlLn."Account No." := "Vendor No.";
-        GenJnlLn."Bal. Account Type" := GenJnlLn."Bal. Account Type"::"G/L Account";
-        GenJnlLn."Bal. Account No." := GetBalAccountFromVendor();
-        // GenJnlLn."Recipient Bank Account" := "Bank Account No.";
-        // TODO add external document no
-        GenJnlLn."Payment Method Code" := GetPaymentMethod();
-        GenJnlPostLine.RunWithCheck(GenJnlLn);
+        GenJnlLine.Init();
+        GenJnlLine."Document No." := "Document No.";
+        GenJnlLine."Document Type" := GenJnlLine."Document Type"::Invoice;
+        GenJnlLine."External Document No." := "External Document No.";
+        GenJnlLine."Posting Date" := "Posting Date";
+        GenJnlLine.Description := Description;
+        GenJnlLine.Amount := -"Amount (USD)";
+        GenJnlLine."Account Type" := GenJnlLine."Account Type"::Vendor;
+        GenJnlLine."Account No." := "Vendor No.";
+        GenJnlLine."Bal. Account Type" := GenJnlLine."Bal. Account Type"::"G/L Account";
+        GenJnlLine."Bal. Account No." := GetBalAccountFromVendor();
+        // GenJnlLine."Recipient Bank Account" := "Bank Account No.";
+        GenJnlLine."Payment Method Code" := GetPaymentMethod();
+        GenJnlPostLine.RunWithCheck(GenJnlLine);
     end;
 
     local procedure CreatePDF(Base64String: Text)
