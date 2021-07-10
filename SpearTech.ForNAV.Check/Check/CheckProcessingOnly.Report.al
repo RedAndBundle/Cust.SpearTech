@@ -81,7 +81,11 @@ Report 50101 "PTE Check Processing"
                             Args."One Check Per Vendor" := false;
                         end;
                     }
-                    // TODO Add option to print or save
+                    field(OutputType; Args."PTE Output Type")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        Caption = 'Output Type', Comment = 'DO NOT TRANSLATE';
+                    }
                 }
             }
         }

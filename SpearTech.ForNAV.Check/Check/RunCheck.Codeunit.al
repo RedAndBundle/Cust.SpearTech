@@ -2,7 +2,6 @@ codeunit 50102 "PTE Run Check Report"
 {
 
     internal procedure RunCheckReportPerLine(var Args: Record "ForNAV Check Arguments"; var GenJnlLn: Record "Gen. Journal Line")
-    var
     begin
         GenJnlLn.FindSet();
         repeat
@@ -13,30 +12,34 @@ codeunit 50102 "PTE Run Check Report"
     local procedure ProcessCheck(var Args: Record "ForNAV Check Arguments"; GenJnlLn: Record "Gen. Journal Line")
     var
         TempBlob: Record "ForNAV Core Setup";
-        Check: Report "PTE US Check";
         GenJnlLnFilter: Record "Gen. Journal Line";
+        CheckArgs: Codeunit "PTE Check Args";
         Filename, Parameters : Text;
         OutStr: OutStream;
         InStr: InStream;
-        ArgsRef: RecordRef;
         GenJnlLnRef: RecordRef;
     begin
-        // Check.SetArgs(Args);
         GenJnlLnFilter.Get(GenJnlLn.RecordId);
         GenJnlLnFilter.SetRecFilter();
-        TempBlob.Blob.CreateOutstream(OutStr);
-        TempBlob.Blob.CreateInstream(InStr);
-        // Check.SetTableView(GenJnlLnFilter);
-        // Check.InputBankAccount;
         Args."PTE Document No." := GenJnlLn."Applies-to Doc. No.";
-        Args."PTE GL Entry" := GenJnlLnFilter.RecordId;
-        // TODO Args set bank acc
-        ArgsRef.GetTable(Args);
-        Report.Print(Report::"PTE US Check", Parameters, '', ArgsRef);
+        CheckArgs.SetArgs(Args);
+        GenJnlLnRef.GetTable(GenJnlLnFilter);
 
-        // Check.SaveAs(Parameters, Reportformat::Pdf, OutStr);
-        // Filename := Args."PTE Document No." + '.pdf';
-        // DownloadFromStream(InStr, '', '', '', Filename);
+        case Args."PTE Output Type" of
+            Args."PTE Output Type"::PDF:
+                begin
+                    TempBlob.Blob.CreateOutstream(OutStr);
+                    TempBlob.Blob.CreateInstream(InStr);
+                    Report.SaveAs(Report::"PTE US Check", Parameters, ReportFormat::Pdf, OutStr, GenJnlLnRef);
+                    Filename := Args."PTE Document No." + '.pdf';
+                    DownloadFromStream(InStr, '', '', '', Filename);
+                end;
+            Args."PTE Output Type"::Print:
+                Report.Print(Report::"PTE US Check", Parameters, '', GenJnlLnRef);
+        end;
+
+        CheckArgs.Reset();
+
         if not Args."Test Print" then
             DeletePDF(Args."PTE Document No.");
     end;
@@ -45,8 +48,8 @@ codeunit 50102 "PTE Run Check Report"
     var
         PDFFile: Record "ForNAV File Storage";
     begin
-        PDFFile.Get(Value);
-        PDFFile.Delete();
+        if PDFFile.Get(Value) then
+            PDFFile.Delete();
     end;
 
 }

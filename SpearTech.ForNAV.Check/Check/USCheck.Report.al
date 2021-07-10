@@ -170,6 +170,7 @@ Report 50100 "PTE US Check"
     begin
         ;
         ReportsForNavInit;
+        GetArgsFromSingleInstance();
     end;
 
     trigger OnPostReport()
@@ -180,16 +181,15 @@ Report 50100 "PTE US Check"
     trigger OnPreReport()
     var
         PDFFile: Record "ForNAV File Storage";
+        // GenJournalLine: Record "Gen. Journal Line";
         is: InStream;
     begin
-
         Codeunit.Run(Codeunit::"ForNAV First Time Setup");
         Commit;
         CheckSetupIsValid;
         LoadWatermark;
         Args.TestMandatoryFields;
-        if VoidGenJnlLine.Get(Args."PTE GL Entry") then
-            VoidGenJnlLine.SetRecFilter();
+
         if CurrReport.Preview then
             Args."Test Print" := true;
         if PDFFile.Get(Args."PTE Document No.") then begin
@@ -203,6 +203,13 @@ Report 50100 "PTE US Check"
 
     var
         AmountCannotBeNegativeErr: Label 'The total amount for %1 %2 cannot be negative', Comment = 'DO NOT TRANSLATE';
+
+    local procedure GetArgsFromSingleInstance()
+    var
+        CheckArgs: Codeunit "PTE Check Args";
+    begin
+        Args := CheckArgs.GetArgs();
+    end;
 
     procedure SetArgs(Value: Record "ForNAV Check Arguments")
     begin

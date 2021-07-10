@@ -11,7 +11,8 @@ Page 50101 "PTE Check Nos."
     APIPublisher = 'speartech';
     APIGroup = 'check';
     APIVersion = 'v2.0';
-    SourceTable = "Check Ledger Entry";
+    SourceTable = "Bank Account Ledger Entry";
+    SourceTableView = where("Document Type" = const(Payment));
 
     layout
     {
@@ -19,7 +20,7 @@ Page 50101 "PTE Check Nos."
         {
             repeater(Group)
             {
-                field(checkNo; Rec."Check No.") { ApplicationArea = Basic; }
+                field(checkNo; Rec."Document No.") { ApplicationArea = Basic; }
                 field(id; Rec.SystemId) { ApplicationArea = Basic; }
                 field(createdAt; Rec.SystemCreatedAt) { ApplicationArea = Basic; }
                 field(documentNo; Rec."Document No.") { ApplicationArea = Basic; }
