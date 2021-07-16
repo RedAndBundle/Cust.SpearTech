@@ -28,6 +28,7 @@ codeunit 50102 "PTE Run Check Report"
         case Args."PTE Output Type" of
             Args."PTE Output Type"::PDF:
                 begin
+                    // TODO store in zip file and offer that for download.
                     TempBlob.Blob.CreateOutstream(OutStr);
                     TempBlob.Blob.CreateInstream(InStr);
                     Report.SaveAs(Report::"PTE US Check", Parameters, ReportFormat::Pdf, OutStr, GenJnlLnRef);
