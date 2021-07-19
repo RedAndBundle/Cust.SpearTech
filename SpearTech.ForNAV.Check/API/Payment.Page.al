@@ -1,4 +1,4 @@
-Page 50100 "PTE Payment Entity"
+Page 80400 "PTE Payment Entity"
 {
     DelayedInsert = true;
     DeleteAllowed = false;

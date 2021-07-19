@@ -1,4 +1,4 @@
-codeunit 50101 "PTE Check Args"
+codeunit 80401 "PTE Check Args"
 {
     SingleInstance = true;
 

@@ -1,9 +1,9 @@
-tableextension 50101 "PTE Check Arguments" extends "ForNAV Check Arguments"
+tableextension 80401 "PTE Check Arguments" extends "ForNAV Check Arguments"
 {
     fields
     {
-        field(50100; "PTE Document No."; Code[20]) { DataClassification = ToBeClassified; }
-        field(50101; "PTE Output Type"; Option)
+        field(80400; "PTE Document No."; Code[20]) { DataClassification = ToBeClassified; }
+        field(80401; "PTE Output Type"; Option)
         {
             OptionMembers = "Print","PDF";
             OptionCaption = 'Print,PDF';

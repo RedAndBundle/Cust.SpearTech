@@ -43,6 +43,26 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Vendor No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2499177229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PDF Merge</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE PDF Merge - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2499177229 - Field 3926698677 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blob</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE PDF Merge - Field Blob - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2499177229 - Field 1545435603 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Filename</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE PDF Merge - Field Filename - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2499177229 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE PDF Merge - Field Primary Key - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 219769631 - Field 3852983238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>G/L Account No.</source>
           <note from="Developer" annotates="general" priority="2"></note>

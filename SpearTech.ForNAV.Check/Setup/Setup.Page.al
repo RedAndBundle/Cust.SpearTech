@@ -1,4 +1,4 @@
-page 50110 "PTE Spear Technologies Setup"
+page 80410 "PTE Spear Technologies Setup"
 {
     PageType = Card;
     ApplicationArea = All;

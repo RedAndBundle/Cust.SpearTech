@@ -1,4 +1,4 @@
-table 50110 "PTE Spear Technology Setup"
+table 80410 "PTE Spear Technology Setup"
 {
     DataClassification = ToBeClassified;
 

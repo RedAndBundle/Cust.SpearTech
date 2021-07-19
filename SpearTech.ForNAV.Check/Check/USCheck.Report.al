@@ -1,4 +1,4 @@
-Report 50100 "PTE US Check"
+Report 80400 "PTE US Check"
 {
     Caption = 'SpearTech Check';
     WordLayout = './Layouts/SpearTech US Check.docx';

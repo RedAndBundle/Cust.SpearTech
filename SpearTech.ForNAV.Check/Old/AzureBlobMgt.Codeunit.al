@@ -1,4 +1,4 @@
-codeunit 50100 "PTE Azure Blob Mgt."
+codeunit 80400 "PTE Azure Blob Mgt."
 {
 
     procedure GetBlobFromAzure(Value: Code[50]) ResponseText: InStream

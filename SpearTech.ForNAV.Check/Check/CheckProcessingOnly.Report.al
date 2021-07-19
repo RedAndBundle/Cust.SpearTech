@@ -1,4 +1,4 @@
-Report 50101 "PTE Check Processing"
+Report 80401 "PTE Check Processing"
 {
     Caption = 'SpearTech Check Batch';
     ProcessingOnly = true;
@@ -104,6 +104,7 @@ Report 50101 "PTE Check Processing"
             if not Args.Get then
                 Args.Insert;
             InputBankAccount;
+            Args."PTE Output Type" := Args."PTE Output Type"::PDF;
         end;
     }
 

@@ -1,4 +1,4 @@
-Codeunit 50148 "PTE Test Check Report"
+Codeunit 80448 "PTE Test Check Report"
 {
     Subtype = Test;
     [Test]

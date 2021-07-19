@@ -1,4 +1,4 @@
-table 50100 "PTE Payment Interface"
+table 80400 "PTE Payment Interface"
 {
     DataClassification = SystemMetadata;
     TableType = Temporary;

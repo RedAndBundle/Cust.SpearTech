@@ -1,4 +1,4 @@
-codeunit 50149 "PTE Test Interface"
+codeunit 80449 "PTE Test Interface"
 {
     Subtype = Test;
 
