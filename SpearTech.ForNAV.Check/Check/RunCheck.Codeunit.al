@@ -43,17 +43,6 @@ codeunit 80402 "PTE Run Check Report"
         end;
 
         CheckArgs.Reset();
-
-        // if not Args."Test Print" then
-        //     DeletePDF(Args."PTE Document No.");
-    end;
-
-    local procedure DeletePDF(Value: Code[20])
-    var
-        PDFFile: Record "PTE Check Data";
-    begin
-        if PDFFile.Get(Value) then
-            PDFFile.Delete(); // TODO delete check on post Gen Ledger Entry
     end;
 
 }
