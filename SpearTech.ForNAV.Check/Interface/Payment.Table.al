@@ -13,6 +13,15 @@ table 80400 "PTE Payment Interface"
         field(6; "External Document No."; Code[35]) { DataClassification = SystemMetadata; }
         field(7; Description; Text[50]) { DataClassification = SystemMetadata; }
         field(8; "Posting Date"; Date) { DataClassification = SystemMetadata; }
+        field(20; "Client"; Text[250]) { DataClassification = SystemMetadata; }
+        field(21; "TIN SSN"; Text[250]) { DataClassification = SystemMetadata; }
+        field(22; "Claim Number"; Text[250]) { DataClassification = SystemMetadata; }
+        field(23; "Claimant Name"; Text[250]) { DataClassification = SystemMetadata; }
+        field(24; "Loss Date"; Date) { DataClassification = SystemMetadata; }
+        field(25; "Payment Type"; Text[250]) { DataClassification = SystemMetadata; }
+        field(26; "From Date"; Date) { DataClassification = SystemMetadata; }
+        field(27; "Through Date"; Date) { DataClassification = SystemMetadata; }
+        field(28; "Invoice Date"; Date) { DataClassification = SystemMetadata; }
 
     }
 
@@ -21,18 +30,15 @@ table 80400 "PTE Payment Interface"
     procedure ProcessPaymentInterface(Base64String: Text): Text
     begin
         CreateVendorLedgerEntry();
-        CreatePDF(Base64String);
+        CreateCheckData(Base64String);
         CreatePaymentJournalLine();
         exit('Vendor Ledger Entries created and Payment Journal prepared in ' + GetPaymentJournalBatch().Name);
     end;
 
     local procedure CreatePaymentJournalLine()
     var
-        x: Report "Suggest Vendor Payments";
-        Vendor: Record Vendor;
         GenJnlLine: Record "Gen. Journal Line";
     begin
-        // TODO external document no not copied to check ledger entry. Use Bank Ledger Entries for ext doc no?
         GenJnlLine.SetRange("Journal Template Name", GetPaymentJournalBatch()."Journal Template Name");
         GenJnlLine.SetRange("Journal Batch Name", GetPaymentJournalBatch().Name);
         if GenJnlLine.FindLast() then
@@ -46,17 +52,6 @@ table 80400 "PTE Payment Interface"
         GenJnlLine."Journal Template Name" := GetPaymentJournalBatch()."Journal Template Name";
         GenJnlLine."Journal Batch Name" := GetPaymentJournalBatch().Name;
         GenJnlLine."Document No." := "Document No.";
-        //         "Document No." := NextDocNo;
-        //         IncrementDocumentNo(GenJnlBatch, NextDocNo);
-        //     end else
-        //         if (TempPaymentBuffer."Vendor No." = OldTempPaymentBuffer."Vendor No.") and
-        //            (TempPaymentBuffer."Currency Code" = OldTempPaymentBuffer."Currency Code")
-        //         then
-        //             "Document No." := OldTempPaymentBuffer."Document No."
-        //         else begin
-        //             "Document No." := NextDocNo;
-
-        //             IncrementDocumentNo(GenJnlBatch, NextDocNo);
 
         GenJnlLine."Account Type" := GenJnlLine."Account Type"::Vendor;
         GenJnlLine.SetHideValidation(true);
@@ -104,18 +99,27 @@ table 80400 "PTE Payment Interface"
         GenJnlPostLine.RunWithCheck(GenJnlLine);
     end;
 
-    local procedure CreatePDF(Base64String: Text)
+    local procedure CreateCheckData(Base64String: Text)
     var
-        PDFFile: Record "ForNAV File Storage";
+        CheckData: Record "PTE Check Data";
         Base64Convert: Codeunit "Base64 Convert";
         OutStr: OutStream;
     begin
-        PDFFile.Code := "Document No.";
-        PDFFile.Data.CreateOutStream(OutStr);
-        // OutStr.WriteText(Base64Convert.FromBase64(Base64String));
-        Base64Convert.FromBase64(Base64String, OutStr);
-        PDFFile.Filename := "Document No." + '.pdf';
-        PDFFile.Insert();
+        CheckData."Document Number" := "Document No.";
+        if Base64String <> '' then begin
+            CheckData.PDF.CreateOutStream(OutStr);
+            Base64Convert.FromBase64(Base64String, OutStr);
+            CheckData.Filename := "Document No." + '.pdf';
+        end;
+        CheckData.Client := Client;
+        CheckData."TIN SSN" := "TIN SSN";
+        CheckData."Claim Number" := "Claim Number";
+        CheckData."Claimant Name" := "Claimant Name";
+        CheckData."Loss Date" := "Loss Date";
+        CheckData."Payment Type" := "Payment Type";
+        CheckData."From Date" := "From Date";
+        CheckData."Through Date" := "Through Date";
+        CheckData.Insert();
     end;
 
     local procedure GetBalAccountFromVendor(): Code[20]

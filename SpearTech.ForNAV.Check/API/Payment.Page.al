@@ -27,6 +27,16 @@ Page 80400 "PTE Payment Entity"
                 field(paymentSpecificationPDF; paymentSpecificationPDF) { ApplicationArea = Basic; }
                 field(description; Rec.Description) { ApplicationArea = Basic; }
                 field(postingDate; Rec."Posting Date") { ApplicationArea = Basic; }
+                field(client; Rec.Client) { ApplicationArea = Basic; }
+                field(tlnSsn; Rec."TIN SSN") { ApplicationArea = Basic; }
+                field(claimNumber; Rec."Claim Number") { ApplicationArea = Basic; }
+                field(claimantName; Rec."Claimant Name") { ApplicationArea = Basic; }
+                field(lossDate; Rec."Loss Date") { ApplicationArea = Basic; }
+                field(paymentType; Rec."Payment Type") { ApplicationArea = Basic; }
+                field(fromDate; Rec."From Date") { ApplicationArea = Basic; }
+                field(throughDate; Rec."Through Date") { ApplicationArea = Basic; }
+                field(invoiceDate; Rec."Invoice Date") { ApplicationArea = Basic; }
+
                 field(result; Result) { ApplicationArea = Basic; }
             }
         }

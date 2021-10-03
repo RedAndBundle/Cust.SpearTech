@@ -8,7 +8,7 @@ codeunit 80449 "PTE Test Interface"
         PaymentInterface: Record "PTE Payment Interface";
         GLEntry: Record "G/L Entry";
         VendLedEnt: Record "Vendor Ledger Entry";
-        PDFFile: Record "ForNAV File Storage";
+        PDFFile: Record "PTE Check Data";
         TestLib: Codeunit "PTE Test Library";
         is: InStream;
         Base64Conv: Codeunit "Base64 Convert";
@@ -32,8 +32,8 @@ codeunit 80449 "PTE Test Interface"
         VendLedEnt.TestField("Original Amount", PaymentInterface."Amount (USD)");
 
         PDFFile.Get(PaymentInterface."Document No.");
-        PDFFile.CalcFields(Data);
-        PDFFile.Data.CreateInStream(is);
+        PDFFile.CalcFields(PDF);
+        PDFFile.PDF.CreateInStream(is);
         is.ReadText(Base64Text);
         Base64Text := Base64Conv.ToBase64(Base64Text);
         if Base64Text <> TestLib.GetSampleBase64PDF() then

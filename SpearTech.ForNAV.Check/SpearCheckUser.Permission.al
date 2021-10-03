@@ -1,5 +1,8 @@
-permissionsetextension 80400 "PTE D365 BASIC" extends "D365 BASIC"
+permissionset 80402 "PTE SpearCheckUser"
 {
+    Caption = 'Spear Check User';
+    Assignable = true;
+
     Permissions =
         tabledata "PTE Check Data" = R,
         tabledata "PTE Spear Technology Setup" = R;

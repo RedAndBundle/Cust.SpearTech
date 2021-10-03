@@ -3,6 +3,76 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="SpearTech.ForNAV.Check">
     <body>
       <group id="body">
+        <trans-unit id="Table 1880891065 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 1125891435 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Claim Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Claim Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 1674648098 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Claimant Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Claimant Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 1169754739 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Client - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 628925288 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Document Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 1527563463 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field External Document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 1545435603 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Filename - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 2110632758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>From Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field From Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 4286292223 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Invoice Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 4080191793 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Loss Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Loss Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 907492870 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Payment Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 3731179934 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PDF</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field PDF - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 1072870329 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Through Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Through Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 798277719 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TIN/SSN</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field TIN SSN - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1159935010 - Field 522698873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount (USD)</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -12,6 +82,21 @@
           <source>Bank Account No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Bank Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 1125891435 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Claim Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Claim Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 1674648098 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Claimant Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Claimant Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 1169754739 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Client</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Client - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1159935010 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
@@ -28,15 +113,45 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field External Document No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 2110632758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>From Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field From Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 4286292223 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Invoice Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 4080191793 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Loss Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Loss Date - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1159935010 - Field 3566004263 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Payment Method</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Payment Method - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 907492870 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Payment Type - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1159935010 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posting Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Posting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 1072870329 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Through Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Through Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 798277719 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TIN SSN</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field TIN SSN - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1159935010 - Field 1527594213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Vendor No.</source>
@@ -88,6 +203,36 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field Primary Key - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1946149876 - Field 486908828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Void Interface - Field Document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1946149876 - Field 1527594213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Void Interface - Field Vendor No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1880891065 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check Data - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1880891065 - Control 989751795 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PDF</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check Data - Control FileName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1880891065 - Action 4087602994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Downloads the PDF.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check Data - Action ViewLogo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1880891065 - Action 4087602994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View PDF</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check Data - Action ViewLogo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3001911709 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -127,11 +272,6 @@
           <source>Output Type</source>
           <note from="Developer" annotates="general" priority="2">DO NOT TRANSLATE</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report PTE Check Processing - Control OutputType - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Report 1058662544 - Control 2992590101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Reprint Checks</source>
-          <note from="Developer" annotates="general" priority="2">DO NOT TRANSLATE</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Check Processing - Control ReprintChecks - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1058662544 - Control 4054877177 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Test Print</source>
@@ -197,6 +337,16 @@
           <source>Print,PDF</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Check Arguments - Field PTE Output Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 1545580143 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Spear Check Admin</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet PTE SpearCheckAdmin - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 1935029213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Spear Check User</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet PTE SpearCheckUser - Property Caption</note>
         </trans-unit>
       </group>
     </body>

@@ -66,11 +66,11 @@ Report 80401 "PTE Check Processing"
                             Args.TestField("Test Print", false);
                         end;
                     }
-                    field(ReprintChecks; Args."Reprint Checks")
-                    {
-                        ApplicationArea = Basic, Suite;
-                        Caption = 'Reprint Checks', Comment = 'DO NOT TRANSLATE';
-                    }
+                    // field(ReprintChecks; Args."Reprint Checks")
+                    // {
+                    //     ApplicationArea = Basic, Suite;
+                    //     Caption = 'Reprint Checks', Comment = 'DO NOT TRANSLATE';
+                    // }
                     field(TestPrinting; Args."Test Print")
                     {
                         ApplicationArea = Basic, Suite;

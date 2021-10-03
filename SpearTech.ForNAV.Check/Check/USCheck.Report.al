@@ -180,7 +180,7 @@ Report 80400 "PTE US Check"
 
     trigger OnPreReport()
     var
-        PDFFile: Record "ForNAV File Storage";
+        PDFFile: Record "PTE Check Data";
         // GenJournalLine: Record "Gen. Journal Line";
         is: InStream;
     begin
@@ -193,9 +193,11 @@ Report 80400 "PTE US Check"
         if CurrReport.Preview then
             Args."Test Print" := true;
         if PDFFile.Get(Args."PTE Document No.") then begin
-            PDFFile.CalcFields(Data);
-            PDFFile.Data.CreateInStream(is);
-            ReportForNav.SetAppendPdf('Args', is);
+            PDFFile.CalcFields(PDF);
+            if PDFFile.PDF.HasValue() then begin
+                PDFFile.PDF.CreateInStream(is);
+                ReportForNav.SetAppendPdf('Args', is);
+            end;
         end;
         ReportsForNavPre;
 

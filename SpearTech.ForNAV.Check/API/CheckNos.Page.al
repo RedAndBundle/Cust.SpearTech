@@ -25,6 +25,7 @@ Page 80401 "PTE Check Nos."
                 field(createdAt; Rec.SystemCreatedAt) { ApplicationArea = Basic; }
                 field(documentNo; Rec."Document No.") { ApplicationArea = Basic; }
                 field(externalDocumentNo; Rec."External Document No.") { ApplicationArea = Basic; }
+                field(Amount; -Rec.Amount) { ApplicationArea = basic; }
             }
         }
     }

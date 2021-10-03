@@ -84,7 +84,7 @@ Codeunit 80448 "PTE Test Check Report"
     local procedure CreatePDFForJournal()
     var
         GenJnlLn: Record "Gen. Journal Line";
-        PDFFile: Record "ForNAV File Storage";
+        PDFFile: Record "PTE Check Data";
     begin
         GenJnlLn.SetRange("Journal Template Name", TestLib.GetJournalTemplate);
         GenJnlLn.SetRange("Journal Batch Name", TestLib.GetJournalBatch);
@@ -164,12 +164,12 @@ Codeunit 80448 "PTE Test Check Report"
 
     local procedure CreatePDF(DocumentNo: Code[20]; Base64String: Text)
     var
-        PDFFile: Record "ForNAV File Storage";
+        PDFFile: Record "PTE Check Data";
         Base64Convert: Codeunit "Base64 Convert";
         OutStr: OutStream;
     begin
-        PDFFile.Code := DocumentNo;
-        PDFFile.Data.CreateOutStream(OutStr);
+        PDFFile."Document Number" := DocumentNo;
+        PDFFile.PDF.CreateOutStream(OutStr);
         OutStr.WriteText(Base64Convert.FromBase64(Base64String));
         PDFFile.Insert();
     end;
