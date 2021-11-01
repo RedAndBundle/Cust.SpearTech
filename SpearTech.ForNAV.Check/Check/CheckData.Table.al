@@ -13,7 +13,7 @@ table 80402 "PTE Check Data"
         field(2; "External Document No."; Code[35])
         {
             DataClassification = CustomerContent;
-            Caption = 'Code';
+            Caption = 'External Document No.';
         }
         field(3; "PDF"; Blob)
         {

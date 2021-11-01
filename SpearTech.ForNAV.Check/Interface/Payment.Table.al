@@ -119,6 +119,7 @@ table 80400 "PTE Payment Interface"
         CheckData."Payment Type" := "Payment Type";
         CheckData."From Date" := "From Date";
         CheckData."Through Date" := "Through Date";
+        CheckData."Invoice Date" := "Invoice Date";
         CheckData.Insert();
     end;
 

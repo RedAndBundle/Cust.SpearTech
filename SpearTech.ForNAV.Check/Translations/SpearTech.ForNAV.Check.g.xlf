@@ -29,7 +29,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Document Number - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1880891065 - Field 1527563463 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Code</source>
+          <source>External Document No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field External Document No. - Property Caption</note>
         </trans-unit>
@@ -232,6 +232,11 @@
           <source>View PDF</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check Data - Action ViewLogo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3001911709 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Spear Technologies Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Spear Technologies Setup - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3001911709 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>

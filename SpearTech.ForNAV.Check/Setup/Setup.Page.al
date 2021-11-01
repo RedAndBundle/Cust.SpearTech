@@ -6,6 +6,7 @@ page 80410 "PTE Spear Technologies Setup"
     SourceTable = "PTE Spear Technology Setup";
     InsertAllowed = false;
     DeleteAllowed = false;
+    Caption = 'Spear Technologies Setup';
 
     layout
     {

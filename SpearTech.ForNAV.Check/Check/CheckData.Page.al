@@ -13,7 +13,6 @@ page 80402 "PTE Check Data"
             repeater(Group)
             {
                 field("Document Number"; Rec."Document Number") { ApplicationArea = Basic; }
-                field("External Document No."; Rec."External Document No.") { ApplicationArea = Basic; }
                 field(FileName; Rec.Filename)
                 {
                     ApplicationArea = Basic;
