@@ -8,12 +8,33 @@ Report 80401 "PTE Check Processing"
         {
             DataItemTableView = sorting("Primary Key");
             UseTemporary = true;
+            dataitem(VoidGenJnlLine; "Gen. Journal Line")
+            {
+                DataItemTableView = sorting("Journal Template Name", "Journal Batch Name", "Posting Date", "Document No.");
+                trigger OnPreDataItem();
+                var
+                    TestVoidCheck: Codeunit "ForNAV Test Void Check";
+                begin
+                    VoidGenJnlLine.SetFilter("Bal. Account No.", '%1|%2', '', Args."Bank Account No.");
+                    if not TestVoidCheck.TestVoidCheck(VoidGenJnlLine, Args, CurrReport.Preview) then
+                        CurrReport.Break;
+                end;
+
+                trigger OnAfterGetRecord();
+                var
+                    CheckManagement: Codeunit CheckManagement;
+                begin
+                    CheckManagement.VoidCheck(VoidGenJnlLine);
+                end;
+
+            }
             dataitem(GenJnlLnBuffer; "Gen. Journal Line")
             {
                 DataItemTableView = sorting("Journal Template Name", "Journal Batch Name", "Line No.");
                 UseTemporary = true;
                 trigger OnPreDataItem();
                 begin
+                    Args."Reprint Checks" := false;
                     CreateGenJnlLnBuffer;
                 end;
 
@@ -66,11 +87,11 @@ Report 80401 "PTE Check Processing"
                             Args.TestField("Test Print", false);
                         end;
                     }
-                    // field(ReprintChecks; Args."Reprint Checks")
-                    // {
-                    //     ApplicationArea = Basic, Suite;
-                    //     Caption = 'Reprint Checks', Comment = 'DO NOT TRANSLATE';
-                    // }
+                    field(ReprintChecks; Args."Reprint Checks")
+                    {
+                        ApplicationArea = Basic, Suite;
+                        Caption = 'Reprint Checks', Comment = 'DO NOT TRANSLATE';
+                    }
                     field(TestPrinting; Args."Test Print")
                     {
                         ApplicationArea = Basic, Suite;

@@ -23,7 +23,7 @@ Report 80400 "PTE US Check"
                 var
                     TestVoidCheck: Codeunit "ForNAV Test Void Check";
                 begin
-                    VoidGenJnlLine.SetRange("Bal. Account No.", Args."Bank Account No.");
+                    VoidGenJnlLine.SetFilter("Bal. Account No.", '%1|%2', '', Args."Bank Account No.");
                     if not TestVoidCheck.TestVoidCheck(VoidGenJnlLine, Args, CurrReport.Preview) then
                         CurrReport.Break;
                     ReportForNav.OnPreDataItem('VoidGenJnlLine', VoidGenJnlLine);
@@ -166,6 +166,8 @@ Report 80400 "PTE US Check"
             ReportForNavOpenDesigner := false;
             if not Args.Get then
                 Args.Insert;
+
+            GetBankAccFromFirstGnlLine();
             InputBankAccount;
         end;
     }
@@ -179,12 +181,6 @@ Report 80400 "PTE US Check"
 
     trigger OnPostReport()
     begin
-
-
-
-
-
-
     end;
 
     trigger OnPreReport()
@@ -238,6 +234,17 @@ Report 80400 "PTE US Check"
             BankAccount.TestField("Last Check No.");
             Args."Check No." := BankAccount."Last Check No.";
         end;
+    end;
+
+    local procedure GetBankAccFromFirstGnlLine()
+    var
+        GenJournalLine: Record "Gen. Journal Line";
+    begin
+        GenJournalLine.CopyFilters(VoidGenJnlLine);
+        GenJournalLine.SetRange("Bal. Account Type", GenJournalLine."Bal. Account Type"::"Bank Account");
+        GenJournalLine.SetFilter("Bal. Account No.", '<>%1', '');
+        if GenJournalLine.FindFirst() then
+            Args."Bank Account No." := GenJournalLine."Bal. Account No.";
     end;
 
     local procedure CheckSetupIsValid()

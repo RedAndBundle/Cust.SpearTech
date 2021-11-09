@@ -48,6 +48,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Invoice Date - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 166038250 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Invoice No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1880891065 - Field 4080191793 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Loss Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -122,6 +127,11 @@
           <source>Invoice Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Invoice Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 166038250 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Invoice No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1159935010 - Field 4080191793 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Loss Date</source>
@@ -277,6 +287,11 @@
           <source>Output Type</source>
           <note from="Developer" annotates="general" priority="2">DO NOT TRANSLATE</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report PTE Check Processing - Control OutputType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1058662544 - Control 2992590101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reprint Checks</source>
+          <note from="Developer" annotates="general" priority="2">DO NOT TRANSLATE</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Check Processing - Control ReprintChecks - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1058662544 - Control 4054877177 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Test Print</source>

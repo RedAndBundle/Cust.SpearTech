@@ -70,6 +70,11 @@ table 80402 "PTE Check Data"
             Caption = 'Invoice Date';
             DataClassification = SystemMetadata;
         }
+        field(29; "Invoice No."; Code[35])
+        {
+            Caption = 'Invoice No.';
+            DataClassification = SystemMetadata;
+        }
     }
 
     keys

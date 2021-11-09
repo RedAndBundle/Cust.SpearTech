@@ -28,6 +28,7 @@ page 80402 "PTE Check Data"
                 field("From Date"; Rec."From Date") { ApplicationArea = Basic; }
                 field("Through Date"; Rec."Through Date") { ApplicationArea = Basic; }
                 field("Invoice Date"; Rec."Invoice Date") { ApplicationArea = Basic; }
+                field("Invoice No."; Rec."Invoice No.") { ApplicationArea = Basic; }
             }
         }
         area(Factboxes)

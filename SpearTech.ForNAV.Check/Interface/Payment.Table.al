@@ -22,6 +22,7 @@ table 80400 "PTE Payment Interface"
         field(26; "From Date"; Date) { DataClassification = SystemMetadata; }
         field(27; "Through Date"; Date) { DataClassification = SystemMetadata; }
         field(28; "Invoice Date"; Date) { DataClassification = SystemMetadata; }
+        field(29; "Invoice No."; Code[35]) { DataClassification = SystemMetadata; }
 
     }
 
@@ -59,7 +60,6 @@ table 80400 "PTE Payment Interface"
         GenJnlLine.Validate("Account No.", "Vendor No.");
         GenJnlLine."Bal. Account Type" := GenJnlLine."Bal. Account Type"::"Bank Account";
         GenJnlLine.Validate("Bal. Account No.", GetBankAccount."No.");
-        // "Message to Recipient" := GetMessageToRecipient(SummarizePerVend); TODO Can we use this?
         case "Payment Method" of
             "Payment Method"::Check:
                 GenJnlLine."Bank Payment Type" := GenJnlLine."Bank Payment Type"::"Computer Check";
@@ -74,7 +74,10 @@ table 80400 "PTE Payment Interface"
         GenJnlLine."Applies-to Doc. Type" := GenJnlLine."Applies-to Doc. Type"::Invoice;
         GenJnlLine."Applies-to Doc. No." := "Document No.";
         GenJnlLine."Payment Method Code" := GetPaymentMethod();
-        GenJnlLine."External Document No." := "External Document No.";
+        if "External Document No." = '' then
+            GenJnlLine."External Document No." := "Document No."
+        else
+            GenJnlLine."External Document No." := "External Document No.";
         GenJnlLine.Insert();
     end;
 
@@ -86,7 +89,10 @@ table 80400 "PTE Payment Interface"
         GenJnlLine.Init();
         GenJnlLine."Document No." := "Document No.";
         GenJnlLine."Document Type" := GenJnlLine."Document Type"::Invoice;
-        GenJnlLine."External Document No." := "External Document No.";
+        if "External Document No." = '' then
+            GenJnlLine."External Document No." := "Document No."
+        else
+            GenJnlLine."External Document No." := "External Document No.";
         GenJnlLine."Posting Date" := "Posting Date";
         GenJnlLine.Description := Description;
         GenJnlLine.Amount := -"Amount (USD)";
@@ -120,6 +126,7 @@ table 80400 "PTE Payment Interface"
         CheckData."From Date" := "From Date";
         CheckData."Through Date" := "Through Date";
         CheckData."Invoice Date" := "Invoice Date";
+        CheckData."Invoice No." := "Invoice No.";
         CheckData.Insert();
     end;
 
