@@ -23,6 +23,8 @@ table 80400 "PTE Payment Interface"
         field(27; "Through Date"; Date) { DataClassification = SystemMetadata; }
         field(28; "Invoice Date"; Date) { DataClassification = SystemMetadata; }
         field(29; "Invoice No."; Code[35]) { DataClassification = SystemMetadata; }
+        field(30; "Carrier Name 1"; Text[250]) { DataClassification = SystemMetadata; }
+        field(31; "Carrier Name 2"; Text[250]) { DataClassification = SystemMetadata; }
 
     }
 
@@ -127,6 +129,8 @@ table 80400 "PTE Payment Interface"
         CheckData."Through Date" := "Through Date";
         CheckData."Invoice Date" := "Invoice Date";
         CheckData."Invoice No." := "Invoice No.";
+        CheckData."Carrier Name 1" := "Carrier Name 1";
+        CheckData."Carrier Name 2" := "Carrier Name 2";
         CheckData.Insert();
     end;
 

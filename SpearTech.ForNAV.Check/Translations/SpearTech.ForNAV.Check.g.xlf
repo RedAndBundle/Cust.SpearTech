@@ -8,6 +8,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 4214297126 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Carrier Name 1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Carrier Name 1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 2301207275 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Carrier Name 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Carrier Name 2 - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1880891065 - Field 1125891435 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Claim Number</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -87,6 +97,16 @@
           <source>Bank Account No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Bank Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 4214297126 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Carrier Name 1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Carrier Name 1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 2301207275 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Carrier Name 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Carrier Name 2 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1159935010 - Field 1125891435 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Claim Number</source>

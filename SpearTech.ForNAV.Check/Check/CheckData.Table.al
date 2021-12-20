@@ -75,6 +75,16 @@ table 80402 "PTE Check Data"
             Caption = 'Invoice No.';
             DataClassification = SystemMetadata;
         }
+        field(30; "Carrier Name 1"; Text[250])
+        {
+            Caption = 'Carrier Name 1';
+            DataClassification = SystemMetadata;
+        }
+        field(31; "Carrier Name 2"; Text[250])
+        {
+            Caption = 'Carrier Name 2';
+            DataClassification = SystemMetadata;
+        }
     }
 
     keys
