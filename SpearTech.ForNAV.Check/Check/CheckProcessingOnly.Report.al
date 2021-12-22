@@ -30,10 +30,11 @@ Report 80401 "PTE Check Processing"
             }
             dataitem(GenJnlLnBuffer; "Gen. Journal Line")
             {
-                DataItemTableView = sorting("Journal Template Name", "Journal Batch Name", "Line No.");
                 UseTemporary = true;
+                DataItemTableView = sorting("Journal Template Name", "Journal Batch Name", "Line No.");
                 trigger OnPreDataItem();
                 begin
+                    GenJnlLnBuffer.Reset();
                     Args."Reprint Checks" := false;
                     CreateGenJnlLnBuffer;
                 end;
@@ -124,6 +125,7 @@ Report 80401 "PTE Check Processing"
         begin
             if not Args.Get then
                 Args.Insert;
+            GetBankAccFromFirstGnlLine();
             InputBankAccount;
             Args."PTE Output Type" := Args."PTE Output Type"::PDF;
         end;
@@ -146,6 +148,17 @@ Report 80401 "PTE Check Processing"
     procedure SetArgs(Value: Record "ForNAV Check Arguments")
     begin
         Args := Value;
+    end;
+
+    local procedure GetBankAccFromFirstGnlLine()
+    var
+        GenJournalLine: Record "Gen. Journal Line";
+    begin
+        GenJournalLine.CopyFilters(VoidGenJnlLine);
+        GenJournalLine.SetRange("Bal. Account Type", GenJournalLine."Bal. Account Type"::"Bank Account");
+        GenJournalLine.SetFilter("Bal. Account No.", '<>%1', '');
+        if GenJournalLine.FindFirst() then
+            Args."Bank Account No." := GenJournalLine."Bal. Account No.";
     end;
 
     procedure InputBankAccount()
@@ -177,7 +190,7 @@ Report 80401 "PTE Check Processing"
             GenJnlLnBuffer.Init;
             GenJnlLnBuffer.Insert;
         end else begin
-            // GenJnlLn.Copy(VoidGenJnlLine);
+            GenJnlLn.Copy(VoidGenJnlLine);
             if not Args."Test Print" then begin
                 GenJnlLn.SetRange(GenJnlLn."Bank Payment Type", GenJnlLn."bank payment type"::"Computer Check");
                 GenJnlLn.SetRange(GenJnlLn."Check Printed", false);

@@ -57,6 +57,7 @@ Report 80400 "PTE US Check"
                 }
                 trigger OnPreDataItem();
                 begin
+                    GenJnlLnBuffer.Reset();
                     CreateGenJnlLnBuffer;
                     ReportForNav.OnPreDataItem('GenJnlLnBuffer', GenJnlLnBuffer);
                 end;
@@ -181,6 +182,7 @@ Report 80400 "PTE US Check"
 
     trigger OnPostReport()
     begin
+
 
     end;
 
