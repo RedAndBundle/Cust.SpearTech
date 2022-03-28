@@ -31,7 +31,7 @@ codeunit 80401 "PTE Check Args"
         CopyStream(os, is);
     end;
 
-    procedure GetMergedCheck() is: InStream
+    procedure GetMergedCheck(var is: InStream)
     begin
         MergedCheck.CreateInstream(is);
     end;

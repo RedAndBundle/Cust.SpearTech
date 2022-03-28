@@ -213,6 +213,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field G/L Account No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 219769631 - Field 3679404599 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generate Check Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field Generate Check Type - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 219769631 - Field 1549154094 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Payment Method (Check)</source>
           <note from="Developer" annotates="general" priority="2"></note>

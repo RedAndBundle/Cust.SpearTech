@@ -194,7 +194,7 @@ Report 80400 "PTE US Check"
         PDFFile: Record "PTE Check Data";
         Setup: Record "PTE Spear Technology Setup";
         CheckArgs: Codeunit "PTE Check Args";
-        is: InStream;
+        is, is2 : InStream;
     begin
         Codeunit.Run(Codeunit::"ForNAV First Time Setup");
         Commit;
@@ -213,7 +213,8 @@ Report 80400 "PTE US Check"
             end;
         end;
         if Setup."Generate Check Type" = Setup."Generate Check Type"::PDF then
-            ReportForNav.SetPrependPdf('Args', CheckArgs.GetMergedCheck());
+            CheckArgs.GetMergedCheck(is2);
+        ReportForNav.SetPrependPdf('Args', is2);
         ;
         ReportsForNavPre;
 
