@@ -23,20 +23,21 @@ codeunit 80401 "PTE Check Args"
         Args.DeleteAll();
     end;
 
-    procedure SetMergedCheck(var os: OutStream)
-    var
-        is: InStream;
+    procedure SetMergedCheck(var TempBlobIn: Record "PTE PDF Merge")
     begin
-        MergedCheck.CreateInStream(is);
-        CopyStream(os, is);
+        TempBlob := TempBlobIn;
+        TempBlob.Blob := TempBlobIn.Blob;
+        if not TempBlob.Insert() then
+            TempBlob.Modify();
     end;
 
-    procedure GetMergedCheck(var is: InStream)
+    procedure GetMergedCheck(var is: InStream): Boolean
     begin
-        MergedCheck.CreateInstream(is);
+        TempBlob.Blob.CreateInStream(is);
+        exit(not TempBlob.IsEmpty);
     end;
 
     var
         Args: Record "ForNAV Check Arguments" temporary;
-        MergedCheck: Codeunit "Temp Blob";
+        TempBlob: Record "PTE PDF Merge" temporary;
 }

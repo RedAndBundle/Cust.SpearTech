@@ -29,6 +29,7 @@ codeunit 80402 "PTE Run Check Report"
         InStr: InStream;
         GenJnlLnRef: RecordRef;
     begin
+        Setup.Get();
         GenJnlLnFilter.Get(GenJnlLn.RecordId);
         GenJnlLnFilter.SetRecFilter();
         Args."PTE Document No." := GenJnlLn."Applies-to Doc. No.";
@@ -45,7 +46,7 @@ codeunit 80402 "PTE Run Check Report"
                     TempMergePDF.Filename := Args."PTE Document No." + '.pdf';
                     TempMergePDF.Insert();
                     if Setup."Generate Check Type" = Setup."Generate Check Type"::PDF then
-                        CheckArgs.SetMergedCheck(OutStr);
+                        CheckArgs.SetMergedCheck(TempMergePDF);
                 end;
             Args."PTE Output Type"::Print:
                 Report.Print(Report::"PTE US Check", Parameters, '', GenJnlLnRef);

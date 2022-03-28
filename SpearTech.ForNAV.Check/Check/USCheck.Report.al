@@ -213,8 +213,8 @@ Report 80400 "PTE US Check"
             end;
         end;
         if Setup."Generate Check Type" = Setup."Generate Check Type"::PDF then
-            CheckArgs.GetMergedCheck(is2);
-        ReportForNav.SetPrependPdf('Args', is2);
+            if CheckArgs.GetMergedCheck(is2) then
+                ReportForNav.SetPrependPdf('Args', is2);
         ;
         ReportsForNavPre;
 
