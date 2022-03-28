@@ -192,7 +192,6 @@ Report 80400 "PTE US Check"
     trigger OnPreReport()
     var
         PDFFile: Record "PTE Check Data";
-        Setup: Record "PTE Spear Technology Setup";
         CheckArgs: Codeunit "PTE Check Args";
         is, is2 : InStream;
     begin
@@ -201,7 +200,6 @@ Report 80400 "PTE US Check"
         CheckSetupIsValid;
         LoadWatermark;
         Args.TestMandatoryFields;
-        Setup.Get();
 
         if CurrReport.Preview then
             Args."Test Print" := true;
@@ -212,7 +210,7 @@ Report 80400 "PTE US Check"
                 ReportForNav.SetAppendPdf('Args', is);
             end;
         end;
-        if Setup."Generate Check Type" = Setup."Generate Check Type"::PDF then
+        if Args."PTE Output Type" = Args."PTE Output Type"::PDF then
             if CheckArgs.GetMergedCheck(is2) then
                 ReportForNav.SetPrependPdf('Args', is2);
         ;

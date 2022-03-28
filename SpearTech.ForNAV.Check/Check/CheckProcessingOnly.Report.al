@@ -122,12 +122,15 @@ Report 80401 "PTE Check Processing"
         end;
 
         trigger OnOpenPage()
+        var
+            Setup: Record "PTE Spear Technology Setup";
         begin
+            Setup.Get();
             if not Args.Get then
                 Args.Insert;
             GetBankAccFromFirstGnlLine();
             InputBankAccount;
-            Args."PTE Output Type" := Args."PTE Output Type"::PDF;
+            Args."PTE Output Type" := Setup."Output Type";
         end;
     }
 
