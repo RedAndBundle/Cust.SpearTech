@@ -19,6 +19,7 @@ page 80410 "PTE Spear Technologies Setup"
                 field("Payment Method (Check)"; Rec."Payment Method (Check)") { ApplicationArea = All; }
                 field("Payment Method (EFT)"; Rec."Payment Method (EFT)") { ApplicationArea = All; }
                 field("Payment Method (Void)"; Rec."Payment Method (Void)") { ApplicationArea = All; }
+                field("Generate Check Type"; Rec."Generate Check Type") { ApplicationArea = All; }
             }
         }
     }

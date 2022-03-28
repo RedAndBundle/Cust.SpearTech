@@ -61,4 +61,17 @@ table 80401 "PTE PDF Merge"
         DownloadFromStream(is, '', '', '', clientFileName);
         DataCompression.CloseZipArchive();
     end;
+
+    procedure MergeAndPreview()
+    var
+        clientFileName: Text;
+        is: InStream;
+    begin
+        if not FindLast() then
+            exit;
+        clientFileName := StrSubstNo('Check %1.pdf', CurrentDateTime);
+        CalcFields(Blob);
+        Blob.CreateInStream(is);
+        DownloadFromStream(is, '', '', '', clientFileName);
+    end;
 }
