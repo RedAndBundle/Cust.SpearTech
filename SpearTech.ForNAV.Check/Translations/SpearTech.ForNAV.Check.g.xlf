@@ -213,6 +213,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field G/L Account No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 219769631 - Field 1794591305 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Output Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field Output Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 219769631 - Field 1794591305 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print,PDF,Zip</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field Output Type - Property OptionCaption</note>
+        </trans-unit>
         <trans-unit id="Table 219769631 - Field 1549154094 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Payment Method (Check)</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -374,7 +384,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Check Arguments - Field PTE Output Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1972246617 - Field 312394242 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1648332528">
-          <source>Print,PDF</source>
+          <source>Print,PDF,Zip</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Check Arguments - Field PTE Output Type - Property OptionCaption</note>
         </trans-unit>

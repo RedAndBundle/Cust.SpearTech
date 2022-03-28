@@ -192,8 +192,8 @@ Report 80400 "PTE US Check"
     trigger OnPreReport()
     var
         PDFFile: Record "PTE Check Data";
-        // GenJournalLine: Record "Gen. Journal Line";
-        is: InStream;
+        CheckArgs: Codeunit "PTE Check Args";
+        is, is2 : InStream;
     begin
         Codeunit.Run(Codeunit::"ForNAV First Time Setup");
         Commit;
@@ -210,6 +210,9 @@ Report 80400 "PTE US Check"
                 ReportForNav.SetAppendPdf('Args', is);
             end;
         end;
+        if Args."PTE Output Type" = Args."PTE Output Type"::PDF then
+            if CheckArgs.GetMergedCheck(is2) then
+                ReportForNav.SetPrependPdf('Args', is2);
         ;
         ReportsForNavPre;
 
