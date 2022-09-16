@@ -33,8 +33,18 @@ codeunit 80401 "PTE Check Args"
 
     procedure GetMergedCheck(var is: InStream): Boolean
     begin
+        TempBlob.CalcFields(Blob);
+        if not TempBlob.Blob.HasValue() then
+            exit(false);
+
         TempBlob.Blob.CreateInStream(is);
         exit(not TempBlob.IsEmpty);
+    end;
+
+    procedure ResetMergedCheck()
+    begin
+        // clear(TempBlob.Blob);
+        if TempBlob.Delete() then;
     end;
 
     var

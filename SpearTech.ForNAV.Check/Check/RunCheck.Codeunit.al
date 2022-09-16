@@ -3,19 +3,25 @@ codeunit 80402 "PTE Run Check Report"
 
     internal procedure RunCheckReportPerLine(var Args: Record "ForNAV Check Arguments"; var GenJnlLn: Record "Gen. Journal Line")
     var
+        Setup: Record "PTE Spear Technology Setup";
         TempMergePDF: Record "PTE PDF Merge" temporary;
+        CheckArgs: Codeunit "PTE Check Args";
     begin
+        CheckArgs.ResetMergedCheck();
+        Setup.Get();
         GenJnlLn.FindSet();
         repeat
-            ProcessCheck(Args, GenJnlLn, TempMergePDF)
+            ProcessCheck(Args, GenJnlLn, TempMergePDF);
+            Args.GetNextCheckNo();
         until GenJnlLn.Next() = 0;
 
-        case Args."PTE Output Type" of
-            Args."PTE Output Type"::Zip:
+        case Setup."Output Type" of
+            Setup."Output Type"::Zip:
                 TempMergePDF.Zip();
-            Args."PTE Output Type"::PDF:
+            Setup."Output Type"::PDF:
                 TempMergePDF.MergeAndPreview();
         end;
+        // CheckArgs.Reset();
     end;
 
     local procedure ProcessCheck(var Args: Record "ForNAV Check Arguments"; GenJnlLn: Record "Gen. Journal Line"; var TempMergePDF: Record "PTE PDF Merge" temporary)
@@ -36,7 +42,7 @@ codeunit 80402 "PTE Run Check Report"
         GenJnlLnRef.GetTable(GenJnlLnFilter);
 
         case Args."PTE Output Type" of
-            Args."PTE Output Type"::PDF, Args."PTE Output Type"::Zip:
+            Args."PTE Output Type"::PDF:
                 begin
                     TempMergePDF."Primary Key" := Args."PTE Document No.";
                     TempMergePDF.Blob.CreateOutstream(OutStr);
@@ -53,5 +59,4 @@ codeunit 80402 "PTE Run Check Report"
 
         CheckArgs.Reset();
     end;
-
 }

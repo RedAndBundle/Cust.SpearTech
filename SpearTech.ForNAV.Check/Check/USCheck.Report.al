@@ -193,8 +193,12 @@ Report 80400 "PTE US Check"
     var
         PDFFile: Record "PTE Check Data";
         CheckArgs: Codeunit "PTE Check Args";
+        Setup: Record "PTE Spear Technology Setup";
+        Base64Convert: Codeunit "Base64 Convert";
         is, is2 : InStream;
+        base64: text;
     begin
+        Setup.Get();
         Codeunit.Run(Codeunit::"ForNAV First Time Setup");
         Commit;
         CheckSetupIsValid;
@@ -210,9 +214,12 @@ Report 80400 "PTE US Check"
                 ReportForNav.SetAppendPdf('Args', is);
             end;
         end;
-        if Args."PTE Output Type" = Args."PTE Output Type"::PDF then
+
+        if Setup."Output Type" = Setup."Output Type"::PDF then begin
+            // Base64Convert.FromBase64(base64);
             if CheckArgs.GetMergedCheck(is2) then
                 ReportForNav.SetPrependPdf('Args', is2);
+        end;
         ;
         ReportsForNavPre;
 
@@ -226,6 +233,7 @@ Report 80400 "PTE US Check"
         CheckArgs: Codeunit "PTE Check Args";
     begin
         Args := CheckArgs.GetArgs();
+        Args.Insert();
     end;
 
     procedure SetArgs(Value: Record "ForNAV Check Arguments")
