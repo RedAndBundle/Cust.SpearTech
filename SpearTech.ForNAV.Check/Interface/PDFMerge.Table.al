@@ -65,13 +65,16 @@ table 80401 "PTE PDF Merge"
     procedure MergeAndPreview()
     var
         clientFileName: Text;
+        TempBlob: Codeunit "Temp Blob";
         is: InStream;
     begin
+        clientFileName := StrSubstNo('Check %1.pdf', CurrentDateTime);
         if not FindLast() then
             exit;
-        clientFileName := StrSubstNo('Check %1.pdf', CurrentDateTime);
+        // FindFirst();
         CalcFields(Blob);
         Blob.CreateInStream(is);
         DownloadFromStream(is, '', '', '', clientFileName);
+
     end;
 }

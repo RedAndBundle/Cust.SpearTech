@@ -12,8 +12,8 @@ table 80410 "PTE Spear Technology Setup"
         field(70; "Output Type"; Option)
         {
             DataClassification = CustomerContent;
-            OptionCaption = 'Print,PDF,Zip';
-            OptionMembers = Print,PDF,Zip;
+            OptionCaption = 'PDF,Zip';
+            OptionMembers = PDF,Zip;
         }
     }
 
