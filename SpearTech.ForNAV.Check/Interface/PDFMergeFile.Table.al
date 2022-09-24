@@ -1,4 +1,4 @@
-table 80401 "PTE PDF Merge"
+table 80401 "PTE PDF Merge File"
 {
     DataClassification = SystemMetadata;
     Caption = 'PDF Merge';
@@ -64,17 +64,36 @@ table 80401 "PTE PDF Merge"
 
     procedure MergeAndPreview()
     var
+        MergePDF: Codeunit "PTE Merge PDF";
         clientFileName: Text;
-        TempBlob: Codeunit "Temp Blob";
         is: InStream;
     begin
         clientFileName := StrSubstNo('Check %1.pdf', CurrentDateTime);
-        if not FindLast() then
-            exit;
-        // FindFirst();
+        if Count <> 1 then
+            MergePDF.Run(Rec);
+
+        FindFirst();
         CalcFields(Blob);
         Blob.CreateInStream(is);
         DownloadFromStream(is, '', '', '', clientFileName);
+    end;
 
+    procedure InsertFromObject(jObject: JsonObject)
+    var
+        Base64Convert: Codeunit "Base64 Convert";
+        OutStr: OutStream;
+        jToken: JsonToken;
+        EntryNo: Integer;
+    begin
+        Init();
+        if jObject.Get('page', jToken) and (not jToken.AsValue().IsNull) then
+            EntryNo := jToken.AsValue().AsInteger()
+        else
+            EntryNo += 1;
+        "Primary Key" := Format(EntryNo);
+        Blob.CreateOutStream(OutStr);
+        jObject.Get('base64', jToken);
+        Base64Convert.FromBase64(jToken.AsValue().AsText(), OutStr);
+        Insert();
     end;
 }

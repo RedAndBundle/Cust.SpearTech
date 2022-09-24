@@ -21,6 +21,13 @@ page 80410 "PTE Spear Technologies Setup"
                 field("Payment Method (Void)"; Rec."Payment Method (Void)") { ApplicationArea = All; }
                 field("Generate Check Type"; Rec."Output Type") { ApplicationArea = All; }
             }
+            group(PDF)
+            {
+                Caption = 'PDF';
+                field("PDF Merge Webservice"; Rec."PDF Merge Webservice") { ApplicationArea = All; }
+                field("PDF Merge Key"; Rec."PDF Merge Key") { ApplicationArea = All; }
+
+            }
         }
     }
 
@@ -31,5 +38,4 @@ page 80410 "PTE Spear Technologies Setup"
             Rec.Insert();
         end;
     end;
-
 }

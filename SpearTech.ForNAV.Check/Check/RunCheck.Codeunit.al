@@ -4,11 +4,12 @@ codeunit 80402 "PTE Run Check Report"
     internal procedure RunCheckReportPerLine(var Args: Record "ForNAV Check Arguments"; var GenJnlLn: Record "Gen. Journal Line")
     var
         Setup: Record "PTE Spear Technology Setup";
-        TempMergePDF: Record "PTE PDF Merge" temporary;
+        TempMergePDF: Record "PTE PDF Merge File" temporary;
         CheckArgs: Codeunit "PTE Check Args";
     begin
-        CheckArgs.ResetMergedCheck();
+        // CheckArgs.ResetMergedCheck();
         Setup.Get();
+        Setup.TestPDFSetup();
         GenJnlLn.FindSet();
         repeat
             ProcessCheck(Args, GenJnlLn, TempMergePDF);
@@ -24,7 +25,7 @@ codeunit 80402 "PTE Run Check Report"
         // CheckArgs.Reset();
     end;
 
-    local procedure ProcessCheck(var Args: Record "ForNAV Check Arguments"; GenJnlLn: Record "Gen. Journal Line"; var TempMergePDF: Record "PTE PDF Merge" temporary)
+    local procedure ProcessCheck(var Args: Record "ForNAV Check Arguments"; GenJnlLn: Record "Gen. Journal Line"; var TempMergePDF: Record "PTE PDF Merge File" temporary)
     var
         GenJnlLnFilter: Record "Gen. Journal Line";
         Setup: Record "PTE Spear Technology Setup";
@@ -50,8 +51,8 @@ codeunit 80402 "PTE Run Check Report"
                     Report.SaveAs(Report::"PTE US Check", Parameters, ReportFormat::Pdf, OutStr, GenJnlLnRef);
                     TempMergePDF.Filename := Args."PTE Document No." + '.pdf';
                     TempMergePDF.Insert();
-                    if Setup."Output Type" = Setup."Output Type"::PDF then
-                        CheckArgs.SetMergedCheck(TempMergePDF);
+                    // if Setup."Output Type" = Setup."Output Type"::PDF then
+                    //     CheckArgs.SetMergedCheck(TempMergePDF);
                 end;
             Args."PTE Output Type"::Print:
                 Report.Print(Report::"PTE US Check", Parameters, '', GenJnlLnRef);

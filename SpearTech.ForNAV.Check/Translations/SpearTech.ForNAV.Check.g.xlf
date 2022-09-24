@@ -188,25 +188,25 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Vendor No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2499177229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 3353416791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>PDF Merge</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table PTE PDF Merge - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE PDF Merge File - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2499177229 - Field 3926698677 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 3353416791 - Field 3926698677 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Blob</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table PTE PDF Merge - Field Blob - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE PDF Merge File - Field Blob - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2499177229 - Field 1545435603 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 3353416791 - Field 1545435603 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Filename</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table PTE PDF Merge - Field Filename - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE PDF Merge File - Field Filename - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 2499177229 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 3353416791 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Primary Key</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table PTE PDF Merge - Field Primary Key - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE PDF Merge File - Field Primary Key - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 219769631 - Field 3852983238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>G/L Account No.</source>
@@ -238,6 +238,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field Payment Method (Void) - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 219769631 - Field 863906143 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PDF Merge Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field PDF Merge Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 219769631 - Field 32184689 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PDF Merge Webservice</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field PDF Merge Webservice - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 219769631 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Primary Key</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -252,6 +262,16 @@
           <source>Vendor No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Void Interface - Field Vendor No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3971160397 - NamedType 1615422614" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cannot connect</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PTE Merge PDF - NamedType CannotConnectErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3971160397 - NamedType 3799088596" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Web Service error:\\Statuscode: %1\Description: %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = HttpStatusCode %2 = ReasonPhrase</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PTE Merge PDF - NamedType WebServiceErr</note>
         </trans-unit>
         <trans-unit id="Page 1880891065 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Check Data</source>
@@ -282,6 +302,11 @@
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Spear Technologies Setup - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3001911709 - Control 3731179934 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PDF</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Spear Technologies Setup - Control PDF - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1058662544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>SpearTech Check Batch</source>

@@ -15,8 +15,22 @@ table 80410 "PTE Spear Technology Setup"
             OptionCaption = 'PDF,Zip';
             OptionMembers = PDF,Zip;
         }
+        field(80; "PDF Merge Webservice"; Text[100]) { DataClassification = SystemMetadata; }
+        field(90; "PDF Merge Key"; Text[100]) { DataClassification = SystemMetadata; ExtendedDatatype = Masked; }
     }
 
     keys { key(pk; "Primary Key") { Clustered = true; } }
 
+    procedure TestPDFSetup()
+    begin
+        case true of
+            "Output Type" <> "Output Type"::PDF,
+            ("PDF Merge Webservice" <> '') and ("PDF Merge Key" <> ''):
+                exit;
+        end;
+
+        "PDF Merge Webservice" := 'https://redpdfmethods.azurewebsites.net/api/v1/merge';
+        "PDF Merge Key" := 'To2HLw4YT4JavfCc09EeVFj0vA0Nm9XsYGm7uyH5aWfxijDfditV4w==';
+        Modify();
+    end;
 }
