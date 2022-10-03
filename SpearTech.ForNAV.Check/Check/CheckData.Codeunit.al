@@ -1,7 +1,9 @@
 codeunit 80403 "PTE Check Data"
 {
+    Permissions = tabledata "PTE Check Data" = RIMD;
+
     [EventSubscriber(ObjectType::Table, Database::"Gen. Journal Line", 'OnAfterDeleteEvent', '', false, false)]
-    local procedure MyProcedure(RunTrigger: Boolean; var Rec: Record "Gen. Journal Line")
+    local procedure OnAfterDeleteEvent(RunTrigger: Boolean; var Rec: Record "Gen. Journal Line")
     begin
         DeleteCheckData(Rec);
     end;
