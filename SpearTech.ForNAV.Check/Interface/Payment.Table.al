@@ -25,6 +25,7 @@ table 80400 "PTE Payment Interface"
         field(29; "Invoice No."; Code[35]) { DataClassification = SystemMetadata; }
         field(30; "Carrier Name 1"; Text[250]) { DataClassification = SystemMetadata; }
         field(31; "Carrier Name 2"; Text[250]) { DataClassification = SystemMetadata; }
+        // TODO check $0 checks
 
     }
 
