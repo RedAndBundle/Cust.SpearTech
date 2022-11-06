@@ -86,48 +86,48 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
             Caption = 'Void text';
             DataClassification = CustomerContent;
         }
-        field(80410; "PTE 1st Sigature Text"; Text[100])
+        field(80410; "PTE 1st Signature Text"; Text[100])
         {
-            Caption = '1st Sigature Text';
+            Caption = '1st Signature Text';
             DataClassification = CustomerContent;
         }
-        field(80411; "PTE 1st Sigature"; Blob)
+        field(80411; "PTE 1st Signature"; Blob)
         {
-            Caption = '1st Sigature';
+            Caption = '1st Signature';
             DataClassification = CustomerContent;
         }
-        field(80412; "PTE 1st Sigature Filename"; Text[100])
+        field(80412; "PTE 1st Signature Filename"; Text[100])
         {
-            Caption = '1st Sigature Filename';
-            DataClassification = CustomerContent;
-            Editable = false;
-            InitValue = 'Click to import...';
-        }
-        field(80413; "PTE 1st Sigature Logic"; Text[100])
-        {
-            Caption = '1st Sigature Logic';
-            DataClassification = CustomerContent;
-        }
-        field(80420; "PTE 2nd Sigature Text"; Text[100])
-        {
-            Caption = '2nd Sigature Text';
-            DataClassification = CustomerContent;
-        }
-        field(80421; "PTE 2nd Sigature"; Blob)
-        {
-            Caption = '2nd Sigature';
-            DataClassification = CustomerContent;
-        }
-        field(80422; "PTE 2nd Sigature Filename"; Text[100])
-        {
-            Caption = '2nd Sigature Filename';
+            Caption = '1st Signature Filename';
             DataClassification = CustomerContent;
             Editable = false;
             InitValue = 'Click to import...';
         }
-        field(80423; "PTE 2nd Sigature Logic"; Text[100])
+        field(80413; "PTE 1st Signature Logic"; Text[100])
         {
-            Caption = '2nd Sigature Logic';
+            Caption = '1st Signature Logic';
+            DataClassification = CustomerContent;
+        }
+        field(80420; "PTE 2nd Signature Text"; Text[100])
+        {
+            Caption = '2nd Signature Text';
+            DataClassification = CustomerContent;
+        }
+        field(80421; "PTE 2nd Signature"; Blob)
+        {
+            Caption = '2nd Signature';
+            DataClassification = CustomerContent;
+        }
+        field(80422; "PTE 2nd Signature Filename"; Text[100])
+        {
+            Caption = '2nd Signature Filename';
+            DataClassification = CustomerContent;
+            Editable = false;
+            InitValue = 'Click to import...';
+        }
+        field(80423; "PTE 2nd Signature Logic"; Text[100])
+        {
+            Caption = '2nd Signature Logic';
             DataClassification = CustomerContent;
         }
         field(80430; "PTE MICR Offset X"; Integer)
@@ -144,7 +144,8 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
 
     procedure DrillDownBlob(BlobFieldNo: Integer)
     var
-        BlobDrilldown: Codeunit "ForNAV Blob Drilldown";
+    // BlobDrilldown: Codeunit "ForNAV Blob Drilldown";
+    // TODO reattach
     begin
         if not BlobHasValue(BlobFieldNo) then begin
             ImportWatermarkFromClientFile(BlobFieldNo);
@@ -152,7 +153,8 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
             exit;
         end;
 
-        case BlobDrilldown.DrilldownSelect() of
+        // case BlobDrilldown.DrilldownSelect() of
+        case DrilldownSelect() of
             1:
                 DownloadWatermark(BlobFieldNo);
             2:
@@ -183,15 +185,15 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
         CopyStream(os, is);
 
         case Which of
-            FieldNo("PTE 1st Sigature"):
+            FieldNo("PTE 1st Signature"):
                 begin
-                    "PTE 1st Sigature" := TempBlob.Blob;
-                    "PTE 1st Sigature Filename" := GetFileNameFromFile(FileName);
+                    "PTE 1st Signature" := TempBlob.Blob;
+                    "PTE 1st Signature Filename" := GetFileNameFromFile(FileName);
                 end;
-            FieldNo("PTE 2nd Sigature"):
+            FieldNo("PTE 2nd Signature"):
                 begin
-                    "PTE 2nd Sigature" := TempBlob.Blob;
-                    "PTE 2nd Sigature Filename" := GetFileNameFromFile(FileName);
+                    "PTE 2nd Signature" := TempBlob.Blob;
+                    "PTE 2nd Signature Filename" := GetFileNameFromFile(FileName);
                 end;
             else
                 exit(false);
@@ -205,17 +207,17 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
         is: InStream;
     begin
         case Which of
-            FieldNo("PTE 1st Sigature"):
+            FieldNo("PTE 1st Signature"):
                 begin
-                    CalcFields("PTE 1st Sigature");
-                    "PTE 1st Sigature".CreateInStream(is);
-                    FileName := "PTE 1st Sigature Filename";
+                    CalcFields("PTE 1st Signature");
+                    "PTE 1st Signature".CreateInStream(is);
+                    FileName := "PTE 1st Signature Filename";
                 end;
-            FieldNo("PTE 2nd Sigature"):
+            FieldNo("PTE 2nd Signature"):
                 begin
-                    CalcFields("PTE 2nd Sigature");
-                    "PTE 2nd Sigature".CreateInStream(is);
-                    FileName := "PTE 2nd Sigature Filename";
+                    CalcFields("PTE 2nd Signature");
+                    "PTE 2nd Signature".CreateInStream(is);
+                    FileName := "PTE 2nd Signature Filename";
                 end;
             else
                 exit;
@@ -230,31 +232,31 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
     begin
         FileName := 'Click to import...';
         case Which of
-            FieldNo("PTE 1st Sigature"):
+            FieldNo("PTE 1st Signature"):
                 begin
-                    "PTE 1st Sigature Filename" := FileName;
-                    Clear("PTE 1st Sigature");
+                    "PTE 1st Signature Filename" := FileName;
+                    Clear("PTE 1st Signature");
                 end;
-            FieldNo("PTE 2nd Sigature"):
+            FieldNo("PTE 2nd Signature"):
                 begin
-                    "PTE 2nd Sigature Filename" := FileName;
-                    Clear("PTE 2nd Sigature");
+                    "PTE 2nd Signature Filename" := FileName;
+                    Clear("PTE 2nd Signature");
                 end;
         end;
     end;
 
-    local procedure BlobHasValue(Which: Integer): Boolean
+    procedure BlobHasValue(Which: Integer): Boolean
     begin
         case Which of
-            FieldNo("PTE 1st Sigature"):
+            FieldNo("PTE 1st Signature"):
                 begin
-                    CalcFields("PTE 1st Sigature");
-                    exit("PTE 1st Sigature".HasValue);
+                    CalcFields("PTE 1st Signature");
+                    exit("PTE 1st Signature".HasValue);
                 end;
-            FieldNo("PTE 2nd Sigature"):
+            FieldNo("PTE 2nd Signature"):
                 begin
-                    CalcFields("PTE 2nd Sigature");
-                    exit("PTE 2nd Sigature".HasValue);
+                    CalcFields("PTE 2nd Signature");
+                    exit("PTE 2nd Signature".HasValue);
                 end;
             else
                 exit(false);
@@ -273,5 +275,17 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
         end;
 
         exit(CopyStr(Value, LastPos + 1));
+    end;
+
+    local procedure DrilldownSelect(): Integer;
+    var
+        // TODO remove
+        DownloadLbl: Label 'Download';
+        UpdateLbl: Label 'Update';
+        DeleteLbl: Label 'Delete';
+        OptionsLbl: Label '%1,%2,%3', Comment = 'DO NOT TRANSLATE';
+        ChooseLbl: Label 'Choose one of these options';
+    begin
+        exit(StrMenu(StrSubstNo(OptionsLbl, DownloadLbl, UpdateLbl, DeleteLbl), 0, ChooseLbl));
     end;
 }
