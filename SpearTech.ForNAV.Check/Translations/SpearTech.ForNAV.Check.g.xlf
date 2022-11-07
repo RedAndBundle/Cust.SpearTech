@@ -568,31 +568,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Void Text - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 572952394 - Method 3788748663 - NamedType 4210430314" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 572952394">
-          <source>Download</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Method DrilldownSelect - NamedType DownloadLbl</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 572952394 - Method 3788748663 - NamedType 1369133989" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 572952394">
-          <source>Update</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Method DrilldownSelect - NamedType UpdateLbl</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 572952394 - Method 3788748663 - NamedType 3642635461" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 572952394">
-          <source>Delete</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Method DrilldownSelect - NamedType DeleteLbl</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 572952394 - Method 3788748663 - NamedType 3203928494" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 572952394">
-          <source>%1,%2,%3</source>
-          <note from="Developer" annotates="general" priority="2">DO NOT TRANSLATE</note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Method DrilldownSelect - NamedType OptionsLbl</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 572952394 - Method 3788748663 - NamedType 996825897" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 572952394">
-          <source>Choose one of these options</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Method DrilldownSelect - NamedType ChooseLbl</note>
-        </trans-unit>
         <trans-unit id="TableExtension 572952394 - Method 2396499048 - NamedType 3857071818" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 572952394">
           <source>Select a file</source>
           <note from="Developer" annotates="general" priority="2"></note>

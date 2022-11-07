@@ -55,11 +55,10 @@ page 80404 "PTE Vendors"
                 {
                     ApplicationArea = all;
                 }
-                // TODO enable
-                // field(federalIDNo; Rec."Federal ID No.")
-                // {
-                //     ApplicationArea = all;
-                // }
+                field(federalIDNo; Rec."Federal ID No.")
+                {
+                    ApplicationArea = all;
+                }
                 field(paymentTermsCode; Rec."Payment Terms Code")
                 {
                     ApplicationArea = all;

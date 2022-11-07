@@ -144,8 +144,7 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
 
     procedure DrillDownBlob(BlobFieldNo: Integer)
     var
-    // BlobDrilldown: Codeunit "ForNAV Blob Drilldown";
-    // TODO reattach
+        BlobDrilldown: Codeunit "ForNAV Blob Drilldown";
     begin
         if not BlobHasValue(BlobFieldNo) then begin
             ImportWatermarkFromClientFile(BlobFieldNo);
@@ -153,8 +152,7 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
             exit;
         end;
 
-        // case BlobDrilldown.DrilldownSelect() of
-        case DrilldownSelect() of
+        case BlobDrilldown.DrilldownSelect() of
             1:
                 DownloadWatermark(BlobFieldNo);
             2:
@@ -275,17 +273,5 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
         end;
 
         exit(CopyStr(Value, LastPos + 1));
-    end;
-
-    local procedure DrilldownSelect(): Integer;
-    var
-        // TODO remove
-        DownloadLbl: Label 'Download';
-        UpdateLbl: Label 'Update';
-        DeleteLbl: Label 'Delete';
-        OptionsLbl: Label '%1,%2,%3', Comment = 'DO NOT TRANSLATE';
-        ChooseLbl: Label 'Choose one of these options';
-    begin
-        exit(StrMenu(StrSubstNo(OptionsLbl, DownloadLbl, UpdateLbl, DeleteLbl), 0, ChooseLbl));
     end;
 }

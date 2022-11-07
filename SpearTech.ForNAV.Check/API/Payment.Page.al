@@ -51,11 +51,13 @@ Page 80400 "PTE Payment Entity"
     trigger OnInsertRecord(BelowxRec: Boolean): Boolean
     var
         Setup: Record "PTE Spear Technology Setup";
+        Vendor: Record Vendor;
     begin
         Rec.TestField("Vendor No.");
         Rec.TestField("Document No.");
         Rec.TestField("Posting Date");
         Rec.TestField("Amount (USD)");
+        Vendor.Get(Rec."Vendor No.");
         Setup.Get();
         Setup.TestField("Payment Method (Check)");
         Setup.TestField("Payment Method (EFT)");
