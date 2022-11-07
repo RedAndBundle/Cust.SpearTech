@@ -398,6 +398,271 @@
           <note from="Developer" annotates="general" priority="2">DO NOT TRANSLATE</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report PTE US Check - Control TestPrinting - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Method 3373737092 - NamedType 409066782" size-unit="char" translate="yes" xml:space="preserve" al-object-target="PageExtension 3849922958">
+          <source>Click to import...</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Method OnAfterGetCurrRecord - NamedType InitTxt</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 3935179097 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>SpearTech</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control SpearTech - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 2838643478 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the 1st signature that will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE 1st Signature Filename - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 2838643478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>1st Signature</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE 1st Signature Filename - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 662378247 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the logic that will be used to determine if the 1st signature will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE 1st Signature Logic - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 662378247 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>1st Signature Logic</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE 1st Signature Logic - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 3980570066 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the 1st signature text that will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE 1st Signature Text - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 3980570066 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>1st Signature Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE 1st Signature Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 569415984 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the 2nd signature that will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE 2nd Signature Filename - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 569415984 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>2nd Signature</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE 2nd Signature Filename - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 247029693 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the logic that will be used to determine if the 2nd signature will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE 2nd Signature Logic - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 247029693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>2nd Signature Logic</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE 2nd Signature Logic - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 2419646228 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the 2nd signature text that will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE 2nd Signature Text - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 2419646228 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>2nd Signature Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE 2nd Signature Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 3697683347 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the address that will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Address - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 3697683347 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Check Address</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 916901461 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the 2nd address that will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Address 2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 916901461 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Check Address 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Address 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 3851670316 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the city that will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check City - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 3851670316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Check City</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check City - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 3680053535 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the country/region that will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Country/Region Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 3680053535 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Check Country/Region Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Country/Region Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 4039528444 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the name that will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 4039528444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Check Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 2158755566 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the 2nd name that will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Name 2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 2158755566 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Check Name 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Name 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 1501888022 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the post code that will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Post Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 1501888022 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Check Post Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Post Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 569971819 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the MICR Offset X that will be used to position the MICR text. The MICR Offset starts from the top left hand corder of the MICR text box.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE MICR Offset X - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 569971819 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>MICR Offset X</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE MICR Offset X - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 1207668436 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the MICR Offset Y that will be used to position the MICR text. The MICR Offset starts from the top left hand corder of the MICR text box.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE MICR Offset Y - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 1207668436 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>MICR Offset Y</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE MICR Offset Y - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 2835687964 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the void text that will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Void Text - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 2835687964 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Check Void Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Void Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Method 2396499048 - NamedType 3857071818" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 572952394">
+          <source>Select a file</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Method ImportWatermarkFromClientFile - NamedType SelectFile</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 3360212837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>1st Signature</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE 1st Signature - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 2838643478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>1st Signature Filename</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE 1st Signature Filename - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 662378247 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>1st Signature Logic</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE 1st Signature Logic - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 3980570066 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>1st Signature Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE 1st Signature Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 2368770159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>2nd Signature</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE 2nd Signature - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 569415984 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>2nd Signature Filename</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE 2nd Signature Filename - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 247029693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>2nd Signature Logic</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE 2nd Signature Logic - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 2419646228 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>2nd Signature Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE 2nd Signature Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 3697683347 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>Check Address</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE Check Address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 916901461 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>Check Address 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE Check Address 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 3851670316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>Check City</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE Check City - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 3680053535 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>Check Country/Region Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE Check Country/Region Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 4039528444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>Check Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE Check Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 2158755566 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>Check Name 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE Check Name 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 1501888022 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>Check Post Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE Check Post Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 569971819 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>MICR Offset X</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE MICR Offset X - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 1207668436 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>MICR Offset X</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE MICR Offset Y - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 2835687964 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>Void text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE Void Text - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 1972246617 - Field 3684356171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1648332528">
           <source>PTE Document No.</source>
           <note from="Developer" annotates="general" priority="2"></note>

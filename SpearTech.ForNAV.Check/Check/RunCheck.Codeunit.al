@@ -1,5 +1,6 @@
 codeunit 80402 "PTE Run Check Report"
 {
+    Permissions = tabledata "PTE Check Data" = rimd;
 
     internal procedure RunCheckReportPerLine(var Args: Record "ForNAV Check Arguments"; var GenJnlLn: Record "Gen. Journal Line")
     var

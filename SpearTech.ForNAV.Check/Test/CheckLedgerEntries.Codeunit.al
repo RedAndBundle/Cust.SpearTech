@@ -84,7 +84,6 @@ Codeunit 80448 "PTE Test Check Report"
     local procedure CreatePDFForJournal()
     var
         GenJnlLn: Record "Gen. Journal Line";
-        PDFFile: Record "PTE Check Data";
     begin
         GenJnlLn.SetRange("Journal Template Name", TestLib.GetJournalTemplate);
         GenJnlLn.SetRange("Journal Batch Name", TestLib.GetJournalBatch);
