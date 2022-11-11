@@ -103,7 +103,7 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
             Editable = false;
             InitValue = 'Click to import...';
         }
-        field(80413; "PTE 1st Signature Logic"; Text[100])
+        field(80413; "PTE 1st Signature Logic"; Decimal)
         {
             Caption = '1st Signature Logic';
             DataClassification = CustomerContent;
@@ -125,7 +125,7 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
             Editable = false;
             InitValue = 'Click to import...';
         }
-        field(80423; "PTE 2nd Signature Logic"; Text[100])
+        field(80423; "PTE 2nd Signature Logic"; Decimal)
         {
             Caption = '2nd Signature Logic';
             DataClassification = CustomerContent;
