@@ -39,6 +39,7 @@ Page 80400 "PTE Payment Entity"
                 field(invoiceDate; Rec."Invoice Date") { ApplicationArea = Basic; }
                 field(carrierName1; Rec."Carrier Name 1") { ApplicationArea = Basic; }
                 field(carrierName2; Rec."Carrier Name 2") { ApplicationArea = Basic; }
+                field(comment; Rec.Comment) { ApplicationArea = Basic; }
 
                 field(result; Result) { ApplicationArea = Basic; }
             }

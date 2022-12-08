@@ -2,9 +2,9 @@
 Report 80400 "PTE US Check"
 {
     Caption = 'SpearTech Check';
+    Permissions = tabledata "PTE Check Data" = RIMD;
     WordLayout = './Layouts/SpearTech US Check.docx';
     DefaultLayout = Word;
-    Permissions = tabledata "PTE Check Data" = RIMD;
 
     dataset
     {
@@ -183,6 +183,8 @@ Report 80400 "PTE US Check"
 
     trigger OnPostReport()
     begin
+
+
     end;
 
     trigger OnPreReport()
