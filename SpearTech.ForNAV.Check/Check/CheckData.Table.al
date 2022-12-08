@@ -85,6 +85,11 @@ table 80402 "PTE Check Data"
             Caption = 'Carrier Name 2';
             DataClassification = SystemMetadata;
         }
+        field(32; "Comment"; Text[500])
+        {
+            Caption = 'Comment';
+            DataClassification = SystemMetadata;
+        }
     }
 
     keys

@@ -33,6 +33,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Client - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 2790486453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Comment - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1880891065 - Field 628925288 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Document Number</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -122,6 +127,11 @@
           <source>Client</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Client - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 2790486453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Comment - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1159935010 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>

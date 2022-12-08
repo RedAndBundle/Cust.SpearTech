@@ -31,6 +31,7 @@ page 80402 "PTE Check Data"
                 field("Invoice No."; Rec."Invoice No.") { ApplicationArea = Basic; }
                 field("Carrier Name 1"; Rec."Carrier Name 1") { ApplicationArea = Basic; }
                 field("Carrier Name 2"; Rec."Carrier Name 2") { ApplicationArea = Basic; }
+                field(Comment; Rec.Comment) { ApplicationArea = Basic; }
             }
         }
         area(Factboxes)
