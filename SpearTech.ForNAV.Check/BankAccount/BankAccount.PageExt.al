@@ -107,6 +107,18 @@ pageextension 80400 "PTE Bank Account Card" extends "Bank Account Card"
                     Caption = 'MICR Offset X';
                     ToolTip = 'Specifies the MICR Offset X that will be used to position the MICR text. The MICR Offset starts from the top left hand corder of the MICR text box.';
                 }
+                field("PTE MICR Offset X1"; Rec."PTE MICR Offset X1")
+                {
+                    ApplicationArea = All;
+                    Caption = 'MICR Offset X1';
+                    ToolTip = 'Specifies the MICR Offset that will be used to position the first and second MICR text.';
+                }
+                field("PTE MICR Offset X2"; Rec."PTE MICR Offset X2")
+                {
+                    ApplicationArea = All;
+                    Caption = 'MICR Offset X2';
+                    ToolTip = 'Specifies the MICR Offset that will be used to position the second and third MICR text.';
+                }
                 field("PTE MICR Offset Y"; Rec."PTE MICR Offset Y")
                 {
                     ApplicationArea = All;
