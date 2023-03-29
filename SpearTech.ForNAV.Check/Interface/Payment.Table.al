@@ -27,8 +27,11 @@ table 80400 "PTE Payment Interface"
         field(30; "Carrier Name 1"; Text[250]) { DataClassification = SystemMetadata; }
         field(31; "Carrier Name 2"; Text[250]) { DataClassification = SystemMetadata; }
         field(32; "Comment"; Text[500]) { DataClassification = SystemMetadata; }
-        // TODO check $0 checks
-
+        field(33; "Department"; Text[100]) { DataClassification = SystemMetadata; }
+        field(34; "Adjuster Name"; Text[100]) { DataClassification = SystemMetadata; }
+        field(35; "Adjuster Phone"; Text[100]) { DataClassification = SystemMetadata; }
+        field(36; "Event Number"; Integer) { DataClassification = SystemMetadata; }
+        field(37; "Control Number"; Integer) { DataClassification = SystemMetadata; }
     }
 
     keys { key(Key1; "Vendor No.") { Clustered = true; } }

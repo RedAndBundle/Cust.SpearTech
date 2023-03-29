@@ -46,7 +46,10 @@ codeunit 80402 "PTE Run Check Report"
         case Args."PTE Output Type" of
             Args."PTE Output Type"::PDF:
                 begin
-                    TempMergePDF."Primary Key" := Args."PTE Document No.";
+                    if Args."PTE Document No." = '' then
+                        TempMergePDF."Primary Key" := Format(GenJnlLn."Line No.")
+                    else
+                        TempMergePDF."Primary Key" := Args."PTE Document No.";
                     TempMergePDF.Blob.CreateOutstream(OutStr);
                     TempMergePDF.Blob.CreateInstream(InStr);
                     Report.SaveAs(Report::"PTE US Check", Parameters, ReportFormat::Pdf, OutStr, GenJnlLnRef);

@@ -2,12 +2,12 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
 {
     fields
     {
-        field(80400; "PTE Check Name"; Text[100])
+        field(80400; "PTE Check Name"; Text[250])
         {
             Caption = 'Check Name';
             DataClassification = CustomerContent;
         }
-        field(80401; "PTE Check Name 2"; Text[50])
+        field(80401; "PTE Check Name 2"; Text[250])
         {
             Caption = 'Check Name 2';
             DataClassification = CustomerContent;
@@ -17,7 +17,7 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
             Caption = 'Check Address';
             DataClassification = CustomerContent;
         }
-        field(80403; "PTE Check Address 2"; Text[50])
+        field(80403; "PTE Check Address 2"; Text[100])
         {
             Caption = 'Check Address 2';
             DataClassification = CustomerContent;
