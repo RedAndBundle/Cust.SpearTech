@@ -30,8 +30,8 @@ table 80400 "PTE Payment Interface"
         field(33; "Department"; Text[100]) { DataClassification = SystemMetadata; }
         field(34; "Adjuster Name"; Text[100]) { DataClassification = SystemMetadata; }
         field(35; "Adjuster Phone"; Text[100]) { DataClassification = SystemMetadata; }
-        field(36; "Event Number"; Integer) { DataClassification = SystemMetadata; }
-        field(37; "Control Number"; Integer) { DataClassification = SystemMetadata; }
+        field(36; "Event Number"; Text[100]) { DataClassification = SystemMetadata; }
+        field(37; "Control Number"; Text[100]) { DataClassification = SystemMetadata; }
     }
 
     keys { key(Key1; "Vendor No.") { Clustered = true; } }
@@ -138,6 +138,11 @@ table 80400 "PTE Payment Interface"
         CheckData."Carrier Name 1" := "Carrier Name 1";
         CheckData."Carrier Name 2" := "Carrier Name 2";
         CheckData.Comment := Comment;
+        CheckData."Department" := Department;
+        CheckData."Adjuster Name" := "Adjuster Name";
+        CheckData."Adjuster Phone" := "Adjuster Phone";
+        CheckData."Event Number" := "Event Number";
+        CheckData."Control Number" := "Control Number";
         CheckData.Insert();
     end;
 

@@ -105,12 +105,12 @@ table 80402 "PTE Check Data"
             Caption = 'Adjuster Phone';
             DataClassification = SystemMetadata;
         }
-        field(36; "Event Number"; Integer)
+        field(36; "Event Number"; Text[100])
         {
             Caption = 'Event Number';
             DataClassification = SystemMetadata;
         }
-        field(37; "Control Number"; Integer)
+        field(37; "Control Number"; Text[100])
         {
             Caption = 'Control Number';
             DataClassification = SystemMetadata;
