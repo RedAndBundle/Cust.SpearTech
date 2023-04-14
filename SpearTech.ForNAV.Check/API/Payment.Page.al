@@ -45,6 +45,7 @@ Page 80400 "PTE Payment Entity"
                 field(adjusterPhone; Rec."Adjuster Phone") { ApplicationArea = basic; }
                 field(eventNumber; Rec."Event Number") { ApplicationArea = basic; }
                 field(controlNumber; Rec."Control Number") { ApplicationArea = basic; }
+                field(additionalPayee; Rec."Additional Payee") { ApplicationArea = basic; }
 
                 field(result; Result) { ApplicationArea = Basic; }
             }

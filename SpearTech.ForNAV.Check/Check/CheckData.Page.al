@@ -37,6 +37,7 @@ page 80402 "PTE Check Data"
                 field("Adjuster Phone"; Rec."Adjuster Phone") { ApplicationArea = basic; }
                 field("Event Number"; Rec."Event Number") { ApplicationArea = basic; }
                 field("Control Number"; Rec."Control Number") { ApplicationArea = basic; }
+                field("Additional Payee"; Rec."Additional Payee") { ApplicationArea = basic; }
             }
         }
         area(Factboxes)

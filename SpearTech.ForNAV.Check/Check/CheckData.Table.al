@@ -115,6 +115,11 @@ table 80402 "PTE Check Data"
             Caption = 'Control Number';
             DataClassification = SystemMetadata;
         }
+        field(38; "Additional Payee"; Text[100])
+        {
+            Caption = 'Additional Payee';
+            DataClassification = SystemMetadata;
+        }
     }
 
     keys

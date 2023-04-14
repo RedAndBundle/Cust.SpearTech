@@ -150,6 +150,11 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
             Caption = 'MICR Offset X2';
             DataClassification = CustomerContent;
         }
+        field(80434; "PTE MICR Font Size"; Integer)
+        {
+            Caption = 'MICR Font Size';
+            DataClassification = CustomerContent;
+        }
     }
 
     procedure DrillDownBlob(BlobFieldNo: Integer)
