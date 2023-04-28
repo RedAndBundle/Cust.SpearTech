@@ -15,7 +15,11 @@ page 80502 "PTEAP Spear AP Setup"
             group(General)
             {
                 Caption = 'General';
-                field("Item Template"; Rec."Item Template") { ApplicationArea = All; }
+                field("Item Template"; Rec."Item Template")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the item template that will be used for unused task codes sent through the AP API.';
+                }
             }
         }
     }

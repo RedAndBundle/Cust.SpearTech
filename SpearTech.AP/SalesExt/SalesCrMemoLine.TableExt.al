@@ -12,5 +12,11 @@ tableextension 80507 "PTEAP Sales Cr.Memo Line" extends "Sales Cr.Memo Line"
             DataClassification = CustomerContent;
             Caption = 'Task Date';
         }
+        field(80502; "PTEAP Claim Number"; Text[100])
+        {
+            FieldClass = FlowField;
+            CalcFormula = lookup("Sales Cr.Memo Header"."PTEAP Claim Number" where("No." = field("Document No.")));
+            Caption = 'Claim Number';
+        }
     }
 }

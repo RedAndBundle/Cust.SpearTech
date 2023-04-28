@@ -58,14 +58,13 @@ table 80500 "PTEAP API AP Header"
 
     procedure ProcessAPInterface(): Text
     var
-        // TempAPEntry: Record "PTEAP AP Entry" temporary;
         SalesHeader: Record "Sales Header";
-        SalesLine: Record "Sales Line";
+        CreatedLbl: Label '%1 %2 Created', Comment = '%1 = doc type %2 = doc no';
     begin
         // CreateTempAPEntries(TempAPEntry, '');
         SalesHeader.PTEGetSalesHeader("Sales Document Type"::Invoice, Rec);
         // CreateSalesLines(SalesHeader, TempAPEntry);
-        exit(StrSubstNo('%1 %2 Created', SalesHeader."Document Type", SalesHeader."No."));
+        exit(StrSubstNo(CreatedLbl, SalesHeader."Document Type", SalesHeader."No."));
     end;
 
     // local procedure CreateTempAPEntries(var TempAPEntry: Record "PTEAP AP Entry"; LinesText: Text)

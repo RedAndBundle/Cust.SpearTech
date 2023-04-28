@@ -12,21 +12,27 @@ tableextension 80501 "PTEAP Sales Line" extends "Sales Line"
             DataClassification = CustomerContent;
             Caption = 'Task Date';
         }
+        field(80502; "PTEAP Claim Number"; Text[100])
+        {
+            FieldClass = FlowField;
+            CalcFormula = lookup("Sales Header"."PTEAP Claim Number" where("Document Type" = field("Document Type"), "No." = field("Document No.")));
+            Caption = 'Claim Number';
+        }
     }
 
     trigger OnBeforeDelete()
     begin
-        PTEBlockIfHasAPEntry();
+        // PTEBlockIfHasAPEntry();
     end;
 
     trigger OnBeforeModify()
     begin
-        PTEBlockIfHasAPEntry();
+        // PTEBlockIfHasAPEntry();
     end;
 
     trigger OnBeforeRename()
     begin
-        PTEBlockIfHasAPEntry();
+        // PTEBlockIfHasAPEntry();
     end;
 
     local procedure PTEBlockIfHasAPEntry()

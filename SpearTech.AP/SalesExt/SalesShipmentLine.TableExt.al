@@ -12,5 +12,11 @@ tableextension 80503 "PTEAP Sales Shipment Line" extends "Sales Shipment Line"
             DataClassification = CustomerContent;
             Caption = 'Task Date';
         }
+        field(80502; "PTEAP Claim Number"; Text[100])
+        {
+            FieldClass = FlowField;
+            CalcFormula = lookup("Sales Shipment Header"."PTEAP Claim Number" where("No." = field("Document No.")));
+            Caption = 'Claim Number';
+        }
     }
 }

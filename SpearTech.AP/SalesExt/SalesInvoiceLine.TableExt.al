@@ -12,5 +12,11 @@ tableextension 80505 "PTEAP Sales Invoice Line" extends "Sales Invoice Line"
             DataClassification = CustomerContent;
             Caption = 'Task Date';
         }
+        field(80502; "PTEAP Claim Number"; Text[100])
+        {
+            FieldClass = FlowField;
+            CalcFormula = lookup("Sales Invoice Header"."PTEAP Claim Number" where("No." = field("Document No.")));
+            Caption = 'Claim Number';
+        }
     }
 }

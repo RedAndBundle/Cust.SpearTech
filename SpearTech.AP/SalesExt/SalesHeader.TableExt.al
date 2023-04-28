@@ -34,14 +34,7 @@ tableextension 80500 "PTEAP Sales Header" extends "Sales Header"
         }
     }
 
-    // keys
-    // {
-    //     key(PTEClaimNumber; "PTEAP Claim Number") { }
-    // }
-
     internal procedure PTEGetSalesHeader(DocumentType: Enum "Sales Document Type"; var APIAPHeader: Record "PTEAP API AP Header"): Boolean;
-    var
-        SalesHeader: Record "Sales Header";
     begin
         if PTEGetSalesHeader(DocumentType, APIAPHeader."Claim Number") then
             exit(true);
@@ -63,8 +56,6 @@ tableextension 80500 "PTEAP Sales Header" extends "Sales Header"
     end;
 
     internal procedure PTEGetSalesHeader(DocumentType: Enum "Sales Document Type"; ClaimNumber: Text): Boolean;
-    var
-        SalesHeader: Record "Sales Header";
     begin
         SetRange("PTEAP Claim Number", ClaimNumber);
         SetRange("Document Type", DocumentType);

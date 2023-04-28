@@ -52,6 +52,11 @@ table 80503 "PTEAP API AP Line"
             DataClassification = CustomerContent;
             Caption = 'Description';
         }
+        field(107; "Source"; Text[1024])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Description';
+        }
     }
 
     keys
@@ -67,20 +72,20 @@ table 80503 "PTEAP API AP Line"
         SalesHeader: Record "Sales Header";
         SalesLine: Record "Sales Line";
         CannotFindOrderErr: Label 'Cannot find a Sales Header for %1 %2', Comment = '%1 = fieldcaption %2=field';
+        CreatedLbl: Label '%1 %2 %3 Created', Comment = '%1 = doc type %2 = doc no %3= Line nO';
     begin
         // if FindSet() then
         //     repeat
         if not SalesHeader.PTEGetSalesHeader("Sales Document Type"::Invoice, "Claim Number") then
             Error(CannotFindOrderErr, FieldCaption("Claim Number"), "Claim Number");
 
-        CreateSalesLine(SalesHeader);
+        CreateSalesLine(SalesHeader, SalesLine);
         // until Next() = 0;
-        exit(StrSubstNo('%1 %2 Created', SalesHeader."Document Type", SalesHeader."No."));
+        exit(StrSubstNo(CreatedLbl, SalesLine."Document Type", SalesLine."Document No.", SalesLine."Line No."));
     end;
 
-    local procedure CreateSalesLine(SalesHeader: Record "Sales Header")
+    local procedure CreateSalesLine(SalesHeader: Record "Sales Header"; var SalesLine: Record "Sales Line")
     var
-        SalesLine: Record "Sales Line";
         LastLineNo: Integer;
     begin
         SalesLine.SetRange("Document Type", SalesHeader."Document Type");
@@ -106,19 +111,26 @@ table 80503 "PTEAP API AP Line"
     local procedure GetItem(ItemNo: Code[20]): Code[20]
     var
         Item: Record Item;
+    begin
+        if not Item.Get(ItemNo) then
+            CreateItem(Item, ItemNo);
+
+        exit(Item."No.");
+    end;
+
+    local procedure CreateItem(var Item: Record Item; ItemNo: Code[20])
+    var
+        ItemTempl: Record "Item Templ.";
         Setup: Record "PTEAP Spear AP Setup";
         ItemTemplMgt: Codeunit "Item Templ. Mgt.";
-        IsHandled: Boolean;
-        CannotCreateItemFromTemplateErr: Label 'Cannot create a new item from template %1', Comment = '%1 is termplate code';
     begin
-        Does not create the item with the original item no.Needs to do that;
-        Instead of calling the whole auto shebang init item + no manually then call:;
-        ItemTemplMgt.ApplyItemTemplate(Item, ItemTemplate);
         Setup.Get();
-        if not Item.Get(ItemNo) then begin
-            if not ItemTemplMgt.CreateItemFromTemplate(Item, IsHandled, Setup."Item Template") then
-                error(CannotCreateItemFromTemplateErr, Setup."Item Template");
-        end;
-        exit(Item."No.");
+        ItemTempl.Get(Setup."Item Template");
+
+        Item.Init();
+        Item."No." := ItemNo;
+        Item.Insert(true);
+
+        ItemTemplMgt.ApplyItemTemplate(Item, ItemTempl, true);
     end;
 }

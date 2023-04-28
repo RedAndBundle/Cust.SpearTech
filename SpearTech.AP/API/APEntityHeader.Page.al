@@ -20,16 +20,16 @@ Page 80501 "PTEAP API AP Header"
         {
             repeater(Group)
             {
-                field(id; Rec.SystemId) { ApplicationArea = Basic; }
-                field(sellto_customer_no; Rec."Sell-to Customer No.") { ApplicationArea = Basic; }
-                field(bill_to_customer_no; Rec."Bill-To Customer No.") { ApplicationArea = Basic; }
-                field(claim_number; Rec."Claim Number") { ApplicationArea = Basic; }
-                field(claimant_name; Rec."Claimant Name") { ApplicationArea = Basic; }
-                field(ssn; Rec.SSN) { ApplicationArea = Basic; }
-                field(dob; Rec.DOB) { ApplicationArea = Basic; }
-                field(claims_manager; Rec."Claims Manager") { ApplicationArea = Basic; }
-                field(referral_date; Rec."Referral Date") { ApplicationArea = Basic; }
-                field(result; Result) { ApplicationArea = Basic; }
+                field(id; Rec.SystemId) { ApplicationArea = Basic, Suite; }
+                field(selltoCustomerNo; Rec."Sell-to Customer No.") { ApplicationArea = Basic, Suite; }
+                field(billToCustomerNo; Rec."Bill-To Customer No.") { ApplicationArea = Basic, Suite; }
+                field(claimNumber; Rec."Claim Number") { ApplicationArea = Basic, Suite; }
+                field(claimantName; Rec."Claimant Name") { ApplicationArea = Basic, Suite; }
+                field(ssn; Rec.SSN) { ApplicationArea = Basic, Suite; }
+                field(dob; Rec.DOB) { ApplicationArea = Basic, Suite; }
+                field(claimsManager; Rec."Claims Manager") { ApplicationArea = Basic, Suite; }
+                field(referralDate; Rec."Referral Date") { ApplicationArea = Basic, Suite; }
+                field(result; Result) { ApplicationArea = Basic, Suite; }
             }
             part(apLines; "PTEAP API AP Line")
             {
@@ -46,13 +46,26 @@ Page 80501 "PTEAP API AP Header"
     trigger OnInsertRecord(BelowxRec: Boolean): Boolean
     var
         Setup: Record "PTEAP Spear AP Setup";
-        TempAPIAPLine: Record "PTEAP API AP Line" temporary;
-        Vendor: Record Vendor;
     begin
         Rec.TestField("Sell-to Customer No.");
         Rec.TestField("Claim Number");
         Setup.Get();
         Setup.TestField("Item Template");
         Result := Rec.ProcessAPInterface();
+    end;
+
+    trigger OnFindRecord(Which: Text): Boolean
+    begin
+        Message('hi');
+        Rec.Init();
+        Rec."Claim Number" := Rec.GetFilter("Claim Number");
+        Rec."Sell-to Customer No." := '10000';
+        Rec.Insert();
+        exit(true);
+    end;
+
+    trigger OnAfterGetRecord()
+    begin
+        Message('hi');
     end;
 }
