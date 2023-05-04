@@ -1,4 +1,4 @@
-table 80501 "PTEAP Spear AP Setup"
+table 80504 "PTEAP Spear AP Setup"
 {
     DataClassification = ToBeClassified;
 

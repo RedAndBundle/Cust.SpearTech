@@ -1,4 +1,4 @@
-page 80502 "PTEAP Spear AP Setup"
+page 80504 "PTEAP Spear AP Setup"
 {
     PageType = Card;
     ApplicationArea = All;

@@ -263,11 +263,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Invoice Line - Field PTEAP Task/Activity - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3595448026 - Method 1218424716 - NamedType 2112810544" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 3595448026">
-          <source>You cannot modify this line because it was created from the AP Entry API.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Line - Method PTEBlockIfHasAPEntry - NamedType CannotModifyErr</note>
-        </trans-unit>
         <trans-unit id="TableExtension 3595448026 - Field 1619727731 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
           <source>Claim Number</source>
           <note from="Developer" annotates="general" priority="2"></note>

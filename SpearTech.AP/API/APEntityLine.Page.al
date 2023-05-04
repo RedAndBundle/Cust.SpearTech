@@ -1,4 +1,4 @@
-Page 80504 "PTEAP API AP Line"
+Page 80502 "PTEAP API AP Line"
 {
     DelayedInsert = true;
     DeleteAllowed = false;

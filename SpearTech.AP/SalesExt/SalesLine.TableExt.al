@@ -35,11 +35,11 @@ tableextension 80501 "PTEAP Sales Line" extends "Sales Line"
         // PTEBlockIfHasAPEntry();
     end;
 
-    local procedure PTEBlockIfHasAPEntry()
-    var
-        CannotModifyErr: Label 'You cannot modify this line because it was created from the AP Entry API.';
-    begin
-        if "PTEAP Task/Activity" <> '' then
-            Error(CannotModifyErr);
-    end;
+    // local procedure PTEBlockIfHasAPEntry()
+    // var
+    //     CannotModifyErr: Label 'You cannot modify this line because it was created from the AP Entry API.';
+    // begin
+    //     if "PTEAP Task/Activity" <> '' then
+    //         Error(CannotModifyErr);
+    // end;
 }

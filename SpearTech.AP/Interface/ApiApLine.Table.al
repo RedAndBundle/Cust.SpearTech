@@ -1,4 +1,4 @@
-table 80503 "PTEAP API AP Line"
+table 80501 "PTEAP API AP Line"
 {
     DataClassification = CustomerContent;
     Caption = 'API AP Header';

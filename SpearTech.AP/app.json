@@ -2,7 +2,7 @@
   "id": "7514153e-ac1e-497c-b55c-0caa195adc44",
   "name": "SpearTech.AP",
   "publisher": "Red and Bundle",
-  "version": "1.0.0.0",
+  "version": "1.0.0.1",
   "brief": "Accounts Payable APIs",
   "description": "APIs and other customizations for Accounts Payable",
   "privacyStatement": "https://wwww.speartech.com",
@@ -25,8 +25,8 @@
     }
   ],
   "screenshots": [],
-  "platform": "22.0.0.0",
-  "application": "22.0.0.0",
+  "platform": "21.0.0.0",
+  "application": "21.0.0.0",
   "idRanges": [
     {
       "from": 80500,
@@ -39,7 +39,7 @@
 		"allowDownloadingSource": false, 
 		"includeSourceInSymbolFile": true
 	},
-  "runtime": "11.0",
+  "runtime": "10.0",
   "features": [
     "TranslationFile",
     "NoImplicitWith"
