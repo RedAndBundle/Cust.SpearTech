@@ -4,7 +4,7 @@ pageextension 80400 "PTE Bank Account Card" extends "Bank Account Card"
     {
         addlast(content)
         {
-            group(SpearTech)
+            group(PTESpearTech)
             {
                 Caption = 'SpearTech';
                 field("PTE Check Name"; Rec."PTE Check Name")

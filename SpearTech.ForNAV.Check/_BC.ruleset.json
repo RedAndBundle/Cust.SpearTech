@@ -9,6 +9,11 @@
             "justification": "Not possible to solve"
         },
         {
+            "id": "AA0215",
+            "action": "None",
+            "justification": "Not possible to solve"
+        },
+        {
             "id": "AA0139",
             "action": "None",
             "justification": "Pointless rule"
@@ -25,6 +30,11 @@
         },
         {
             "id": "AS0084",
+            "action": "None",
+            "justification": "App going to appsource. Need rules"
+        },
+        {
+            "id": "AS0092",
             "action": "None",
             "justification": "App going to appsource. Need rules"
         }

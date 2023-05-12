@@ -7,7 +7,7 @@ pageextension 80401 "PTE Company Information" extends "Company Information"
             group(PTESpear)
             {
                 Caption = 'SpearTech';
-                field(SystemId; Rec.SystemId)
+                field(PTESystemId; Rec.SystemId)
                 {
                     ApplicationArea = Basic, Suite;
                     Editable = false;
