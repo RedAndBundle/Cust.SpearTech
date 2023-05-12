@@ -1,0 +1,1272 @@
+{
+  "@PageHeight": "2794",
+  "@PaperKind": "Letter",
+  "@ReportUnit": "TenthsOfAMillimeter",
+  "@Margins": "300, 159, 200, 200",
+  "@PageWidth": "2159",
+  "@Font": "Segoe UI, 8pt",
+  "Bands": {
+    "Header": {
+      "@ControlType": "DataItem",
+      "@Name": "Header",
+      "@TotalColumns": "Header$Amount,Header$AmountIncludingVAT",
+      "@TotalFields": "60,61",
+      "@CalcFields": "\"Amount Including VAT\", Amount",
+      "@ResetPageNumber": "true",
+      "@NewPagePerRecord": "true",
+      "@Id": "2",
+      "@GroupTotalFields": "\"3\"",
+      "@GroupTotalFieldNames": "\"No.\"",
+      "@ReqFilterFields": "\"No.\",\"Posting Date\"",
+      "@DataItemTableView": "SORTING(\"No.\")",
+      "@DataItemVarName": "Header",
+      "@DataItemTable": "Table112",
+      "Bands": {
+        "DocumentHeader": {
+          "@ControlType": "Header",
+          "@Name": "DocumentHeader",
+          "@BackColor": "Transparent",
+          "@Signature": "abc",
+          "@AllowScriptErrors": "true",
+          "@PrintOnEveryPage": "true",
+          "@ShowOutput": "false",
+          "@Height": "830.0001",
+          "Controls": {
+            "Header_DueDate": {
+              "@Name": "Header_DueDate",
+              "@ControlType": "TextBox",
+              "@Size": "380.000244,59.99994",
+              "@Location": "1319.99988,679.9998",
+              "@Font": "Segoe UI, 8pt",
+              "@ForeColor": "Black",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.DueDate"
+            },
+            "CurrReport_StandardCaptions_Copy": {
+              "@Name": "CurrReport_StandardCaptions_Copy",
+              "@ControlType": "TextBox",
+              "@Size": "400,60",
+              "@Location": "0,560",
+              "@Font": "Segoe UI, 8pt",
+              "@SourceExpression": "CurrReport.StandardCaptions.Copy"
+            },
+            "Header_FieldLookups_PaymentTermsDescription": {
+              "@Name": "Header_FieldLookups_PaymentTermsDescription",
+              "@ControlType": "TextBox",
+              "@Size": "380,60.0001221",
+              "@Location": "1320,739.999756",
+              "@Font": "Segoe UI, 8pt",
+              "@ForeColor": "Black",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.FieldLookups.PaymentTermsDescription"
+            },
+            "Header_FieldLookups_PaymentTermsCaption": {
+              "@Name": "Header_FieldLookups_PaymentTermsCaption",
+              "@ControlType": "TextBox",
+              "@Size": "320.000061,60.00006",
+              "@Location": "1000,739.9999",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@ForeColor": "Black",
+              "@SourceExpression": "Header.FieldLookups.PaymentTermsCaption"
+            },
+            "Header_FieldCaptions_DueDate": {
+              "@Name": "Header_FieldCaptions_DueDate",
+              "@ControlType": "TextBox",
+              "@Size": "320.000061,60",
+              "@Location": "1000,679.9998",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@ForeColor": "Black",
+              "@SourceExpression": "Header.FieldCaptions.DueDate"
+            },
+            "Header_FieldCaptions_DocumentDate": {
+              "@Name": "Header_FieldCaptions_DocumentDate",
+              "@ControlType": "TextBox",
+              "@Size": "320,60",
+              "@Location": "1000,619.999939",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@ForeColor": "Black",
+              "@SourceExpression": "Header.FieldCaptions.DocumentDate"
+            },
+            "Header_FieldCaptions_OrderNo": {
+              "@Name": "Header_FieldCaptions_OrderNo",
+              "@ControlType": "TextBox",
+              "@Size": "320,60",
+              "@Location": "0,679.9998",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@ForeColor": "Black",
+              "@ShowOutput": "Header.OrderNo!=''",
+              "@SourceExpression": "Header.FieldCaptions.OrderNo"
+            },
+            "Header_FieldLookups_CustomerCaption": {
+              "@Name": "Header_FieldLookups_CustomerCaption",
+              "@ControlType": "TextBox",
+              "@Size": "320,60",
+              "@Location": "0,619.999939",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@ForeColor": "Black",
+              "@SourceExpression": "Header.FieldLookups.CustomerCaption"
+            },
+            "Header_FieldGroups_Bill_toAddress": {
+              "@Name": "Header_FieldGroups_Bill_toAddress",
+              "@ControlType": "TextBox",
+              "@Size": "400,220.003281",
+              "@Location": "0,159.996689",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@ForeColor": "Black",
+              "@MultiLine": "true",
+              "@VertAlign": "Top",
+              "@HorzAlign": "Left",
+              "@SourceExpression": "Header.FieldGroups.Bill_toAddress",
+              "@CanGrow": "true"
+            },
+            "CompanyInformation_FieldGroups_Address": {
+              "@Name": "CompanyInformation_FieldGroups_Address",
+              "@ControlType": "TextBox",
+              "@Size": "400,220.003281",
+              "@Location": "1300.00012,159.996689",
+              "@Font": "Segoe UI, 8pt",
+              "@ForeColor": "Black",
+              "@MultiLine": "true",
+              "@VertAlign": "Top",
+              "@ShowOutput": "CurrReport.PrintLogo(ForNAVSetup.UsePreprintedPaper)",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "CompanyInformation.FieldGroups.Address"
+            },
+            "CurrReport_Caption": {
+              "@Name": "CurrReport_Caption",
+              "@ControlType": "TextBox",
+              "@Size": "1000,60",
+              "@Location": "0,500",
+              "@Font": "Segoe UI, 10pt, style=Bold",
+              "@ForeColor": "Black",
+              "@HorzAlign": "Left",
+              "@SourceExpression": "CurrReport.Caption + ': ' + Header.No"
+            },
+            "CurrReport_Page": {
+              "@Name": "CurrReport_Page",
+              "@ControlType": "TextBox",
+              "@Size": "200,60",
+              "@Location": "1500,500",
+              "@Font": "Segoe UI, 8pt",
+              "@ForeColor": "Black",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "CurrReport.Page"
+            },
+            "Header_Bill_toCustomerNo": {
+              "@Name": "Header_Bill_toCustomerNo",
+              "@ControlType": "TextBox",
+              "@Size": "450,60",
+              "@Location": "320,619.999939",
+              "@Font": "Segoe UI, 8pt",
+              "@ForeColor": "Black",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.Bill_toCustomerNo"
+            },
+            "Header_FieldGroups_Bill_toAddress8": {
+              "@Name": "Header_FieldGroups_Bill_toAddress8",
+              "@ControlType": "TextBox",
+              "@Size": "449.9999,60.00006",
+              "@Location": "320.000183,680",
+              "@Font": "Segoe UI, 8pt",
+              "@ForeColor": "Black",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.OrderNo"
+            },
+            "Header_DocumentDate": {
+              "@Name": "Header_DocumentDate",
+              "@ControlType": "TextBox",
+              "@Size": "380.000244,59.99994",
+              "@Location": "1319.99951,619.999939",
+              "@Font": "Segoe UI, 8pt",
+              "@ForeColor": "Black",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.DocumentDate"
+            }
+          }
+        },
+        "Footer": {
+          "@ControlType": "Footer",
+          "@Name": "Footer",
+          "@BackColor": "Transparent",
+          "@Padding": "0,0,0,0,254",
+          "@PrintOnEveryPage": "true",
+          "@PlaceInBottom": "true",
+          "@Signature": "abc",
+          "@Height": "508.919952",
+          "Controls": {
+            "TextBox51": {
+              "@Name": "TextBox51",
+              "@ControlType": "TextBox",
+              "@Size": "254,58.42",
+              "@Location": "0,353.4584",
+              "@Font": "Segoe UI, 7pt",
+              "@SourceExpression": "CurrReport.Page"
+            },
+            "Header_FieldGroups_Bill_toAddress6": {
+              "@Name": "Header_FieldGroups_Bill_toAddress6",
+              "@ControlType": "TextBox",
+              "@Size": "770.0002,293.4582",
+              "@Location": "0,60.0002136",
+              "@Font": "Segoe UI, 8pt",
+              "@MultiLine": "true",
+              "@ShowOutput": "CurrReport.PrintLogo(ForNAVSetup.UsePreprintedPaper)",
+              "@SourceExpression": [
+                "var joinFormat = ': ';",
+                "CurrReport.JoinStrings('\\n',",
+                "CompanyInformation.Name,",
+                "CompanyInformation.Address,",
+                "CompanyInformation.Address2 + ', ' + CompanyInformation.City + ', ' + CompanyInformation.County + ' ' + CompanyInformation.VATRegistrationNo,",
+                "CompanyInformation.FieldExtensions.PhoneNo.Format(joinFormat) + ' ' + CompanyInformation.FieldExtensions.FaxNo.Format(joinFormat))",
+                ""
+              ],
+              "@CanShrink": "true"
+            },
+            "CompanyInformation_FieldGroups_Address2": {
+              "@Name": "CompanyInformation_FieldGroups_Address2",
+              "@ControlType": "TextBox",
+              "@Size": "1700.00012,72.04144",
+              "@Location": "0,411.8783",
+              "@Font": "Segoe UI, 6pt, style=Italic",
+              "@ShowOutput": "CurrReport.PrintLogo(ForNAVSetup.UsePreprintedPaper)",
+              "@HorzAlign": "Center",
+              "@SourceExpression": "ForNAVSetup.LegalConditions"
+            },
+            "TextBox5": {
+              "@Name": "TextBox5",
+              "@ControlType": "TextBox",
+              "@Size": "399.999969,60.0001831",
+              "@Location": "0,0",
+              "@Font": "Arial, 9pt, style=Italic",
+              "@SourceExpression": "ForNAVSetup.PaymentNote"
+            }
+          }
+        },
+        "Header1": {
+          "@ControlType": "Header",
+          "@Name": "Header1",
+          "@Signature": "abc",
+          "@CanGrow": "true",
+          "@PrintOnEveryPage": "true",
+          "@Height": "703.0485",
+          "Controls": {
+            "TextBox38": {
+              "@Name": "TextBox38",
+              "@ControlType": "TextBox",
+              "@Size": "750.00116,176.645691",
+              "@Location": "949.997253,470.850952",
+              "@SourceExpression": "Header.FieldGroups.Bill_toAddress"
+            },
+            "TextBox36": {
+              "@Name": "TextBox36",
+              "@ControlType": "TextBox",
+              "@Size": "254,50",
+              "@Location": "0,597.496643",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.FieldCaptions.Sell_toCounty + ': '"
+            },
+            "TextBox37": {
+              "@Name": "TextBox37",
+              "@ControlType": "TextBox",
+              "@Size": "333.38,50",
+              "@Location": "253.999023,597.496643",
+              "@Font": "Segoe UI, 8pt",
+              "@SourceExpression": "Header.Sell_toCounty"
+            },
+            "TextBox33": {
+              "@Name": "TextBox33",
+              "@ControlType": "TextBox",
+              "@Size": "254,50",
+              "@Location": "0,497.496765",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.FieldCaptions.PTEAPClaimsManager + ': '"
+            },
+            "TextBox34": {
+              "@Name": "TextBox34",
+              "@ControlType": "TextBox",
+              "@Size": "333.38,50",
+              "@Location": "253.999023,497.496765",
+              "@Font": "Segoe UI, 8pt",
+              "@SourceExpression": "Header.PTEAPClaimsManager"
+            },
+            "TextBox31": {
+              "@Name": "TextBox31",
+              "@ControlType": "TextBox",
+              "@Size": "254,50",
+              "@Location": "0,547.496643",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.FieldCaptions.Sell_toCustomerName + ': '"
+            },
+            "TextBox32": {
+              "@Name": "TextBox32",
+              "@ControlType": "TextBox",
+              "@Size": "333.38,50",
+              "@Location": "253.999023,547.496643",
+              "@Font": "Segoe UI, 8pt",
+              "@SourceExpression": "Header.Sell_toCustomerName"
+            },
+            "TextBox29": {
+              "@Name": "TextBox29",
+              "@ControlType": "TextBox",
+              "@Size": "254,50",
+              "@Location": "0,447.496735",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.FieldCaptions.PTEAPReferralDate + ': '"
+            },
+            "TextBox30": {
+              "@Name": "TextBox30",
+              "@ControlType": "TextBox",
+              "@Size": "333.38,50",
+              "@Location": "253.999023,447.496735",
+              "@Font": "Segoe UI, 8pt",
+              "@SourceExpression": "Header.PTEAPReferralDate"
+            },
+            "TextBox27": {
+              "@Name": "TextBox27",
+              "@ControlType": "TextBox",
+              "@Size": "254,50",
+              "@Location": "0,397.496735",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.FieldCaptions.PTEAPDOB + ': '"
+            },
+            "TextBox28": {
+              "@Name": "TextBox28",
+              "@ControlType": "TextBox",
+              "@Size": "333.38,50",
+              "@Location": "253.999023,397.496735",
+              "@Font": "Segoe UI, 8pt",
+              "@SourceExpression": "Header.PTEAPDOB"
+            },
+            "TextBox25": {
+              "@Name": "TextBox25",
+              "@ControlType": "TextBox",
+              "@Size": "254,50",
+              "@Location": "0,347.4967",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.FieldCaptions.PTEAPSSN + ': '"
+            },
+            "TextBox26": {
+              "@Name": "TextBox26",
+              "@ControlType": "TextBox",
+              "@Size": "333.38,50",
+              "@Location": "253.999023,347.4967",
+              "@Font": "Segoe UI, 8pt",
+              "@SourceExpression": "Header.PTEAPSSN"
+            },
+            "TextBox23": {
+              "@Name": "TextBox23",
+              "@ControlType": "TextBox",
+              "@Size": "254,50",
+              "@Location": "0,297.4967",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.FieldCaptions.PTEAPClaimantName + ': '"
+            },
+            "TextBox24": {
+              "@Name": "TextBox24",
+              "@ControlType": "TextBox",
+              "@Size": "333.38,50",
+              "@Location": "253.999023,297.4967",
+              "@Font": "Segoe UI, 8pt",
+              "@SourceExpression": "Header.PTEAPClaimantName"
+            },
+            "TextBox22": {
+              "@Name": "TextBox22",
+              "@ControlType": "TextBox",
+              "@Size": "333.38,50",
+              "@Location": "253.999023,247.496689",
+              "@Font": "Segoe UI, 8pt",
+              "@SourceExpression": "Header.PTEAPClaimNumber"
+            },
+            "TextBox21": {
+              "@Name": "TextBox21",
+              "@ControlType": "TextBox",
+              "@Size": "254,50",
+              "@Location": "0,247.496689",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.FieldCaptions.PTEAPClaimNumber + ': '"
+            },
+            "TextBox19": {
+              "@Name": "TextBox19",
+              "@ControlType": "TextBox",
+              "@Size": "300.0005,50.0000153",
+              "@Location": "1399.99915,410.267578",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@BackColor": "Transparent",
+              "@SourceExpression": "'[Billed-To-Date]'"
+            },
+            "TextBox20": {
+              "@Name": "TextBox20",
+              "@ControlType": "TextBox",
+              "@Size": "320,50.0000153",
+              "@Location": "1079.99915,410.267578",
+              "@Font": "Segoe UI, 8pt",
+              "@BackColor": "Transparent",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "'[Billed-To-Date]' + ': '"
+            },
+            "TextBox17": {
+              "@Name": "TextBox17",
+              "@ControlType": "TextBox",
+              "@Size": "320,50.0000153",
+              "@Location": "1079.99915,309.996735",
+              "@Font": "Segoe UI, 8pt",
+              "@BackColor": "Transparent",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "'[Claim ID caption]' + ': '"
+            },
+            "TextBox18": {
+              "@Name": "TextBox18",
+              "@ControlType": "TextBox",
+              "@Size": "300.0005,50.0000153",
+              "@Location": "1399.99915,309.996735",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@BackColor": "Transparent",
+              "@SourceExpression": "'[Claim ID]'"
+            },
+            "TextBox15": {
+              "@Name": "TextBox15",
+              "@ControlType": "TextBox",
+              "@Size": "320,50.0000153",
+              "@Location": "1079.99915,359.996765",
+              "@Font": "Segoe UI, 8pt",
+              "@BackColor": "Transparent",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "'[Date of Accident]' + ': '"
+            },
+            "TextBox16": {
+              "@Name": "TextBox16",
+              "@ControlType": "TextBox",
+              "@Size": "300.0005,50.0000153",
+              "@Location": "1399.99915,359.996765",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@BackColor": "Transparent",
+              "@SourceExpression": "'[Date of Accident]'"
+            },
+            "TextBox13": {
+              "@Name": "TextBox13",
+              "@ControlType": "TextBox",
+              "@Size": "320,50.0000153",
+              "@Location": "1079.99854,259.996735",
+              "@Font": "Segoe UI, 8pt",
+              "@BackColor": "Transparent",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.FieldCaptions.PaymentTermsCode + ': '"
+            },
+            "TextBox14": {
+              "@Name": "TextBox14",
+              "@ControlType": "TextBox",
+              "@Size": "300.0005,50.0000153",
+              "@Location": "1399.99854,259.996735",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@BackColor": "Transparent",
+              "@SourceExpression": "Header.PaymentTermsCode"
+            },
+            "TextBox10": {
+              "@Name": "TextBox10",
+              "@ControlType": "TextBox",
+              "@Size": "300.0005,50.0000153",
+              "@Location": "1399.99963,209.9967",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@SourceExpression": "Header.DocumentDate"
+            },
+            "TextBox11": {
+              "@Name": "TextBox11",
+              "@ControlType": "TextBox",
+              "@Size": "320,50.0000153",
+              "@Location": "1079.99963,209.9967",
+              "@Font": "Segoe UI, 8pt",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "Header.FieldCaptions.DocumentDate + ': '"
+            },
+            "TextBox9": {
+              "@Name": "TextBox9",
+              "@ControlType": "TextBox",
+              "@Size": "633.72876,58.4200439",
+              "@Location": "533.1356,87.4999847",
+              "@Font": "Segoe UI, 14pt",
+              "@HorzAlign": "Center",
+              "@SourceExpression": "CompanyInformation.Name",
+              "@AutoFit": "true"
+            },
+            "TextBox7": {
+              "@Name": "TextBox7",
+              "@ControlType": "TextBox",
+              "@Size": "320,50.0000153",
+              "@Location": "1079.99963,159.996689",
+              "@Font": "Segoe UI, 8pt",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "CurrReport.Caption + ' #: '"
+            },
+            "TextBox6": {
+              "@Name": "TextBox6",
+              "@ControlType": "TextBox",
+              "@Size": "300.0005,50.0000153",
+              "@Location": "1399.99963,159.996689",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@SourceExpression": "Header.No"
+            },
+            "TextBox8": {
+              "@Name": "TextBox8",
+              "@ControlType": "TextBox",
+              "@Size": "633.72876,84.8782959",
+              "@Location": "533.1356,0",
+              "@Font": "Segoe UI, 20pt, style=Bold",
+              "@HorzAlign": "Center",
+              "@SourceExpression": "CurrReport.Caption.toUpperCase()",
+              "@AutoFit": "true"
+            },
+            "CompanyInformation_Picture": {
+              "@ControlType": "PictureBox",
+              "@Name": "CompanyInformation_Picture",
+              "@Size": "700,159.996658",
+              "@Location": "999.999,0",
+              "@ShowOutput": "CurrReport.PrintLogo(ForNAVSetup.UsePreprintedPaper)",
+              "@Sizing": "ZoomImage",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "ForNAVSetup.Logo"
+            }
+          }
+        },
+        "Line": {
+          "@ControlType": "DataItem",
+          "@Name": "Line",
+          "@TotalColumns": "Line$Amount",
+          "@TotalFields": "29",
+          "@Id": "3",
+          "@DataItemLink": "\"Document No.\" = FIELD(\"No.\")",
+          "@DataItemLinkReference": "Header",
+          "@DataItemTableView": "SORTING(\"Document No.\", \"Line No.\")",
+          "@DataItemVarName": "Line",
+          "@DataItemTable": "Table113",
+          "Bands": {
+            "LinesBody": {
+              "@ControlType": "Body",
+              "@Name": "LinesBody",
+              "@BackColor": "Transparent",
+              "@Signature": "abc",
+              "@CanGrow": "true",
+              "@Height": "60",
+              "Controls": {
+                "LinesTable": {
+                  "@Name": "LinesTable",
+                  "@ControlType": "Table",
+                  "@Size": "1699.99927,60",
+                  "@Location": "0,0",
+                  "Rows": {
+                    "LinesRow": {
+                      "@Name": "LinesRow",
+                      "@ControlType": "TableRow",
+                      "@Weight": "0.5679012345679012",
+                      "Cells": {
+                        "tableCell27": {
+                          "@Name": "tableCell27",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "0.5018775073667231",
+                          "@SourceExpression": "Line.FieldExtensions.PTEAPTaskDate",
+                          "@VertAlign": "Top",
+                          "@HorzAlign": "Right"
+                        },
+                        "Line_No": {
+                          "@Name": "Line_No",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "0.49797458908319825",
+                          "@SourceExpression": "Line.No",
+                          "@VertAlign": "Top",
+                          "@HorzAlign": "Right",
+                          "@ShowOutput": "Line.GetOptionValue('Type') == 2"
+                        },
+                        "Line_Description": {
+                          "@Name": "Line_Description",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "2.687488098192",
+                          "@SourceExpression": "Line.FieldExtensions.PTEAPTask_Activity",
+                          "@VertAlign": "Top",
+                          "@HorzAlign": "Left",
+                          "@CanGrow": "true"
+                        },
+                        "Line_Quantity": {
+                          "@Name": "Line_Quantity",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "0.66226469365859786",
+                          "@BlankZero": "true",
+                          "@SourceExpression": "Line.Quantity",
+                          "@VertAlign": "Top",
+                          "@HorzAlign": "Right"
+                        },
+                        "Line_UnitofMeasure": {
+                          "@Name": "Line_UnitofMeasure",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "0.62343623179445851",
+                          "@SourceExpression": "Line.UnitofMeasure",
+                          "@VertAlign": "Top",
+                          "@HorzAlign": "Right"
+                        },
+                        "tableCell38": {
+                          "@Name": "tableCell38",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "0.58697860185972928",
+                          "@SourceExpression": "Line.LineDiscountPct",
+                          "@VertAlign": "Top",
+                          "@HorzAlign": "Right",
+                          "@ShowOutput": "DynamicsNavDataSet.HasDiscount==true"
+                        },
+                        "Line_UnitPrice": {
+                          "@Name": "Line_UnitPrice",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "0.50187750438338152",
+                          "@BlankZero": "true",
+                          "@SourceExpression": "Line.UnitPrice",
+                          "@VertAlign": "Top",
+                          "@HorzAlign": "Right",
+                          "@FormatString": "$0.00"
+                        },
+                        "Line_Amount": {
+                          "@Name": "Line_Amount",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "1.2989716382952796",
+                          "@BlankZero": "true",
+                          "@SourceExpression": "Line.Amount",
+                          "@VertAlign": "Top",
+                          "@HorzAlign": "Right",
+                          "@FormatString": "$0.00"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "LinesHeader": {
+              "@ControlType": "Header",
+              "@Name": "LinesHeader",
+              "@BackColor": "Transparent",
+              "@Signature": "abc",
+              "@Height": "117.874908",
+              "Controls": {
+                "LinesHeaderTable": {
+                  "@Name": "LinesHeaderTable",
+                  "@ControlType": "Table",
+                  "@Size": "1699.99915,100.000031",
+                  "@Location": "0,0",
+                  "@BackColor": "Gainsboro",
+                  "@Borders": "Bottom",
+                  "Rows": {
+                    "LinesHeaderRow": {
+                      "@Name": "LinesHeaderRow",
+                      "@ControlType": "TableRow",
+                      "@Weight": "0.5679012345679012",
+                      "@AutoFit": "true",
+                      "Cells": {
+                        "Line_FieldCaptions_No_LinesHeader": {
+                          "@Name": "Line_FieldCaptions_No_LinesHeader",
+                          "@ControlType": "TableCell",
+                          "@Borders": "Bottom",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "8.8055524327114121",
+                          "@MultiLine": "true",
+                          "@SourceExpression": "Line.FieldCaptions.PTEAPTaskDate",
+                          "@HorzAlign": "Center"
+                        },
+                        "tableCell7": {
+                          "@Name": "tableCell7",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "8.7370767861979957",
+                          "@SourceExpression": "Line.FieldCaptions.No",
+                          "@HorzAlign": "Center"
+                        },
+                        "Line_FieldCaptions_Description_LinesHeader": {
+                          "@Name": "Line_FieldCaptions_Description_LinesHeader",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "47.152572812312336",
+                          "@MultiLine": "true",
+                          "@SourceExpression": "Line.FieldCaptions.PTEAPTask_Activity",
+                          "@HorzAlign": "Center"
+                        },
+                        "Line_FieldCaptions_Quantity_LinesHeader": {
+                          "@Name": "Line_FieldCaptions_Quantity_LinesHeader",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "11.619585060930039",
+                          "@MultiLine": "true",
+                          "@SourceExpression": "Line.FieldCaptions.Quantity",
+                          "@CanShrink": "true",
+                          "@HorzAlign": "Center"
+                        },
+                        "Line_FieldCaptions_UnitOfMeasure_LinesHeader": {
+                          "@Name": "Line_FieldCaptions_UnitOfMeasure_LinesHeader",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "10.938328751502926",
+                          "@MultiLine": "true",
+                          "@SourceExpression": "Line.FieldCaptions.UnitofMeasure",
+                          "@CanShrink": "true",
+                          "@HorzAlign": "Center"
+                        },
+                        "tableCell36": {
+                          "@Name": "tableCell36",
+                          "@ControlType": "TableCell",
+                          "@ForeColor": "Black",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "10.298669318792468",
+                          "@SourceExpression": "Line.FieldCaptions.LineDiscountPct",
+                          "@HorzAlign": "Center",
+                          "@ShowOutput": "DynamicsNavDataSet.HasDiscount==true"
+                        },
+                        "Line_FieldCaptions_UnitPrice_LinesHeader": {
+                          "@Name": "Line_FieldCaptions_UnitPrice_LinesHeader",
+                          "@ControlType": "TableCell",
+                          "@ForeColor": "Black",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "8.8055424502050812",
+                          "@MultiLine": "true",
+                          "@SourceExpression": "ForNAVCaptions.FieldCaptions.UnitPrice",
+                          "@CanShrink": "true",
+                          "@HorzAlign": "Center"
+                        },
+                        "Line_FieldCaptions_Amount_LinesHeader_LinesHeader": {
+                          "@Name": "Line_FieldCaptions_Amount_LinesHeader_LinesHeader",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "22.790736898473384",
+                          "@MultiLine": "true",
+                          "@SourceExpression": "Line.FieldCaptions.Amount + ' (' + Header.FieldLookups.CurrencyCode + ')'",
+                          "@HorzAlign": "Center"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "TransHeader": {
+              "@ControlType": "TransHeader",
+              "@Name": "TransHeader",
+              "@BackColor": "Transparent",
+              "@Signature": "abc",
+              "@Height": "160.000092",
+              "Controls": {
+                "Continued_Header_Amount": {
+                  "@Name": "Continued_Header_Amount",
+                  "@ControlType": "TextBox",
+                  "@Size": "299.9995,60.00006",
+                  "@Location": "1400.00061,100.000031",
+                  "@Font": "Segoe UI, 8pt, style=Italic",
+                  "@VertAlign": "Top",
+                  "@HorzAlign": "Right",
+                  "@SourceExpression": "Header.FieldLookups.CurrencySymbol + Line.Amount",
+                  "@FormatString": "$0.00"
+                },
+                "Continued_Header_Caption": {
+                  "@Name": "Continued_Header_Caption",
+                  "@ControlType": "TextBox",
+                  "@Size": "150,60",
+                  "@Location": "1250.00012,100.000031",
+                  "@Font": "Segoe UI, 8pt, style=Bold, Italic",
+                  "@SourceExpression": "CurrReport.StandardCaptions.Continued"
+                },
+                "table2": {
+                  "@Name": "table2",
+                  "@ControlType": "Table",
+                  "@Size": "1699.99915,100.000031",
+                  "@Location": "0,0",
+                  "@BackColor": "Gainsboro",
+                  "@Borders": "Bottom",
+                  "Rows": {
+                    "tableRow2": {
+                      "@Name": "tableRow2",
+                      "@ControlType": "TableRow",
+                      "@Weight": "0.5679012345679012",
+                      "@AutoFit": "true",
+                      "Cells": {
+                        "tableCell17": {
+                          "@Name": "tableCell17",
+                          "@ControlType": "TableCell",
+                          "@Borders": "Bottom",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "8.8055524327114121",
+                          "@MultiLine": "true",
+                          "@SourceExpression": "Line.FieldCaptions.PTEAPTaskDate",
+                          "@HorzAlign": "Center"
+                        },
+                        "tableCell18": {
+                          "@Name": "tableCell18",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "8.7370767861979957",
+                          "@SourceExpression": "Line.FieldCaptions.No",
+                          "@HorzAlign": "Center"
+                        },
+                        "tableCell19": {
+                          "@Name": "tableCell19",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "47.152577411667849",
+                          "@MultiLine": "true",
+                          "@SourceExpression": "Line.FieldCaptions.PTEAPTask_Activity",
+                          "@HorzAlign": "Center"
+                        },
+                        "tableCell21": {
+                          "@Name": "tableCell21",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "11.619580461574522",
+                          "@MultiLine": "true",
+                          "@SourceExpression": "Line.FieldCaptions.Quantity",
+                          "@CanShrink": "true",
+                          "@HorzAlign": "Center"
+                        },
+                        "tableCell22": {
+                          "@Name": "tableCell22",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "10.938327012699329",
+                          "@MultiLine": "true",
+                          "@SourceExpression": "Line.FieldCaptions.UnitofMeasure",
+                          "@CanShrink": "true",
+                          "@HorzAlign": "Center"
+                        },
+                        "tableCell37": {
+                          "@Name": "tableCell37",
+                          "@ControlType": "TableCell",
+                          "@ForeColor": "Black",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "10.298671057596065",
+                          "@SourceExpression": "Line.FieldCaptions.LineDiscountPct",
+                          "@HorzAlign": "Center",
+                          "@ShowOutput": "DynamicsNavDataSet.HasDiscount==true"
+                        },
+                        "tableCell24": {
+                          "@Name": "tableCell24",
+                          "@ControlType": "TableCell",
+                          "@ForeColor": "Black",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "8.8055534427547641",
+                          "@MultiLine": "true",
+                          "@SourceExpression": "ForNAVCaptions.FieldCaptions.UnitPrice",
+                          "@CanShrink": "true",
+                          "@HorzAlign": "Center"
+                        },
+                        "tableCell25": {
+                          "@Name": "tableCell25",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "22.790727624853758",
+                          "@MultiLine": "true",
+                          "@SourceExpression": "Line.FieldCaptions.Amount + ' (' + Header.FieldLookups.CurrencyCode + ')'",
+                          "@HorzAlign": "Center"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "TransFooter": {
+              "@ControlType": "TransFooter",
+              "@Name": "TransFooter",
+              "@BackColor": "Transparent",
+              "@Signature": "abc",
+              "@Height": "81.16672",
+              "Controls": {
+                "CompanyInformation_FieldGroups_Address4": {
+                  "@Name": "CompanyInformation_FieldGroups_Address4",
+                  "@ControlType": "TextBox",
+                  "@Size": "149.999878,60.0000534",
+                  "@Location": "1250,0",
+                  "@Font": "Segoe UI, 8pt, style=Bold, Italic",
+                  "@SourceExpression": "CurrReport.StandardCaptions.Continued"
+                },
+                "CompanyInformation_FieldGroups_Address3": {
+                  "@Name": "CompanyInformation_FieldGroups_Address3",
+                  "@ControlType": "TextBox",
+                  "@Size": "299.9994,60.0000534",
+                  "@Location": "1400,0",
+                  "@Font": "Segoe UI, 8pt, style=Italic",
+                  "@VertAlign": "Top",
+                  "@HorzAlign": "Right",
+                  "@SourceExpression": "Line.Amount",
+                  "@FormatString": "$0.00"
+                }
+              }
+            },
+            "LinesFooter": {
+              "@ControlType": "Footer",
+              "@Name": "LinesFooter",
+              "@BackColor": "Transparent",
+              "@Signature": "abc",
+              "@Height": "312.208344",
+              "Controls": {
+                "TextBox48": {
+                  "@Name": "TextBox48",
+                  "@ControlType": "TextBox",
+                  "@Size": "300.000244,60",
+                  "@Location": "1099.99939,144.999878",
+                  "@Font": "Segoe UI, 8pt",
+                  "@SourceExpression": "Line.FieldCaptions.InvDiscountAmount"
+                },
+                "TextBox49": {
+                  "@Name": "TextBox49",
+                  "@ControlType": "TextBox",
+                  "@Size": "300,60",
+                  "@Location": "1399.99915,144.999878",
+                  "@Font": "Segoe UI, 8pt",
+                  "@SourceExpression": "Header.InvoiceDiscountAmount",
+                  "@FormatString": "$0.00"
+                },
+                "Shape2": {
+                  "@Name": "Shape2",
+                  "@ControlType": "Shape",
+                  "@Size": "1700,5",
+                  "@Location": "0,10",
+                  "@Stretch": "true",
+                  "@Angle": "90",
+                  "@ShapeType": "HorzLine",
+                  "Shape": {
+                    "@ShapeName": "Line"
+                  }
+                },
+                "CurrReport_Caption6": {
+                  "@Name": "CurrReport_Caption6",
+                  "@ControlType": "TextBox",
+                  "@Size": "299.999878,60",
+                  "@Location": "1399.99976,24.9999275",
+                  "@Font": "Segoe UI, 8pt, style=Bold",
+                  "@SourceExpression": "Header.Amount",
+                  "@FormatString": "$0.00"
+                },
+                "CurrReport_Caption8": {
+                  "@Name": "CurrReport_Caption8",
+                  "@ControlType": "TextBox",
+                  "@Size": "300,60",
+                  "@Location": "1399.99976,84.99982",
+                  "@Font": "Segoe UI, 8pt",
+                  "@SourceExpression": "Header.AmountIncludingVAT-Header.Amount",
+                  "@FormatString": "$0.00"
+                },
+                "CurrReport_Caption7": {
+                  "@Name": "CurrReport_Caption7",
+                  "@ControlType": "TextBox",
+                  "@Size": "300,60",
+                  "@Location": "1100,24.9999275",
+                  "@Font": "Segoe UI, 8pt, style=Bold",
+                  "@SourceExpression": "CurrReport.StandardCaptions.SubTotal"
+                },
+                "CurrReport_Caption9": {
+                  "@Name": "CurrReport_Caption9",
+                  "@ControlType": "TextBox",
+                  "@Size": "300,60",
+                  "@Location": "1100.00049,204.999924",
+                  "@Font": "Segoe UI, 8pt, style=Bold",
+                  "@Borders": "Bottom",
+                  "@SourceExpression": "CurrReport.StandardCaptions.Total + ' (' + Header.FieldLookups.CurrencyCode + ')'"
+                },
+                "CompanyInformation_FieldGroups_Address0": {
+                  "@Name": "CompanyInformation_FieldGroups_Address0",
+                  "@ControlType": "TextBox",
+                  "@Size": "300,60",
+                  "@Location": "1400.00024,204.999924",
+                  "@Font": "Segoe UI, 8pt, style=Bold",
+                  "@Borders": "Bottom",
+                  "@SourceExpression": "Header.AmountIncludingVAT",
+                  "@FormatString": "$0.00"
+                },
+                "CompanyInformation_FieldGroups_Address1": {
+                  "@Name": "CompanyInformation_FieldGroups_Address1",
+                  "@ControlType": "TextBox",
+                  "@Size": "300.000244,60",
+                  "@Location": "1100,84.99982",
+                  "@Font": "Segoe UI, 8pt",
+                  "@SourceExpression": "CurrReport.StandardCaptions.TaxAmount"
+                }
+              }
+            }
+          },
+          "Fields": {
+            "DocumentNo": {
+              "@FieldName": "Document No.",
+              "@FieldNo": "3"
+            },
+            "LineNo": {
+              "@FieldName": "Line No.",
+              "@FieldNo": "4"
+            },
+            "Type": {
+              "@FieldName": "Type",
+              "@FieldNo": "5"
+            },
+            "No": {
+              "@FieldName": "No.",
+              "@FieldNo": "6"
+            },
+            "UnitofMeasure": {
+              "@FieldName": "Unit of Measure",
+              "@FieldNo": "13"
+            },
+            "Quantity": {
+              "@FieldName": "Quantity",
+              "@FieldNo": "15"
+            },
+            "UnitPrice": {
+              "@FieldName": "Unit Price",
+              "@FieldNo": "22"
+            },
+            "LineDiscountPct": {
+              "@FieldName": "Line Discount %",
+              "@FieldNo": "27"
+            },
+            "Amount": {
+              "@FieldName": "Amount",
+              "@FieldNo": "29"
+            },
+            "PTEAPTask_Activity": {
+              "@FieldName": "PTEAP Task/Activity",
+              "@FieldNo": "80500"
+            },
+            "PTEAPTaskDate": {
+              "@FieldName": "PTEAP Task Date",
+              "@FieldNo": "80501"
+            }
+          }
+        },
+        "SalesTaxBuffer": {
+          "@ControlType": "DataItem",
+          "@Name": "SalesTaxBuffer",
+          "@Id": "1",
+          "@Temporary": "true",
+          "@DataItemTableView": "SORTING(\"Primary Key\")",
+          "@DataItemVarName": "SalesTaxBuffer",
+          "@DataItemTable": "Table6189469",
+          "Bands": {
+            "SalesTaxBody": {
+              "@ControlType": "Body",
+              "@Name": "SalesTaxBody",
+              "@BackColor": "Transparent",
+              "@Signature": "abc",
+              "@ShowOutput": "SalesTaxBuffer.ExemptAmount != 0;",
+              "@Height": "120",
+              "Controls": {
+                "TextBox4": {
+                  "@Name": "TextBox4",
+                  "@ControlType": "TextBox",
+                  "@Size": "300.0005,60.00005",
+                  "@Location": "1100,59.99989",
+                  "@Font": "Segoe UI, 8pt, style=Bold",
+                  "@SourceExpression": "SalesTaxBuffer.FieldCaptions.TaxableAmount"
+                },
+                "TextBox3": {
+                  "@Name": "TextBox3",
+                  "@ControlType": "TextBox",
+                  "@Size": "300.0005,60.0000534",
+                  "@Location": "1100,0",
+                  "@Font": "Segoe UI, 8pt, style=Bold",
+                  "@SourceExpression": "SalesTaxBuffer.FieldCaptions.ExemptAmount"
+                },
+                "TextBox2": {
+                  "@Name": "TextBox2",
+                  "@ControlType": "TextBox",
+                  "@Size": "300,60",
+                  "@Location": "1399.99976,59.99989",
+                  "@Font": "Segoe UI, 8pt",
+                  "@SourceExpression": "SalesTaxBuffer.TaxableAmount",
+                  "@FormatString": "$0.00"
+                },
+                "TextBox1": {
+                  "@Name": "TextBox1",
+                  "@ControlType": "TextBox",
+                  "@Size": "299.9995,60",
+                  "@Location": "1400.00049,0",
+                  "@Font": "Segoe UI, 8pt",
+                  "@SourceExpression": "SalesTaxBuffer.ExemptAmount",
+                  "@FormatString": "$0.00"
+                }
+              }
+            }
+          },
+          "Fields": {
+            "PrimaryKey": {
+              "@FieldName": "Primary Key",
+              "@FieldNo": "1"
+            },
+            "ExemptAmount": {
+              "@FieldName": "Exempt Amount",
+              "@FieldNo": "2"
+            },
+            "TaxableAmount": {
+              "@FieldName": "Taxable Amount",
+              "@FieldNo": "3"
+            }
+          }
+        }
+      },
+      "Fields": {
+        "No": {
+          "@FieldName": "No.",
+          "@FieldNo": "3"
+        },
+        "Bill_toCustomerNo": {
+          "@FieldName": "Bill-to Customer No.",
+          "@FieldNo": "4"
+        },
+        "PaymentTermsCode": {
+          "@FieldName": "Payment Terms Code",
+          "@FieldNo": "23"
+        },
+        "DueDate": {
+          "@FieldName": "Due Date",
+          "@FieldNo": "24"
+        },
+        "OrderNo": {
+          "@FieldName": "Order No.",
+          "@FieldNo": "44"
+        },
+        "Amount": {
+          "@FieldName": "Amount",
+          "@FieldNo": "60"
+        },
+        "AmountIncludingVAT": {
+          "@FieldName": "Amount Including VAT",
+          "@FieldNo": "61"
+        },
+        "Sell_toCustomerName": {
+          "@FieldName": "Sell-to Customer Name",
+          "@FieldNo": "79"
+        },
+        "Sell_toCounty": {
+          "@FieldName": "Sell-to County",
+          "@FieldNo": "89"
+        },
+        "DocumentDate": {
+          "@FieldName": "Document Date",
+          "@FieldNo": "99"
+        },
+        "InvoiceDiscountAmount": {
+          "@FieldName": "Invoice Discount Amount",
+          "@FieldNo": "1305"
+        },
+        "PTEAPClaimNumber": {
+          "@FieldName": "PTEAP Claim Number",
+          "@FieldNo": "80500"
+        },
+        "PTEAPClaimantName": {
+          "@FieldName": "PTEAP Claimant Name",
+          "@FieldNo": "80501"
+        },
+        "PTEAPSSN": {
+          "@FieldName": "PTEAP SSN",
+          "@FieldNo": "80502"
+        },
+        "PTEAPDOB": {
+          "@FieldName": "PTEAP DOB",
+          "@FieldNo": "80503"
+        },
+        "PTEAPClaimsManager": {
+          "@FieldName": "PTEAP Claims Manager",
+          "@FieldNo": "80504"
+        },
+        "PTEAPReferralDate": {
+          "@FieldName": "PTEAP Referral Date",
+          "@FieldNo": "80505"
+        }
+      }
+    },
+    "topMarginBand1": {
+      "@Name": "topMarginBand1",
+      "@ControlType": "TopMargin",
+      "@Height": "200"
+    },
+    "bottomMarginBand1": {
+      "@Name": "bottomMarginBand1",
+      "@ControlType": "BottomMargin",
+      "@Height": "200"
+    }
+  },
+  "Records": {
+    "ForNAVCaptions": {
+      "@Table": "ForNAV Captions",
+      "@No": "6189371",
+      "@Name": "ForNAVCaptions"
+    },
+    "ForNAVSetup": {
+      "@Table": "ForNAV Setup",
+      "@No": "6188471",
+      "@Name": "ForNAVSetup",
+      "Fields": {
+        "UsePreprintedPaper": {
+          "@FieldName": "Use Preprinted Paper",
+          "@FieldNo": "15"
+        },
+        "Logo": {
+          "@FieldName": "Logo",
+          "@FieldNo": "20"
+        },
+        "PaymentNote": {
+          "@FieldName": "Payment Note",
+          "@FieldNo": "70"
+        },
+        "LegalConditions": {
+          "@FieldName": "Legal Conditions",
+          "@FieldNo": "80"
+        }
+      }
+    },
+    "CompanyInformation": {
+      "@Table": "Company Information",
+      "@No": "79",
+      "@Name": "CompanyInformation",
+      "Fields": {
+        "Name": {
+          "@FieldName": "Name",
+          "@FieldNo": "2"
+        },
+        "Address": {
+          "@FieldName": "Address",
+          "@FieldNo": "4"
+        },
+        "Address2": {
+          "@FieldName": "Address 2",
+          "@FieldNo": "5"
+        },
+        "City": {
+          "@FieldName": "City",
+          "@FieldNo": "6"
+        },
+        "PhoneNo": {
+          "@FieldName": "Phone No.",
+          "@FieldNo": "7"
+        },
+        "FaxNo": {
+          "@FieldName": "Fax No.",
+          "@FieldNo": "10"
+        },
+        "VATRegistrationNo": {
+          "@FieldName": "VAT Registration No.",
+          "@FieldNo": "19"
+        },
+        "County": {
+          "@FieldName": "County",
+          "@FieldNo": "31"
+        }
+      }
+    }
+  },
+  "DesignerOptions": {
+    "@ShowExportWarnings": "false"
+  }
+}
