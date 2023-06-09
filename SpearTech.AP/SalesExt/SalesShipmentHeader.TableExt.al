@@ -32,5 +32,10 @@ tableextension 80502 "PTEAP Sales Shipment  Header" extends "Sales Shipment Head
             DataClassification = CustomerContent;
             Caption = 'Referral Date';
         }
+        field(80506; "PTEAP Invoice Type"; Code[20])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Invoice Type';
+        }
     }
 }

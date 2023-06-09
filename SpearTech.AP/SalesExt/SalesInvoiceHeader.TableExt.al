@@ -32,5 +32,10 @@ tableextension 80504 "PTEAP Sales Invoice Header" extends "Sales Invoice Header"
             DataClassification = CustomerContent;
             Caption = 'Referral Date';
         }
+        field(80506; "PTEAP Invoice Type"; Code[20])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Invoice Type';
+        }
     }
 }

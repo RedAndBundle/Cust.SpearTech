@@ -32,11 +32,16 @@ tableextension 80500 "PTEAP Sales Header" extends "Sales Header"
             DataClassification = CustomerContent;
             Caption = 'Referral Date';
         }
+        field(80506; "PTEAP Invoice Type"; Code[20])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Invoice Type';
+        }
     }
 
-    internal procedure PTEGetSalesHeader(DocumentType: Enum "Sales Document Type"; var APIAPHeader: Record "PTEAP API AP Header"): Boolean;
+    internal procedure PTEAPGetSalesHeader(DocumentType: Enum "Sales Document Type"; var APIAPHeader: Record "PTEAP API AP Header"): Boolean;
     begin
-        if PTEGetSalesHeader(DocumentType, APIAPHeader."Claim Number") then
+        if PTEAPGetSalesHeader(DocumentType, APIAPHeader."Claim Number", APIAPHeader."Invoice Type") then
             exit(true);
 
         Init();
@@ -51,15 +56,16 @@ tableextension 80500 "PTEAP Sales Header" extends "Sales Header"
         "PTEAP DOB" := APIAPHeader.DOB;
         "PTEAP Claims Manager" := APIAPHeader."Claims Manager";
         "PTEAP Referral Date" := APIAPHeader."Referral Date";
+        "PTEAP Invoice Type" := APIAPHeader."Invoice Type";
         Insert(true);
         exit(true);
     end;
 
-    internal procedure PTEGetSalesHeader(DocumentType: Enum "Sales Document Type"; ClaimNumber: Text): Boolean;
+    internal procedure PTEAPGetSalesHeader(DocumentType: Enum "Sales Document Type"; ClaimNumber: Text; InvoiceType: Text): Boolean;
     begin
         SetRange("PTEAP Claim Number", ClaimNumber);
+        SetRange("PTEAP Invoice Type", InvoiceType);
         SetRange("Document Type", DocumentType);
-        if FindLast() then
-            exit(true);
+        exit(FindLast());
     end;
 }

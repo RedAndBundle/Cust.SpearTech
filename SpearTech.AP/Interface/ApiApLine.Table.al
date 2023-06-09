@@ -11,7 +11,12 @@ table 80501 "PTEAP API AP Line"
             DataClassification = CustomerContent;
             Caption = 'Claim Number';
         }
-        field(2; "Line No."; Integer)
+        field(2; "Invoice Type"; Code[20])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Invoice Type';
+        }
+        field(3; "Line No."; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Line No.';
@@ -61,7 +66,7 @@ table 80501 "PTEAP API AP Line"
 
     keys
     {
-        key(Key1; "Claim Number", "Line No.")
+        key(Key1; "Claim Number", "Invoice Type", "Line No.")
         {
             Clustered = true;
         }
@@ -71,16 +76,13 @@ table 80501 "PTEAP API AP Line"
     var
         SalesHeader: Record "Sales Header";
         SalesLine: Record "Sales Line";
-        CannotFindOrderErr: Label 'Cannot find a Sales Header for %1 %2', Comment = '%1 = fieldcaption %2=field';
-        CreatedLbl: Label '%1 %2 %3 Created', Comment = '%1 = doc type %2 = doc no %3= Line nO';
+        CannotFindOrderErr: Label 'Cannot find a Sales Header for %1 %2, %3 %4', Comment = '%1 = fieldcaption %2=field %3= fieldcaption 2 %4 = field 2';
+        CreatedLbl: Label '%1 %2 %3 Created', Comment = '%1 = doc type %2 = doc no %3= Line no';
     begin
-        // if FindSet() then
-        //     repeat
-        if not SalesHeader.PTEGetSalesHeader("Sales Document Type"::Invoice, "Claim Number") then
-            Error(CannotFindOrderErr, FieldCaption("Claim Number"), "Claim Number");
+        if not SalesHeader.PTEAPGetSalesHeader("Sales Document Type"::Invoice, "Claim Number", "Invoice Type") then
+            Error(CannotFindOrderErr, FieldCaption("Claim Number"), "Claim Number", FieldCaption("Invoice Type"), "Invoice Type");
 
         CreateSalesLine(SalesHeader, SalesLine);
-        // until Next() = 0;
         exit(StrSubstNo(CreatedLbl, SalesLine."Document Type", SalesLine."Document No.", SalesLine."Line No."));
     end;
 

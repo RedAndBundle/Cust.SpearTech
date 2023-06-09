@@ -32,5 +32,10 @@ tableextension 80506 "PTEAP Sales Cr.Memo Header" extends "Sales Cr.Memo Header"
             DataClassification = CustomerContent;
             Caption = 'Referral Date';
         }
+        field(80506; "PTEAP Invoice Type"; Code[20])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Invoice Type';
+        }
     }
 }

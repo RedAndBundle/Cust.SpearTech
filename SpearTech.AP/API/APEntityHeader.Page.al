@@ -24,6 +24,7 @@ Page 80501 "PTEAP API AP Header"
                 field(selltoCustomerNo; Rec."Sell-to Customer No.") { ApplicationArea = Basic, Suite; }
                 field(billToCustomerNo; Rec."Bill-To Customer No.") { ApplicationArea = Basic, Suite; }
                 field(claimNumber; Rec."Claim Number") { ApplicationArea = Basic, Suite; }
+                field(invoiceType; Rec."Invoice Type") { ApplicationArea = Basic, Suite; }
                 field(claimantName; Rec."Claimant Name") { ApplicationArea = Basic, Suite; }
                 field(ssn; Rec.SSN) { ApplicationArea = Basic, Suite; }
                 field(dob; Rec.DOB) { ApplicationArea = Basic, Suite; }
@@ -35,7 +36,7 @@ Page 80501 "PTEAP API AP Header"
             {
                 EntityName = 'apLine';
                 EntitySetName = 'apLines';
-                SubPageLink = "Claim Number" = field("Claim Number");
+                SubPageLink = "Claim Number" = field("Claim Number"), "Invoice Type" = field("Invoice Type");
             }
         }
     }
@@ -66,6 +67,6 @@ Page 80501 "PTEAP API AP Header"
 
     trigger OnAfterGetRecord()
     begin
-        Message('hi');
+        // Message('hi');
     end;
 }

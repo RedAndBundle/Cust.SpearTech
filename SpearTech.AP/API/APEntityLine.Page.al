@@ -21,6 +21,7 @@ Page 80502 "PTEAP API AP Line"
                 field(id; Rec.SystemId) { ApplicationArea = Basic, Suite; }
                 // Lines
                 field(claimNumber; Rec."Claim Number") { ApplicationArea = Basic, Suite; }
+                field(invoiceType; Rec."Invoice Type") { ApplicationArea = Basic, Suite; }
                 field(lineNo; Rec."Line No.") { ApplicationArea = Basic, Suite; }
                 field(taskActivity; Rec."Task/Activity") { ApplicationArea = Basic, Suite; }
                 field(taskCode; Rec."Task Code") { ApplicationArea = Basic, Suite; }
