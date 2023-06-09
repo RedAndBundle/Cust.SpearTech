@@ -37,5 +37,10 @@ tableextension 80502 "PTEAP Sales Shipment  Header" extends "Sales Shipment Head
             DataClassification = CustomerContent;
             Caption = 'Invoice Type';
         }
+        field(80507; "PTEAP Accident Date"; Date)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Accident Date';
+        }
     }
 }

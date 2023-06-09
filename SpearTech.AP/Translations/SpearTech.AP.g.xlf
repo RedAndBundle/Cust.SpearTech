@@ -13,6 +13,11 @@
           <note from="Developer" annotates="general" priority="2">%1 = doc type %2 = doc no</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTEAP API AP Header - Method ProcessAPInterface - NamedType CreatedLbl</note>
         </trans-unit>
+        <trans-unit id="Table 646955490 - Field 3806552137 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accident Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEAP API AP Header - Field Accident Date - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 646955490 - Field 2837372666 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sell-to Customer No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -153,6 +158,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTEAP Spear AP Setup - Control Item Template - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2323623686 - Field 2632928993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Accident Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Cr.Memo Header - Field PTEAP Accident Date - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 2323623686 - Field 1619727731 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
           <source>Claim Number</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -203,6 +213,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Cr.Memo Line - Field PTEAP Task/Activity - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2742752801 - Field 2632928993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Accident Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Header - Field PTEAP Accident Date - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 2742752801 - Field 1619727731 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
           <source>Claim Number</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -237,6 +252,11 @@
           <source>SSN</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Header - Field PTEAP SSN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 585645922 - Field 2632928993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Accident Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Invoice Header - Field PTEAP Accident Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 585645922 - Field 1619727731 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
           <source>Claim Number</source>
@@ -302,6 +322,11 @@
           <source>Task/Activity</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Line - Field PTEAP Task/Activity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2934091145 - Field 2632928993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Accident Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Shipment  Header - Field PTEAP Accident Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2934091145 - Field 1619727731 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
           <source>Claim Number</source>

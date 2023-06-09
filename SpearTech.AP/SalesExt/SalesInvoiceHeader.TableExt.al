@@ -37,5 +37,10 @@ tableextension 80504 "PTEAP Sales Invoice Header" extends "Sales Invoice Header"
             DataClassification = CustomerContent;
             Caption = 'Invoice Type';
         }
+        field(80507; "PTEAP Accident Date"; Date)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Accident Date';
+        }
     }
 }

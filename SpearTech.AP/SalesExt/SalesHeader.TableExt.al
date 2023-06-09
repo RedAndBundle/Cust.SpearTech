@@ -37,6 +37,11 @@ tableextension 80500 "PTEAP Sales Header" extends "Sales Header"
             DataClassification = CustomerContent;
             Caption = 'Invoice Type';
         }
+        field(80507; "PTEAP Accident Date"; Date)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Accident Date';
+        }
     }
 
     internal procedure PTEAPGetSalesHeader(DocumentType: Enum "Sales Document Type"; var APIAPHeader: Record "PTEAP API AP Header"): Boolean;
