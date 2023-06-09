@@ -126,6 +126,7 @@ table 80400 "PTE Payment Interface"
             Base64Convert.FromBase64(Base64String, OutStr);
             CheckData.Filename := "Document No." + '.pdf';
         end;
+
         CheckData.Client := Client;
         CheckData."TIN SSN" := "TIN SSN";
         CheckData."Claim Number" := "Claim Number";
