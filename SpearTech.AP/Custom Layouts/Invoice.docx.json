@@ -32,6 +32,13 @@
           "@Signature": "abc",
           "@Height": "483.919739",
           "Controls": {
+            "Label1": {
+              "@Name": "Label1",
+              "@ControlType": "Label",
+              "@Size": "254,58.42",
+              "@Location": "0.0003229777,0",
+              "@CaptionML": "ENU=Remit to:"
+            },
             "TextBox51": {
               "@Name": "TextBox51",
               "@ControlType": "TextBox",
@@ -68,14 +75,6 @@
               "@ShowOutput": "CurrReport.PrintLogo(ForNAVSetup.UsePreprintedPaper)",
               "@HorzAlign": "Center",
               "@SourceExpression": "ForNAVSetup.LegalConditions"
-            },
-            "TextBox5": {
-              "@Name": "TextBox5",
-              "@ControlType": "TextBox",
-              "@Size": "399.999969,60.0001831",
-              "@Location": "0,0",
-              "@Font": "Arial, 9pt, style=Italic",
-              "@SourceExpression": "ForNAVSetup.PaymentNote"
             }
           }
         },
@@ -1044,10 +1043,6 @@
         "Logo": {
           "@FieldName": "Logo",
           "@FieldNo": "20"
-        },
-        "PaymentNote": {
-          "@FieldName": "Payment Note",
-          "@FieldNo": "70"
         },
         "LegalConditions": {
           "@FieldName": "Legal Conditions",
