@@ -1,0 +1,114 @@
+Page 80502 "PTEAP API AP Line"
+{
+    DelayedInsert = true;
+    DeleteAllowed = false;
+    EntityName = 'apLine';
+    EntitySetName = 'apLines';
+    ODataKeyFields = SystemId;
+    PageType = API;
+    APIPublisher = 'speartech';
+    APIGroup = 'ap';
+    APIVersion = 'v2.0';
+    SourceTable = "PTEAP API AP Line";
+    SourceTableTemporary = true;
+
+    layout
+    {
+        area(content)
+        {
+            repeater(Group)
+            {
+                field(id; Rec.SystemId) { ApplicationArea = Basic, Suite; }
+                // Lines
+                field(claimNumber; Rec."Claim Number") { ApplicationArea = Basic, Suite; }
+                field(invoiceType; Rec."Invoice Type") { ApplicationArea = Basic, Suite; }
+                field(lineNo; Rec."Line No.") { ApplicationArea = Basic, Suite; }
+                field(taskActivity; Rec."Task/Activity") { ApplicationArea = Basic, Suite; }
+                field(taskCode; Rec."Task Code") { ApplicationArea = Basic, Suite; }
+                field(taskDate; Rec."Task Date") { ApplicationArea = Basic, Suite; }
+                field(units; Rec.Units) { ApplicationArea = Basic, Suite; }
+                field(rate; Rec.Rate) { ApplicationArea = Basic, Suite; }
+                field(amount; Rec.Amount) { ApplicationArea = Basic, Suite; }
+                field(description; Rec.Description) { ApplicationArea = Basic, Suite; }
+                field(source; Rec.Source) { ApplicationArea = Basic, Suite; }
+                field(result; Result) { ApplicationArea = Basic, Suite; }
+            }
+        }
+    }
+
+    var
+        Result: Text;
+
+    trigger OnInsertRecord(BelowxRec: Boolean): Boolean
+    begin
+        Rec.TestField("Task Code");
+        Rec.TestField("Task/Activity");
+        Result := Rec.ProcessAPInterface();
+    end;
+
+    trigger OnOpenPage()
+    begin
+        if (Rec.GetFilter("Claim Number") = '') and (Rec.GetFilter("Task/Activity") = '') then
+            Error('Please provide a filter on %1 or %2', Rec.FieldCaption("Claim Number"), Rec.FieldCaption("Task/Activity"));
+
+        GetFromSalesLine();
+        GetFromSalesInvoiceLine();
+    end;
+
+    trigger OnFindRecord(Which: Text): Boolean
+    begin
+        exit(Rec.FindSet());
+    end;
+
+    local procedure GetFromSalesLine()
+    var
+        SalesLine: Record "Sales Line";
+    begin
+        SalesLine.SetAutoCalcFields("PTEAP Claim Number");
+        if Rec.GetFilter("Claim Number") <> '' then
+            SalesLine.SetFilter("PTEAP Claim Number", Rec.GetFilter("Claim Number"));
+        if Rec.GetFilter("Task/Activity") <> '' then
+            SalesLine.SetFilter("PTEAP Task/Activity", Rec.GetFilter("Task/Activity"));
+        SalesLine.SetRange(Type, SalesLine.Type::Item);
+
+        if SalesLine.FindSet() then
+            repeat
+                Rec."Claim Number" := SalesLine."PTEAP Claim Number";
+                Rec."Line No." += 1;
+                Rec."Task/Activity" := SalesLine."PTEAP Task/Activity";
+                Rec."Task Code" := SalesLine."No.";
+                Rec."Task Date" := SalesLine."PTEAP Task Date";
+                Rec.Units := SalesLine.Quantity;
+                Rec.Rate := SalesLine."Unit Price";
+                Rec.Amount := SalesLine."Line Amount";
+                Rec.Source := Format(SalesLine.RecordId);
+                Rec.Insert();
+            until SalesLine.Next() = 0;
+    end;
+
+    local procedure GetFromSalesInvoiceLine()
+    var
+        SalesInvoiceLine: Record "Sales Invoice Line";
+    begin
+        SalesInvoiceLine.SetAutoCalcFields("PTEAP Claim Number");
+        if Rec.GetFilter("Claim Number") <> '' then
+            SalesInvoiceLine.SetFilter("PTEAP Claim Number", Rec.GetFilter("Claim Number"));
+        if Rec.GetFilter("Task/Activity") <> '' then
+            SalesInvoiceLine.SetFilter("PTEAP Task/Activity", Rec.GetFilter("Task/Activity"));
+        SalesInvoiceLine.SetRange(Type, SalesInvoiceLine.Type::Item);
+
+        if SalesInvoiceLine.FindSet() then
+            repeat
+                Rec."Claim Number" := SalesInvoiceLine."PTEAP Claim Number";
+                Rec."Line No." += 1;
+                Rec."Task/Activity" := SalesInvoiceLine."PTEAP Task/Activity";
+                Rec."Task Code" := SalesInvoiceLine."No.";
+                Rec."Task Date" := SalesInvoiceLine."PTEAP Task Date";
+                Rec.Units := SalesInvoiceLine.Quantity;
+                Rec.Rate := SalesInvoiceLine."Unit Price";
+                Rec.Amount := SalesInvoiceLine."Line Amount";
+                Rec.Source := Format(SalesInvoiceLine.RecordId);
+                Rec.Insert();
+            until SalesInvoiceLine.Next() = 0;
+    end;
+}

@@ -1,10 +1,10 @@
 {
-  "id": "558f7426-bb0f-4445-8ab0-8ac0383e10ec",
-  "name": "SpearTech.ForNAV.Check",
+  "id": "7514153e-ac1e-497c-b55c-0caa195adc44",
+  "name": "SpearTech.AP",
   "publisher": "Red and Bundle",
-  "version": "1.0.0.20",
-  "brief": "Create Payments and Print Checks",
-  "description": "Create Payments and Print Checks",
+  "version": "1.0.0.1",
+  "brief": "Accounts Payable APIs",
+  "description": "APIs and other customizations for Accounts Payable",
   "privacyStatement": "https://wwww.speartech.com",
   "EULA": "https://wwww.speartech.com",
   "help": "https://wwww.speartech.com",
@@ -29,8 +29,8 @@
   "application": "21.0.0.0",
   "idRanges": [
     {
-      "from": 80400,
-      "to": 80449
+      "from": 80500,
+      "to": 80549
     }
   ],
   "contextSensitiveHelpUrl": "https://SpearTech.ForNAV.Check.com/help/",

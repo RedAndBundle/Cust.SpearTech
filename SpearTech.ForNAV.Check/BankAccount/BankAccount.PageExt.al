@@ -4,7 +4,7 @@ pageextension 80400 "PTE Bank Account Card" extends "Bank Account Card"
     {
         addlast(content)
         {
-            group(SpearTech)
+            group(PTESpearTech)
             {
                 Caption = 'SpearTech';
                 field("PTE Check Name"; Rec."PTE Check Name")
@@ -124,6 +124,11 @@ pageextension 80400 "PTE Bank Account Card" extends "Bank Account Card"
                     ApplicationArea = All;
                     Caption = 'MICR Offset Y';
                     ToolTip = 'Specifies the MICR Offset Y that will be used to position the MICR text. The MICR Offset starts from the top left hand corder of the MICR text box.';
+                }
+                field("PTE MICR Font Size"; Rec."PTE MICR Font Size")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the MICR font size.';
                 }
             }
         }

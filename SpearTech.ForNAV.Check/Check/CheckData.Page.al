@@ -32,6 +32,12 @@ page 80402 "PTE Check Data"
                 field("Carrier Name 1"; Rec."Carrier Name 1") { ApplicationArea = Basic; }
                 field("Carrier Name 2"; Rec."Carrier Name 2") { ApplicationArea = Basic; }
                 field(Comment; Rec.Comment) { ApplicationArea = Basic; }
+                field(Department; Rec.Department) { ApplicationArea = basic; }
+                field("Adjuster Name"; Rec."Adjuster Name") { ApplicationArea = basic; }
+                field("Adjuster Phone"; Rec."Adjuster Phone") { ApplicationArea = basic; }
+                field("Event Number"; Rec."Event Number") { ApplicationArea = basic; }
+                field("Control Number"; Rec."Control Number") { ApplicationArea = basic; }
+                field("Additional Payee"; Rec."Additional Payee") { ApplicationArea = basic; }
             }
         }
         area(Factboxes)

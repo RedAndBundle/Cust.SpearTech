@@ -90,6 +90,36 @@ table 80402 "PTE Check Data"
             Caption = 'Comment';
             DataClassification = SystemMetadata;
         }
+        field(33; "Department"; Text[100])
+        {
+            Caption = 'Department';
+            DataClassification = SystemMetadata;
+        }
+        field(34; "Adjuster Name"; Text[100])
+        {
+            Caption = 'Adjuster Name';
+            DataClassification = SystemMetadata;
+        }
+        field(35; "Adjuster Phone"; Text[100])
+        {
+            Caption = 'Adjuster Phone';
+            DataClassification = SystemMetadata;
+        }
+        field(36; "Event Number"; Text[100])
+        {
+            Caption = 'Event Number';
+            DataClassification = SystemMetadata;
+        }
+        field(37; "Control Number"; Text[100])
+        {
+            Caption = 'Control Number';
+            DataClassification = SystemMetadata;
+        }
+        field(38; "Additional Payee"; Text[100])
+        {
+            Caption = 'Additional Payee';
+            DataClassification = SystemMetadata;
+        }
     }
 
     keys

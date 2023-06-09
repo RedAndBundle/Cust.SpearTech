@@ -8,6 +8,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 3929456755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Additional Payee</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Additional Payee - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 1295077671 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adjuster Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Adjuster Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 4197166426 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adjuster Phone</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Adjuster Phone - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1880891065 - Field 4214297126 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Carrier Name 1</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -38,10 +53,25 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Comment - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 1383946072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Control Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Control Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 1651921640 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Department</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Department - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1880891065 - Field 628925288 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Document Number</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Document Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 276198305 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Event Number - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1880891065 - Field 1527563463 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>External Document No.</source>
@@ -93,6 +123,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field TIN SSN - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 3929456755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Additional Payee</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Additional Payee - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 1295077671 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adjuster Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Adjuster Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 4197166426 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adjuster Phone</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Adjuster Phone - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1159935010 - Field 522698873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount (USD)</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -133,6 +178,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Comment - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 1383946072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Control Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Control Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 1651921640 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Department</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Department - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1159935010 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -142,6 +197,11 @@
           <source>Document No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 276198305 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Event Number - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1159935010 - Field 1527563463 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>External Document No.</source>
@@ -413,10 +473,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Method OnAfterGetCurrRecord - NamedType InitTxt</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3849922958 - Control 3935179097 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+        <trans-unit id="PageExtension 3849922958 - Control 881133202 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
           <source>SpearTech</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control SpearTech - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTESpearTech - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3849922958 - Control 2838643478 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
           <source>Specifies the 1st signature that will be printed on the check.</source>
@@ -548,6 +608,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Post Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 2563809422 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the MICR font size.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE MICR Font Size - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3849922958 - Control 569971819 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
           <source>Specifies the MICR Offset X that will be used to position the MICR text. The MICR Offset starts from the top left hand corder of the MICR text box.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -597,6 +662,16 @@
           <source>Check Void Text</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Void Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1130638838 - Control 3682803296 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
+          <source>SpearTech</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Company Information - Control PTESpear - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1130638838 - Control 35073691 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
+          <source>Specifies the company's system id. You need this for the API communication.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Company Information - Control PTESystemId - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="TableExtension 572952394 - Method 2396499048 - NamedType 3857071818" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 572952394">
           <source>Select a file</source>
@@ -678,6 +753,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE Check Post Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 2563809422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>MICR Font Size</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE MICR Font Size - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 572952394 - Field 569971819 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
           <source>MICR Offset X</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -727,6 +807,11 @@
           <source>Spear Check User</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PermissionSet PTE SpearCheckUser - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 4063191082 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Spear Check API</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet PTE SpearTech API - Property Caption</note>
         </trans-unit>
       </group>
     </body>

@@ -40,6 +40,12 @@ Page 80400 "PTE Payment Entity"
                 field(carrierName1; Rec."Carrier Name 1") { ApplicationArea = Basic; }
                 field(carrierName2; Rec."Carrier Name 2") { ApplicationArea = Basic; }
                 field(comment; Rec.Comment) { ApplicationArea = Basic; }
+                field(department; Rec.Department) { ApplicationArea = basic; }
+                field(adjusterName; Rec."Adjuster Name") { ApplicationArea = basic; }
+                field(adjusterPhone; Rec."Adjuster Phone") { ApplicationArea = basic; }
+                field(eventNumber; Rec."Event Number") { ApplicationArea = basic; }
+                field(controlNumber; Rec."Control Number") { ApplicationArea = basic; }
+                field(additionalPayee; Rec."Additional Payee") { ApplicationArea = basic; }
 
                 field(result; Result) { ApplicationArea = Basic; }
             }
