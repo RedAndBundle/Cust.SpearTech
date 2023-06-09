@@ -5,7 +5,7 @@ Codeunit 80440 "PTE Test Library"
         GenJnlTemplate: Record "Gen. Journal Template";
     begin
         GenJnlTemplate.SetRange(Type, GenJnlTemplate.Type::Payments);
-        GenJnlTemplate.FindFirst;
+        GenJnlTemplate.FindFirst();
         exit(GenJnlTemplate.Name);
     end;
 
@@ -13,8 +13,8 @@ Codeunit 80440 "PTE Test Library"
     var
         GenJnlBatch: Record "Gen. Journal Batch";
     begin
-        GenJnlBatch.SetRange("Journal Template Name", GetJournalTemplate);
-        GenJnlBatch.FindFirst;
+        GenJnlBatch.SetRange("Journal Template Name", GetJournalTemplate());
+        GenJnlBatch.FindFirst();
         exit(GenJnlBatch.Name);
     end;
 

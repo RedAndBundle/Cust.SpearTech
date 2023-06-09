@@ -17,37 +17,38 @@ Page 80400 "PTE Payment Entity"
         {
             repeater(Group)
             {
-                field(vendorNo; Rec."Vendor No.") { ApplicationArea = Basic; }
-                field(id; Rec.SystemId) { ApplicationArea = Basic; }
-                field(documentNo; Rec."Document No.") { ApplicationArea = Basic; }
-                field(externalDocumentNo; Rec."External Document No.") { ApplicationArea = Basic; }
-                field(paymentMethod; Rec."Payment Method") { ApplicationArea = Basic; }
-                field(bankAccount; Rec."Bank Account No.") { ApplicationArea = Basic; }
-                field(invoiceNo; Rec."Invoice No.") { ApplicationArea = Basic; }
-                field(amountUSD; Rec."Amount (USD)") { ApplicationArea = Basic; }
-                field(paymentSpecificationPDF; paymentSpecificationPDF) { ApplicationArea = Basic; }
-                field(description; Rec.Description) { ApplicationArea = Basic; }
-                field(postingDate; Rec."Posting Date") { ApplicationArea = Basic; }
-                field(client; Rec.Client) { ApplicationArea = Basic; }
-                field(tlnSsn; Rec."TIN SSN") { ApplicationArea = Basic; }
-                field(claimNumber; Rec."Claim Number") { ApplicationArea = Basic; }
-                field(claimantName; Rec."Claimant Name") { ApplicationArea = Basic; }
-                field(lossDate; Rec."Loss Date") { ApplicationArea = Basic; }
-                field(paymentType; Rec."Payment Type") { ApplicationArea = Basic; }
-                field(fromDate; Rec."From Date") { ApplicationArea = Basic; }
-                field(throughDate; Rec."Through Date") { ApplicationArea = Basic; }
-                field(invoiceDate; Rec."Invoice Date") { ApplicationArea = Basic; }
-                field(carrierName1; Rec."Carrier Name 1") { ApplicationArea = Basic; }
-                field(carrierName2; Rec."Carrier Name 2") { ApplicationArea = Basic; }
-                field(comment; Rec.Comment) { ApplicationArea = Basic; }
-                field(department; Rec.Department) { ApplicationArea = basic; }
-                field(adjusterName; Rec."Adjuster Name") { ApplicationArea = basic; }
-                field(adjusterPhone; Rec."Adjuster Phone") { ApplicationArea = basic; }
-                field(eventNumber; Rec."Event Number") { ApplicationArea = basic; }
-                field(controlNumber; Rec."Control Number") { ApplicationArea = basic; }
-                field(additionalPayee; Rec."Additional Payee") { ApplicationArea = basic; }
+                field(vendorNo; Rec."Vendor No.") { ApplicationArea = Basic, Suite; }
+                field(id; Rec.SystemId) { ApplicationArea = Basic, Suite; }
+                field(documentNo; Rec."Document No.") { ApplicationArea = Basic, Suite; }
+                field(externalDocumentNo; Rec."External Document No.") { ApplicationArea = Basic, Suite; }
+                field(paymentMethod; Rec."Payment Method") { ApplicationArea = Basic, Suite; }
+                field(bankAccount; Rec."Bank Account No.") { ApplicationArea = Basic, Suite; }
+                field(invoiceNo; Rec."Invoice No.") { ApplicationArea = Basic, Suite; }
+                field(amountUSD; Rec."Amount (USD)") { ApplicationArea = Basic, Suite; }
+                field(paymentSpecificationPDF; paymentSpecificationPDF) { ApplicationArea = Basic, Suite; }
+                field(description; Rec.Description) { ApplicationArea = Basic, Suite; }
+                field(postingDate; Rec."Posting Date") { ApplicationArea = Basic, Suite; }
+                field(client; Rec.Client) { ApplicationArea = Basic, Suite; }
+                field(tlnSsn; Rec."TIN SSN") { ApplicationArea = Basic, Suite; }
+                field(claimNumber; Rec."Claim Number") { ApplicationArea = Basic, Suite; }
+                field(claimantName; Rec."Claimant Name") { ApplicationArea = Basic, Suite; }
+                field(lossDate; Rec."Loss Date") { ApplicationArea = Basic, Suite; }
+                field(paymentType; Rec."Payment Type") { ApplicationArea = Basic, Suite; }
+                field(fromDate; Rec."From Date") { ApplicationArea = Basic, Suite; }
+                field(throughDate; Rec."Through Date") { ApplicationArea = Basic, Suite; }
+                field(invoiceDate; Rec."Invoice Date") { ApplicationArea = Basic, Suite; }
+                field(carrierName1; Rec."Carrier Name 1") { ApplicationArea = Basic, Suite; }
+                field(carrierName2; Rec."Carrier Name 2") { ApplicationArea = Basic, Suite; }
+                field(comment; Rec.Comment) { ApplicationArea = Basic, Suite; }
+                field(department; Rec.Department) { ApplicationArea = Basic, Suite; }
+                field(adjusterName; Rec."Adjuster Name") { ApplicationArea = Basic, Suite; }
+                field(adjusterPhone; Rec."Adjuster Phone") { ApplicationArea = Basic, Suite; }
+                field(eventNumber; Rec."Event Number") { ApplicationArea = Basic, Suite; }
+                field(controlNumber; Rec."Control Number") { ApplicationArea = Basic, Suite; }
+                field(additionalPayee; Rec."Additional Payee") { ApplicationArea = Basic, Suite; }
+                field(additionalPayeeText; Rec."Additional Payee Text") { ApplicationArea = Basic, Suite; }
 
-                field(result; Result) { ApplicationArea = Basic; }
+                field(result; Result) { ApplicationArea = Basic, Suite; }
             }
         }
     }

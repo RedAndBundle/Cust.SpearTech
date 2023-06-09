@@ -6,9 +6,7 @@ codeunit 80402 "PTE Run Check Report"
     var
         Setup: Record "PTE Spear Technology Setup";
         TempMergePDF: Record "PTE PDF Merge File" temporary;
-        CheckArgs: Codeunit "PTE Check Args";
     begin
-        // CheckArgs.ResetMergedCheck();
         Setup.Get();
         Setup.TestPDFSetup();
         GenJnlLn.FindSet();
@@ -23,7 +21,6 @@ codeunit 80402 "PTE Run Check Report"
             Setup."Output Type"::PDF:
                 TempMergePDF.MergeAndPreview();
         end;
-        // CheckArgs.Reset();
     end;
 
     local procedure ProcessCheck(var Args: Record "ForNAV Check Arguments"; GenJnlLn: Record "Gen. Journal Line"; var TempMergePDF: Record "PTE PDF Merge File" temporary)
@@ -31,10 +28,10 @@ codeunit 80402 "PTE Run Check Report"
         GenJnlLnFilter: Record "Gen. Journal Line";
         Setup: Record "PTE Spear Technology Setup";
         CheckArgs: Codeunit "PTE Check Args";
-        Filename, Parameters : Text;
+        GenJnlLnRef: RecordRef;
+        Parameters: Text;
         OutStr: OutStream;
         InStr: InStream;
-        GenJnlLnRef: RecordRef;
     begin
         Setup.Get();
         GenJnlLnFilter.Get(GenJnlLn.RecordId);

@@ -157,41 +157,41 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
         }
     }
 
-    procedure DrillDownBlob(BlobFieldNo: Integer)
+    procedure PTEDrillDownBlob(BlobFieldNo: Integer)
     var
         BlobDrilldown: Codeunit "ForNAV Blob Drilldown";
     begin
-        if not BlobHasValue(BlobFieldNo) then begin
-            ImportWatermarkFromClientFile(BlobFieldNo);
+        if not PTEBlobHasValue(BlobFieldNo) then begin
+            PTEImportWatermarkFromClientFile(BlobFieldNo);
             Modify();
             exit;
         end;
 
         case BlobDrilldown.DrilldownSelect() of
             1:
-                DownloadWatermark(BlobFieldNo);
+                PTEDownloadWatermark(BlobFieldNo);
             2:
                 begin
-                    ImportWatermarkFromClientFile(BlobFieldNo);
+                    PTEImportWatermarkFromClientFile(BlobFieldNo);
                     Modify();
                 end;
             3:
                 begin
-                    DeleteBlob(BlobFieldNo);
+                    PTEDeleteBlob(BlobFieldNo);
                     Modify();
                 end;
         end;
     end;
 
-    procedure ImportWatermarkFromClientFile(Which: Integer): Boolean
+    local procedure PTEImportWatermarkFromClientFile(Which: Integer): Boolean
     var
         TempBlob: Record "ForNAV Core Setup" temporary;
         FileName: Text;
         is: InStream;
         os: OutStream;
-        SelectFile: Label 'Select a file';
+        SelectFileQst: Label 'Select a file';
     begin
-        if not UploadIntoStream(SelectFile, '', 'PDF files (*.pdf)|*.pdf|All files (*.*)|*.*', FileName, is) then
+        if not UploadIntoStream(SelectFileQst, '', 'PDF files (*.pdf)|*.pdf|All files (*.*)|*.*', FileName, is) then
             exit;
 
         TempBlob.Blob.CreateOutstream(os);
@@ -201,12 +201,12 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
             FieldNo("PTE 1st Signature"):
                 begin
                     "PTE 1st Signature" := TempBlob.Blob;
-                    "PTE 1st Signature Filename" := GetFileNameFromFile(FileName);
+                    "PTE 1st Signature Filename" := PTEGetFileNameFromFile(FileName);
                 end;
             FieldNo("PTE 2nd Signature"):
                 begin
                     "PTE 2nd Signature" := TempBlob.Blob;
-                    "PTE 2nd Signature Filename" := GetFileNameFromFile(FileName);
+                    "PTE 2nd Signature Filename" := PTEGetFileNameFromFile(FileName);
                 end;
             else
                 exit(false);
@@ -214,7 +214,7 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
         exit(true);
     end;
 
-    local procedure DownloadWatermark(Which: Integer)
+    local procedure PTEDownloadWatermark(Which: Integer)
     var
         FileName: Text;
         is: InStream;
@@ -238,10 +238,9 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
         DownloadFromStream(is, '', '', '', FileName);
     end;
 
-    local procedure DeleteBlob(Which: Integer)
+    local procedure PTEDeleteBlob(Which: Integer)
     var
         FileName: Text;
-        is: InStream;
     begin
         FileName := 'Click to import...';
         case Which of
@@ -258,7 +257,7 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
         end;
     end;
 
-    procedure BlobHasValue(Which: Integer): Boolean
+    procedure PTEBlobHasValue(Which: Integer): Boolean
     begin
         case Which of
             FieldNo("PTE 1st Signature"):
@@ -276,7 +275,7 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
         end;
     end;
 
-    local procedure GetFileNameFromFile(Value: Text): Text
+    local procedure PTEGetFileNameFromFile(Value: Text): Text
     var
         LastPos: Integer;
         i: Integer;

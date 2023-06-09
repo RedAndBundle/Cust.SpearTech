@@ -21,7 +21,7 @@ table 80403 "PTE Void Interface"
         GenJnlLine.SetRange("Applies-to Doc. Type", GenJnlLine."Applies-to Doc. Type"::Invoice);
         GenJnlLine.SetRange("Account Type", GenJnlLine."Account Type"::Vendor);
         GenJnlLine.SetRange("Account No.", "Vendor No.");
-        if GenJnlLine.FindFirst then begin
+        if GenJnlLine.FindFirst() then begin
             GenJnlLine.TestField("Bank Payment Type", GenJnlLine."Bank Payment Type"::"Computer Check");
             GenJnlLine.TestField("Check Printed", true);
             CheckManagement.VoidCheck(GenJnlLine);

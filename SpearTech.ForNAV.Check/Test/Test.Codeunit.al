@@ -10,8 +10,8 @@ codeunit 80449 "PTE Test Interface"
         VendLedEnt: Record "Vendor Ledger Entry";
         PDFFile: Record "PTE Check Data";
         TestLib: Codeunit "PTE Test Library";
-        is: InStream;
         Base64Conv: Codeunit "Base64 Convert";
+        is: InStream;
         Base64Text: Text;
     begin
         PaymentInterface."Vendor No." := '10000';

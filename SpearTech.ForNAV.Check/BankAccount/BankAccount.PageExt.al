@@ -69,7 +69,7 @@ pageextension 80400 "PTE Bank Account Card" extends "Bank Account Card"
 
                     trigger OnDrillDown()
                     begin
-                        Rec.DrillDownBlob(Rec.FieldNo("PTE 1st Signature"));
+                        Rec.PTEDrillDownBlob(Rec.FieldNo("PTE 1st Signature"));
                     end;
                 }
                 field("PTE 1st Signature Logic"; Rec."PTE 1st Signature Logic")
@@ -92,7 +92,7 @@ pageextension 80400 "PTE Bank Account Card" extends "Bank Account Card"
 
                     trigger OnDrillDown()
                     begin
-                        Rec.DrillDownBlob(Rec.FieldNo("PTE 2nd Signature"));
+                        Rec.PTEDrillDownBlob(Rec.FieldNo("PTE 2nd Signature"));
                     end;
                 }
                 field("PTE 2nd Signature Logic"; Rec."PTE 2nd Signature Logic")
@@ -138,10 +138,10 @@ pageextension 80400 "PTE Bank Account Card" extends "Bank Account Card"
     var
         InitTxt: Label 'Click to import...';
     begin
-        if not Rec.BlobHasValue(Rec.FieldNo("PTE 1st Signature")) then
+        if not Rec.PTEBlobHasValue(Rec.FieldNo("PTE 1st Signature")) then
             Rec."PTE 1st Signature Filename" := InitTxt;
 
-        if not Rec.BlobHasValue(Rec.FieldNo("PTE 2nd Signature")) then
+        if not Rec.PTEBlobHasValue(Rec.FieldNo("PTE 2nd Signature")) then
             Rec."PTE 2nd Signature Filename" := InitTxt;
     end;
 }

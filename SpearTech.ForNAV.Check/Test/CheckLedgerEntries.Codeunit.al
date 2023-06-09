@@ -6,13 +6,13 @@ Codeunit 80448 "PTE Test Check Report"
     procedure TestSuggestVendorPayments()
     begin
         // [Given]
-        Initialize;
+        Initialize();
 
         // [When]
-        RunSuggestVendorPayments;
-        CreatePDFForJournal;
+        RunSuggestVendorPayments();
+        CreatePDFForJournal();
         // [Then]
-        TestJournalLinesExist;
+        TestJournalLinesExist();
     end;
 
     [Test]
@@ -22,22 +22,20 @@ Codeunit 80448 "PTE Test Check Report"
         TempBlob: Record "ForNAV Core Setup";
         Args: Record "ForNAV Check Arguments";
         USCheck: Report "PTE Check Processing";
-        FileMgt: Codeunit "File Management";
-        Filename, Parameters : Text;
         OutStr: OutStream;
         InStr: InStream;
     begin
         // [Given]
-        Initialize;
+        Initialize();
 
         // [When]
         TempBlob.Blob.CreateOutstream(OutStr);
         TempBlob.Blob.CreateInstream(InStr);
 
-        Args."Bank Account No." := TestLib.FindValidBank;
+        Args."Bank Account No." := TestLib.FindValidBank();
 
         USCheck.SetArgs(Args);
-        USCheck.InputBankAccount;
+        USCheck.InputBankAccount();
         USCheck.Run();
         // USCheck.SaveAs(Parameters, Reportformat::Pdf, OutStr);
         // CopyStream(OutStr, InStr);
@@ -45,21 +43,21 @@ Codeunit 80448 "PTE Test Check Report"
         // DownloadFromStream(InStr, '', '', '', Filename);
 
         // [Then]
-        TestCheckprinted;
-        TestCheckEntries;
+        TestCheckprinted();
+        TestCheckEntries();
     end;
 
     local procedure TestJournalLinesExist()
     var
         GenJournalLine: Record "Gen. Journal Line";
     begin
-        GenJournalLine.SetRange(GenJournalLine."Journal Template Name", TestLib.GetJournalTemplate);
-        GenJournalLine.SetRange(GenJournalLine."Journal Batch Name", TestLib.GetJournalBatch);
-        GenJournalLine.FindSet;
+        GenJournalLine.SetRange(GenJournalLine."Journal Template Name", TestLib.GetJournalTemplate());
+        GenJournalLine.SetRange(GenJournalLine."Journal Batch Name", TestLib.GetJournalBatch());
+        GenJournalLine.FindSet();
         repeat
             GenJournalLine.TestField(GenJournalLine."Check Printed", false);
             GenJournalLine.TestField(GenJournalLine."Bank Payment Type", GenJournalLine."Bank Payment Type"::"Computer Check".AsInteger());
-        until GenJournalLine.Next = 0;
+        until GenJournalLine.Next() = 0;
 
     end;
 
@@ -67,26 +65,24 @@ Codeunit 80448 "PTE Test Check Report"
     var
         GenJournalLine: Record "Gen. Journal Line";
         SuggestVendorPayments: Report "Suggest Vendor Payments";
-        BalAccType: Option "G/L Account",Customer,Vendor,"Bank Account";
-        BankPmtType: Option " ","Computer Check","Manual Check","Electronic Payment","Electronic Payment-IAT";
     begin
-        GenJournalLine.SetRange(GenJournalLine."Journal Template Name", TestLib.GetJournalTemplate);
-        GenJournalLine.SetRange(GenJournalLine."Journal Batch Name", TestLib.GetJournalBatch);
-        GenJournalLine."Journal Template Name" := TestLib.GetJournalTemplate;
-        GenJournalLine."Journal Batch Name" := TestLib.GetJournalBatch;
+        GenJournalLine.SetRange(GenJournalLine."Journal Template Name", TestLib.GetJournalTemplate());
+        GenJournalLine.SetRange(GenJournalLine."Journal Batch Name", TestLib.GetJournalBatch());
+        GenJournalLine."Journal Template Name" := TestLib.GetJournalTemplate();
+        GenJournalLine."Journal Batch Name" := TestLib.GetJournalBatch();
 
 
         SuggestVendorPayments.SetGenJnlLine(GenJournalLine);
-        Commit;
-        SuggestVendorPayments.Run;
+        Commit();
+        SuggestVendorPayments.Run();
     end;
 
     local procedure CreatePDFForJournal()
     var
         GenJnlLn: Record "Gen. Journal Line";
     begin
-        GenJnlLn.SetRange("Journal Template Name", TestLib.GetJournalTemplate);
-        GenJnlLn.SetRange("Journal Batch Name", TestLib.GetJournalBatch);
+        GenJnlLn.SetRange("Journal Template Name", TestLib.GetJournalTemplate());
+        GenJnlLn.SetRange("Journal Batch Name", TestLib.GetJournalBatch());
         GenJnlLn.FindSet();
         repeat
             CreatePDF(GenJnlLn."Applies-to Doc. No.", TestLib.GetSampleBase64PDF());
@@ -102,7 +98,7 @@ Codeunit 80448 "PTE Test Check Report"
 
         // InitializeTest.TaxSetup;
         // InitializeTest.CheckSetup;
-        Commit;
+        Commit();
 
         IsInitialized := true;
     end;
@@ -112,46 +108,42 @@ Codeunit 80448 "PTE Test Check Report"
     var
         BalAccType: Option "G/L Account",Customer,Vendor,"Bank Account";
         BankPmtType: Option " ","Computer Check","Manual Check","Electronic Payment","Electronic Payment-IAT";
-        Test: Variant;
     begin
         SuggestVendorPayments.LastPaymentDate.SETVALUE(Today + 1000);
         SuggestVendorPayments.SkipExportedPayments.SETVALUE(true);
         SuggestVendorPayments.PostingDate.SETVALUE(Today + 1000);
         SuggestVendorPayments.StartingDocumentNo.SETVALUE('FORNAV01');
         SuggestVendorPayments.BalAccountType.SETVALUE(Balacctype::"Bank Account");
-        SuggestVendorPayments.BalAccountNo.SETVALUE(TestLib.FindValidBank);
+        SuggestVendorPayments.BalAccountNo.SETVALUE(TestLib.FindValidBank());
         SuggestVendorPayments.BankPaymentType.SETVALUE(Bankpmttype::"Computer Check");
 
-        SuggestVendorPayments.OK.INVOKE;
+        SuggestVendorPayments.OK().INVOKE();
     end;
 
     [RequestPageHandler]
     procedure CheckRequestPageHandler(var Check: TestRequestPage "PTE Check Processing")
-    var
-        BalAccType: Option "G/L Account",Customer,Vendor,"Bank Account";
-        BankPmtType: Option " ","Computer Check","Manual Check","Electronic Payment","Electronic Payment-IAT";
-        Test: Variant;
     begin
-        Check.OK.INVOKE;
+        Check.OK().INVOKE();
     end;
 
-    procedure TestCheckEntries()
+    procedure TestCheckEntries(): Integer
     var
         CheckLedgerEntry: Record "Check Ledger Entry";
     begin
-        CheckLedgerEntry.FindSet;
+        CheckLedgerEntry.FindFirst();
+        exit(CheckLedgerEntry."Entry No.");
     end;
 
     procedure TestCheckprinted()
     var
         GenJournalLine: Record "Gen. Journal Line";
     begin
-        GenJournalLine.SetRange(GenJournalLine."Journal Template Name", TestLib.GetJournalTemplate);
-        GenJournalLine.SetRange(GenJournalLine."Journal Batch Name", TestLib.GetJournalBatch);
-        GenJournalLine.FindSet;
+        GenJournalLine.SetRange(GenJournalLine."Journal Template Name", TestLib.GetJournalTemplate());
+        GenJournalLine.SetRange(GenJournalLine."Journal Batch Name", TestLib.GetJournalBatch());
+        GenJournalLine.FindSet();
         repeat
             GenJournalLine.TestField(GenJournalLine."Check Printed", true);
-        until GenJournalLine.Next = 0;
+        until GenJournalLine.Next() = 0;
 
     end;
 

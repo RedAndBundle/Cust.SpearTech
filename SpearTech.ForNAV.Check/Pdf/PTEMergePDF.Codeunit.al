@@ -12,7 +12,6 @@ codeunit 80404 "PTE Merge PDF"
         Setup: Record "PTE Spear Technology Setup";
         jArray: JsonArray;
         jObject: JsonObject;
-        InStr: InStream;
         Result: Text;
     begin
         Setup.Get();
