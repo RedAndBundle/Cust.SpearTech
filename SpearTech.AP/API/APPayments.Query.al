@@ -15,10 +15,18 @@ query 80500 "PTEAP Payments"
             column(entryNo; "Entry No.") { }
             column(postingDate; "Posting Date") { }
             column(customerNo; "Customer No.") { }
+            column(amount; "Credit Amount") { }
+            column(remainingAmount; "Remaining Amount") { }
             dataitem(OriginalCustLedgerEntry; "Cust. Ledger Entry")
             {
-                DataItemLink = "Entry No." = PaymentCustLedgerEntry."Closed by Entry No.";
+                DataItemLink = "Closed by Entry No." = PaymentCustLedgerEntry."Entry No.";
                 column(documentNo; "Document No.") { }
+                dataitem(Sales_Invoice_Header; "Sales Invoice Header")
+                {
+                    DataItemLink = "No." = OriginalCustLedgerEntry."Document No.";
+                    column(claimNumber; "PTEAP Claim Number") { }
+                    column(invoiceType; "PTEAP Invoice Type") { }
+                }
             }
         }
     }
