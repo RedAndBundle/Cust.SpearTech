@@ -30,6 +30,7 @@ Page 80501 "PTEAP API AP Header"
                 field(dob; Rec.DOB) { ApplicationArea = Basic, Suite; }
                 field(claimsManager; Rec."Claims Manager") { ApplicationArea = Basic, Suite; }
                 field(referralDate; Rec."Referral Date") { ApplicationArea = Basic, Suite; }
+                field(accidentDate; Rec."Accident Date") { ApplicationArea = Basic, Suite; }
                 field(result; Result) { ApplicationArea = Basic, Suite; }
             }
             part(apLines; "PTEAP API AP Line")
