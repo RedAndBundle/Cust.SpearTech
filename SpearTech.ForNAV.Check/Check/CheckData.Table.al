@@ -120,6 +120,11 @@ table 80402 "PTE Check Data"
             Caption = 'Additional Payee';
             DataClassification = SystemMetadata;
         }
+        field(39; "Additional Payee Text"; Text[250])
+        {
+            Caption = 'Additional Payee Text';
+            DataClassification = SystemMetadata;
+        }
     }
 
     keys

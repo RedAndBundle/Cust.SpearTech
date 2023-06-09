@@ -33,6 +33,7 @@ table 80400 "PTE Payment Interface"
         field(36; "Event Number"; Text[100]) { DataClassification = SystemMetadata; }
         field(37; "Control Number"; Text[100]) { DataClassification = SystemMetadata; }
         field(38; "Additional Payee"; Text[100]) { DataClassification = SystemMetadata; }
+        field(39; "Additional Payee Text"; Text[250]) { DataClassification = SystemMetadata; }
     }
 
     keys { key(Key1; "Vendor No.") { Clustered = true; } }
@@ -109,7 +110,6 @@ table 80400 "PTE Payment Interface"
         GenJnlLine."Account No." := "Vendor No.";
         GenJnlLine."Bal. Account Type" := GenJnlLine."Bal. Account Type"::"G/L Account";
         GenJnlLine."Bal. Account No." := GetBalAccountFromVendor();
-        // GenJnlLine."Recipient Bank Account" := "Bank Account No.";
         GenJnlLine."Payment Method Code" := GetPaymentMethod();
         GenJnlPostLine.RunWithCheck(GenJnlLine);
     end;
@@ -145,6 +145,7 @@ table 80400 "PTE Payment Interface"
         CheckData."Event Number" := "Event Number";
         CheckData."Control Number" := "Control Number";
         CheckData."Additional Payee" := "Additional Payee";
+        checkData."Additional Payee Text" := "Additional Payee Text";
         CheckData.Insert();
     end;
 

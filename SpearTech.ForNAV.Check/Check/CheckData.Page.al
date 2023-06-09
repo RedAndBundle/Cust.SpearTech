@@ -38,6 +38,7 @@ page 80402 "PTE Check Data"
                 field("Event Number"; Rec."Event Number") { ApplicationArea = Basic, Suite; }
                 field("Control Number"; Rec."Control Number") { ApplicationArea = Basic, Suite; }
                 field("Additional Payee"; Rec."Additional Payee") { ApplicationArea = Basic, Suite; }
+                field("Additional Payee Text"; Rec."Additional Payee Text") { ApplicationArea = Basic, Suite; }
             }
         }
         area(Factboxes)
