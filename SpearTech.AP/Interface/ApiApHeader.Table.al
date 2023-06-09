@@ -54,7 +54,7 @@ table 80500 "PTEAP API AP Header"
         field(10; "Accident Date"; Date)
         {
             DataClassification = CustomerContent;
-            Caption = 'Accident Date';
+            Caption = 'Accident Date ';
         }
     }
 
