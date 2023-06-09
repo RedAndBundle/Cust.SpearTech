@@ -97,7 +97,7 @@ Report 80400 "PTE US Check"
                 group(Options)
                 {
                     Caption = 'Options';
-                    field(BankAccount; Args."Bank Account No.")
+                    field(BankAccountFld; Args."Bank Account No.")
                     {
                         ApplicationArea = Basic, Suite;
                         Caption = 'Bank Account', Comment = 'DO NOT TRANSLATE';
@@ -141,7 +141,7 @@ Report 80400 "PTE US Check"
                     }
                     field(ForNavOpenDesigner; ReportForNavOpenDesigner)
                     {
-                        ApplicationArea = Basic;
+                        ApplicationArea = Basic, Suite;
                         Caption = 'Design', Comment = 'DO NOT TRANSLATE';
                         Visible = ReportForNavAllowDesign;
                         trigger OnValidate()

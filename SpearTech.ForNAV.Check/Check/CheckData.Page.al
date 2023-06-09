@@ -2,7 +2,7 @@ page 80402 "PTE Check Data"
 {
     PageType = List;
     Caption = 'Check Data';
-    ApplicationArea = Basic;
+    ApplicationArea = Basic, Suite;
     UsageCategory = Lists;
     SourceTable = "PTE Check Data";
 
@@ -12,32 +12,32 @@ page 80402 "PTE Check Data"
         {
             repeater(Group)
             {
-                field("Document Number"; Rec."Document Number") { ApplicationArea = Basic; }
+                field("Document Number"; Rec."Document Number") { ApplicationArea = Basic, Suite; }
                 field(FileName; Rec.Filename)
                 {
-                    ApplicationArea = Basic;
+                    ApplicationArea = Basic, Suite;
                     Editable = false;
                     Caption = 'PDF';
                 }
-                field(Client; Rec.Client) { ApplicationArea = Basic; }
-                field("TIN SSN"; Rec."TIN SSN") { ApplicationArea = Basic; }
-                field("Claim Number"; Rec."Claim Number") { ApplicationArea = Basic; }
-                field("Claimant Name"; Rec."Claimant Name") { ApplicationArea = Basic; }
-                field("Loss Date"; Rec."Loss Date") { ApplicationArea = Basic; }
-                field("Payment Type"; Rec."Payment Type") { ApplicationArea = Basic; }
-                field("From Date"; Rec."From Date") { ApplicationArea = Basic; }
-                field("Through Date"; Rec."Through Date") { ApplicationArea = Basic; }
-                field("Invoice Date"; Rec."Invoice Date") { ApplicationArea = Basic; }
-                field("Invoice No."; Rec."Invoice No.") { ApplicationArea = Basic; }
-                field("Carrier Name 1"; Rec."Carrier Name 1") { ApplicationArea = Basic; }
-                field("Carrier Name 2"; Rec."Carrier Name 2") { ApplicationArea = Basic; }
-                field(Comment; Rec.Comment) { ApplicationArea = Basic; }
-                field(Department; Rec.Department) { ApplicationArea = basic; }
-                field("Adjuster Name"; Rec."Adjuster Name") { ApplicationArea = basic; }
-                field("Adjuster Phone"; Rec."Adjuster Phone") { ApplicationArea = basic; }
-                field("Event Number"; Rec."Event Number") { ApplicationArea = basic; }
-                field("Control Number"; Rec."Control Number") { ApplicationArea = basic; }
-                field("Additional Payee"; Rec."Additional Payee") { ApplicationArea = basic; }
+                field(Client; Rec.Client) { ApplicationArea = Basic, Suite; }
+                field("TIN SSN"; Rec."TIN SSN") { ApplicationArea = Basic, Suite; }
+                field("Claim Number"; Rec."Claim Number") { ApplicationArea = Basic, Suite; }
+                field("Claimant Name"; Rec."Claimant Name") { ApplicationArea = Basic, Suite; }
+                field("Loss Date"; Rec."Loss Date") { ApplicationArea = Basic, Suite; }
+                field("Payment Type"; Rec."Payment Type") { ApplicationArea = Basic, Suite; }
+                field("From Date"; Rec."From Date") { ApplicationArea = Basic, Suite; }
+                field("Through Date"; Rec."Through Date") { ApplicationArea = Basic, Suite; }
+                field("Invoice Date"; Rec."Invoice Date") { ApplicationArea = Basic, Suite; }
+                field("Invoice No."; Rec."Invoice No.") { ApplicationArea = Basic, Suite; }
+                field("Carrier Name 1"; Rec."Carrier Name 1") { ApplicationArea = Basic, Suite; }
+                field("Carrier Name 2"; Rec."Carrier Name 2") { ApplicationArea = Basic, Suite; }
+                field(Comment; Rec.Comment) { ApplicationArea = Basic, Suite; }
+                field(Department; Rec.Department) { ApplicationArea = Basic, Suite; }
+                field("Adjuster Name"; Rec."Adjuster Name") { ApplicationArea = Basic, Suite; }
+                field("Adjuster Phone"; Rec."Adjuster Phone") { ApplicationArea = Basic, Suite; }
+                field("Event Number"; Rec."Event Number") { ApplicationArea = Basic, Suite; }
+                field("Control Number"; Rec."Control Number") { ApplicationArea = Basic, Suite; }
+                field("Additional Payee"; Rec."Additional Payee") { ApplicationArea = Basic, Suite; }
             }
         }
         area(Factboxes)
@@ -52,7 +52,7 @@ page 80402 "PTE Check Data"
         {
             action(ViewLogo)
             {
-                ApplicationArea = Basic;
+                ApplicationArea = Basic, Suite;
                 Caption = 'View PDF';
                 ToolTip = 'Downloads the PDF.';
                 Image = Picture;

@@ -17,7 +17,7 @@ Report 80401 "PTE Check Processing"
                 begin
                     VoidGenJnlLine.SetFilter("Bal. Account No.", '%1|%2', '', Args."Bank Account No.");
                     if not TestVoidCheck.TestVoidCheck(VoidGenJnlLine, Args, CurrReport.Preview) then
-                        CurrReport.Break;
+                        CurrReport.Break();
                 end;
 
                 trigger OnAfterGetRecord();
@@ -36,7 +36,7 @@ Report 80401 "PTE Check Processing"
                 begin
                     GenJnlLnBuffer.Reset();
                     Args."Reprint Checks" := false;
-                    CreateGenJnlLnBuffer;
+                    CreateGenJnlLnBuffer();
                 end;
 
                 trigger OnAfterGetRecord();
@@ -61,7 +61,7 @@ Report 80401 "PTE Check Processing"
                 group(Options)
                 {
                     Caption = 'Options';
-                    field(BankAccount; Args."Bank Account No.")
+                    field(BankAccountFld; Args."Bank Account No.")
                     {
                         ApplicationArea = Basic, Suite;
                         Caption = 'Bank Account', Comment = 'DO NOT TRANSLATE';
@@ -69,7 +69,7 @@ Report 80401 "PTE Check Processing"
 
                         trigger OnValidate()
                         begin
-                            InputBankAccount;
+                            InputBankAccount();
                         end;
                     }
                     field(LastCheckNo; Args."Check No.")
@@ -118,7 +118,7 @@ Report 80401 "PTE Check Processing"
 
         trigger OnClosePage()
         begin
-            Args.Modify;
+            Args.Modify();
         end;
 
         trigger OnOpenPage()
@@ -126,10 +126,10 @@ Report 80401 "PTE Check Processing"
             Setup: Record "PTE Spear Technology Setup";
         begin
             Setup.Get();
-            if not Args.Get then
-                Args.Insert;
+            if not Args.Get() then
+                Args.Insert();
             GetBankAccFromFirstGnlLine();
-            InputBankAccount;
+            InputBankAccount();
             // Args."PTE Output Type" := Setup."Output Type";
         end;
     }
@@ -137,16 +137,13 @@ Report 80401 "PTE Check Processing"
     trigger OnPreReport()
     begin
         Codeunit.Run(Codeunit::"ForNAV First Time Setup");
-        Commit;
-        CheckSetupIsValid;
-        Args.TestMandatoryFields;
+        Commit();
+        CheckSetupIsValid();
+        Args.TestMandatoryFields();
         if CurrReport.Preview then
             Args."Test Print" := true;
 
     end;
-
-    var
-        AmountCannotBeNegativeErr: Label 'The total amount for %1 %2 cannot be negative', Comment = 'DO NOT TRANSLATE';
 
     procedure SetArgs(Value: Record "ForNAV Check Arguments")
     begin
@@ -180,7 +177,7 @@ Report 80401 "PTE Check Processing"
     var
         CheckSetup: Record "ForNAV Check Setup";
     begin
-        CheckSetup.Get;
+        CheckSetup.Get();
         if CheckSetup.Layout = CheckSetup.Layout::" " then
             CheckSetup.FieldError(CheckSetup.Layout);
     end;
@@ -190,8 +187,8 @@ Report 80401 "PTE Check Processing"
         GenJnlLn: Record "Gen. Journal Line";
     begin
         if Args."Test Print" then begin
-            GenJnlLnBuffer.Init;
-            GenJnlLnBuffer.Insert;
+            GenJnlLnBuffer.Init();
+            GenJnlLnBuffer.Insert();
         end else begin
             GenJnlLn.Copy(VoidGenJnlLine);
             if not Args."Test Print" then begin
@@ -203,11 +200,11 @@ Report 80401 "PTE Check Processing"
             if GenJnlLn.Find('-') then
                 GenJnlLn.FieldError(GenJnlLn."Account Type");
             GenJnlLn.SetRange(GenJnlLn."Account Type");
-            if GenJnlLn.FindSet then
+            if GenJnlLn.FindSet() then
                 repeat
                     GenJnlLnBuffer := GenJnlLn;
-                    GenJnlLnBuffer.Insert;
-                until GenJnlLn.Next = 0;
+                    GenJnlLnBuffer.Insert();
+                until GenJnlLn.Next() = 0;
         end;
     end;
 

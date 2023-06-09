@@ -56,9 +56,9 @@ table 80400 "PTE Payment Interface"
         else
             GenJnlLine."Line No." := 10000;
 
-        GenJnlLine.Init;
+        GenJnlLine.Init();
         GenJnlLine."Document Type" := GenJnlLine."Document Type"::Payment;
-        GenJnlLine."Posting No. Series" := GetPaymentJournalBatch."Posting No. Series";
+        GenJnlLine."Posting No. Series" := GetPaymentJournalBatch()."Posting No. Series";
         GenJnlLine."Journal Template Name" := GetPaymentJournalBatch()."Journal Template Name";
         GenJnlLine."Journal Batch Name" := GetPaymentJournalBatch().Name;
         GenJnlLine."Document No." := "Document No.";
@@ -68,7 +68,7 @@ table 80400 "PTE Payment Interface"
         GenJnlLine."Posting Date" := "Posting Date";
         GenJnlLine.Validate("Account No.", "Vendor No.");
         GenJnlLine."Bal. Account Type" := GenJnlLine."Bal. Account Type"::"Bank Account";
-        GenJnlLine.Validate("Bal. Account No.", GetBankAccount."No.");
+        GenJnlLine.Validate("Bal. Account No.", GetBankAccount()."No.");
         case "Payment Method" of
             "Payment Method"::Check:
                 GenJnlLine."Bank Payment Type" := GenJnlLine."Bank Payment Type"::"Computer Check";
@@ -180,7 +180,7 @@ table 80400 "PTE Payment Interface"
     local procedure GetPaymentJournalBatch() Batch: Record "Gen. Journal Batch"
     begin
         Batch.SetRange("Bal. Account Type", Batch."Bal. Account Type"::"Bank Account");
-        Batch.SetRange("Bal. Account No.", GetBankAccount."No.");
+        Batch.SetRange("Bal. Account No.", GetBankAccount()."No.");
         Batch.FindFirst();
     end;
 

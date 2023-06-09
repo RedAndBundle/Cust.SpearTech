@@ -24,9 +24,49 @@
             "justification": "Pointless rule"
         },
         {
+            "id": "AA0217",
+            "action": "None",
+            "justification": "Pointless rule"
+        },
+        {
+            "id": "AA0470",
+            "action": "None",
+            "justification": "Suspended"
+        },
+        {
             "id": "AA0204",
             "action": "None",
             "justification": "Pointless rule"
+        },
+        {
+            "id": "AA0237",
+            "action": "None",
+            "justification": "Pointless rule"
+        },
+        {
+            "id": "AA0205",
+            "action": "None",
+            "justification": "Pointless rule"
+        },
+        {
+            "id": "AA0072",
+            "action": "None",
+            "justification": "Pointless rule"
+        },
+        {
+            "id": "AA0073",
+            "action": "None",
+            "justification": "Pointless rule"
+        },
+        {
+            "id": "AA0218",
+            "action": "None",
+            "justification": "Suspended"
+        },
+        {
+            "id": "AL0470",
+            "action": "None",
+            "justification": "Suspended"
         },
         {
             "id": "AS0084",

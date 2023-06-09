@@ -17,10 +17,10 @@ Page 80403 "PTE Void Check"
         {
             repeater(Group)
             {
-                field(vendorNo; Rec."Vendor No.") { ApplicationArea = Basic; }
-                field(documentNo; Rec."Document No.") { ApplicationArea = Basic; }
-                field(id; Rec.SystemId) { ApplicationArea = Basic; }
-                field(result; Result) { ApplicationArea = Basic; }
+                field(vendorNo; Rec."Vendor No.") { ApplicationArea = Basic, Suite; }
+                field(documentNo; Rec."Document No.") { ApplicationArea = Basic, Suite; }
+                field(id; Rec.SystemId) { ApplicationArea = Basic, Suite; }
+                field(result; Result) { ApplicationArea = Basic, Suite; }
             }
         }
     }
