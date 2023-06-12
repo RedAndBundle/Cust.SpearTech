@@ -130,7 +130,6 @@ Report 80401 "PTE Check Processing"
                 Args.Insert();
             GetBankAccFromFirstGnlLine();
             InputBankAccount();
-            // Args."PTE Output Type" := Setup."Output Type";
         end;
     }
 

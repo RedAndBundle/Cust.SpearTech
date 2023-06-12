@@ -13,6 +13,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Additional Payee - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 1590212720 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Additional Payee Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Additional Payee Text - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1880891065 - Field 1295077671 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Adjuster Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -127,6 +132,11 @@
           <source>Additional Payee</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Additional Payee - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 1590212720 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Additional Payee Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Additional Payee Text - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1159935010 - Field 1295077671 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Adjuster Name</source>
@@ -278,6 +288,61 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE PDF Merge File - Field Primary Key - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3157054206 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run Check Batch</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3157054206 - Field 1891586249 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bal. Account No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Field Bal. Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3157054206 - Field 824028820 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bal. Account Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Field Bal. Account Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3157054206 - Field 4248640148 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank Account No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Field Bank Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3157054206 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3157054206 - Field 3684440170 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Template Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Field Journal Template Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3157054206 - Field 1238883557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Check No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Field Last Check No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3157054206 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Field Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3157054206 - Field 3386232459 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>One Check Per Vendor</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Field One Check Per Vendor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3157054206 - Field 3052993517 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reprint Checks</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Field Reprint Checks - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3157054206 - Field 2777652313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run Check</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Field Run Check - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 219769631 - Field 3852983238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>G/L Account No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -363,6 +428,56 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check Data - Action ViewLogo - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3319261591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run Check All Batches</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3319261591 - Control 3540653242 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the bank account from which the checks are drawn.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Control BankAccountNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3319261591 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a brief description of the journal batch you are creating.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3319261591 - Control 1514267703 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the last check that was created for this bank account.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Control LastCheckNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3319261591 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the journal you are creating.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3319261591 - Control 3386232459 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that only one check is printed per vendor.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Control One Check Per Vendor - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3319261591 - Control 3052993517 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that the check is reprinted.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Control Reprint Checks - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3319261591 - Control 1609300185 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a checks are created for this batch.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Control RunCheck - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3319261591 - Action 3550185296 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Prints checks for all batches.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Action RunChecks - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3319261591 - Action 3550185296 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run Checks</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Action RunChecks - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3001911709 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Spear Technologies Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -383,20 +498,15 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report PTE Check Processing - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Report 1058662544 - NamedType 4088936152" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The total amount for %1 %2 cannot be negative</source>
-          <note from="Developer" annotates="general" priority="2">DO NOT TRANSLATE</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Check Processing - NamedType AmountCannotBeNegativeErr</note>
-        </trans-unit>
         <trans-unit id="Report 1058662544 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Options</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report PTE Check Processing - Control Options - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Report 1058662544 - Control 2663384385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Report 1058662544 - Control 1730178123 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bank Account</source>
           <note from="Developer" annotates="general" priority="2">DO NOT TRANSLATE</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Check Processing - Control BankAccount - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Check Processing - Control BankAccountFld - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1058662544 - Control 1514267703 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Last Check No.</source>
@@ -438,10 +548,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report PTE US Check - Control Options - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Report 1085912035 - Control 2663384385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Report 1085912035 - Control 1730178123 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Bank Account</source>
           <note from="Developer" annotates="general" priority="2">DO NOT TRANSLATE</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report PTE US Check - Control BankAccount - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PTE US Check - Control BankAccountFld - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1085912035 - Control 1992870141 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Design</source>
@@ -673,10 +783,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Company Information - Control PTESystemId - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="TableExtension 572952394 - Method 2396499048 - NamedType 3857071818" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 572952394">
+        <trans-unit id="TableExtension 572952394 - Method 569382207 - NamedType 364545404" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 572952394">
           <source>Select a file</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Method ImportWatermarkFromClientFile - NamedType SelectFile</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Method PTEImportWatermarkFromClientFile - NamedType SelectFileQst</note>
         </trans-unit>
         <trans-unit id="TableExtension 572952394 - Field 3360212837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
           <source>1st Signature</source>

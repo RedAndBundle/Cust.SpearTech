@@ -14,6 +14,9 @@ codeunit 80404 "PTE Merge PDF"
         jObject: JsonObject;
         Result: Text;
     begin
+        if PDFMergeFile.IsEmpty() then
+            exit;
+
         Setup.Get();
         jArray := GetFilesArray(PDFMergeFile);
         Result := Post(Setup."PDF Merge Webservice", Setup."PDF Merge Key", Format(jArray));
