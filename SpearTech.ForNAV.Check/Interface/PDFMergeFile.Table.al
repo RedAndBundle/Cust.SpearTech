@@ -69,6 +69,11 @@ table 80401 "PTE PDF Merge File"
         is: InStream;
     begin
         clientFileName := StrSubstNo('Check %1.pdf', CurrentDateTime);
+        if IsEmpty then begin
+            Message('No PDF to merge');
+            exit;
+        end;
+
         if Count <> 1 then
             MergePDF.Run(Rec);
 

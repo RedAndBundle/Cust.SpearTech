@@ -2,6 +2,41 @@ codeunit 80402 "PTE Run Check Report"
 {
     Permissions = tabledata "PTE Check Data" = rimd;
 
+    internal procedure RunCheckReportPerBatch(var Args: Record "ForNAV Check Arguments"; var GenJournalBatch: Record "Gen. Journal Batch"; var MergePDF: Record "PTE PDF Merge File")
+    var
+        GenJnlLn: Record "Gen. Journal Line";
+    begin
+        GenJnlLn.SetRange("Journal Template Name", GenJournalBatch."Journal Template Name");
+        GenJnlLn.SetRange("Journal Batch Name", GenJournalBatch.Name);
+
+        if Args."Reprint Checks" then
+            VoidChecks(Args, GenJnlLn);
+
+        if GenJnlLn.FindSet() then
+            repeat
+                ProcessCheck(Args, GenJnlLn, MergePDF);
+                Args.GetNextCheckNo();
+            until GenJnlLn.Next() = 0;
+    end;
+
+    local procedure VoidChecks(var Args: Record "ForNAV Check Arguments"; var GenJnlLn: Record "Gen. Journal Line")
+    var
+        VoidGenJnlLn: Record "Gen. Journal Line";
+        CheckManagement: Codeunit CheckManagement;
+        TestVoidCheck: Codeunit "ForNAV Test Void Check";
+    begin
+        VoidGenJnlLn.CopyFilters(GenJnlLn);
+        VoidGenJnlLn.SetFilter("Bal. Account No.", '%1|%2', '', Args."Bank Account No.");
+        if TestVoidCheck.TestVoidCheck(VoidGenJnlLn, Args, false) then
+            if VoidGenJnlLn.FindSet() then
+                repeat
+                    CheckManagement.VoidCheck(VoidGenJnlLn);
+                until VoidGenJnlLn.Next() = 0;
+
+        Args."Reprint Checks" := false;
+        Args.Modify();
+    end;
+
     internal procedure RunCheckReportPerLine(var Args: Record "ForNAV Check Arguments"; var GenJnlLn: Record "Gen. Journal Line")
     var
         Setup: Record "PTE Spear Technology Setup";
@@ -51,9 +86,8 @@ codeunit 80402 "PTE Run Check Report"
                     TempMergePDF.Blob.CreateInstream(InStr);
                     Report.SaveAs(Report::"PTE US Check", Parameters, ReportFormat::Pdf, OutStr, GenJnlLnRef);
                     TempMergePDF.Filename := Args."PTE Document No." + '.pdf';
-                    TempMergePDF.Insert();
-                    // if Setup."Output Type" = Setup."Output Type"::PDF then
-                    //     CheckArgs.SetMergedCheck(TempMergePDF);
+                    if TempMergePDF.Blob.Length > 0 then
+                        TempMergePDF.Insert();
                 end;
             Args."PTE Output Type"::Print:
                 Report.Print(Report::"PTE US Check", Parameters, '', GenJnlLnRef);
