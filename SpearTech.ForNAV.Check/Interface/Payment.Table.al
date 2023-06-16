@@ -34,6 +34,8 @@ table 80400 "PTE Payment Interface"
         field(37; "Control Number"; Text[100]) { DataClassification = SystemMetadata; }
         field(38; "Additional Payee"; Text[100]) { DataClassification = SystemMetadata; }
         field(39; "Additional Payee Text"; Text[250]) { DataClassification = SystemMetadata; }
+        field(40; "Group Claimant Vendor Checks"; Boolean) { DataClassification = SystemMetadata; }
+        field(41; "Claimant Id"; Guid) { DataClassification = SystemMetadata; }
     }
 
     keys { key(Key1; "Vendor No.") { Clustered = true; } }
@@ -49,46 +51,96 @@ table 80400 "PTE Payment Interface"
     local procedure CreatePaymentJournalLine()
     var
         GenJnlLine: Record "Gen. Journal Line";
+        CheckData: Record "PTE Check Data";
+        VendorLedgerEntry: Record "Vendor Ledger Entry";
+    begin
+        if SummarizePerVendor() and GetGenJournalLineForVendor(GenJnlLine) then begin
+            GenJnlLine.Validate(Amount, GenJnlLine.Amount + "Amount (USD)");
+            GenJnlLine.Modify();
+        end else begin
+            GenJnlLine."Line No." := GetGenJnlLineNo();
+
+            GenJnlLine.Init();
+            GenJnlLine."Document Type" := GenJnlLine."Document Type"::Payment;
+            GenJnlLine."Posting No. Series" := GetPaymentJournalBatch()."Posting No. Series";
+            GenJnlLine."Journal Template Name" := GetPaymentJournalBatch()."Journal Template Name";
+            GenJnlLine."Journal Batch Name" := GetPaymentJournalBatch().Name;
+            GenJnlLine."Document No." := "Document No.";
+
+            GenJnlLine."Account Type" := GenJnlLine."Account Type"::Vendor;
+            GenJnlLine.SetHideValidation(true);
+            GenJnlLine."Posting Date" := "Posting Date";
+            GenJnlLine.Validate("Account No.", "Vendor No.");
+            GenJnlLine."Bal. Account Type" := GenJnlLine."Bal. Account Type"::"Bank Account";
+            GenJnlLine.Validate("Bal. Account No.", GetBankAccount()."No.");
+            case "Payment Method" of
+                "Payment Method"::Check:
+                    GenJnlLine."Bank Payment Type" := GenJnlLine."Bank Payment Type"::"Computer Check";
+                "Payment Method"::EFT:
+                    GenJnlLine."Bank Payment Type" := GenJnlLine."Bank Payment Type"::"Electronic Payment";
+                "Payment Method"::Void:
+                    GenJnlLine."Bank Payment Type" := GenJnlLine."Bank Payment Type"::"Manual Check";
+            end;
+            GenJnlLine.Description := Description;
+            GenJnlLine."Source Line No." := GetLastVendorLedgerEntryNo()."Entry No.";
+            GenJnlLine.Validate(Amount, "Amount (USD)");
+            if SummarizePerVendor() then
+                GenJnlLine."Applies-to ID" := "Document No."
+            else begin
+                GenJnlLine."Applies-to Doc. Type" := GenJnlLine."Applies-to Doc. Type"::Invoice;
+                GenJnlLine."Applies-to Doc. No." := "Document No.";
+            end;
+            GenJnlLine."Payment Method Code" := GetPaymentMethod();
+            if "External Document No." = '' then
+                GenJnlLine."External Document No." := "Document No."
+            else
+                GenJnlLine."External Document No." := "External Document No.";
+            GenJnlLine.Insert();
+        end;
+
+        if not SummarizePerVendor() then
+            exit;
+
+        if CheckData.Get("Document No.") then begin
+            CheckData."Applies-to ID" := GenJnlLine."Applies-to ID";
+            CheckData.Modify();
+        end;
+
+        VendorLedgerEntry.SetRange("Vendor No.", "Vendor No.");
+        VendorLedgerEntry.SetRange("Document No.", "Document No.");
+        if VendorLedgerEntry.FindFirst() then begin
+            VendorLedgerEntry."Applies-to ID" := GenJnlLine."Applies-to ID";
+            VendorLedgerEntry.Modify();
+        end;
+    end;
+
+    local procedure SummarizePerVendor(): Boolean
+    var
+        Vendor: Record Vendor;
+    begin
+        Vendor.Get("Vendor No.");
+        exit(Vendor."PTE Combine Payments" and "Group Claimant Vendor Checks");
+    end;
+
+    local procedure GetGenJournalLineForVendor(var GenJnlLine: Record "Gen. Journal Line"): boolean
+    begin
+        GenJnlLine.SetRange("Journal Template Name", GetPaymentJournalBatch()."Journal Template Name");
+        GenJnlLine.SetRange("Journal Batch Name", GetPaymentJournalBatch().Name);
+        GenJnlLine.SetRange("Account No.", "Vendor No.");
+        exit(GenJnlLine.FindLast());
+    end;
+
+    local procedure GetGenJnlLineNo(): Integer
+    var
+        GenJnlLine: Record "Gen. Journal Line";
     begin
         GenJnlLine.SetRange("Journal Template Name", GetPaymentJournalBatch()."Journal Template Name");
         GenJnlLine.SetRange("Journal Batch Name", GetPaymentJournalBatch().Name);
         if GenJnlLine.FindLast() then
-            GenJnlLine."Line No." += 10000
+            exit(GenJnlLine."Line No." + 10000)
         else
-            GenJnlLine."Line No." := 10000;
+            exit(10000);
 
-        GenJnlLine.Init();
-        GenJnlLine."Document Type" := GenJnlLine."Document Type"::Payment;
-        GenJnlLine."Posting No. Series" := GetPaymentJournalBatch()."Posting No. Series";
-        GenJnlLine."Journal Template Name" := GetPaymentJournalBatch()."Journal Template Name";
-        GenJnlLine."Journal Batch Name" := GetPaymentJournalBatch().Name;
-        GenJnlLine."Document No." := "Document No.";
-
-        GenJnlLine."Account Type" := GenJnlLine."Account Type"::Vendor;
-        GenJnlLine.SetHideValidation(true);
-        GenJnlLine."Posting Date" := "Posting Date";
-        GenJnlLine.Validate("Account No.", "Vendor No.");
-        GenJnlLine."Bal. Account Type" := GenJnlLine."Bal. Account Type"::"Bank Account";
-        GenJnlLine.Validate("Bal. Account No.", GetBankAccount()."No.");
-        case "Payment Method" of
-            "Payment Method"::Check:
-                GenJnlLine."Bank Payment Type" := GenJnlLine."Bank Payment Type"::"Computer Check";
-            "Payment Method"::EFT:
-                GenJnlLine."Bank Payment Type" := GenJnlLine."Bank Payment Type"::"Electronic Payment";
-            "Payment Method"::Void:
-                GenJnlLine."Bank Payment Type" := GenJnlLine."Bank Payment Type"::"Manual Check";
-        end;
-        GenJnlLine.Description := Description;
-        GenJnlLine."Source Line No." := GetLastVendorLedgerEntryNo()."Entry No.";
-        GenJnlLine.Validate(Amount, "Amount (USD)");
-        GenJnlLine."Applies-to Doc. Type" := GenJnlLine."Applies-to Doc. Type"::Invoice;
-        GenJnlLine."Applies-to Doc. No." := "Document No.";
-        GenJnlLine."Payment Method Code" := GetPaymentMethod();
-        if "External Document No." = '' then
-            GenJnlLine."External Document No." := "Document No."
-        else
-            GenJnlLine."External Document No." := "External Document No.";
-        GenJnlLine.Insert();
     end;
 
     local procedure CreateVendorLedgerEntry()
@@ -147,6 +199,8 @@ table 80400 "PTE Payment Interface"
         CheckData."Control Number" := "Control Number";
         CheckData."Additional Payee" := "Additional Payee";
         checkData."Additional Payee Text" := "Additional Payee Text";
+        CheckData."Group Claimant Vendor Checks" := "Group Claimant Vendor Checks";
+        CheckData."Claimant Id" := "Claimant Id";
         CheckData.Insert();
     end;
 
@@ -181,6 +235,7 @@ table 80400 "PTE Payment Interface"
 
     local procedure GetPaymentJournalBatch() Batch: Record "Gen. Journal Batch"
     begin
+        Batch.SetRange("Journal Template Name", 'PAYMENT');
         Batch.SetRange("Bal. Account Type", Batch."Bal. Account Type"::"Bank Account");
         Batch.SetRange("Bal. Account No.", GetBankAccount()."No.");
         Batch.FindFirst();

@@ -39,6 +39,8 @@ page 80402 "PTE Check Data"
                 field("Control Number"; Rec."Control Number") { ApplicationArea = Basic, Suite; }
                 field("Additional Payee"; Rec."Additional Payee") { ApplicationArea = Basic, Suite; }
                 field("Additional Payee Text"; Rec."Additional Payee Text") { ApplicationArea = Basic, Suite; }
+                field("Group Claimant Vendor Checks"; Rec."Group Claimant Vendor Checks") { ApplicationArea = Basic, Suite; }
+                field("Claimant Id"; Rec."Claimant Id") { ApplicationArea = Basic, Suite; }
             }
         }
         area(Factboxes)

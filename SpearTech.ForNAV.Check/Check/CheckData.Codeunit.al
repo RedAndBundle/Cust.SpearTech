@@ -19,6 +19,12 @@ codeunit 80403 "PTE Check Data"
                 exit;
         end;
 
+        if GenJnlLine."Applies-to ID" <> '' then begin
+            CheckData.SetRange("Applies-to ID", GenJnlLine."Applies-to ID");
+            CheckData.DeleteAll();
+            exit;
+        end;
+
         if CheckData.Get(GenJnlLine."Applies-to Doc. No.") then
             CheckData.Delete();
     end;

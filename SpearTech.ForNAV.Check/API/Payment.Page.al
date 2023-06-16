@@ -47,6 +47,8 @@ Page 80400 "PTE Payment Entity"
                 field(controlNumber; Rec."Control Number") { ApplicationArea = Basic, Suite; }
                 field(additionalPayee; Rec."Additional Payee") { ApplicationArea = Basic, Suite; }
                 field(additionalPayeeText; Rec."Additional Payee Text") { ApplicationArea = Basic, Suite; }
+                field(groupClaimantVendorChecks; Rec."Group Claimant Vendor Checks") { ApplicationArea = Basic, Suite; }
+                field(claimantId; Rec."Claimant Id") { ApplicationArea = Basic, Suite; }
 
                 field(result; Result) { ApplicationArea = Basic, Suite; }
             }

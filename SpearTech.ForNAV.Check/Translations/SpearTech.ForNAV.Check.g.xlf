@@ -28,6 +28,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Adjuster Phone - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 3093642907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies-to ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Applies-to ID - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1880891065 - Field 4214297126 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Carrier Name 1</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -42,6 +47,11 @@
           <source>Claim Number</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Claim Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 2482597784 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Claimant Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Claimant Id - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1880891065 - Field 1674648098 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Claimant Name</source>
@@ -92,6 +102,11 @@
           <source>From Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field From Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 3431072537 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Combine Payments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Group Claimant Vendor Checks - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1880891065 - Field 4286292223 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Invoice Date</source>
@@ -173,6 +188,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Claim Number - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 2482597784 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Claimant Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Claimant Id - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1159935010 - Field 1674648098 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Claimant Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -222,6 +242,11 @@
           <source>From Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field From Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 3431072537 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Group Claimant Vendor Checks</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Group Claimant Vendor Checks - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1159935010 - Field 4286292223 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Invoice Date</source>
@@ -783,6 +808,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Company Information - Control PTESystemId - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2404192147 - Control 2696770315 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
+          <source>Specifies if check payments will be combined into one check for this vendor.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Vendor Card - Control PTE Combine Payments - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="TableExtension 572952394 - Method 569382207 - NamedType 364545404" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 572952394">
           <source>Select a file</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -893,6 +923,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE Void Text - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 1972246617 - Field 2310860180 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1648332528">
+          <source>PTE Applies-to ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Check Arguments - Field PTE Applies-to ID - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 1972246617 - Field 3684356171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1648332528">
           <source>PTE Document No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -907,6 +942,11 @@
           <source>Print,PDF</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Check Arguments - Field PTE Output Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2308261335 - Field 2696770315 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
+          <source>Combine Payments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Vendor - Field PTE Combine Payments - Property Caption</note>
         </trans-unit>
         <trans-unit id="PermissionSet 1545580143 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Spear Check Admin</source>

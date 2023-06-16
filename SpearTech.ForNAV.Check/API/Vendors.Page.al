@@ -75,6 +75,10 @@ page 80404 "PTE Vendors"
                 {
                     ApplicationArea = all;
                 }
+                field(combinePayments; Rec."PTE Combine Payments")
+                {
+                    ApplicationArea = all;
+                }
                 field(id; Rec.SystemId)
                 {
                     ApplicationArea = all;

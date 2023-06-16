@@ -31,6 +31,31 @@ table 80401 "PTE PDF Merge File"
         }
     }
 
+    internal procedure GetFromAppliestoID(AppliestoID: Code[50]): Boolean
+    var
+        CheckData: Record "PTE Check Data";
+        MergePDF: Codeunit "PTE Merge PDF";
+    begin
+        CheckData.Setrange("Applies-to ID", AppliestoID);
+        if not CheckData.FindSet() then
+            exit;
+
+        CheckData.SetAutoCalcFields(PDF);
+        repeat
+            if CheckData.PDF.HasValue then begin
+                "Primary Key" := CheckData."Document Number";
+                Blob := CheckData.PDF;
+                Filename := CheckData."Document Number" + '.pdf';
+                Insert();
+            end;
+        until CheckData.Next() = 0;
+
+        if Count <> 1 then
+            MergePDF.Run(Rec);
+
+        exit(FindFirst());
+    end;
+
     procedure Zip()
     var
         DataCompression: Codeunit "Data Compression";
