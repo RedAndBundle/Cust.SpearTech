@@ -11,8 +11,11 @@ Page 80501 "PTEAP API AP Header"
     APIVersion = 'v2.0';
     SourceTable = "PTEAP API AP Header";
     SourceTableTemporary = true;
-
     Extensible = false;
+
+    // Entitycaption = 'Sales Order';
+    // EntitySetCaption = 'Sales Orders ';
+    ChangeTrackingAllowed = true;
 
     layout
     {
@@ -59,15 +62,25 @@ Page 80501 "PTEAP API AP Header"
     trigger OnFindRecord(Which: Text): Boolean
     begin
         Message('hi');
-        Rec.Init();
-        Rec."Claim Number" := Rec.GetFilter("Claim Number");
-        Rec."Sell-to Customer No." := '10000';
-        Rec.Insert();
-        exit(true);
+        exit(Rec.GetFromSystemId(Rec.GetFilter(SystemId)));
+        // TODO return sales invoice system id on post
+        // TODO get sales order based on System Id
     end;
 
     trigger OnAfterGetRecord()
     begin
         // Message('hi');
+    end;
+
+    trigger OnOpenPage()
+    begin
+        // Message('OnOpenPage');
+    end;
+
+    [ServiceEnabled]
+    [Scope('Cloud')]
+    procedure Post(var ActionContext: WebServiceActionContext)
+    begin
+        Rec.Post();
     end;
 }

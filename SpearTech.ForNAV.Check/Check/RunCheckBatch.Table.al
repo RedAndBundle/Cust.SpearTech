@@ -147,19 +147,17 @@ table 80404 "PTE Run Check Batch"
         if Rec.FindSet() then
             repeat
                 if "Run Check" then begin
-                    // Set Args
                     Args.DeleteAll();
                     Args.Init();
                     Args."Bank Account No." := "Bank Account No.";
                     Args."Reprint Checks" := "Reprint Checks";
                     Args."One Check Per Vendor" := "One Check Per Vendor";
-                    Args."Check No." := "Last Check No.";
+                    Args."Check No." := InputBankAccount("Bank Account No.");
                     Args."PTE Document No." := '';
                     Args."PTE Output Type" := Args."PTE Output Type"::PDF;
                     Args.Insert();
                     GenJournalBatch.Get("Journal Template Name", Name);
                     RunCheckReport.RunCheckReportPerBatch(Args, GenJournalBatch, TempMergePDF);
-                    InputBankAccount("Bank Account No.");
                     Modify();
                 end;
             until Rec.Next() = 0;

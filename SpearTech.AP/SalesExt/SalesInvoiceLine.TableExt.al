@@ -18,5 +18,10 @@ tableextension 80505 "PTEAP Sales Invoice Line" extends "Sales Invoice Line"
             CalcFormula = lookup("Sales Invoice Header"."PTEAP Claim Number" where("No." = field("Document No.")));
             Caption = 'Claim Number';
         }
+        field(80503; "PTEAP Spear Id"; Guid)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Spear Id';
+        }
     }
 }

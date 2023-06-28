@@ -71,7 +71,11 @@ codeunit 80402 "PTE Run Check Report"
         Setup.Get();
         GenJnlLnFilter.Get(GenJnlLn.RecordId);
         GenJnlLnFilter.SetRecFilter();
-        Args."PTE Document No." := GenJnlLn."Applies-to Doc. No.";
+        if GenJnlLn."Applies-to ID" <> '' then
+            Args.Validate("PTE Applies-to ID", GenJnlLn."Applies-to ID")
+        else
+            Args."PTE Document No." := GenJnlLn."Applies-to Doc. No.";
+
         CheckArgs.SetArgs(Args);
         GenJnlLnRef.GetTable(GenJnlLnFilter);
 

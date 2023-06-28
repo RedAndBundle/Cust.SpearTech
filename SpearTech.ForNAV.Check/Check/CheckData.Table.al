@@ -125,6 +125,21 @@ table 80402 "PTE Check Data"
             Caption = 'Additional Payee Text';
             DataClassification = SystemMetadata;
         }
+        field(40; "Group Claimant Vendor Checks"; Boolean)
+        {
+            Caption = 'Combine Payments';
+            DataClassification = SystemMetadata;
+        }
+        field(41; "Claimant Id"; Guid)
+        {
+            Caption = 'Claimant Id';
+            DataClassification = SystemMetadata;
+        }
+        field(10000; "Applies-to ID"; Code[50])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Applies-to ID';
+        }
     }
 
     keys

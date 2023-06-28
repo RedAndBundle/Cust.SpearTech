@@ -66,12 +66,45 @@ table 80500 "PTEAP API AP Header"
         }
     }
 
-    procedure ProcessAPInterface(): Text
+    internal procedure ProcessAPInterface(): Text
     var
         SalesHeader: Record "Sales Header";
         CreatedLbl: Label '%1 %2 Created', Comment = '%1 = doc type %2 = doc no';
     begin
         SalesHeader.PTEAPGetSalesHeader("Sales Document Type"::Invoice, Rec);
+        SystemId := SalesHeader.SystemId;
         exit(StrSubstNo(CreatedLbl, SalesHeader."Document Type", SalesHeader."No."));
+    end;
+
+    internal procedure Post()
+    var
+        SalesHeader: Record "Sales Header";
+        SalesPost: Codeunit "Sales-Post";
+    begin
+        if not SalesHeader.GetBySystemId(SystemId) then
+            exit;
+
+        SalesPost.SetSuppressCommit(true);
+        SalesPost.Run(SalesHeader);
+    end;
+
+    internal procedure GetFromSystemId(NewSystemId: Guid): Boolean
+    var
+        SalesHeader: Record "Sales Header";
+    begin
+        DeleteAll();
+        SalesHeader.GetBySystemId(NewSystemId);
+        SystemId := SalesHeader.SystemId;
+        "Sell-to Customer No." := SalesHeader."Sell-to Customer No.";
+        "Bill-To Customer No." := SalesHeader."Bill-to Customer No.";
+        "Claim Number" := SalesHeader."PTEAP Claim Number";
+        "Claimant Name" := SalesHeader."PTEAP Claimant Name";
+        SSN := SalesHeader."PTEAP SSN";
+        DOB := SalesHeader."PTEAP DOB";
+        "Claims Manager" := SalesHeader."PTEAP Claims Manager";
+        "Referral Date" := SalesHeader."PTEAP Referral Date";
+        "Invoice Type" := SalesHeader."PTEAP Invoice Type";
+        "Accident Date" := SalesHeader."PTEAP Accident Date";
+        exit(Insert());
     end;
 }

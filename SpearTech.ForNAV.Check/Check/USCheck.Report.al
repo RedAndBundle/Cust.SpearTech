@@ -190,6 +190,7 @@ Report 80400 "PTE US Check"
     trigger OnPreReport()
     var
         PDFFile: Record "PTE Check Data";
+        PDFMergeFile: Record "PTE PDF Merge File";
         CheckArgs: Codeunit "PTE Check Args";
         Setup: Record "PTE Spear Technology Setup";
         is: InStream;
@@ -203,7 +204,17 @@ Report 80400 "PTE US Check"
 
         if CurrReport.Preview then
             Args."Test Print" := true;
-        if PDFFile.Get(Args."PTE Document No.") then begin
+
+        if Args."PTE Applies-to ID" <> '' then
+            if PDFMergeFile.GetFromAppliestoID(Args."PTE Applies-to ID") then begin
+                PDFMergeFile.CalcFields(Blob);
+                if PDFMergeFile.Blob.HasValue() then begin
+                    PDFMergeFile.Blob.CreateInStream(is);
+                    ReportForNav.SetAppendPdf('Args', is);
+                end;
+            end;
+
+        if (Args."PTE Applies-to ID" = '') and PDFFile.Get(Args."PTE Document No.") then begin
             PDFFile.CalcFields(PDF);
             if PDFFile.PDF.HasValue() then begin
                 PDFFile.PDF.CreateInStream(is);
