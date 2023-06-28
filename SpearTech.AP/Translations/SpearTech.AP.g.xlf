@@ -113,6 +113,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTEAP API AP Line - Field Source - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4263857641 - Field 995702660 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Spear Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEAP API AP Line - Field Spear Id - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 4263857641 - Field 1791699764 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Task Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -202,6 +207,11 @@
           <source>Claim Number</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Cr.Memo Line - Field PTEAP Claim Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2187323981 - Field 1491611852 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Spear Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Cr.Memo Line - Field PTEAP Spear Id - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2187323981 - Field 4262483891 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
           <source>Task Date</source>
@@ -298,6 +308,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Invoice Line - Field PTEAP Claim Number - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 478737257 - Field 1491611852 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Spear Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Invoice Line - Field PTEAP Spear Id - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 478737257 - Field 4262483891 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
           <source>Task Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -312,6 +327,11 @@
           <source>Claim Number</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Line - Field PTEAP Claim Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3595448026 - Field 1491611852 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Spear Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Line - Field PTEAP Spear Id - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3595448026 - Field 4262483891 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
           <source>Task Date</source>
@@ -367,6 +387,11 @@
           <source>Claim Number</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Shipment Line - Field PTEAP Claim Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3498048746 - Field 1491611852 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Spear Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEAP Sales Shipment Line - Field PTEAP Spear Id - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3498048746 - Field 4262483891 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
           <source>Task Date</source>

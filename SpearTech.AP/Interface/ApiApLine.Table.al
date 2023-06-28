@@ -62,6 +62,11 @@ table 80501 "PTEAP API AP Line"
             DataClassification = CustomerContent;
             Caption = 'Description';
         }
+        field(108; "Spear Id"; Guid)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Spear Id';
+        }
     }
 
     keys
@@ -107,6 +112,7 @@ table 80501 "PTEAP API AP Line"
         SalesLine.Description := Description;
         SalesLine."PTEAP Task/Activity" := "Task/Activity";
         SalesLine."PTEAP Task Date" := "Task Date";
+        SalesLine."PTEAP Spear Id" := "Spear Id";
         SalesLine.Insert(true);
     end;
 

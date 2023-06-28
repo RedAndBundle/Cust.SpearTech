@@ -18,5 +18,10 @@ tableextension 80503 "PTEAP Sales Shipment Line" extends "Sales Shipment Line"
             CalcFormula = lookup("Sales Shipment Header"."PTEAP Claim Number" where("No." = field("Document No.")));
             Caption = 'Claim Number';
         }
+        field(80503; "PTEAP Spear Id"; Guid)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Spear Id';
+        }
     }
 }

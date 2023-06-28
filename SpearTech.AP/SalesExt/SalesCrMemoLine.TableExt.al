@@ -18,5 +18,10 @@ tableextension 80507 "PTEAP Sales Cr.Memo Line" extends "Sales Cr.Memo Line"
             CalcFormula = lookup("Sales Cr.Memo Header"."PTEAP Claim Number" where("No." = field("Document No.")));
             Caption = 'Claim Number';
         }
+        field(80503; "PTEAP Spear Id"; Guid)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Spear Id';
+        }
     }
 }

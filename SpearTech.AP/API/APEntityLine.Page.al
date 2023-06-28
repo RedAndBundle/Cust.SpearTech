@@ -31,6 +31,7 @@ Page 80502 "PTEAP API AP Line"
                 field(amount; Rec.Amount) { ApplicationArea = Basic, Suite; }
                 field(description; Rec.Description) { ApplicationArea = Basic, Suite; }
                 field(source; Rec.Source) { ApplicationArea = Basic, Suite; }
+                field(spearId; Rec."Spear Id") { ApplicationArea = Basic, Suite; }
                 field(result; Result) { ApplicationArea = Basic, Suite; }
             }
         }
@@ -48,8 +49,8 @@ Page 80502 "PTEAP API AP Line"
 
     trigger OnOpenPage()
     begin
-        if (Rec.GetFilter("Claim Number") = '') and (Rec.GetFilter("Task/Activity") = '') then
-            Error('Please provide a filter on %1 or %2', Rec.FieldCaption("Claim Number"), Rec.FieldCaption("Task/Activity"));
+        if (Rec.GetFilter("Claim Number") = '') and (Rec.GetFilter("Task/Activity") = '') and (Rec.GetFilter("Spear Id") = '') then
+            Error('Please provide a filter on %1, %2, or %3', Rec.FieldCaption("Spear Id"), Rec.FieldCaption("Claim Number"), Rec.FieldCaption("Task/Activity"));
 
         GetFromSalesLine();
         GetFromSalesInvoiceLine();
@@ -65,6 +66,8 @@ Page 80502 "PTEAP API AP Line"
         SalesLine: Record "Sales Line";
     begin
         SalesLine.SetAutoCalcFields("PTEAP Claim Number");
+        if Rec.GetFilter("Spear Id") <> '' then
+            SalesLine.SetFilter("PTEAP Spear Id", Rec.GetFilter("Spear Id"));
         if Rec.GetFilter("Claim Number") <> '' then
             SalesLine.SetFilter("PTEAP Claim Number", Rec.GetFilter("Claim Number"));
         if Rec.GetFilter("Task/Activity") <> '' then
@@ -82,6 +85,7 @@ Page 80502 "PTEAP API AP Line"
                 Rec.Rate := SalesLine."Unit Price";
                 Rec.Amount := SalesLine."Line Amount";
                 Rec.Source := Format(SalesLine.RecordId);
+                Rec."Spear Id" := SalesLine."PTEAP Spear Id";
                 Rec.Insert();
             until SalesLine.Next() = 0;
     end;
@@ -91,6 +95,8 @@ Page 80502 "PTEAP API AP Line"
         SalesInvoiceLine: Record "Sales Invoice Line";
     begin
         SalesInvoiceLine.SetAutoCalcFields("PTEAP Claim Number");
+        if Rec.GetFilter("Spear Id") <> '' then
+            SalesInvoiceLine.SetFilter("PTEAP Spear Id", Rec.GetFilter("Spear Id"));
         if Rec.GetFilter("Claim Number") <> '' then
             SalesInvoiceLine.SetFilter("PTEAP Claim Number", Rec.GetFilter("Claim Number"));
         if Rec.GetFilter("Task/Activity") <> '' then
@@ -107,7 +113,9 @@ Page 80502 "PTEAP API AP Line"
                 Rec.Units := SalesInvoiceLine.Quantity;
                 Rec.Rate := SalesInvoiceLine."Unit Price";
                 Rec.Amount := SalesInvoiceLine."Line Amount";
+                Rec."Spear Id" := SalesInvoiceLine."PTEAP Spear Id";
                 Rec.Source := Format(SalesInvoiceLine.RecordId);
+                Rec."Spear Id" := SalesInvoiceLine."PTEAP Spear Id";
                 Rec.Insert();
             until SalesInvoiceLine.Next() = 0;
     end;

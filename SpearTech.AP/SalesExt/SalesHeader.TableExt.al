@@ -62,6 +62,7 @@ tableextension 80500 "PTEAP Sales Header" extends "Sales Header"
         "PTEAP Claims Manager" := APIAPHeader."Claims Manager";
         "PTEAP Referral Date" := APIAPHeader."Referral Date";
         "PTEAP Invoice Type" := APIAPHeader."Invoice Type";
+        "PTEAP Accident Date" := APIAPHeader."Accident Date";
         Insert(true);
         exit(true);
     end;

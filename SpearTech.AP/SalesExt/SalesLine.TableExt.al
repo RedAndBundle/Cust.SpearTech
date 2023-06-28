@@ -18,6 +18,11 @@ tableextension 80501 "PTEAP Sales Line" extends "Sales Line"
             CalcFormula = lookup("Sales Header"."PTEAP Claim Number" where("Document Type" = field("Document Type"), "No." = field("Document No.")));
             Caption = 'Claim Number';
         }
+        field(80503; "PTEAP Spear Id"; Guid)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Spear Id';
+        }
     }
 
     trigger OnBeforeDelete()
