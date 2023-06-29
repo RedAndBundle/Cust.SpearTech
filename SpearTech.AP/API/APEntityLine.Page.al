@@ -12,6 +12,7 @@ Page 80502 "PTEAP API AP Line"
     SourceTable = "PTEAP API AP Line";
     SourceTableTemporary = true;
 
+    // http://bc220-us:7048/bc/api/speartech/ap/v2.0/companies(17bbc8b0-cc08-ee11-8f7b-6045bdc8a215)/apLines?tenant=default&$filter=spearId eq 2381c46b-8d3e-46e5-90e8-9b2a94e40aa9
     layout
     {
         area(content)

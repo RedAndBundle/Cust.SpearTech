@@ -12,11 +12,9 @@ Page 80501 "PTEAP API AP Header"
     SourceTable = "PTEAP API AP Header";
     SourceTableTemporary = true;
     Extensible = false;
-
-    // Entitycaption = 'Sales Order';
-    // EntitySetCaption = 'Sales Orders ';
     ChangeTrackingAllowed = true;
 
+    // http://bc220-us:7048/bc/api/speartech/ap/v2.0/companies(17bbc8b0-cc08-ee11-8f7b-6045bdc8a215)/apHeaders?tenant=default
     layout
     {
         area(content)
@@ -59,24 +57,13 @@ Page 80501 "PTEAP API AP Header"
         Result := Rec.ProcessAPInterface();
     end;
 
+    // http://bc220-us:7048/bc/api/speartech/ap/v2.0/companies(17bbc8b0-cc08-ee11-8f7b-6045bdc8a215)/apHeaders(ecca1e29-8815-ee11-9e03-a6b3ed45dbcc)
     trigger OnFindRecord(Which: Text): Boolean
     begin
-        Message('hi');
         exit(Rec.GetFromSystemId(Rec.GetFilter(SystemId)));
-        // TODO return sales invoice system id on post
-        // TODO get sales order based on System Id
     end;
 
-    trigger OnAfterGetRecord()
-    begin
-        // Message('hi');
-    end;
-
-    trigger OnOpenPage()
-    begin
-        // Message('OnOpenPage');
-    end;
-
+    // http://bc220-us:7048/bc/api/speartech/ap/v2.0/companies(17bbc8b0-cc08-ee11-8f7b-6045bdc8a215)/apHeaders(ecca1e29-8815-ee11-9e03-a6b3ed45dbcc)/Microsoft.NAV.post?tenant=default
     [ServiceEnabled]
     [Scope('Cloud')]
     procedure Post(var ActionContext: WebServiceActionContext)
