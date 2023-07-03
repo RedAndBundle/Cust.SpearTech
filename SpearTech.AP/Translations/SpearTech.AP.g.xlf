@@ -93,6 +93,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTEAP API AP Line - Field Description - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4263857641 - Field 580412389 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEAP API AP Line - Field Document Date - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 4263857641 - Field 4095313195 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Invoice Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -109,9 +114,24 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTEAP API AP Line - Field Rate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4263857641 - Field 2397723431 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
+          <source>Source</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTEAP API AP Line - Field Source - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4263857641 - Field 1413859156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEAP API AP Line - Field Source Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4263857641 - Field 312545736 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEAP API AP Line - Field Source Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4263857641 - Field 1882905478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEAP API AP Line - Field Source No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4263857641 - Field 995702660 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Spear Id</source>

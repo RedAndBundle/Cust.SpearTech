@@ -32,7 +32,11 @@ Page 80502 "PTEAP API AP Line"
                 field(amount; Rec.Amount) { ApplicationArea = Basic, Suite; }
                 field(description; Rec.Description) { ApplicationArea = Basic, Suite; }
                 field(source; Rec.Source) { ApplicationArea = Basic, Suite; }
+                field(sourceNo; Rec."Source No.") { ApplicationArea = Basic, Suite; }
+                field(sourceLineNo; Rec."Source Line No.") { ApplicationArea = Basic, Suite; }
+                field(sourceId; Rec."Source Id") { ApplicationArea = Basic, Suite; }
                 field(spearId; Rec."Spear Id") { ApplicationArea = Basic, Suite; }
+                field(documentDate; Rec."Document Date") { ApplicationArea = Basic, Suite; }
                 field(result; Result) { ApplicationArea = Basic, Suite; }
             }
         }
@@ -86,6 +90,10 @@ Page 80502 "PTEAP API AP Line"
                 Rec.Rate := SalesLine."Unit Price";
                 Rec.Amount := SalesLine."Line Amount";
                 Rec.Source := Format(SalesLine.RecordId);
+                Rec."Source No." := SalesLine."Document No.";
+                Rec."Source Line No." := SalesLine."Line No.";
+                Rec."Source Id" := SalesLine.SystemId;
+                Rec."Document Date" := SalesLine."Posting Date";
                 Rec."Spear Id" := SalesLine."PTEAP Spear Id";
                 Rec.Insert();
             until SalesLine.Next() = 0;
@@ -116,6 +124,10 @@ Page 80502 "PTEAP API AP Line"
                 Rec.Amount := SalesInvoiceLine."Line Amount";
                 Rec."Spear Id" := SalesInvoiceLine."PTEAP Spear Id";
                 Rec.Source := Format(SalesInvoiceLine.RecordId);
+                Rec."Source No." := SalesInvoiceLine."Document No.";
+                Rec."Source Line No." := SalesInvoiceLine."Line No.";
+                Rec."Source Id" := SalesInvoiceLine.SystemId;
+                Rec."Document Date" := SalesInvoiceLine."Posting Date";
                 Rec."Spear Id" := SalesInvoiceLine."PTEAP Spear Id";
                 Rec.Insert();
             until SalesInvoiceLine.Next() = 0;

@@ -60,9 +60,29 @@ table 80501 "PTEAP API AP Line"
         field(107; "Source"; Text[1024])
         {
             DataClassification = CustomerContent;
+            Caption = 'Source';
+        }
+        field(108; "Source No."; Code[20])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Source No.';
+        }
+        field(109; "Source Line No."; Integer)
+        {
+            DataClassification = CustomerContent;
             Caption = 'Description';
         }
-        field(108; "Spear Id"; Guid)
+        field(110; "Source Id"; Guid)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Description';
+        }
+        field(111; "Document Date"; Date)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Document Date';
+        }
+        field(112; "Spear Id"; Guid)
         {
             DataClassification = CustomerContent;
             Caption = 'Spear Id';
