@@ -4,15 +4,16 @@ codeunit 80400 "PTE Create Positive Pay Entry"
                   TableData "Positive Pay Entry" = rimd,
                   TableData "Positive Pay Entry Detail" = rimd;
 
-    internal procedure CreatePositivePayEntry(var PositivePayEntry: Record "Positive Pay Entry"; BankPaymentType: Enum "Bank Payment Type")
+    internal procedure CreatePositivePayEntry(var PositivePayEntry: Record "Positive Pay Entry"; BankPaymentType: Enum "Bank Payment Type"; CutoffExportDate: Date)
     var
         CheckLedgerEntry: Record "Check Ledger Entry";
         PositivePayEntryDetail: Record "Positive Pay Entry Detail";
+        NoCheckLedgerEntriesToExportErr: Label 'No Check Ledger Entries to Export for bank account %1.';
     begin
-        if not GetCheckLedgerEntries(PositivePayEntry, CheckLedgerEntry, BankPaymentType) then
-            exit;
+        InitPositivePayEntry(PositivePayEntry);
 
-        InitPositivePayEntry(PositivePayEntry, CheckLedgerEntry."Bank Account No.");
+        if not GetCheckLedgerEntries(PositivePayEntry, CheckLedgerEntry, BankPaymentType, CutoffExportDate) then
+            Error(NoCheckLedgerEntriesToExportErr, PositivePayEntry."Bank Account No.");
 
         repeat
             CreatePosPayEntryDetail(CheckLedgerEntry, PositivePayEntryDetail, PositivePayEntry);
@@ -22,11 +23,14 @@ codeunit 80400 "PTE Create Positive Pay Entry"
         SetPositivePayExported(CheckLedgerEntry);
     end;
 
-    local procedure GetCheckLedgerEntries(var PositivePayEntry: Record "Positive Pay Entry"; var CheckLedgerEntry: Record "Check Ledger Entry"; BankPaymentType: Enum "Bank Payment Type"): Boolean
+    local procedure GetCheckLedgerEntries(var PositivePayEntry: Record "Positive Pay Entry"; var CheckLedgerEntry: Record "Check Ledger Entry"; BankPaymentType: Enum "Bank Payment Type"; CutoffExportDate: Date): Boolean
     begin
+        if CutoffExportDate = 0D then
+            CutoffExportDate := WorkDate();
+
         CheckLedgerEntry.SetCurrentKey("Bank Account No.", "Check Date");
         CheckLedgerEntry.SetRange("Bank Account No.", PositivePayEntry."Bank Account No.");
-        CheckLedgerEntry.SetRange("Check Date", PositivePayEntry."Last Upload Date", WorkDate());
+        CheckLedgerEntry.SetRange("Check Date", PositivePayEntry."Last Upload Date", CutoffExportDate);
         CheckLedgerEntry.SetRange("Positive Pay Exported", false);
         if BankPaymentType <> Enum::"Bank Payment Type"::" " then
             CheckLedgerEntry.SetRange("Bank Payment Type", BankPaymentType);
@@ -34,14 +38,14 @@ codeunit 80400 "PTE Create Positive Pay Entry"
         exit(CheckLedgerEntry.FindSet());
     end;
 
-    local procedure InitPositivePayEntry(var PositivePayEntry: Record "Positive Pay Entry"; BankAccountNo: Code[20])
+    local procedure InitPositivePayEntry(var PositivePayEntry: Record "Positive Pay Entry")
     begin
         PositivePayEntry.Init();
-        PositivePayEntry.Validate("Bank Account No.", BankAccountNo);
-        PositivePayEntry."Upload Date-Time" := CurrentDateTime();
+        // PositivePayEntry.Validate("Bank Account No.", BankAccountNo);
+        // PositivePayEntry."Upload Date-Time" := CurrentDateTime();
         PositivePayEntry."Last Upload Date" := DT2Date(GetLastUploadDateTime(PositivePayEntry."Bank Account No."));
         PositivePayEntry."Last Upload Time" := DT2Time(GetLastUploadDateTime(PositivePayEntry."Bank Account No."));
-        PositivePayEntry.Insert();
+        // PositivePayEntry.Insert();
     end;
 
     local procedure CreatePosPayEntryDetail(var CheckLedgerEntry: Record "Check Ledger Entry"; var PositivePayEntryDetail: Record "Positive Pay Entry Detail"; PositivePayEntry: Record "Positive Pay Entry")
@@ -93,7 +97,7 @@ codeunit 80400 "PTE Create Positive Pay Entry"
             until PositivePayEntryDetail.Next() = 0;
 
         PositivePayEntry."Number of Uploads" += 1;
-        PositivePayEntry.Modify();
+        // PositivePayEntry.Modify();
     end;
 
     local procedure SetPositivePayExported(var CheckLedgerEntry: Record "Check Ledger Entry")

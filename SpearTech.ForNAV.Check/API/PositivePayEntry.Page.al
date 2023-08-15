@@ -6,7 +6,7 @@ page 80406 "PTE Positive Pay Entry"
     ModifyAllowed = false;
     EntityName = 'positivePayEntry';
     EntitySetName = 'positivePayEntries';
-    ODataKeyFields = "Bank Account No.", "Upload Date-Time";
+    ODataKeyFields = SystemId;
     PageType = API;
     APIPublisher = 'speartech';
     APIGroup = 'check';
@@ -23,7 +23,7 @@ page 80406 "PTE Positive Pay Entry"
             repeater(GroupName)
             {
                 field(bankAccountNo; Rec."Bank Account No.") { ApplicationArea = All; }
-                // field(cutoffExportDate; CutoffExportDate) { ApplicationArea = All; }
+                field(cutoffExportDate; CutoffExportDate) { ApplicationArea = All; }
                 field(bankPaymentType; BankPaymentType) { ApplicationArea = All; }
                 field(uploadDateTime; Rec."Upload Date-Time") { ApplicationArea = All; }
                 field(lastUploadDate; Rec."Last Upload Date") { ApplicationArea = All; }
@@ -42,7 +42,6 @@ page 80406 "PTE Positive Pay Entry"
                 EntityName = 'positivePayEntryDetail';
                 EntitySetName = 'positivePayEntryDetails';
                 SubPageLink = SystemId = field("SystemId");
-                // SubPageLink = "Bank Account No." = field("Bank Account No."), "Upload Date-Time" = field();
             }
         }
     }
@@ -50,18 +49,24 @@ page 80406 "PTE Positive Pay Entry"
     trigger OnInsertRecord(BelowxRec: Boolean): Boolean
     begin
         Rec.TestField("Bank Account No.");
+        Rec.Insert();
         CreateExport();
+        exit(false);
     end;
 
     var
         BankPaymentType: Enum "Bank Payment Type";
+        CutoffExportDate: Date;
 
     local procedure CreateExport()
     var
         // PositivePayEntry: Record "Positive Pay Entry";
         CreatePositivePayEntry: Codeunit "PTE Create Positive Pay Entry";
     begin
-        CreatePositivePayEntry.CreatePositivePayEntry(Rec, BankPaymentType);
+        CreatePositivePayEntry.CreatePositivePayEntry(Rec, BankPaymentType, CutoffExportDate);
+        // Rec.Get(Rec."Bank Account No.", Rec."Upload Date-Time");
+        Rec.Modify();
+        Rec.Find();
         Rec.SetRecFilter();
         // TODO Export Pos Pay Entries => Get details from pos pay subentries
     end;
