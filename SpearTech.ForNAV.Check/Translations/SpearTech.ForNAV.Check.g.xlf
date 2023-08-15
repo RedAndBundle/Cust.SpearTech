@@ -423,6 +423,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Void Interface - Field Vendor No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1823164814 - Method 3130473693 - NamedType 186733454" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No Check Ledger Entries to Export for bank account %1.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PTE Create Positive Pay Entry - Method CreatePositivePayEntry - NamedType NoCheckLedgerEntriesToExportErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3971160397 - NamedType 1615422614" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cannot connect</source>
           <note from="Developer" annotates="general" priority="2"></note>

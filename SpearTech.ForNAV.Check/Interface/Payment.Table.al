@@ -119,7 +119,8 @@ table 80400 "PTE Payment Interface"
         Vendor: Record Vendor;
     begin
         Vendor.Get("Vendor No.");
-        exit(Vendor."PTE Combine Payments" and "Group Claimant Vendor Checks");
+        // exit(Vendor."PTE Combine Payments" and "Group Claimant Vendor Checks");
+        exit(Vendor."PTE Combine Payments");
     end;
 
     local procedure GetGenJournalLineForVendor(var GenJnlLine: Record "Gen. Journal Line"): boolean
