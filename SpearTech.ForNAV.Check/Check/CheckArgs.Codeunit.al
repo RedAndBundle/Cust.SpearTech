@@ -10,6 +10,9 @@ codeunit 80401 "PTE Check Args"
     begin
         Args.DeleteAll();
         Args := NewArgs;
+        if Args."PTE Applies-to ID" <> '' then
+            Args."One Check Per Vendor" := false;
+
         Args.Insert();
     end;
 
