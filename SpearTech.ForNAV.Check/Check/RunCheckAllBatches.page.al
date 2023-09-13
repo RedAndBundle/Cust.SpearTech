@@ -74,6 +74,7 @@ page 80405 "PTE Run Check All Batches"
                 trigger OnAction()
                 begin
                     Rec.PrintChecks();
+                    // TOD add post of pmt journal
                 end;
             }
         }

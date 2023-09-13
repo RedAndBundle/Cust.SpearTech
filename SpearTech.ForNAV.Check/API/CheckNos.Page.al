@@ -60,6 +60,7 @@ Page 80401 "PTE Check Nos."
     var
         BankAccountLedgerEntry: Record "Bank Account Ledger Entry";
         VendorLedgerEntry: Record "Vendor Ledger Entry";
+        VendorLedgerEntry2: Record "Vendor Ledger Entry";
     begin
         VendorLedgerEntry.SetFilter("External Document No.", Rec.GetFilter("External Document No."));
         VendorLedgerEntry.SetRange("Document Type", VendorLedgerEntry."Document Type"::Invoice);
@@ -67,18 +68,30 @@ Page 80401 "PTE Check Nos."
             exit(false);
 
         repeat
+            VendorLedgerEntry2.SetRange("Document Type", VendorLedgerEntry2."Document Type"::Payment);
             if vendorLedgerEntry."Applies-to ID" = '' then
-                BankAccountLedgerEntry.SetRange("External Document No.", VendorLedgerEntry."External Document No.")
+                VendorLedgerEntry2.SetRange("External Document No.", VendorLedgerEntry."External Document No.")
             else
-                BankAccountLedgerEntry.SetRange("External Document No.", VendorLedgerEntry."Applies-to ID");
+                VendorLedgerEntry2.SetRange("External Document No.", VendorLedgerEntry."Applies-to ID");
 
-            If BankAccountLedgerEntry.FindFirst() then begin
+            If VendorLedgerEntry2.FindFirst() then begin
+                BankAccountLedgerEntry.SetRange("Document Type", BankAccountLedgerEntry."Document Type"::Payment);
+                BankAccountLedgerEntry.SetRange("Bank Account No.", VendorLedgerEntry2."Bal. Account No.");
+                BankAccountLedgerEntry.SetRange("Document No.", VendorLedgerEntry2."Document No.");
+                BankAccountLedgerEntry.FindFirst();
+
                 Rec := BankAccountLedgerEntry;
-                Rec."Entry No." := VendorLedgerEntry."Entry No.";
+                Rec."Entry No." := VendorLedgerEntry2."Entry No.";
                 Rec."External Document No." := VendorLedgerEntry."External Document No.";
+                // Rec."Document Date" := VendorLedgerEntry2."Posting Date";
+                // Rec."Document No." := VendorLedgerEntry2."Document No.";
+                // Rec.Amount := VendorLedgerEntry2.Amount;
+                // Rec.SystemId := VendorLedgerEntry2.SystemId;
                 Rec.Insert();
             end;
         until VendorLedgerEntry.Next() = 0;
+        Rec.Reset();
+        Rec.FindSet();
         exit(Rec.FindSet());
     end;
 }
