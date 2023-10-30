@@ -358,6 +358,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Field One Check Per Vendor - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3157054206 - Field 1143162714 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>post Check</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Field Post Check - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3157054206 - Field 3052993517 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reprint Checks</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -488,15 +493,30 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Control One Check Per Vendor - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 3319261591 - Control 2356537938 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that checks can be posted for this batch.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Control PostCheck - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3319261591 - Control 3052993517 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies that the check is reprinted.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Control Reprint Checks - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3319261591 - Control 1609300185 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies a checks are created for this batch.</source>
+          <source>Specifies that checks are created for this batch.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Control RunCheck - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3319261591 - Action 1647331103 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posts checks for all batches.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Action PostChecks - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3319261591 - Action 1647331103 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>post Checks</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Run Check All Batches - Action PostChecks - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3319261591 - Action 3550185296 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Prints checks for all batches.</source>
