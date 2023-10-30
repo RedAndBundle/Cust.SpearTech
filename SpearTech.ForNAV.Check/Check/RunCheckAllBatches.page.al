@@ -31,7 +31,12 @@ page 80405 "PTE Run Check All Batches"
                 field(RunCheck; Rec."Run Check")
                 {
                     ApplicationArea = Basic, Suite;
-                    ToolTip = 'Specifies a checks are created for this batch.';
+                    ToolTip = 'Specifies that checks are created for this batch.';
+                }
+                field(PostCheck; Rec."Post Check")
+                {
+                    ApplicationArea = Basic, Suite;
+                    ToolTip = 'Specifies that checks can be posted for this batch.';
                 }
                 field(BankAccountNo; Rec."Bank Account No.")
                 {
@@ -74,7 +79,21 @@ page 80405 "PTE Run Check All Batches"
                 trigger OnAction()
                 begin
                     Rec.PrintChecks();
-                    // TOD add post of pmt journal
+                end;
+            }
+            action(PostChecks)
+            {
+                ApplicationArea = Basic, Suite;
+                Caption = 'post Checks';
+                Image = PostBatch;
+                ToolTip = 'Posts checks for all batches.';
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+
+                trigger OnAction()
+                begin
+                    Rec.PostChecks();
                 end;
             }
         }

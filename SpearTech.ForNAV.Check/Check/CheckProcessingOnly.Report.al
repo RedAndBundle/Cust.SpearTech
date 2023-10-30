@@ -206,7 +206,4 @@ Report 80401 "PTE Check Processing"
                 until GenJnlLn.Next() = 0;
         end;
     end;
-
-
-
 }

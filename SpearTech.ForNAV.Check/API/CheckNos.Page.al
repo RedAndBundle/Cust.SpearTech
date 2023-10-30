@@ -27,6 +27,10 @@ Page 80401 "PTE Check Nos."
                 field(documentNo; Rec."Document No.") { ApplicationArea = Basic, Suite; }
                 field(externalDocumentNo; Rec."External Document No.") { ApplicationArea = Basic, Suite; }
                 field(amount; -Rec.Amount) { ApplicationArea = Basic, Suite; }
+                field(checkAmount; GetCheckAmount())
+                {
+                    ApplicationArea = Basic, Suite;
+                }
             }
         }
     }
@@ -58,7 +62,6 @@ Page 80401 "PTE Check Nos."
 
     local procedure GetFromVendorLedgerEntry(Which: Text): Boolean
     var
-        // BankAccountLedgerEntry: Record "Bank Account Ledger Entry";
         VendorLedgerEntry: Record "Vendor Ledger Entry";
         VendorLedgerEntry2: Record "Vendor Ledger Entry";
     begin
@@ -76,12 +79,6 @@ Page 80401 "PTE Check Nos."
                 VendorLedgerEntry2.SetRange("External Document No.", VendorLedgerEntry."Applies-to ID");
 
             If VendorLedgerEntry2.FindFirst() then begin
-                // BankAccountLedgerEntry.SetRange("Document Type", BankAccountLedgerEntry."Document Type"::Payment);
-                // BankAccountLedgerEntry.SetRange("Bank Account No.", VendorLedgerEntry2."Bal. Account No.");
-                // BankAccountLedgerEntry.SetRange("Document No.", VendorLedgerEntry2."Document No.");
-                // BankAccountLedgerEntry.FindFirst();
-
-                // Rec := BankAccountLedgerEntry;
                 Rec."Entry No." += 1;
                 Rec."External Document No." := VendorLedgerEntry."External Document No.";
                 Rec."Document Date" := VendorLedgerEntry2."Posting Date";
@@ -94,5 +91,18 @@ Page 80401 "PTE Check Nos."
         Rec.Reset();
         Rec.FindSet();
         exit(Rec.FindSet());
+    end;
+
+    local procedure GetCheckAmount() Result: decimal
+    var
+        VendorLedgerEntry: Record "Vendor Ledger Entry";
+    begin
+        VendorLedgerEntry.SetRange("Document Type", VendorLedgerEntry."Document Type"::Payment);
+        VendorLedgerEntry.SetRange("Document No.", Rec."Document No.");
+        VendorLedgerEntry.SetAutoCalcFields(Amount);
+        if VendorLedgerEntry.FindSet() then
+            repeat
+                Result += VendorLedgerEntry.Amount;
+            until VendorLedgerEntry.Next() = 0;
     end;
 }

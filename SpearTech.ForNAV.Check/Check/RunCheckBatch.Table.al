@@ -29,7 +29,6 @@ table 80404 "PTE Run Check Batch"
         {
             Caption = 'Bal. Account No.';
         }
-
         field(80400; "Run Check"; Boolean)
         {
             Caption = 'Run Check';
@@ -40,7 +39,18 @@ table 80404 "PTE Run Check Batch"
                     Error('You cannot run a check without a bank account or last check no.');
             end;
         }
-        field(80401; "Bank Account No."; Code[20])
+        field(80401; "Post Check"; Boolean)
+        {
+            Caption = 'post Check';
+
+            trigger OnValidate()
+            begin
+                // TODO set for batches that have something to post
+                if ("Bank Account No." = '') or ("Last Check No." = '') then
+                    Error('You cannot post a check without a bank account or last check no.');
+            end;
+        }
+        field(80402; "Bank Account No."; Code[20])
         {
             Caption = 'Bank Account No.';
             TableRelation = "Bank Account";
@@ -49,9 +59,10 @@ table 80404 "PTE Run Check Batch"
             begin
                 "Last Check No." := InputBankAccount("Bank Account No.");
                 "Run Check" := "Last Check No." <> '';
+                SetPostCheck();
             end;
         }
-        field(80402; "Last Check No."; Code[20])
+        field(80403; "Last Check No."; Code[20])
         {
             Caption = 'Last Check No.';
 
@@ -61,13 +72,14 @@ table 80404 "PTE Run Check Batch"
                     "Last Check No." := '';
 
                 "Run Check" := "Last Check No." <> '';
+                SetPostCheck();
             end;
         }
-        field(80403; "Reprint Checks"; boolean)
+        field(80404; "Reprint Checks"; boolean)
         {
             Caption = 'Reprint Checks';
         }
-        field(80404; "One Check Per Vendor"; Boolean)
+        field(80405; "One Check Per Vendor"; Boolean)
         {
             Caption = 'One Check Per Vendor';
         }
@@ -101,9 +113,8 @@ table 80404 "PTE Run Check Batch"
                 Description := GenJournalBatch.Description;
                 "Bal. Account Type" := GenJournalBatch."Bal. Account Type";
                 "Bal. Account No." := GenJournalBatch."Bal. Account No.";
-                "Bank Account No." := GetBankAccFromFirstGnlLine(GenJournalBatch);
-                "Last Check No." := InputBankAccount("Bank Account No.");
-                "Run Check" := "Last Check No." <> '';
+                Validate("Bank Account No.", GetBankAccFromFirstGnlLine(GenJournalBatch));
+                Validate("Last Check No.", InputBankAccount("Bank Account No."));
                 Insert();
             until GenJournalBatch.Next() = 0;
     end;
@@ -158,9 +169,13 @@ table 80404 "PTE Run Check Batch"
                     Args.Insert();
                     GenJournalBatch.Get("Journal Template Name", Name);
                     RunCheckReport.RunCheckReportPerBatch(Args, GenJournalBatch, TempMergePDF);
+                    SetPostCheck();
                     Modify();
                 end;
             until Rec.Next() = 0;
+
+        if TempMergePDF.IsEmpty() then
+            exit;
 
         case Setup."Output Type" of
             Setup."Output Type"::Zip:
@@ -168,6 +183,37 @@ table 80404 "PTE Run Check Batch"
             Setup."Output Type"::PDF:
                 TempMergePDF.MergeAndPreview();
         end;
+    end;
+
+    internal procedure PostChecks()
+    var
+        GenJournalLine: Record "Gen. Journal Line";
+        Setup: Record "PTE Spear Technology Setup";
+    begin
+        Setup.Get();
+        Setup.TestPDFSetup();
+
+        if Rec.FindSet() then
+            repeat
+                if "Post Check" then begin
+                    GenJournalLine.SetRange("Journal Template Name", "Journal Template Name");
+                    GenJournalLine.SetRange("Journal Batch Name", Name);
+                    if GenJournalLine.FindSet() then
+                        GenJournalLine.SendToPosting(Codeunit::"Gen. Jnl.-Post");
+                    SetPostCheck();
+                    Modify();
+                end;
+            until Rec.Next() = 0;
+    end;
+
+    local procedure SetPostCheck()
+    var
+        GenJournalLine: Record "Gen. Journal Line";
+    begin
+        GenJournalLine.SetRange("Journal Template Name", "Journal Template Name");
+        GenJournalLine.SetRange("Journal Batch Name", Name);
+        GenJournalLine.SetRange("Check Printed", true);
+        "Post Check" := not GenJournalLine.IsEmpty();
     end;
 }
 
