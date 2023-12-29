@@ -373,6 +373,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Field Run Check - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 219769631 - Method 3006618788 - NamedType 3144380115" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No Report Selections found for PTE Spear Check</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Method TestReportSelection - NamedType NoReportSelectionsErr</note>
+        </trans-unit>
         <trans-unit id="Table 219769631 - Field 3852983238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>G/L Account No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -972,6 +977,16 @@
           <source>Combine Payments</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Vendor - Field PTE Combine Payments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3084199300 - EnumValue 1468848270 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 142705927">
+          <source>Spear Check</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension PTE Report Sel. Usage Bank - EnumValue PTE Spear Check - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1705499118 - EnumValue 1468848270 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 3528066925">
+          <source>Spear Check</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension PTE Report Selection Usage - EnumValue PTE Spear Check - Property Caption</note>
         </trans-unit>
         <trans-unit id="PermissionSet 1545580143 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Spear Check Admin</source>
