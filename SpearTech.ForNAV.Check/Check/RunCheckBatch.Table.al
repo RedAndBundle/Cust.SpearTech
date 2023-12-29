@@ -154,6 +154,7 @@ table 80404 "PTE Run Check Batch"
     begin
         Setup.Get();
         Setup.TestPDFSetup();
+        Setup.TestReportSelection();
 
         if Rec.FindSet() then
             repeat
@@ -192,6 +193,7 @@ table 80404 "PTE Run Check Batch"
     begin
         Setup.Get();
         Setup.TestPDFSetup();
+        Setup.TestReportSelection();
 
         if Rec.FindSet() then
             repeat

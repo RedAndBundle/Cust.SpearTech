@@ -33,4 +33,14 @@ table 80410 "PTE Spear Technology Setup"
         "PDF Merge Key" := 'To2HLw4YT4JavfCc09EeVFj0vA0Nm9XsYGm7uyH5aWfxijDfditV4w==';
         Modify();
     end;
+
+    procedure TestReportSelection()
+    var
+        ReportSelections: Record "Report Selections";
+        NoReportSelectionsErr: Label 'No Report Selections found for PTE Spear Check';
+    begin
+        ReportSelections.SetRange(Usage, ReportSelections.Usage::"PTE Spear Check");
+        if ReportSelections.IsEmpty() then
+            Error(NoReportSelectionsErr);
+    end;
 }

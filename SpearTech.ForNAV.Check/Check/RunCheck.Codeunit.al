@@ -44,6 +44,7 @@ codeunit 80402 "PTE Run Check Report"
     begin
         Setup.Get();
         Setup.TestPDFSetup();
+        Setup.TestReportSelection();
         GenJnlLn.FindSet();
         repeat
             ProcessCheck(Args, GenJnlLn, TempMergePDF);
@@ -61,7 +62,9 @@ codeunit 80402 "PTE Run Check Report"
     local procedure ProcessCheck(var Args: Record "ForNAV Check Arguments"; GenJnlLn: Record "Gen. Journal Line"; var TempMergePDF: Record "PTE PDF Merge File" temporary)
     var
         GenJnlLnFilter: Record "Gen. Journal Line";
+        ReportSelections: Record "Report Selections";
         Setup: Record "PTE Spear Technology Setup";
+        TempBlob: Codeunit "Temp Blob";
         CheckArgs: Codeunit "PTE Check Args";
         GenJnlLnRef: RecordRef;
         Parameters: Text;
@@ -87,8 +90,15 @@ codeunit 80402 "PTE Run Check Report"
                     else
                         TempMergePDF."Primary Key" := Args."PTE Document No.";
                     TempMergePDF.Blob.CreateOutstream(OutStr);
-                    TempMergePDF.Blob.CreateInstream(InStr);
-                    Report.SaveAs(Report::"PTE US Check", Parameters, ReportFormat::Pdf, OutStr, GenJnlLnRef);
+                    // TempMergePDF.Blob.CreateInstream(InStr);
+                    // Report.SaveAs(Report::"PTE US Check", Parameters, ReportFormat::Pdf, OutStr, GenJnlLnRef);
+                    // GetReportID and Usage
+                    ReportSelections.SetRange(Usage, ReportSelections.Usage::"PTE Spear Check");
+                    ReportSelections.FindFirst();
+
+                    ReportSelections.SaveReportAsPDFInTempBlob(TempBlob, ReportSelections."Report ID", GenJnlLnRef, GetLayoutCode(ReportSelections."Report ID"), ReportSelections.Usage);
+                    TempBlob.CreateInstream(InStr);
+                    CopyStream(OutStr, InStr);
                     TempMergePDF.Filename := Args."PTE Document No." + '.pdf';
                     if TempMergePDF.Blob.Length > 0 then
                         TempMergePDF.Insert();
@@ -98,5 +108,17 @@ codeunit 80402 "PTE Run Check Report"
         end;
 
         CheckArgs.Reset();
+    end;
+
+    local procedure GetLayoutCode(ReportId: Integer) CustomReportLayoutCode: Text
+    var
+        ReportLayoutSelection: Record "Report Layout Selection";
+    begin
+        case true of
+            ReportLayoutSelection.Get(ReportId, CompanyName):
+                CustomReportLayoutCode := ReportLayoutSelection."Custom Report Layout Code";
+            ReportLayoutSelection.Get(ReportId, ''):
+                CustomReportLayoutCode := ReportLayoutSelection."Custom Report Layout Code";
+        end;
     end;
 }
