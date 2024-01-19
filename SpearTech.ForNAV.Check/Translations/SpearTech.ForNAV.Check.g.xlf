@@ -173,6 +173,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Bank Account No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 310497131 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Bank No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1159935010 - Field 4214297126 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Carrier Name 1</source>
           <note from="Developer" annotates="general" priority="2"></note>

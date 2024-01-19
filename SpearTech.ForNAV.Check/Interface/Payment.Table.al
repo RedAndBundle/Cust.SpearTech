@@ -14,6 +14,7 @@ table 80400 "PTE Payment Interface"
         field(6; "External Document No."; Code[35]) { DataClassification = SystemMetadata; }
         field(7; Description; Text[50]) { DataClassification = SystemMetadata; }
         field(8; "Posting Date"; Date) { DataClassification = SystemMetadata; }
+        field(9; "Bank No."; Text[30]) { DataClassification = SystemMetadata; }
         field(20; "Client"; Text[250]) { DataClassification = SystemMetadata; }
         field(21; "TIN SSN"; Text[250]) { DataClassification = SystemMetadata; }
         field(22; "Claim Number"; Text[250]) { DataClassification = SystemMetadata; }
@@ -230,6 +231,11 @@ table 80400 "PTE Payment Interface"
 
     local procedure GetBankAccount() BankAccount: Record "Bank Account"
     begin
+        if "Bank No." <> '' then begin
+            BankAccount.Get("Bank No.");
+            exit;
+        end;
+
         BankAccount.SetRange("Bank Account No.", "Bank Account No.");
         BankAccount.FindFirst();
     end;
