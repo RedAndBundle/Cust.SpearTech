@@ -327,7 +327,6 @@ Report 80400 "PTE US Check"
         ReportForNavInitialized: Boolean;
         ReportForNavShowOutput: Boolean;
         ReportForNavOpenDesigner: Boolean;
-        [InDataSet]
         ReportForNavAllowDesign: Boolean;
 
     local procedure ReportsForNavInit()
