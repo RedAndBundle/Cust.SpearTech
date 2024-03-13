@@ -1,9 +1,9 @@
 {
-  "id": "7514153e-ac1e-497c-b55c-0caa195adc44",
-  "name": "SpearTech.AP",
+  "id": "52d33997-e640-4888-a74d-faa2091f443d",
+  "name": "SpearTech.PI",
   "publisher": "Red and Bundle",
-  "version": "1.0.0.4",
-  "brief": "Accounts Payable APIs",
+  "version": "1.0.0.0",
+  "brief": "Policy Invoice APIs",
   "description": "APIs and other customizations for Accounts Payable",
   "privacyStatement": "https://wwww.speartech.com",
   "EULA": "https://wwww.speartech.com",
@@ -29,11 +29,11 @@
   "application": "23.0.0.0",
   "idRanges": [
     {
-      "from": 80500,
-      "to": 80549
+      "from": 80600,
+      "to": 80649
     }
   ],
-  "contextSensitiveHelpUrl": "https://SpearTech.ForNAV.Check.com/help/",
+  "contextSensitiveHelpUrl": "https://SpearTech.com/help/",
 	"resourceExposurePolicy": {
 		"allowDebugging": true,
 		"allowDownloadingSource": false, 

@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="SpearTech.PI">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 972359778 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>API PI Header</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Method 4102666281 - NamedType 291269830" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2 Created</source>
+          <note from="Developer" annotates="general" priority="2">%1 = doc type %2 = doc no</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Method ProcessAPInterface - NamedType CreatedLbl</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 25700210 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balance</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Balance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 729641696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Broker No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Broker No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 1021562623 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Insured No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Insured No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 4286292223 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Invoice Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 166038250 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Invoice No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 3354317798 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Due Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Payment Due Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 1142328810 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payments Received</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Payments Received - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 4186920883 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Policy Effective Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Policy Effective Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 784560129 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Policy Expiration Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Policy Expiration Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 1634642573 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Policy Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Policy Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 4234045061 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Policy Total Charges</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Policy Total Charges - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 1295811075 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Policy Total Cost</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Policy Total Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 1300276187 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Policy Total Premium</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Policy Total Premium - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 3363305468 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Policy Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Policy Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 972359778 - Field 4015808694 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Spear No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Header - Field Spear No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>API PI Header</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Method 4102666281 - NamedType 983217553" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cannot find a Sales Header for %1 %2, %3 %4</source>
+          <note from="Developer" annotates="general" priority="2">%1 = fieldcaption %2=field %3= fieldcaption 2 %4 = field 2</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Method ProcessAPInterface - NamedType CannotFindOrderErr</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Method 4102666281 - NamedType 291269830" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2 %3 Created</source>
+          <note from="Developer" annotates="general" priority="2">%1 = doc type %2 = doc no %3= Line no</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Method ProcessAPInterface - NamedType CreatedLbl</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Field Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Field 1634642573 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Policy Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Field Policy Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Field 2006937558 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Rate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Field Rate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Field 2397723431 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Field Source - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Field 1413859156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Field Source Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Field 312545736 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Field Source Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Field 1882905478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Field Source No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Field 4015808694 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Field Spear No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2909482089 - Field 2864861839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Units</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Field Units - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 824582141 - Field 2775122287 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Template</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI Spear PI Setup - Field Item Template - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 824582141 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI Spear PI Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 824582141 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Spear PI Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTEPI Spear PI Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 824582141 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTEPI Spear PI Setup - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 824582141 - Control 2775122287 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the item template that will be used for unused task codes sent through the PI API.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTEPI Spear PI Setup - Control Item Template - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1076958566 - Field 1931486478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Payment Due Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Cr.Memo Header - Field PTEPI Payment Due Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1076958566 - Field 1158284987 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Policy Effective Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Cr.Memo Header - Field PTEPI Policy Effective Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1076958566 - Field 1917894697 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Policy Expiration Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Cr.Memo Header - Field PTEPI Policy Expiration Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1076958566 - Field 1705115237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Policy Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Cr.Memo Header - Field PTEPI Policy Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1076958566 - Field 1906392557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Policy Total Charges</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Cr.Memo Header - Field PTEPI Policy Total Charges - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1076958566 - Field 901426411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Policy Total Cost</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Cr.Memo Header - Field PTEPI Policy Total Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1076958566 - Field 1389087299 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Policy Total Premium</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Cr.Memo Header - Field PTEPI Policy Total Premium - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1076958566 - Field 2705833252 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Policy Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Cr.Memo Header - Field PTEPI Policy Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1076958566 - Field 2338865918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Spear No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Cr.Memo Header - Field PTEPI Spear No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 113547949 - Field 1705115237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Policy Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Cr.Memo Line - Field PTEPI Policy Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 113547949 - Field 2338865918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Spear Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Cr.Memo Line - Field PTEPI Spear No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4191157121 - Field 1931486478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Payment Due Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Header - Field PTEPI Payment Due Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4191157121 - Field 1158284987 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Policy Effective Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Header - Field PTEPI Policy Effective Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4191157121 - Field 1917894697 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Policy Expiration Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Header - Field PTEPI Policy Expiration Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4191157121 - Field 1705115237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Policy Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Header - Field PTEPI Policy Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4191157121 - Field 1906392557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Policy Total Charges</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Header - Field PTEPI Policy Total Charges - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4191157121 - Field 901426411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Policy Total Cost</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Header - Field PTEPI Policy Total Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4191157121 - Field 1389087299 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Policy Total Premium</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Header - Field PTEPI Policy Total Premium - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4191157121 - Field 2705833252 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Policy Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Header - Field PTEPI Policy Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4191157121 - Field 2338865918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Spear No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Header - Field PTEPI Spear No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3942278018 - Field 1931486478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Payment Due Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Invoice Header - Field PTEPI Payment Due Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3942278018 - Field 1158284987 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Policy Effective Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Invoice Header - Field PTEPI Policy Effective Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3942278018 - Field 1917894697 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Policy Expiration Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Invoice Header - Field PTEPI Policy Expiration Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3942278018 - Field 1705115237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Policy Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Invoice Header - Field PTEPI Policy Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3942278018 - Field 1906392557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Policy Total Charges</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Invoice Header - Field PTEPI Policy Total Charges - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3942278018 - Field 901426411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Policy Total Cost</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Invoice Header - Field PTEPI Policy Total Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3942278018 - Field 1389087299 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Policy Total Premium</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Invoice Header - Field PTEPI Policy Total Premium - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3942278018 - Field 2705833252 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Policy Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Invoice Header - Field PTEPI Policy Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3942278018 - Field 2338865918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Spear No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Invoice Header - Field PTEPI Spear No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3357243529 - Field 1705115237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Policy Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Invoice Line - Field PTEPI Policy Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3357243529 - Field 2338865918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Spear Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Invoice Line - Field PTEPI Spear No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1624437818 - Field 1705115237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Policy Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Line - Field PTEPI Policy Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1624437818 - Field 2338865918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Spear Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Line - Field PTEPI Spear No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3949225897 - Field 1931486478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Payment Due Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Shipment  Header - Field PTEPI Payment Due Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3949225897 - Field 1158284987 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Policy Effective Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Shipment  Header - Field PTEPI Policy Effective Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3949225897 - Field 1917894697 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Policy Expiration Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Shipment  Header - Field PTEPI Policy Expiration Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3949225897 - Field 1705115237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Policy Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Shipment  Header - Field PTEPI Policy Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3949225897 - Field 1906392557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Policy Total Charges</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Shipment  Header - Field PTEPI Policy Total Charges - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3949225897 - Field 901426411 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Policy Total Cost</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Shipment  Header - Field PTEPI Policy Total Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3949225897 - Field 1389087299 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Policy Total Premium</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Shipment  Header - Field PTEPI Policy Total Premium - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3949225897 - Field 2705833252 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Policy Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Shipment  Header - Field PTEPI Policy Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3949225897 - Field 2338865918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Spear No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Shipment  Header - Field PTEPI Spear No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3890046538 - Field 1705115237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Policy Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Shipment Line - Field PTEPI Policy Number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3890046538 - Field 2338865918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Spear Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Shipment Line - Field PTEPI Spear No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 2237839213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Spear PI Admin</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet PTEPI Spear PI Admin - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 1916858696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Spear PI API</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet PTEPI Spear PI API - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 3958810095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Spear PI User</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet PTEPI Spear PI User - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
