@@ -748,6 +748,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Country/Region Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 173754319 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the county that will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check County - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3849922958 - Control 4039528444 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
           <source>Specifies the name that will be printed on the check.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -912,6 +917,11 @@
           <source>Check Country/Region Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE Check Country/Region Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 173754319 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>State</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE Check County - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 572952394 - Field 4039528444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
           <source>Check Name</source>

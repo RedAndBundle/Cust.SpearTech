@@ -85,21 +85,23 @@ codeunit 80402 "PTE Run Check Report"
         case Args."PTE Output Type" of
             Args."PTE Output Type"::PDF:
                 begin
-                    if Args."PTE Document No." = '' then
-                        TempMergePDF."Primary Key" := Format(GenJnlLn."Line No.")
+                    if TempMergePDF."Primary Key" = '' then
+                        TempMergePDF."Primary Key" := '00000001'
                     else
-                        TempMergePDF."Primary Key" := Args."PTE Document No.";
+                        TempMergePDF."Primary Key" := IncStr(TempMergePDF."Primary Key");
+
                     TempMergePDF.Blob.CreateOutstream(OutStr);
-                    // TempMergePDF.Blob.CreateInstream(InStr);
-                    // Report.SaveAs(Report::"PTE US Check", Parameters, ReportFormat::Pdf, OutStr, GenJnlLnRef);
-                    // GetReportID and Usage
                     ReportSelections.SetRange(Usage, ReportSelections.Usage::"PTE Spear Check");
                     ReportSelections.FindFirst();
 
                     ReportSelections.SaveReportAsPDFInTempBlob(TempBlob, ReportSelections."Report ID", GenJnlLnRef, GetLayoutCode(ReportSelections."Report ID"), ReportSelections.Usage);
                     TempBlob.CreateInstream(InStr);
                     CopyStream(OutStr, InStr);
-                    TempMergePDF.Filename := Args."PTE Document No." + '.pdf';
+                    if Args."PTE Document No." = '' then
+                        TempMergePDF.Filename := Format(GenJnlLn."Line No.") + '.pdf'
+                    else
+                        TempMergePDF.Filename := Args."PTE Document No." + '.pdf';
+
                     if TempMergePDF.Blob.Length > 0 then
                         TempMergePDF.Insert();
                 end;

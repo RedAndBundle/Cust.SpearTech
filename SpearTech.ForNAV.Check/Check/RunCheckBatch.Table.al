@@ -198,6 +198,7 @@ table 80404 "PTE Run Check Batch"
         if Rec.FindSet() then
             repeat
                 if "Post Check" then begin
+                    GenJournalLine.Reset();
                     GenJournalLine.SetRange("Journal Template Name", "Journal Template Name");
                     GenJournalLine.SetRange("Journal Batch Name", Name);
                     if GenJournalLine.FindSet() then

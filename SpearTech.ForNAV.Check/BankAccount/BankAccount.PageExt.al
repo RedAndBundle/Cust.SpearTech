@@ -37,6 +37,11 @@ pageextension 80400 "PTE Bank Account Card" extends "Bank Account Card"
                     Caption = 'Check City';
                     ToolTip = 'Specifies the city that will be printed on the check.';
                 }
+                field("PTE Check County"; Rec."PTE Check County")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the county that will be printed on the check.';
+                }
                 field("PTE Check Country/Region Code"; Rec."PTE Check Country/Region Code")
                 {
                     ApplicationArea = All;
