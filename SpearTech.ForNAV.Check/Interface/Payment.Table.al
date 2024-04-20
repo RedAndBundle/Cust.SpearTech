@@ -37,6 +37,14 @@ table 80400 "PTE Payment Interface"
         field(39; "Additional Payee Text"; Text[250]) { DataClassification = SystemMetadata; }
         field(40; "Group Claimant Vendor Checks"; Boolean) { DataClassification = SystemMetadata; }
         field(41; "Claimant Id"; Guid) { DataClassification = SystemMetadata; }
+        field(42; "Add. Pay. Name"; Text[50]) { DataClassification = SystemMetadata; }
+        field(43; "Add. Pay. Name 2"; Text[50]) { DataClassification = SystemMetadata; }
+        field(44; "Add. Pay. Address"; Text[50]) { DataClassification = SystemMetadata; }
+        field(45; "Add. Pay. Address 2"; Text[50]) { DataClassification = SystemMetadata; }
+        field(46; "Add. Pay. City"; Text[30]) { DataClassification = SystemMetadata; }
+        field(47; "Add. Pay. Post Code"; Code[20]) { DataClassification = SystemMetadata; }
+        field(48; "Add. Pay. County"; Text[30]) { DataClassification = SystemMetadata; }
+        field(49; "Add. Pay. Country/Region Code"; Code[10]) { DataClassification = SystemMetadata; }
     }
 
     keys { key(Key1; "Vendor No.") { Clustered = true; } }
@@ -203,6 +211,14 @@ table 80400 "PTE Payment Interface"
         checkData."Additional Payee Text" := "Additional Payee Text";
         CheckData."Group Claimant Vendor Checks" := "Group Claimant Vendor Checks";
         CheckData."Claimant Id" := "Claimant Id";
+        CheckData."Add. Pay. Name" := "Add. Pay. Name";
+        CheckData."Add. Pay. Name 2" := "Add. Pay. Name 2";
+        CheckData."Add. Pay. Address" := "Add. Pay. Address";
+        CheckData."Add. Pay. Address 2" := "Add. Pay. Address 2";
+        CheckData."Add. Pay. City" := "Add. Pay. City";
+        CheckData."Add. Pay. Post Code" := "Add. Pay. Post Code";
+        CheckData."Add. Pay. County" := "Add. Pay. County";
+        CheckData."Add. Pay. Country/Region Code" := "Add. Pay. Country/Region Code";
         CheckData.Insert();
     end;
 

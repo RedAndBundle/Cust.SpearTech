@@ -135,6 +135,55 @@ table 80402 "PTE Check Data"
             Caption = 'Claimant Id';
             DataClassification = SystemMetadata;
         }
+        field(42; "Add. Pay. Name"; Text[50])
+        {
+            Caption = 'Additional Payee Name';
+            DataClassification = SystemMetadata;
+        }
+        field(43; "Add. Pay. Name 2"; Text[50])
+        {
+            Caption = 'Additional Payee Name 2';
+            DataClassification = SystemMetadata;
+        }
+        field(44; "Add. Pay. Address"; Text[50])
+        {
+            Caption = 'Additional Payee Address';
+            DataClassification = SystemMetadata;
+        }
+        field(45; "Add. Pay. Address 2"; Text[50])
+        {
+            Caption = 'Additional Payee Address 2';
+            DataClassification = SystemMetadata;
+        }
+        field(46; "Add. Pay. City"; Text[30])
+        {
+            Caption = 'Additional Payee City';
+            DataClassification = SystemMetadata;
+            TableRelation = if ("Add. Pay. Country/Region Code" = const('')) "Post Code".City
+            else
+            if ("Add. Pay. Country/Region Code" = filter(<> '')) "Post Code".City where("Country/Region Code" = field("Add. Pay. Country/Region Code"));
+            ValidateTableRelation = false;
+        }
+        field(47; "Add. Pay. Post Code"; Code[20])
+        {
+            Caption = 'Additional Payee Post Code';
+            DataClassification = SystemMetadata;
+            TableRelation = if ("Add. Pay. Country/Region Code" = const('')) "Post Code".Code
+            else
+            if ("Add. Pay. Country/Region Code" = filter(<> '')) "Post Code".Code where("Country/Region Code" = field("Add. Pay. Country/Region Code"));
+            ValidateTableRelation = false;
+        }
+        field(48; "Add. Pay. County"; Text[30])
+        {
+            Caption = 'Additional Payee State';
+            DataClassification = SystemMetadata;
+        }
+        field(49; "Add. Pay. Country/Region Code"; Code[10])
+        {
+            Caption = 'Additional Payee Country/Region Code';
+            DataClassification = SystemMetadata;
+            TableRelation = "Country/Region";
+        }
         field(10000; "Applies-to ID"; Code[50])
         {
             DataClassification = CustomerContent;
