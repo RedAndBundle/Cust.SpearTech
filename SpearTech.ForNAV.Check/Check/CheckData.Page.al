@@ -39,6 +39,14 @@ page 80402 "PTE Check Data"
                 field("Control Number"; Rec."Control Number") { ApplicationArea = Basic, Suite; }
                 field("Additional Payee"; Rec."Additional Payee") { ApplicationArea = Basic, Suite; }
                 field("Additional Payee Text"; Rec."Additional Payee Text") { ApplicationArea = Basic, Suite; }
+                field("Add. Pay. Name"; Rec."Add. Pay. Name") { ApplicationArea = Basic, Suite; }
+                field("Add. Pay. Name2"; Rec."Add. Pay. Name 2") { ApplicationArea = Basic, Suite; }
+                field("Add. Pay. Address"; Rec."Add. Pay. Address") { ApplicationArea = Basic, Suite; }
+                field("Add. Pay. Address2"; Rec."Add. Pay. Address 2") { ApplicationArea = Basic, Suite; }
+                field("Add. Pay. City"; Rec."Add. Pay. City") { ApplicationArea = Basic, Suite; }
+                field("Add. Pay. PostCode"; Rec."Add. Pay. Post Code") { ApplicationArea = Basic, Suite; }
+                field("Add. Pay. State"; Rec."Add. Pay. County") { ApplicationArea = Basic, Suite; }
+                field("Add. Pay. Country"; Rec."Add. Pay. Country/Region Code") { ApplicationArea = Basic, Suite; }
                 field("Group Claimant Vendor Checks"; Rec."Group Claimant Vendor Checks") { ApplicationArea = Basic, Suite; }
                 field("Claimant Id"; Rec."Claimant Id") { ApplicationArea = Basic, Suite; }
             }
