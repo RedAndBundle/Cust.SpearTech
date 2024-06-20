@@ -50,6 +50,14 @@ Page 80400 "PTE Payment Entity"
                 field(additionalPayeeText; Rec."Additional Payee Text") { ApplicationArea = Basic, Suite; }
                 field(groupClaimantVendorChecks; Rec."Group Claimant Vendor Checks") { ApplicationArea = Basic, Suite; }
                 field(claimantId; Rec."Claimant Id") { ApplicationArea = Basic, Suite; }
+                field(additionalPayeeName; Rec."Add. Pay. Name") { ApplicationArea = Basic, Suite; }
+                field(additionalPayeeName2; Rec."Add. Pay. Name 2") { ApplicationArea = Basic, Suite; }
+                field(additionalPayeeAddress; Rec."Add. Pay. Address") { ApplicationArea = Basic, Suite; }
+                field(additionalPayeeAddress2; Rec."Add. Pay. Address 2") { ApplicationArea = Basic, Suite; }
+                field(additionalPayeeCity; Rec."Add. Pay. City") { ApplicationArea = Basic, Suite; }
+                field(additionalPayeePostCode; Rec."Add. Pay. Post Code") { ApplicationArea = Basic, Suite; }
+                field(additionalPayeeState; Rec."Add. Pay. County") { ApplicationArea = Basic, Suite; }
+                field(additionalPayeeCountry; Rec."Add. Pay. Country/Region Code") { ApplicationArea = Basic, Suite; }
 
                 field(result; Result) { ApplicationArea = Basic, Suite; }
             }

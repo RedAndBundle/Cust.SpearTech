@@ -8,6 +8,46 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 4200815977 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Additional Payee Address</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Add. Pay. Address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 1365842343 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Additional Payee Address 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Add. Pay. Address 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 368406706 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Additional Payee City</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Add. Pay. City - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 2488125917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Additional Payee Country/Region Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Add. Pay. Country/Region Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 2338301389 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Additional Payee State</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Add. Pay. County - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 625046786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Additional Payee Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Add. Pay. Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 3142784528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Additional Payee Name 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Add. Pay. Name 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1880891065 - Field 3588719752 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Additional Payee Post Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field Add. Pay. Post Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1880891065 - Field 3929456755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Additional Payee</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -142,6 +182,46 @@
           <source>TIN/SSN</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field TIN SSN - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 4200815977 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add. Pay. Address</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Add. Pay. Address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 1365842343 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add. Pay. Address 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Add. Pay. Address 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 368406706 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add. Pay. City</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Add. Pay. City - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 2488125917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add. Pay. Country/Region Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Add. Pay. Country/Region Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 2338301389 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add. Pay. County</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Add. Pay. County - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 625046786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add. Pay. Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Add. Pay. Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 3142784528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add. Pay. Name 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Add. Pay. Name 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1159935010 - Field 3588719752 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add. Pay. Post Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Payment Interface - Field Add. Pay. Post Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1159935010 - Field 3929456755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Additional Payee</source>
@@ -748,6 +828,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check Country/Region Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3849922958 - Control 173754319 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
+          <source>Specifies the county that will be printed on the check.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Bank Account Card - Control PTE Check County - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3849922958 - Control 4039528444 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2292249509">
           <source>Specifies the name that will be printed on the check.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -912,6 +997,11 @@
           <source>Check Country/Region Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE Check Country/Region Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 572952394 - Field 173754319 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
+          <source>State</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Bank Account - Field PTE Check County - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 572952394 - Field 4039528444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
           <source>Check Name</source>

@@ -86,6 +86,11 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
             Caption = 'Void text';
             DataClassification = CustomerContent;
         }
+        field(80408; "PTE Check County"; Text[30])
+        {
+            Caption = 'State';
+            DataClassification = CustomerContent;
+        }
         field(80410; "PTE 1st Signature Text"; Text[100])
         {
             Caption = '1st Signature Text';
