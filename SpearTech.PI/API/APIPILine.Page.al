@@ -33,6 +33,7 @@ Page 80602 "PTEPI API PI Line"
                 field(sourceNo; Rec."Source No.") { ApplicationArea = Basic, Suite; }
                 field(sourceLineNo; Rec."Source Line No.") { ApplicationArea = Basic, Suite; }
                 field(sourceId; Rec."Source Id") { ApplicationArea = Basic, Suite; }
+                field(spearId; Rec."Spear Id") { ApplicationArea = Basic, Suite; }
                 field(result; Result) { ApplicationArea = Basic, Suite; }
             }
         }
@@ -68,6 +69,8 @@ Page 80602 "PTEPI API PI Line"
         SalesLine.SetAutoCalcFields("PTEPI Policy Number");
         if Rec.GetFilter("Spear No.") <> '' then
             SalesLine.SetFilter("PTEPI Spear No.", Rec.GetFilter("Spear No."));
+        if Rec.GetFilter("Spear Id") <> '' then
+            SalesLine.SetFilter("PTEPI Spear Id", Rec.GetFilter("Spear Id"));
         if Rec.GetFilter("Policy Number") <> '' then
             SalesLine.SetFilter("PTEPI Policy Number", Rec.GetFilter("Policy Number"));
         if Rec.GetFilter("Line No.") <> '' then
@@ -87,6 +90,7 @@ Page 80602 "PTEPI API PI Line"
                 Rec."Source Line No." := SalesLine."Line No.";
                 Rec."Source Id" := SalesLine.SystemId;
                 Rec."Spear No." := SalesLine."PTEPI Spear No.";
+                Rec."Spear Id" := SalesLine."PTEPI Spear Id";
                 Rec.Insert();
             until SalesLine.Next() = 0;
     end;
@@ -98,6 +102,8 @@ Page 80602 "PTEPI API PI Line"
         SalesInvoiceLine.SetAutoCalcFields("PTEPI Policy Number");
         if Rec.GetFilter("Spear No.") <> '' then
             SalesInvoiceLine.SetFilter("PTEPI Spear No.", Rec.GetFilter("Spear No."));
+        if Rec.GetFilter("Spear Id") <> '' then
+            SalesInvoiceLine.SetFilter("PTEPI Spear Id", Rec.GetFilter("Spear Id"));
         if Rec.GetFilter("Policy Number") <> '' then
             SalesInvoiceLine.SetFilter("PTEPI Policy Number", Rec.GetFilter("Policy Number"));
         if Rec.GetFilter("Line No.") <> '' then
@@ -117,6 +123,7 @@ Page 80602 "PTEPI API PI Line"
                 Rec."Source Line No." := SalesInvoiceLine."Line No.";
                 Rec."Source Id" := SalesInvoiceLine.SystemId;
                 Rec."Spear No." := SalesInvoiceLine."PTEPI Spear No.";
+                Rec."Spear Id" := SalesInvoiceLine."PTEPI Spear Id";
                 Rec.Insert();
             until SalesInvoiceLine.Next() = 0;
     end;

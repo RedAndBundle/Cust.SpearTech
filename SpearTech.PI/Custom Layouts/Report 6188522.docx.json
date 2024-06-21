@@ -1,0 +1,909 @@
+{
+  "@PageHeight": "1100",
+  "@PaperKind": "Letter",
+  "@PageWidth": "850",
+  "@Font": "Segoe UI, 8pt",
+  "@Margins": "70, 70, 70, 40",
+  "@ObjectName": "Report 6188522",
+  "@SnapGridSize": "4.92126",
+  "Bands": {
+    "Header": {
+      "@ControlType": "DataItem",
+      "@Name": "Header",
+      "@Font": "Segoe UI, 8.25pt",
+      "@TotalColumns": "Header$Amount,Header$AmountIncludingVAT",
+      "@TotalFields": "60,61,80606,80607,80608",
+      "@CalcFields": "\"Amount Including VAT\", Amount",
+      "@ResetPageNumber": "true",
+      "@NewPagePerRecord": "true",
+      "@Id": "2",
+      "@GroupTotalFields": "\"3\"",
+      "@GroupTotalFieldNames": "\"No.\"",
+      "@ReqFilterFields": "\"No.\",\"Posting Date\"",
+      "@DataItemTableView": "SORTING(\"No.\")",
+      "@CustomDataItem": "TotalFields",
+      "@DataItemVarName": "Header",
+      "@DataItemTable": "Table112",
+      "Bands": {
+        "DocumentHeader": {
+          "@ControlType": "Header",
+          "@Name": "DocumentHeader",
+          "@Font": "Segoe UI, 8.25pt",
+          "@BackColor": "Transparent",
+          "@Signature": "abc",
+          "@AllowScriptErrors": "true",
+          "@PrintOnEveryPage": "true",
+          "@Height": "540.5",
+          "Controls": {
+            "PictureBox1": {
+              "@Name": "PictureBox1",
+              "@ControlType": "PictureBox",
+              "@Size": "355,91.99996",
+              "@SourceExpression": "ForNAVSetup.Logo",
+              "@HorzAlign": "Left",
+              "@Font": "Segoe UI, 8.25pt",
+              "@Sizing": "ZoomImage",
+              "@Location": "0,0"
+            },
+            "Table4": {
+              "@Name": "Table4",
+              "@ControlType": "Table",
+              "@Size": "710,138",
+              "@Borders": "All",
+              "@Font": "Segoe UI, 8.25pt",
+              "@Location": "3.17891427E-05,91.9999542",
+              "Rows": {
+                "tableRow5": {
+                  "@Name": "tableRow5",
+                  "@ControlType": "TableRow",
+                  "@Font": "Segoe UI, 8.25pt",
+                  "@Weight": "0.31769779708607837",
+                  "Cells": {
+                    "tableCell25": {
+                      "@Name": "tableCell25",
+                      "@ControlType": "TableCell",
+                      "@Borders": "Left, Top",
+                      "@ForeColor": "SteelBlue",
+                      "@Font": "Segoe UI, 16pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "'BILL-TO INSURED:'"
+                    },
+                    "tableCell26": {
+                      "@Name": "tableCell26",
+                      "@ControlType": "TableCell",
+                      "@Borders": "Top, Right",
+                      "@Multiline": "true",
+                      "@ForeColor": "SteelBlue",
+                      "@Font": "Segoe UI, 16pt",
+                      "@BackColor": "Transparent",
+                      "@Weight": "1",
+                      "@SourceExpression": [
+                        "'BROKER:'",
+                        ""
+                      ]
+                    }
+                  }
+                },
+                "tableRow4": {
+                  "@Name": "tableRow4",
+                  "@ControlType": "TableRow",
+                  "@Font": "Segoe UI, 8.25pt",
+                  "@Weight": "0.63539559417215685",
+                  "Cells": {
+                    "tableCell22": {
+                      "@Name": "tableCell22",
+                      "@ControlType": "TableCell",
+                      "@Borders": "Left, Bottom",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "Header.FieldGroups.Bill_toAddress"
+                    },
+                    "tableCell24": {
+                      "@Name": "tableCell24",
+                      "@ControlType": "TableCell",
+                      "@Borders": "Right, Bottom",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "Header.FieldGroups.Sell_toAddress"
+                    }
+                  }
+                }
+              }
+            },
+            "TextBox14": {
+              "@Name": "TextBox14",
+              "@ControlType": "TextBox",
+              "@Size": "200,46",
+              "@Location": "509.999969,229.999954",
+              "@Font": "Segoe UI, 16pt, style=Bold",
+              "@HorzAlign": "Right",
+              "@SourceExpression": "CurrReport.Caption"
+            },
+            "Table5": {
+              "@Name": "Table5",
+              "@ControlType": "Table",
+              "@Size": "710,80.5",
+              "@Font": "Segoe UI, 8.25pt",
+              "@Location": "0,275.999939",
+              "Rows": {
+                "tableRow6": {
+                  "@Name": "tableRow6",
+                  "@ControlType": "TableRow",
+                  "@Font": "Segoe UI, 8.25pt",
+                  "@Weight": "1.38",
+                  "Cells": {
+                    "tableCell29": {
+                      "@Name": "tableCell29",
+                      "@ControlType": "TableCell",
+                      "@Borders": "Left, Top",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1.1999999785087478",
+                      "@SourceExpression": "Header.FieldCaptions.PTEPIPolicyEffectiveDate.toUpperCase()",
+                      "@HorzAlign": "Center"
+                    },
+                    "tableCell30": {
+                      "@Name": "tableCell30",
+                      "@ControlType": "TableCell",
+                      "@Borders": "Top",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "0.8999999785087478",
+                      "@SourceExpression": "Header.FieldCaptions.PTEPIPolicyType.toUpperCase()",
+                      "@HorzAlign": "Center"
+                    },
+                    "tableCell31": {
+                      "@Name": "tableCell31",
+                      "@ControlType": "TableCell",
+                      "@Borders": "Top, Right",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "0.90000004298250436",
+                      "@SourceExpression": "Header.FieldCaptions.PTEPIPaymentDueDate.toUpperCase()",
+                      "@HorzAlign": "Center"
+                    }
+                  }
+                },
+                "tableRow7": {
+                  "@Name": "tableRow7",
+                  "@ControlType": "TableRow",
+                  "@Font": "Segoe UI, 8.25pt",
+                  "@Weight": "0.92",
+                  "Cells": {
+                    "tableCell32": {
+                      "@Name": "tableCell32",
+                      "@ControlType": "TableCell",
+                      "@Borders": "Left, Bottom",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1.1999999785087478",
+                      "@SourceExpression": "`Effective from ${CurrReport.DotNetFormat(Header.PTEPIPolicyEffectiveDate,'MMMM d, yyyy')} to ${CurrReport.DotNetFormat(Header.PTEPIPolicyExpirationDate,'MMMM d, yyyy')}`"
+                    },
+                    "tableCell33": {
+                      "@Name": "tableCell33",
+                      "@ControlType": "TableCell",
+                      "@Borders": "Bottom",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "0.8999999785087478",
+                      "@SourceExpression": "`Type of Coverage: ${Header.PTEPIPolicyType}`"
+                    },
+                    "tableCell34": {
+                      "@Name": "tableCell34",
+                      "@ControlType": "TableCell",
+                      "@Borders": "Right, Bottom",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "0.90000004298250436",
+                      "@SourceExpression": "`Date: ${CurrReport.DotNetFormat(Header.PTEPIPaymentDueDate; 'M/d/yyyy' )}`"
+                    }
+                  }
+                },
+                "tableRow8": {
+                  "@Name": "tableRow8",
+                  "@ControlType": "TableRow",
+                  "@Font": "Segoe UI, 8.25pt",
+                  "@Weight": "0.91999999999999993",
+                  "Cells": {
+                    "tableCell38": {
+                      "@Name": "tableCell38",
+                      "@ControlType": "TableCell",
+                      "@Borders": "Left, Bottom",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1.1999999785087478",
+                      "@SourceExpression": "`${Header.FieldLookups.PaymentTermsCaption}: ${Header.FieldLookups.PaymentTermsDescription}`"
+                    },
+                    "tableCell39": {
+                      "@Name": "tableCell39",
+                      "@ControlType": "TableCell",
+                      "@Borders": "Bottom",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "0.8999999785087478"
+                    },
+                    "tableCell40": {
+                      "@Name": "tableCell40",
+                      "@ControlType": "TableCell",
+                      "@Borders": "Right, Bottom",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "0.90000004298250436",
+                      "@SourceExpression": "'Payment #: ' + '[Number]'"
+                    }
+                  }
+                }
+              }
+            },
+            "Table6": {
+              "@Name": "Table6",
+              "@ControlType": "Table",
+              "@Size": "709.999939,46",
+              "@BorderColor": "SteelBlue",
+              "@Borders": "None",
+              "@BorderWidth": "2",
+              "@Font": "Segoe UI, 8.25pt",
+              "@Location": "3.17891427E-05,356.499939",
+              "Rows": {
+                "tableRow9": {
+                  "@Name": "tableRow9",
+                  "@ControlType": "TableRow",
+                  "@Font": "Segoe UI, 8.25pt",
+                  "@BorderColor": "SteelBlue",
+                  "@Borders": "Bottom",
+                  "@BorderWidth": "4",
+                  "@Weight": "1",
+                  "Cells": {
+                    "tableCell44": {
+                      "@Name": "tableCell44",
+                      "@ControlType": "TableCell",
+                      "@ForeColor": "SteelBlue",
+                      "@Font": "Segoe UI, 16pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "'DESCRIPTION'"
+                    },
+                    "tableCell45": {
+                      "@Name": "tableCell45",
+                      "@ControlType": "TableCell",
+                      "@ForeColor": "SteelBlue",
+                      "@Font": "Segoe UI, 16pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "'AMOUNT'",
+                      "@HorzAlign": "Right"
+                    }
+                  }
+                }
+              }
+            },
+            "TextBox17": {
+              "@Name": "TextBox17",
+              "@ControlType": "TextBox",
+              "@Size": "284,23",
+              "@Location": "211.614182,402.499939",
+              "@Font": "Segoe UI, 8pt, style=Bold",
+              "@HorzAlign": "Center",
+              "@SourceExpression": "'Period of Coverage Summary'"
+            },
+            "Table7": {
+              "@Name": "Table7",
+              "@ControlType": "Table",
+              "@Size": "709.999939,115",
+              "@Borders": "Top, Bottom",
+              "@Font": "Segoe UI, 8.25pt",
+              "@Location": "6.10351563E-05,425.499969",
+              "Rows": {
+                "tableRow10": {
+                  "@Name": "tableRow10",
+                  "@ControlType": "TableRow",
+                  "@Font": "Segoe UI, 8.25pt",
+                  "@Weight": "1",
+                  "Cells": {
+                    "tableCell48": {
+                      "@Name": "tableCell48",
+                      "@ControlType": "TableCell",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "'Policy Premium for Period of Coverage'"
+                    },
+                    "tableCell49": {
+                      "@Name": "tableCell49",
+                      "@ControlType": "TableCell",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "Header.PTEPIPolicyTotalPremium",
+                      "@HorzAlign": "Right"
+                    }
+                  }
+                },
+                "tableRow11": {
+                  "@Name": "tableRow11",
+                  "@ControlType": "TableRow",
+                  "@Font": "Segoe UI, 8.25pt",
+                  "@Weight": "1",
+                  "Cells": {
+                    "tableCell50": {
+                      "@Name": "tableCell50",
+                      "@ControlType": "TableCell",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "'Assessments / Surcharges / Taxes Due for the Period of Coverage'"
+                    },
+                    "tableCell51": {
+                      "@Name": "tableCell51",
+                      "@ControlType": "TableCell",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "Header.PTEPIPolicyTotalCharges",
+                      "@HorzAlign": "Right"
+                    }
+                  }
+                },
+                "tableRow12": {
+                  "@Name": "tableRow12",
+                  "@ControlType": "TableRow",
+                  "@Font": "Segoe UI, 8.25pt",
+                  "@Weight": "1",
+                  "Cells": {
+                    "tableCell54": {
+                      "@Name": "tableCell54",
+                      "@ControlType": "TableCell",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "'Total Policy Cost for Period of Coverage'"
+                    },
+                    "tableCell55": {
+                      "@Name": "tableCell55",
+                      "@ControlType": "TableCell",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "Header.PTEPIPolicyTotalCost",
+                      "@HorzAlign": "Right"
+                    }
+                  }
+                },
+                "tableRow13": {
+                  "@Name": "tableRow13",
+                  "@ControlType": "TableRow",
+                  "@Font": "Segoe UI, 8.25pt",
+                  "@Weight": "1",
+                  "Cells": {
+                    "tableCell58": {
+                      "@Name": "tableCell58",
+                      "@ControlType": "TableCell",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "'Payments Received'"
+                    },
+                    "tableCell59": {
+                      "@Name": "tableCell59",
+                      "@ControlType": "TableCell",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "Customer.Payments_LCY",
+                      "@HorzAlign": "Right"
+                    }
+                  }
+                },
+                "tableRow14": {
+                  "@Name": "tableRow14",
+                  "@ControlType": "TableRow",
+                  "@Font": "Segoe UI, 8.25pt",
+                  "@Weight": "1",
+                  "Cells": {
+                    "tableCell62": {
+                      "@Name": "tableCell62",
+                      "@ControlType": "TableCell",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "'Outstanding Balance'"
+                    },
+                    "tableCell63": {
+                      "@Name": "tableCell63",
+                      "@ControlType": "TableCell",
+                      "@Font": "Segoe UI, 8pt",
+                      "@Weight": "1",
+                      "@SourceExpression": "Customer.Balance_LCY",
+                      "@HorzAlign": "Right"
+                    }
+                  }
+                }
+              }
+            },
+            "TextBox6": {
+              "@Name": "TextBox6",
+              "@ControlType": "TextBox",
+              "@Size": "100.000031,91.99995",
+              "@Location": "510.0001,0",
+              "@Font": "Segoe UI, 8pt",
+              "@MultiLine": "true",
+              "@VertAlign": "Top",
+              "@HorzAlign": "Right",
+              "@SourceExpression": [
+                "CurrReport.JoinStrings('\\n',",
+                "    Header.FieldCaptions.DocumentDate.toUpperCase(),",
+                "    'INVOICE #',",
+                "    Header.FieldCaptions.PTEPIPolicyNumber.toUpperCase()",
+                ")"
+              ]
+            },
+            "TextBox7": {
+              "@Name": "TextBox7",
+              "@ControlType": "TextBox",
+              "@Size": "100,91.99995",
+              "@Location": "610.0001,0",
+              "@Font": "Segoe UI, 8pt",
+              "@MultiLine": "true",
+              "@VertAlign": "Top",
+              "@HorzAlign": "Right",
+              "@SourceExpression": [
+                "CurrReport.JoinStrings('\\n',",
+                "    CurrReport.DotNetFormat(Header.DocumentDate, 'm/d/yyyy'),",
+                "    Header.No,",
+                "    Header.PTEPIPolicyNumber",
+                ")"
+              ]
+            }
+          }
+        },
+        "Footer": {
+          "@ControlType": "Footer",
+          "@Name": "Footer",
+          "@Font": "Segoe UI, 8.25pt",
+          "@BackColor": "Transparent",
+          "@Padding": "0,0,0,0,100",
+          "@PrintOnEveryPage": "true",
+          "@PlaceInBottom": "true",
+          "@Signature": "abc",
+          "@Height": "69.0834045",
+          "Controls": {
+            "Header_FieldGroups_Bill_toAddress6": {
+              "@Name": "Header_FieldGroups_Bill_toAddress6",
+              "@ControlType": "TextBox",
+              "@Size": "710,46",
+              "@Location": "0,0",
+              "@Font": "Segoe UI, 8pt",
+              "@ForeColor": "AliceBlue",
+              "@BackColor": "Transparent",
+              "@Borders": "None",
+              "@MultiLine": "true",
+              "@HorzAlign": "Center",
+              "@SourceExpression": [
+                "`All checks should be made payable to ${CompanyInformation.Name} and mailed to ` + ",
+                "",
+                "CurrReport.JoinStrings(', ', CompanyInformation.Address, CompanyInformation.Address2, CompanyInformation.City, CompanyInformation.County + ' ' + CompanyInformation.PostCode)",
+                "",
+                "+ `. For additional payment options, contact us at ${CompanyInformation.E_Mail}.`"
+              ]
+            },
+            "TextBox9": {
+              "@Name": "TextBox9",
+              "@ControlType": "TextBox",
+              "@Size": "710,23",
+              "@Location": "6.10351563E-05,46",
+              "@Font": "Segoe UI, 8pt, style=Bold, Italic",
+              "@ForeColor": "AliceBlue",
+              "@BackColor": "Transparent",
+              "@Borders": "None",
+              "@MultiLine": "true",
+              "@HorzAlign": "Center",
+              "@SourceExpression": "ForNAVSetup.LegalConditions"
+            },
+            "Shape1": {
+              "@Name": "Shape1",
+              "@ControlType": "Shape",
+              "@Size": "710.000061,69.0834045",
+              "@BorderColor": "Transparent",
+              "@Location": "0,0",
+              "@BackColor": "SteelBlue",
+              "@ForeColor": "Transparent",
+              "@Font": "Segoe UI, 8.25pt",
+              "Shape": {
+                "@ShapeName": "Rectangle"
+              }
+            }
+          }
+        },
+        "Line": {
+          "@ControlType": "DataItem",
+          "@Name": "Line",
+          "@Font": "Segoe UI, 8.25pt",
+          "@TotalColumns": "Line$Amount",
+          "@TotalFields": "29",
+          "@Id": "3",
+          "@DataItemLink": "\"Document No.\" = FIELD(\"No.\")",
+          "@DataItemLinkReference": "Header",
+          "@DataItemTableView": "SORTING(\"Document No.\", \"Line No.\")",
+          "@DataItemVarName": "Line",
+          "@DataItemTable": "Table113",
+          "Bands": {
+            "LinesBody": {
+              "@ControlType": "Body",
+              "@Name": "LinesBody",
+              "@Font": "Segoe UI, 8.25pt",
+              "@BackColor": "Transparent",
+              "@Signature": "abc",
+              "@CanGrow": "true",
+              "@Height": "23.0000172",
+              "Controls": {
+                "Table8": {
+                  "@Name": "Table8",
+                  "@ControlType": "Table",
+                  "@Size": "710,23.0000172",
+                  "@Borders": "Top, Bottom",
+                  "@Font": "Segoe UI, 8.25pt",
+                  "@Location": "0,0",
+                  "Rows": {
+                    "tableRow15": {
+                      "@Name": "tableRow15",
+                      "@ControlType": "TableRow",
+                      "@Font": "Segoe UI, 8.25pt",
+                      "@Weight": "1",
+                      "Cells": {
+                        "tableCell66": {
+                          "@Name": "tableCell66",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "1.4999999785087479",
+                          "@SourceExpression": "Line.Description"
+                        },
+                        "tableCell68": {
+                          "@Name": "tableCell68",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "1.5000000214912521",
+                          "@SourceExpression": "Line.Amount",
+                          "@HorzAlign": "Right"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "LinesHeader": {
+              "@ControlType": "Header",
+              "@Name": "LinesHeader",
+              "@Font": "Segoe UI, 8.25pt",
+              "@BackColor": "Transparent",
+              "@Signature": "abc",
+              "@Height": "23",
+              "Controls": {
+                "TextBox16": {
+                  "@Name": "TextBox16",
+                  "@ControlType": "TextBox",
+                  "@Size": "284,23",
+                  "@Location": "211.614182,0",
+                  "@Font": "Segoe UI, 8pt, style=Bold",
+                  "@HorzAlign": "Center",
+                  "@SourceExpression": "'Current Invoice Summary'"
+                }
+              }
+            },
+            "LinesFooter": {
+              "@ControlType": "Footer",
+              "@Name": "LinesFooter",
+              "@Font": "Segoe UI, 8.25pt",
+              "@BackColor": "Transparent",
+              "@Signature": "abc",
+              "@Height": "69.00005",
+              "Controls": {
+                "Table9": {
+                  "@Name": "Table9",
+                  "@ControlType": "Table",
+                  "@Size": "710,69.00005",
+                  "@Borders": "Top, Bottom",
+                  "@Font": "Segoe UI, 8.25pt",
+                  "@Location": "0,0",
+                  "Rows": {
+                    "tableRow16": {
+                      "@Name": "tableRow16",
+                      "@ControlType": "TableRow",
+                      "@Font": "Segoe UI, 8.25pt",
+                      "@Weight": "1",
+                      "Cells": {
+                        "tableCell69": {
+                          "@Name": "tableCell69",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt, style=Bold",
+                          "@Weight": "1.4999999785087479",
+                          "@SourceExpression": "'Current Amount Due'"
+                        },
+                        "tableCell70": {
+                          "@Name": "tableCell70",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "1.5000000214912521",
+                          "@SourceExpression": "Line.Amount",
+                          "@HorzAlign": "Right"
+                        }
+                      }
+                    },
+                    "tableRow19": {
+                      "@Name": "tableRow19",
+                      "@ControlType": "TableRow",
+                      "@Font": "Segoe UI, 8.25pt",
+                      "@Weight": "1",
+                      "Cells": {
+                        "tableCell79": {
+                          "@Name": "tableCell79",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "1.4999999785087479",
+                          "@SourceExpression": "'Balance Past Due'"
+                        },
+                        "tableCell80": {
+                          "@Name": "tableCell80",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "1.5000000214912521",
+                          "@SourceExpression": "Customer.BalanceDue_LCY-Header.Amount",
+                          "@HorzAlign": "Right"
+                        }
+                      }
+                    },
+                    "tableRow18": {
+                      "@Name": "tableRow18",
+                      "@ControlType": "TableRow",
+                      "@Font": "Segoe UI, 8.25pt",
+                      "@Weight": "1",
+                      "Cells": {
+                        "tableCell75": {
+                          "@Name": "tableCell75",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "1.4999999785087479",
+                          "@SourceExpression": "'Total Amount Due'"
+                        },
+                        "tableCell76": {
+                          "@Name": "tableCell76",
+                          "@ControlType": "TableCell",
+                          "@Font": "Segoe UI, 8pt",
+                          "@Weight": "1.5000000214912521",
+                          "@SourceExpression": "Customer.BalanceDue_LCY",
+                          "@HorzAlign": "Right"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "Fields": {
+            "DocumentNo": {
+              "@FieldName": "Document No.",
+              "@FieldNo": "3"
+            },
+            "LineNo": {
+              "@FieldName": "Line No.",
+              "@FieldNo": "4"
+            },
+            "Description": {
+              "@FieldName": "Description",
+              "@FieldNo": "11"
+            },
+            "Amount": {
+              "@FieldName": "Amount",
+              "@FieldNo": "29"
+            }
+          }
+        },
+        "SalesTaxBuffer": {
+          "@ControlType": "DataItem",
+          "@Name": "SalesTaxBuffer",
+          "@Font": "Segoe UI, 8.25pt",
+          "@Id": "1",
+          "@Temporary": "true",
+          "@DataItemTableView": "SORTING(\"Primary Key\")",
+          "@DataItemVarName": "SalesTaxBuffer",
+          "@DataItemTable": "Table6189469",
+          "Bands": {
+            "SalesTaxBody": {
+              "@ControlType": "Body",
+              "@Name": "SalesTaxBody",
+              "@Font": "Segoe UI, 8.25pt",
+              "@BackColor": "Beige",
+              "@Signature": "abc",
+              "@MasterSection": "ForNAV Sales Templ. Sales Tax,SalesTaxBody",
+              "@ShowOutput": "SalesTaxBuffer.ExemptAmount != 0;",
+              "@Height": "47",
+              "Controls": {
+                "TextBox4": {
+                  "@Name": "TextBox4",
+                  "@ControlType": "TextBox",
+                  "@Size": "118.110413,23.6220684",
+                  "@Location": "433.070862,23.6220036",
+                  "@Font": "Segoe UI, 8pt, style=Bold",
+                  "@SourceExpression": "SalesTaxBuffer.FieldCaptions.TaxableAmount"
+                },
+                "TextBox3": {
+                  "@Name": "TextBox3",
+                  "@ControlType": "TextBox",
+                  "@Size": "118.110413,23.6220684",
+                  "@Location": "433.070862,0",
+                  "@Font": "Segoe UI, 8pt, style=Bold",
+                  "@SourceExpression": "SalesTaxBuffer.FieldCaptions.ExemptAmount"
+                },
+                "TextBox2": {
+                  "@Name": "TextBox2",
+                  "@ControlType": "TextBox",
+                  "@Size": "118.110229,23.62205",
+                  "@Location": "551.181,23.6220036",
+                  "@Font": "Segoe UI, 8pt",
+                  "@SourceExpression": "SalesTaxBuffer.TaxableAmount"
+                },
+                "TextBox1": {
+                  "@Name": "TextBox1",
+                  "@ControlType": "TextBox",
+                  "@Size": "118.110046,23.6220474",
+                  "@Location": "551.1813,0",
+                  "@Font": "Segoe UI, 8pt",
+                  "@SourceExpression": "SalesTaxBuffer.ExemptAmount"
+                }
+              }
+            }
+          },
+          "Fields": {
+            "PrimaryKey": {
+              "@FieldName": "Primary Key",
+              "@FieldNo": "1"
+            },
+            "ExemptAmount": {
+              "@FieldName": "Exempt Amount",
+              "@FieldNo": "2"
+            }
+          }
+        }
+      },
+      "Fields": {
+        "Sell_toCustomerNo": {
+          "@FieldName": "Sell-to Customer No.",
+          "@FieldNo": "2"
+        },
+        "No": {
+          "@FieldName": "No.",
+          "@FieldNo": "3"
+        },
+        "FormatRegion": {
+          "@FieldName": "Format Region",
+          "@FieldNo": "42"
+        },
+        "Amount": {
+          "@FieldName": "Amount",
+          "@FieldNo": "60"
+        },
+        "AmountIncludingVAT": {
+          "@FieldName": "Amount Including VAT",
+          "@FieldNo": "61"
+        },
+        "DocumentDate": {
+          "@FieldName": "Document Date",
+          "@FieldNo": "99"
+        },
+        "PTEPIPolicyNumber": {
+          "@FieldName": "PTEPI Policy Number",
+          "@FieldNo": "80601"
+        },
+        "PTEPIPolicyEffectiveDate": {
+          "@FieldName": "PTEPI Policy Effective Date",
+          "@FieldNo": "80602"
+        },
+        "PTEPIPolicyExpirationDate": {
+          "@FieldName": "PTEPI Policy Expiration Date",
+          "@FieldNo": "80603"
+        },
+        "PTEPIPolicyType": {
+          "@FieldName": "PTEPI Policy Type",
+          "@FieldNo": "80604"
+        },
+        "PTEPIPaymentDueDate": {
+          "@FieldName": "PTEPI Payment Due Date",
+          "@FieldNo": "80605"
+        },
+        "PTEPIPolicyTotalPremium": {
+          "@FieldName": "PTEPI Policy Total Premium",
+          "@FieldNo": "80606"
+        },
+        "PTEPIPolicyTotalCharges": {
+          "@FieldName": "PTEPI Policy Total Charges",
+          "@FieldNo": "80607"
+        },
+        "PTEPIPolicyTotalCost": {
+          "@FieldName": "PTEPI Policy Total Cost",
+          "@FieldNo": "80608"
+        }
+      }
+    },
+    "topMarginBand1": {
+      "@Name": "topMarginBand1",
+      "@ControlType": "TopMargin",
+      "@Font": "Segoe UI, 8.25pt",
+      "@Height": "70"
+    },
+    "bottomMarginBand1": {
+      "@Name": "bottomMarginBand1",
+      "@ControlType": "BottomMargin",
+      "@Font": "Segoe UI, 8.25pt",
+      "@Height": "40"
+    }
+  },
+  "Records": {
+    "CompanyInformation": {
+      "@Table": "Company Information",
+      "@No": "79",
+      "@Name": "CompanyInformation",
+      "Fields": {
+        "Name": {
+          "@FieldName": "Name",
+          "@FieldNo": "2"
+        },
+        "Address": {
+          "@FieldName": "Address",
+          "@FieldNo": "4"
+        },
+        "Address2": {
+          "@FieldName": "Address 2",
+          "@FieldNo": "5"
+        },
+        "City": {
+          "@FieldName": "City",
+          "@FieldNo": "6"
+        },
+        "PostCode": {
+          "@FieldName": "Post Code",
+          "@FieldNo": "30"
+        },
+        "County": {
+          "@FieldName": "County",
+          "@FieldNo": "31"
+        },
+        "E_Mail": {
+          "@FieldName": "E-Mail",
+          "@FieldNo": "34"
+        }
+      }
+    },
+    "ForNAVSetup": {
+      "@Table": "ForNAV Setup",
+      "@No": "6188471",
+      "@Name": "ForNAVSetup",
+      "@CalcFields": "Logo",
+      "Fields": {
+        "Logo": {
+          "@FieldName": "Logo",
+          "@FieldNo": "20"
+        },
+        "LegalConditions": {
+          "@FieldName": "Legal Conditions",
+          "@FieldNo": "80"
+        }
+      }
+    },
+    "ForNAVCaptions": {
+      "@Table": "ForNAV Captions",
+      "@No": "6189371",
+      "@Name": "ForNAVCaptions"
+    },
+    "Customer": {
+      "@Table": "Customer",
+      "@No": "18",
+      "@Name": "Customer",
+      "@Temporary": "true",
+      "@CalcFields": "\"Balance (LCY)\",\"Balance Due (LCY)\",\"Payments (LCY)\",\"Payments (LCY)\",\"Balance (LCY)\",\"Balance Due (LCY)\"",
+      "@DataItemLinkReference": "Header",
+      "@DataItemLink": "\"No.\" = FIELD(\"Sell-to Customer No.\")",
+      "Fields": {
+        "No": {
+          "@FieldName": "No.",
+          "@FieldNo": "1"
+        },
+        "Balance_LCY": {
+          "@FieldName": "Balance (LCY)",
+          "@FieldNo": "59"
+        },
+        "BalanceDue_LCY": {
+          "@FieldName": "Balance Due (LCY)",
+          "@FieldNo": "67"
+        },
+        "Payments_LCY": {
+          "@FieldName": "Payments (LCY)",
+          "@FieldNo": "74"
+        }
+      }
+    }
+  },
+  "DesignerOptions": {
+    "@ShowExportWarnings": "false"
+  }
+}

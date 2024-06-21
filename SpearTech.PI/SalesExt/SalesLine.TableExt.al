@@ -11,6 +11,11 @@ tableextension 80601 "PTEPI Sales Line" extends "Sales Line"
         field(80603; "PTEPI Spear No."; Code[20])
         {
             DataClassification = CustomerContent;
+            Caption = 'Spear No.';
+        }
+        field(80600; "PTEPI Spear Id"; Guid)
+        {
+            DataClassification = CustomerContent;
             Caption = 'Spear Id';
         }
     }

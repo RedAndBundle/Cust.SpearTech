@@ -153,6 +153,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Field Source No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2909482089 - Field 995702660 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Spear Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTEPI API PI Line - Field Spear Id - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2909482089 - Field 4015808694 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Invoice Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -338,8 +343,13 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Invoice Line - Field PTEPI Policy Number - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 3357243529 - Field 2338865918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+        <trans-unit id="TableExtension 3357243529 - Field 1489107628 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
           <source>Spear Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Invoice Line - Field PTEPI Spear Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3357243529 - Field 2338865918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Spear No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Invoice Line - Field PTEPI Spear No. - Property Caption</note>
         </trans-unit>
@@ -348,8 +358,13 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Line - Field PTEPI Policy Number - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 1624437818 - Field 2338865918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+        <trans-unit id="TableExtension 1624437818 - Field 1489107628 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
           <source>Spear Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Line - Field PTEPI Spear Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1624437818 - Field 2338865918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Spear No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTEPI Sales Line - Field PTEPI Spear No. - Property Caption</note>
         </trans-unit>

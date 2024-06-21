@@ -67,6 +67,11 @@ table 80601 "PTEPI API PI Line"
             DataClassification = CustomerContent;
             Caption = 'Description';
         }
+        field(112; "Spear Id"; Guid)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Spear Id';
+        }
     }
 
     keys
@@ -110,6 +115,7 @@ table 80601 "PTEPI API PI Line"
         SalesLine.Validate(Quantity, Units);
         SalesLine.Validate("Unit Price", Rate);
         SalesLine.Description := Description;
+        SalesLine."PTEPI Spear Id" := "Spear Id";
         SalesLine.Insert(true);
     end;
 
