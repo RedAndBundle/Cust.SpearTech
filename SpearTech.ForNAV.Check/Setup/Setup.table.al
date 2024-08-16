@@ -17,6 +17,8 @@ table 80410 "PTE Spear Technology Setup"
         }
         field(80; "PDF Merge Webservice"; Text[100]) { DataClassification = SystemMetadata; }
         field(90; "PDF Merge Key"; Text[100]) { DataClassification = SystemMetadata; ExtendedDatatype = Masked; }
+        field(100; "Global Check No."; Boolean) { DataClassification = SystemMetadata; }
+        field(105; "Global Last Check No."; Code[20]) { DataClassification = SystemMetadata; }
     }
 
     keys { key(pk; "Primary Key") { Clustered = true; } }

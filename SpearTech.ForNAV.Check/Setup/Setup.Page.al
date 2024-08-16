@@ -28,6 +28,20 @@ page 80410 "PTE Spear Technologies Setup"
                 field("PDF Merge Key"; Rec."PDF Merge Key") { ApplicationArea = All; }
 
             }
+            group(GlobalCheckNo)
+            {
+                Caption = 'Global Check Numbers';
+                field("Global Check No."; Rec."Global Check No.")
+                {
+                    Caption = 'Use Global Check Numbers:';
+                    ApplicationArea = All;
+                }
+                field("Global Last Check No."; Rec."Global Last Check No.")
+                {
+                    ApplicationArea = All;
+                    Editable = Rec."Global Check No.";
+                }
+            }
         }
     }
 

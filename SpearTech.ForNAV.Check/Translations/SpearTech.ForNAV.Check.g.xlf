@@ -468,6 +468,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field G/L Account No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 219769631 - Field 2043731310 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Global Check No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field Global Check No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 219769631 - Field 2484722204 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Global Last Check No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field Global Last Check No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 219769631 - Field 1794591305 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Output Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -627,6 +637,16 @@
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Spear Technologies Setup - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3001911709 - Control 2791518536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Global Check Numbers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Spear Technologies Setup - Control GlobalCheckNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3001911709 - Control 2043731310 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use Global Check Numbers:</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Spear Technologies Setup - Control Global Check No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3001911709 - Control 3731179934 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>PDF</source>
