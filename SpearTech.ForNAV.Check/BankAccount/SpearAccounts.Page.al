@@ -1,7 +1,7 @@
 page 80408 "PTE Spear Accounts"
 {
     Caption = 'Spear Accounts';
-    PageType = Worksheet;
+    PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = "PTE Spear Account";

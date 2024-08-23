@@ -1,7 +1,5 @@
 table 80405 "PTE Spear Account"
 {
-    LookupPageId = "Bank Account List";
-    DrillDownPageId = "Bank Account List";
     fields
     {
         field(1; "Spear Account No."; Text[30]) { }
