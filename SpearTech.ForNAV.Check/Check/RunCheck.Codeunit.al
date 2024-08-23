@@ -59,7 +59,7 @@ codeunit 80402 "PTE Run Check Report"
         end;
     end;
 
-    local procedure ProcessCheck(var Args: Record "ForNAV Check Arguments"; GenJnlLn: Record "Gen. Journal Line"; var TempMergePDF: Record "PTE PDF Merge File" temporary)
+    local procedure ProcessCheck(var Args: Record "ForNAV Check Arguments"; var GenJnlLn: Record "Gen. Journal Line"; var TempMergePDF: Record "PTE PDF Merge File" temporary)
     var
         GenJnlLnFilter: Record "Gen. Journal Line";
         ReportSelections: Record "Report Selections";
@@ -122,5 +122,21 @@ codeunit 80402 "PTE Run Check Report"
             ReportLayoutSelection.Get(ReportId, ''):
                 CustomReportLayoutCode := ReportLayoutSelection."Custom Report Layout Code";
         end;
+    end;
+
+    local procedure FilterOneCheckPerVendorPerDocument(var GenJournalLine: Record "Gen. Journal Line"; var FromGenJournalLine: Record "Gen. Journal Line")
+    begin
+        GenJournalLine.Reset();
+        GenJournalLine.SetCurrentkey("Journal Template Name", "Journal Batch Name", "Posting Date", "Document No.");
+        GenJournalLine.SetRange("Journal Template Name", FromGenJournalLine."Journal Template Name");
+        GenJournalLine.SetRange("Journal Batch Name", FromGenJournalLine."Journal Batch Name");
+        GenJournalLine.SetRange("Posting Date", FromGenJournalLine."Posting Date");
+        GenJournalLine.SetRange("Document No.", FromGenJournalLine."Document No.");
+        GenJournalLine.SetRange("Account Type", FromGenJournalLine."Account Type");
+        GenJournalLine.SetRange("Account No.", FromGenJournalLine."Account No.");
+        GenJournalLine.SetRange("Bal. Account Type", FromGenJournalLine."Bal. Account Type");
+        GenJournalLine.SetRange("Bal. Account No.", FromGenJournalLine."Bal. Account No.");
+        GenJournalLine.SetRange("Bank Payment Type", FromGenJournalLine."Bank Payment Type");
+        GenJournalLine.CalcSums(Amount);
     end;
 }
