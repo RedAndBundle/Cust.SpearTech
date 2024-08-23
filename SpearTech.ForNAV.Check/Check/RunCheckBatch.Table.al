@@ -134,6 +134,7 @@ table 80404 "PTE Run Check Batch"
     procedure InputBankAccount(BankAccountNo: Code[20]): Code[20]
     var
         BankAccount: Record "Bank Account";
+        SpearAccount: Record "PTE Spear Account";
     begin
         if BankAccountNo = '' then
             exit;
@@ -141,7 +142,11 @@ table 80404 "PTE Run Check Batch"
         BankAccount.Get(BankAccountNo);
         BankAccount.TestField(Blocked, false);
         BankAccount.TestField("Last Check No.");
-        exit(BankAccount."Last Check No.");
+        if SpearAccount.Get(BankAccount."Bank Account No.") then
+            if SpearAccount."Last Check No." <> '' then
+                exit(SpearAccount."Last Check No.")
+            else
+                exit(BankAccount."Last Check No.");
     end;
 
     internal procedure PrintChecks()
