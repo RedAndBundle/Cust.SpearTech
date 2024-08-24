@@ -458,6 +458,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Run Check Batch - Field Run Check - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1915975191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Spear Account</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Account - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1915975191 - Field 1238883557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Last Check No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
