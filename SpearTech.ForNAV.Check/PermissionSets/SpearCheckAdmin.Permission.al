@@ -5,5 +5,6 @@ permissionset 80401 "PTE SpearCheckAdmin"
 
     Permissions =
         tabledata "PTE Check Data" = RIMD,
-        tabledata "PTE Spear Technology Setup" = RIMD;
+        tabledata "PTE Spear Technology Setup" = RIMD,
+        tabledata "PTE Spear Account" = RIMD;
 }

@@ -1,5 +1,7 @@
 table 80405 "PTE Spear Account"
 {
+    DataClassification = CustomerContent;
+    Caption = 'Spear Account';
     fields
     {
         field(1; "Spear Account No."; Text[30]) { }

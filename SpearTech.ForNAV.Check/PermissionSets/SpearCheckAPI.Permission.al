@@ -6,5 +6,6 @@ permissionset 80403 "PTE SpearTech API"
 
     Permissions =
         tabledata "PTE Check Data" = RIMD,
-        tabledata "PTE Spear Technology Setup" = R;
+        tabledata "PTE Spear Technology Setup" = R,
+        tabledata "PTE Spear Account" = R;
 }

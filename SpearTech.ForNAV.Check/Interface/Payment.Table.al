@@ -94,17 +94,17 @@ table 80400 "PTE Payment Interface"
             GenJnlLine."Source Line No." := GetLastVendorLedgerEntryNo()."Entry No.";
             GenJnlLine.Validate(Amount, "Amount (USD)");
             if SummarizePerVendor() then
-                GenJnlLine."Applies-to ID" := "Document No."
+                GenJnlLine.Validate("Applies-to ID", "Document No.")
             else begin
-                GenJnlLine."Applies-to Doc. Type" := GenJnlLine."Applies-to Doc. Type"::Invoice;
-                GenJnlLine."Applies-to Doc. No." := "Document No.";
+                GenJnlLine.Validate("Applies-to Doc. Type", GenJnlLine."Applies-to Doc. Type"::Invoice);
+                GenJnlLine.Validate("Applies-to Doc. No.", "Document No.");
             end;
             GenJnlLine."Payment Method Code" := GetPaymentMethod();
             if "External Document No." = '' then
                 GenJnlLine."External Document No." := "Document No."
             else
                 GenJnlLine."External Document No." := "External Document No.";
-            GenJnlLine.Insert();
+            GenJnlLine.Insert(true);
         end;
 
         if not SummarizePerVendor() then
