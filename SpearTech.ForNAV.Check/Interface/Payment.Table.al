@@ -62,6 +62,7 @@ table 80400 "PTE Payment Interface"
         GenJnlLine: Record "Gen. Journal Line";
         CheckData: Record "PTE Check Data";
         VendorLedgerEntry: Record "Vendor Ledger Entry";
+    // p: page 256
     begin
         if SummarizePerVendor() and GetGenJournalLineForVendor(GenJnlLine) then begin
             GenJnlLine.Validate(Amount, GenJnlLine.Amount + "Amount (USD)");
@@ -117,9 +118,11 @@ table 80400 "PTE Payment Interface"
 
         VendorLedgerEntry.SetRange("Vendor No.", "Vendor No.");
         VendorLedgerEntry.SetRange("Document No.", "Document No.");
+        VendorLedgerEntry.SetAutoCalcFields("Remaining Amount");
         if VendorLedgerEntry.FindFirst() then begin
-            VendorLedgerEntry."Applies-to ID" := GenJnlLine."Applies-to ID";
-            VendorLedgerEntry.Modify();
+            VendorLedgerEntry.Validate("Applies-to ID", GenJnlLine."Applies-to ID");
+            VendorLedgerEntry.Validate("Amount to Apply", VendorLedgerEntry."Remaining Amount");
+            VendorLedgerEntry.Modify(true);
         end;
     end;
 
