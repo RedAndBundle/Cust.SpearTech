@@ -253,21 +253,22 @@ Report 80400 "PTE US Check"
     end;
 
     procedure InputBankAccount()
-    var
-        BankAccount: Record "Bank Account";
-        SpearAccount: Record "PTE Spear Account";
+    // var
+    //     BankAccount: Record "Bank Account";
+    //     SpearAccount: Record "PTE Spear Account";
     begin
-        if Args."Bank Account No." = '' then
-            exit;
-        begin
-            BankAccount.Get(Args."Bank Account No.");
-            BankAccount.TestField(Blocked, false);
-            BankAccount.TestField("Last Check No.");
-            Args."Check No." := BankAccount."Last Check No.";
-            if SpearAccount.Get(BankAccount."Bank Account No.") then
-                if SpearAccount."Last Check No." <> '' then
-                    Args."Check No." := SpearAccount."Last Check No.";
-        end;
+        Args.PTEGetLastCheckNo();
+        // if Args."Bank Account No." = '' then
+        //     exit;
+        // begin
+        //     BankAccount.Get(Args."Bank Account No.");
+        //     BankAccount.TestField(Blocked, false);
+        //     BankAccount.TestField("Last Check No.");
+        //     Args."Check No." := BankAccount."Last Check No.";
+        //     if SpearAccount.Get(BankAccount."Bank Account No.") then
+        //         if SpearAccount."Last Check No." <> '' then
+        //             Args."Check No." := SpearAccount."Last Check No.";
+        // end;
     end;
 
     local procedure GetBankAccFromFirstGnlLine()

@@ -161,15 +161,16 @@ Report 80401 "PTE Check Processing"
     end;
 
     procedure InputBankAccount()
-    var
-        BankAccount: Record "Bank Account";
+    // var
+    //     BankAccount: Record "Bank Account";
     begin
-        if Args."Bank Account No." <> '' then begin
-            BankAccount.Get(Args."Bank Account No.");
-            BankAccount.TestField(Blocked, false);
-            BankAccount.TestField("Last Check No.");
-            Args."Check No." := BankAccount."Last Check No.";
-        end;
+        Args.PTEGetLastCheckNo();
+        // if Args."Bank Account No." <> '' then begin
+        //     BankAccount.Get(Args."Bank Account No.");
+        //     BankAccount.TestField(Blocked, false);
+        //     BankAccount.TestField("Last Check No.");
+        //     Args."Check No." := BankAccount."Last Check No.";
+        // end;
     end;
 
     local procedure CheckSetupIsValid()

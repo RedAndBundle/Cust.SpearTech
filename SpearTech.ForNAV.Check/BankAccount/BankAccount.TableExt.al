@@ -188,6 +188,21 @@ tableextension 80400 "PTE Bank Account" extends "Bank Account"
         end;
     end;
 
+    procedure PTEGetLastCheckNo() Result: Code[20]
+    var
+        SpearAccount: Record "PTE Spear Account";
+    begin
+        // if "Bank Account No." = '' then
+        //     exit;
+
+        TestField(Blocked, false);
+        TestField("Last Check No.");
+        Result := "Last Check No.";
+        if SpearAccount.Get("Bank Account No.") then
+            if SpearAccount."Last Check No." <> '' then
+                Result := SpearAccount."Last Check No.";
+    end;
+
     local procedure PTEImportWatermarkFromClientFile(Which: Integer): Boolean
     var
         TempBlob: Record "ForNAV Core Setup" temporary;

@@ -19,4 +19,15 @@ tableextension 80401 "PTE Check Arguments" extends "ForNAV Check Arguments"
         }
     }
 
+    procedure PTEGetLastCheckNo()
+    var
+        BankAccount: Record "Bank Account";
+    begin
+        if "Bank Account No." = '' then
+            exit;
+
+        BankAccount.Get("Bank Account No.");
+        "Check No." := BankAccount.PTEGetLastCheckNo();
+    end;
+
 }

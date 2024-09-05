@@ -55,10 +55,12 @@ page 80404 "PTE Vendors"
                 {
                     ApplicationArea = all;
                 }
+#if not dev
                 field(federalIDNo; Rec."Federal ID No.")
                 {
                     ApplicationArea = all;
                 }
+#endif
                 field(paymentTermsCode; Rec."Payment Terms Code")
                 {
                     ApplicationArea = all;
