@@ -335,7 +335,15 @@ Report 80400 "PTE US Check"
     local procedure UpdateGlobalLastCheckNo()
     var
         SpearAccount: Record "PTE Spear Account";
+        CheckNo: Text;
     begin
+        case true of
+            Model."Check No." = '',
+            IncStr(Model."Check No.") = '',
+            Args."Test Print":
+                exit;
+        end;
+
         if SpearAccount.Get(Model."Bank Account No.") then
             if SpearAccount."Last Check No." <> '' then begin
                 SpearAccount."Last Check No." := Model."Check No.";

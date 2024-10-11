@@ -73,10 +73,14 @@ Page 80401 "PTE Check Nos."
 
         repeat
             VendorLedgerEntry2.SetRange("Document Type", VendorLedgerEntry2."Document Type"::Payment);
-            if vendorLedgerEntry."Applies-to ID" = '' then
-                VendorLedgerEntry2.SetRange("External Document No.", VendorLedgerEntry."External Document No.")
-            else
-                VendorLedgerEntry2.SetRange("External Document No.", VendorLedgerEntry."Applies-to ID");
+            case true of
+                vendorLedgerEntry."Applies-to ID" <> '':
+                    VendorLedgerEntry2.SetRange("External Document No.", VendorLedgerEntry."Applies-to ID");
+                VendorLedgerEntry."Closed by Entry No." <> 0:
+                    VendorLedgerEntry2.SetRange("Entry No.", VendorLedgerEntry."Closed by Entry No.");
+                else
+                    VendorLedgerEntry2.SetRange("External Document No.", VendorLedgerEntry."External Document No.")
+            end;
 
             If VendorLedgerEntry2.FindFirst() then begin
                 Rec."Entry No." += 1;
@@ -89,7 +93,7 @@ Page 80401 "PTE Check Nos."
             end;
         until VendorLedgerEntry.Next() = 0;
         Rec.Reset();
-        Rec.FindSet();
+        // Rec.FindSet();
         exit(Rec.FindSet());
     end;
 
