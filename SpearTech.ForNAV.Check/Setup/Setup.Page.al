@@ -20,6 +20,11 @@ page 80410 "PTE Spear Technologies Setup"
                 field("Payment Method (EFT)"; Rec."Payment Method (EFT)") { ApplicationArea = All; }
                 field("Payment Method (Void)"; Rec."Payment Method (Void)") { ApplicationArea = All; }
                 field("Generate Check Type"; Rec."Output Type") { ApplicationArea = All; }
+                field("One Check No Per Check"; Rec."One Check No Per Check")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies if the check number should be incremented for each page of the check. If checked multipage checks will only have a single check number.';
+                }
             }
             group(PDF)
             {

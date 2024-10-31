@@ -15,7 +15,8 @@ codeunit 80402 "PTE Run Check Report"
         if GenJnlLn.FindSet() then
             repeat
                 ProcessCheck(Args, GenJnlLn, MergePDF);
-                Args.GetNextCheckNo();
+                Args.PTEGetLastCheckNo();
+            // Args.GetNextCheckNo();
             until GenJnlLn.Next() = 0;
     end;
 
@@ -48,7 +49,8 @@ codeunit 80402 "PTE Run Check Report"
         GenJnlLn.FindSet();
         repeat
             ProcessCheck(Args, GenJnlLn, TempMergePDF);
-            Args.GetNextCheckNo();
+            Args.PTEGetLastCheckNo();
+        // Args.GetNextCheckNo();
         until GenJnlLn.Next() = 0;
 
         case Setup."Output Type" of
@@ -124,19 +126,19 @@ codeunit 80402 "PTE Run Check Report"
         end;
     end;
 
-    local procedure FilterOneCheckPerVendorPerDocument(var GenJournalLine: Record "Gen. Journal Line"; var FromGenJournalLine: Record "Gen. Journal Line")
-    begin
-        GenJournalLine.Reset();
-        GenJournalLine.SetCurrentkey("Journal Template Name", "Journal Batch Name", "Posting Date", "Document No.");
-        GenJournalLine.SetRange("Journal Template Name", FromGenJournalLine."Journal Template Name");
-        GenJournalLine.SetRange("Journal Batch Name", FromGenJournalLine."Journal Batch Name");
-        GenJournalLine.SetRange("Posting Date", FromGenJournalLine."Posting Date");
-        GenJournalLine.SetRange("Document No.", FromGenJournalLine."Document No.");
-        GenJournalLine.SetRange("Account Type", FromGenJournalLine."Account Type");
-        GenJournalLine.SetRange("Account No.", FromGenJournalLine."Account No.");
-        GenJournalLine.SetRange("Bal. Account Type", FromGenJournalLine."Bal. Account Type");
-        GenJournalLine.SetRange("Bal. Account No.", FromGenJournalLine."Bal. Account No.");
-        GenJournalLine.SetRange("Bank Payment Type", FromGenJournalLine."Bank Payment Type");
-        GenJournalLine.CalcSums(Amount);
-    end;
+    // local procedure FilterOneCheckPerVendorPerDocument(var GenJournalLine: Record "Gen. Journal Line"; var FromGenJournalLine: Record "Gen. Journal Line")
+    // begin
+    //     GenJournalLine.Reset();
+    //     GenJournalLine.SetCurrentkey("Journal Template Name", "Journal Batch Name", "Posting Date", "Document No.");
+    //     GenJournalLine.SetRange("Journal Template Name", FromGenJournalLine."Journal Template Name");
+    //     GenJournalLine.SetRange("Journal Batch Name", FromGenJournalLine."Journal Batch Name");
+    //     GenJournalLine.SetRange("Posting Date", FromGenJournalLine."Posting Date");
+    //     GenJournalLine.SetRange("Document No.", FromGenJournalLine."Document No.");
+    //     GenJournalLine.SetRange("Account Type", FromGenJournalLine."Account Type");
+    //     GenJournalLine.SetRange("Account No.", FromGenJournalLine."Account No.");
+    //     GenJournalLine.SetRange("Bal. Account Type", FromGenJournalLine."Bal. Account Type");
+    //     GenJournalLine.SetRange("Bal. Account No.", FromGenJournalLine."Bal. Account No.");
+    //     GenJournalLine.SetRange("Bank Payment Type", FromGenJournalLine."Bank Payment Type");
+    //     GenJournalLine.CalcSums(Amount);
+    // end;
 }

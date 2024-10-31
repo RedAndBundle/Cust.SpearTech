@@ -483,6 +483,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field G/L Account No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 219769631 - Field 3568368782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>One Check No Per Check</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Spear Technology Setup - Field One Check No Per Check - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 219769631 - Field 1794591305 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Output Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -647,6 +652,11 @@
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Spear Technologies Setup - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3001911709 - Control 3568368782 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the check number should be incremented for each page of the check. If checked multipage checks will only have a single check number.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Spear Technologies Setup - Control One Check No Per Check - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3001911709 - Control 3731179934 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>PDF</source>

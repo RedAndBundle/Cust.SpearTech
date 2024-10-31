@@ -2,7 +2,7 @@
   "id": "558f7426-bb0f-4445-8ab0-8ac0383e10ec",
   "name": "SpearTech.ForNAV.Check",
   "publisher": "Red and Bundle",
-  "version": "2.0.0.16",
+  "version": "2.0.0.19",
   "brief": "Create Payments and Print Checks",
   "description": "Create Payments and Print Checks",
   "privacyStatement": "https://wwww.speartech.com",
@@ -15,13 +15,13 @@
       "id": "6f0293d3-86fc-4ff8-9632-54a580be6546",
       "name": "ForNAV Core",
       "publisher": "ForNAV",
-      "version": "7.3.0.0"
+      "version": "7.4.0.0"
     },
     {
       "id": "83326d6d-11f8-49fd-981a-6f266a7c8d81",
       "name": "Customizable Report Pack",
       "publisher": "ForNAV",
-      "version": "7.3.0.0"
+      "version": "7.4.0.0"
     }
   ],
   "screenshots": [],
