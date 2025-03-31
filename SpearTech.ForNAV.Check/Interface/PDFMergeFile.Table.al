@@ -58,11 +58,11 @@ table 80401 "PTE PDF Merge File"
 
     procedure Zip()
     var
+        CheckPDFFile: Record "PTE Check PDF File";
         DataCompression: Codeunit "Data Compression";
-        TempBlob: Codeunit "Temp Blob";
+        MergePDF: Codeunit "PTE Merge PDF";
         is: InStream;
-        os: OutStream;
-        clientFileName: Text;
+        ClientFileName: Text;
     begin
         DataCompression.CreateZipArchive();
         SetAutoCalcFields(Blob);
@@ -70,30 +70,28 @@ table 80401 "PTE PDF Merge File"
             exit;
 
         repeat
-            Blob.CreateInStream(is);
             if Count = 1 then begin
-                DownloadFromStream(is, '', '', '', FileName);
+                CheckPDFFile := MergePDF.SaveFromPDFMergeFile(Rec, FileName);
+                Page.Run(Page::"PTE Check PDF File", CheckPDFFile);
                 exit;
             end;
 
+            Blob.CreateInStream(is);
             DataCompression.AddEntry(is, Filename);
         until Next() = 0;
 
-        TempBlob.CreateOutStream(os);
-        DataCompression.SaveZipArchive(os);
-        TempBlob.CreateInStream(is);
-        clientFileName := StrSubstNo('Check Export %1.zip', CurrentDateTime);
-        DownloadFromStream(is, '', '', '', clientFileName);
-        DataCompression.CloseZipArchive();
+        ClientFileName := StrSubstNo('Check Export %1.zip', CurrentDateTime);
+        CheckPDFFile := MergePDF.SaveFromDataCompression(DataCompression, ClientFileName);
+        Page.Run(Page::"PTE Check PDF File", CheckPDFFile);
     end;
 
     procedure MergeAndPreview()
     var
+        CheckPDFFile: Record "PTE Check PDF File";
         MergePDF: Codeunit "PTE Merge PDF";
-        clientFileName: Text;
-        is: InStream;
+        ClientFileName: Text;
     begin
-        clientFileName := StrSubstNo('Check %1.pdf', CurrentDateTime);
+        ClientFileName := StrSubstNo('Check %1.pdf', CurrentDateTime);
         if IsEmpty then begin
             Message('No PDF to merge');
             exit;
@@ -102,10 +100,8 @@ table 80401 "PTE PDF Merge File"
         if Count <> 1 then
             MergePDF.Run(Rec);
 
-        FindFirst();
-        CalcFields(Blob);
-        Blob.CreateInStream(is);
-        DownloadFromStream(is, '', '', '', clientFileName);
+        CheckPDFFile := MergePDF.SaveFromPDFMergeFile(Rec, ClientFileName);
+        Page.Run(Page::"PTE Check PDF File", CheckPDFFile);
     end;
 
     procedure InsertFromObject(jObject: JsonObject)
@@ -120,6 +116,7 @@ table 80401 "PTE PDF Merge File"
             EntryNo := jToken.AsValue().AsInteger()
         else
             EntryNo += 1;
+
         "Primary Key" := Format(EntryNo);
         Blob.CreateOutStream(OutStr);
         jObject.Get('base64', jToken);
