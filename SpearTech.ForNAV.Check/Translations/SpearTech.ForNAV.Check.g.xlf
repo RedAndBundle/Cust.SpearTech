@@ -183,6 +183,26 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check Data - Field TIN SSN - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2891767821 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check PDF File</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check PDF File - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2891767821 - Field 1447994436 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check PDF File - Field Data - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2891767821 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check PDF File - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2891767821 - Field 1545435603 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Filename</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Check PDF File - Field Filename - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1159935010 - Field 4200815977 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Add. Pay. Address</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -572,6 +592,46 @@
           <source>View PDF</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check Data - Action ViewLogo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2891767821 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check PDF File</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check PDF File - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2891767821 - Action 593408208 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Download the PDF file to your local computer.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check PDF File - Action Download - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2891767821 - Action 593408208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check PDF File - Action Download - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1141744964 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check PDF Files</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check PDF Files - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1141744964 - Action 335581068 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete all pdf files older than 7 days.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check PDF Files - Action Cleanup - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1141744964 - Action 335581068 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cleanup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check PDF Files - Action Cleanup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1141744964 - Action 593408208 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Download the pdf file to your local computer.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check PDF Files - Action Download - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1141744964 - Action 593408208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Check PDF Files - Action Download - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3319261591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Run Check All Batches</source>

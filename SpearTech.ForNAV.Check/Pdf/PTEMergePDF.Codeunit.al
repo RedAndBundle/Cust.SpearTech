@@ -1,6 +1,7 @@
 codeunit 80404 "PTE Merge PDF"
 {
     TableNo = "PTE PDF Merge File";
+    Permissions = tabledata "PTE Check PDF File" = RIMD;
 
     trigger OnRun()
     begin
@@ -65,6 +66,30 @@ codeunit 80404 "PTE Merge PDF"
             Error(WebServiceErr, Response.HttpStatusCode, Response.ReasonPhrase);
 
         Response.Content.ReadAs(Result);
+    end;
+
+    internal procedure SaveFromPDFMergeFile(var PDFMergeFile: Record "PTE PDF Merge File"; ClientFileName: Text) CheckPDFFile: Record "PTE Check PDF File"
+    begin
+        PDFMergeFile.FindFirst();
+        PDFMergeFile.CalcFields(Blob);
+        CheckPDFFile.Init();
+        CheckPDFFile."Data" := PDFMergeFile.Blob;
+        CheckPDFFile."Filename" := clientFileName;
+        CheckPDFFile.Insert();
+        Commit();
+    end;
+
+    internal procedure SaveFromDataCompression(var DataCompression: Codeunit "Data Compression"; ClientFileName: Text) CheckPDFFile: Record "PTE Check PDF File"
+    var
+        os: OutStream;
+    begin
+        CheckPDFFile.Init();
+        CheckPDFFile."Data".CreateOutStream(os);
+        DataCompression.SaveZipArchive(os);
+        CheckPDFFile."Filename" := ClientFileName;
+        CheckPDFFile.Insert();
+        DataCompression.CloseZipArchive();
+        Commit();
     end;
 
     var
