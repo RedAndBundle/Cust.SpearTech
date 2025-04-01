@@ -2,7 +2,7 @@
   "id": "7514153e-ac1e-497c-b55c-0caa195adc44",
   "name": "SpearTech.AP",
   "publisher": "Red and Bundle",
-  "version": "1.0.0.4",
+  "version": "1.1.0.0",
   "brief": "Accounts Payable APIs",
   "description": "APIs and other customizations for Accounts Payable",
   "privacyStatement": "https://wwww.speartech.com",
@@ -15,18 +15,18 @@
       "id": "6f0293d3-86fc-4ff8-9632-54a580be6546",
       "name": "ForNAV Core",
       "publisher": "ForNAV",
-      "version": "7.0.0.0"
+      "version": "8.0.0.0"
     },
     {
       "id": "83326d6d-11f8-49fd-981a-6f266a7c8d81",
       "name": "Customizable Report Pack",
       "publisher": "ForNAV",
-      "version": "7.0.0.0"
+      "version": "8.0.0.0"
     }
   ],
   "screenshots": [],
-  "platform": "23.0.0.0",
-  "application": "23.0.0.0",
+  "platform": "25.0.0.0",
+  "application": "25.0.0.0",
   "idRanges": [
     {
       "from": 80500,
@@ -39,7 +39,7 @@
 		"allowDownloadingSource": false, 
 		"includeSourceInSymbolFile": true
 	},
-  "runtime": "12.0",
+  "runtime": "14.0",
   "features": [
     "TranslationFile",
     "NoImplicitWith"
