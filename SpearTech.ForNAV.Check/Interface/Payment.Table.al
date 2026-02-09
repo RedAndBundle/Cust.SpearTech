@@ -62,8 +62,8 @@ table 80400 "PTE Payment Interface"
         GenJnlLine: Record "Gen. Journal Line";
         CheckData: Record "PTE Check Data";
         VendorLedgerEntry: Record "Vendor Ledger Entry";
-    // p: page 256
     begin
+        GenJnlLine.LockTable();
         if SummarizePerVendor() and GetGenJournalLineForVendor(GenJnlLine) then begin
             GenJnlLine.Validate(Amount, GenJnlLine.Amount + "Amount (USD)");
             GenJnlLine.Modify();
@@ -131,7 +131,6 @@ table 80400 "PTE Payment Interface"
         Vendor: Record Vendor;
     begin
         Vendor.Get("Vendor No.");
-        // exit(Vendor."PTE Combine Payments" and "Group Claimant Vendor Checks");
         exit(Vendor."PTE Combine Payments");
     end;
 
@@ -168,6 +167,7 @@ table 80400 "PTE Payment Interface"
             GenJnlLine."External Document No." := "Document No."
         else
             GenJnlLine."External Document No." := "External Document No.";
+
         GenJnlLine."Posting Date" := "Posting Date";
         GenJnlLine.Description := Description;
         GenJnlLine.Amount := -"Amount (USD)";
